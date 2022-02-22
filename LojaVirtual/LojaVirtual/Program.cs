@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace LojaVirtual
 {
-	public class Program
+	public class Program	
 	{
 		public static void Main(string[] args)
 

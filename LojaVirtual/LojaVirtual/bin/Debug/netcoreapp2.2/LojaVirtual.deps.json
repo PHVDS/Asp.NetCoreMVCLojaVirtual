@@ -26,6 +26,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
+          "Microsoft.NET.Sdk.Razor": "3.1.22",
           "Microsoft.NETCore.App": "2.2.0"
         },
         "runtime": {
@@ -35,6 +36,7 @@
           "LojaVirtual.dll": {}
         }
       },
+      "Microsoft.NET.Sdk.Razor/3.1.22": {},
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
@@ -3236,6 +3238,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.NET.Sdk.Razor/3.1.22": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NfZT06jlXKEAbjXwvhUCzQUE85dS6uuM1hIHVewK74grb0V5OLedq1Ec6pPo8hemxOKQu8rBkgWYlFbC+YSz1w==",
+      "path": "microsoft.net.sdk.razor/3.1.22",
+      "hashPath": "microsoft.net.sdk.razor.3.1.22.nupkg.sha512"
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",

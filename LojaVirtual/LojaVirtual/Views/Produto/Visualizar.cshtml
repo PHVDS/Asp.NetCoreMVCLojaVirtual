@@ -1,4 +1,15 @@
-﻿@{ 
+﻿@model LojaVirtual.Models.Produto
+
+@{ 
     string nome = "Paulo";
 }
 @nome
+
+<h2>Produto</h2>
+
+<b>
+    Codigo: @Model.Id <br />
+    Nome: @Model.Nome <br />
+    Descrição: @Model.Descricao <br />
+    Valor: @Model.Valor.ToString("C")
+</b>

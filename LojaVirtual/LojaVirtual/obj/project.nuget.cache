@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "golPr0Vj1rFPDJIn2wHW95TVvSJ9NQ3MLl1MF4Nwcr/l1s4TprFVTu4CVH3V9fiLvGi9UoZIo8cVNLI6tGylbw==",
+  "dgSpecHash": "5dFfD+J8pK7K0XpgtgurPKE9Ag/nsI+QHKYWNoQryJGicLbYcmhVTh4B4VZld3rM+SDBBOTJa5waVeONfR45Rw==",
   "success": true,
   "projectFilePath": "C:\\Users\\PAULO HENRIQUE\\Documents\\Visual Studio 2019\\Asp.NetCoreMvcLojaVirtual\\LojaVirtual\\LojaVirtual\\LojaVirtual.csproj",
   "expectedPackageFiles": [
@@ -168,6 +168,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.identitymodel.tokens.saml\\5.3.0\\microsoft.identitymodel.tokens.saml.5.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.identitymodel.xml\\5.3.0\\microsoft.identitymodel.xml.5.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
+    "C:\\Users\\PAULO HENRIQUE\\.nuget\\packages\\microsoft.net.sdk.razor\\3.1.22\\microsoft.net.sdk.razor.3.1.22.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.app\\2.2.0\\microsoft.netcore.app.2.2.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.dotnetapphost\\2.2.0\\microsoft.netcore.dotnetapphost.2.2.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.dotnethostpolicy\\2.2.0\\microsoft.netcore.dotnethostpolicy.2.2.0.nupkg.sha512",
