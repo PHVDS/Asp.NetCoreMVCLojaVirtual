@@ -50,6 +50,7 @@ namespace LojaVirtual.Controllers
 					}
 
 					ViewData["MSG_E"] = sb.ToString();
+					ViewData["CONTATO"] = contato;
 				}
 			}
 			catch (Exception e)
