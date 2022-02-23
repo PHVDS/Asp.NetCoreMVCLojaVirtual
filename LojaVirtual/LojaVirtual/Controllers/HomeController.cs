@@ -20,7 +20,11 @@ namespace LojaVirtual.Controllers
 
 		public IActionResult ContatoAcao()
 		{
-			return new ContentResult() { Content = "Dados recebidos com sucesso!"};
+			var nome = HttpContext.Request.Form["nome"];
+			var email = HttpContext.Request.Form["email"];
+			var texto = HttpContext.Request.Form["texto"];
+
+			return new ContentResult() { Content = string.Format("Dados recebidos com sucesso! </br> Nome: {0} </br> Email: {1} </br> Texto: {2}", nome, email, texto), ContentType = "text/html" };
 		}
 
 		public IActionResult Login()
