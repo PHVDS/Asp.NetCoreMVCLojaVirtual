@@ -21,7 +21,14 @@ namespace LojaVirtual.Controllers
 		[HttpPost]
 		public IActionResult Index([FromForm] NewsletterEmail newsletterEmail)
 		{
-			return View();
+			if (ModelState.IsValid)
+			{
+				return RedirectToAction(nameof(Index));
+			}
+			else
+			{
+				return View();
+			}
 		}
 
 		public IActionResult Contato()
