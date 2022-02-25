@@ -14,11 +14,13 @@ namespace LojaVirtual.Controllers
 {
 	public class HomeController : Controller
 	{
-		private readonly IClienteRepository _repository;
+		private readonly IClienteRepository _repositoryCliente;
+		private readonly INewsletterRepository _repositoryNewsletter;
 
-		public HomeController(IClienteRepository repository)
+		public HomeController(IClienteRepository repositoryCliente, INewsletterRepository repositoryNewsletter)
 		{
-			_repository = repository;
+			_repositoryCliente = repositoryCliente;
+			_repositoryNewsletter = repositoryNewsletter;
 		}
 
 		[HttpGet]
@@ -32,8 +34,7 @@ namespace LojaVirtual.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				//_repository.NewsletterEmails.Add(newsletterEmail);
-				//_repository.SaveChanges();
+				_repositoryNewsletter.Cadastrar(newsletterEmail);
 
 				TempData["MSG_S"] = "E-mail cadastrado! Fique atento, agora voçê vai receber promoções no seu e-mail!";
 
@@ -106,7 +107,7 @@ namespace LojaVirtual.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				_repository.Cadastrar(cliente);
+				_repositoryCliente.Cadastrar(cliente);
 
 				TempData["MSG_S"] = "Cadastro feito com sucesso!";
 

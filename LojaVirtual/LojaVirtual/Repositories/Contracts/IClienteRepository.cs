@@ -13,8 +13,8 @@ namespace LojaVirtual.Repositories.Contracts
 		void Cadastrar(Cliente cliente);
 		void Atualizar(Cliente cliente);
 		void Excluir(int Id);
-		void ObterCliente(int Id);
-		List<Cliente> ObterTodosClientes();
+		Cliente ObterCliente(int Id);
+		IEnumerable<Cliente> ObterTodosClientes();
 
 
 	}
