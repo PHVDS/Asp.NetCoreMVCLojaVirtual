@@ -1,5 +1,6 @@
 ﻿using LojaVirtual.Database;
 using LojaVirtual.Libraries.Email;
+using LojaVirtual.Libraries.Login;
 using LojaVirtual.Models;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Http;
@@ -15,11 +16,13 @@ namespace LojaVirtual.Controllers
 {
 	public class HomeController : Controller
 	{
+		private readonly LoginCliente _loginCliente;
 		private readonly IClienteRepository _repositoryCliente;
 		private readonly INewsletterRepository _repositoryNewsletter;
-
-		public HomeController(IClienteRepository repositoryCliente, INewsletterRepository repositoryNewsletter)
+		
+		public HomeController(LoginCliente loginCliente, IClienteRepository repositoryCliente, INewsletterRepository repositoryNewsletter)
 		{
+			_loginCliente = loginCliente;
 			_repositoryCliente = repositoryCliente;
 			_repositoryNewsletter = repositoryNewsletter;
 		}
@@ -101,28 +104,27 @@ namespace LojaVirtual.Controllers
 		[HttpPost]
 		public IActionResult Login([FromForm]Cliente cliente)
 		{
-			if (cliente.Email == "paulocraazy@gmail.com" && cliente.Senha == "1234")
+			Cliente clienteDB = _repositoryCliente.Login(cliente.Email, cliente.Senha);
+			if (clienteDB != null)
 			{
-				HttpContext.Session.Set("ID", new byte[] { 52 });
-				HttpContext.Session.SetString("Email", cliente.Email);
-				HttpContext.Session.SetInt32("Idade", 30);
+				_loginCliente.Login(clienteDB);
 
-				return new ContentResult() { Content = "Logado"};
+				return new RedirectResult(Url.Action(nameof(Painel)));
 			}
 			else
 			{
-				return new ContentResult() { Content = "Nao logado" };
+				ViewData["MSG_E"] = "Usuario não encontrado, verifique os campos digitados!";
+				return View();
 			}
 		}
 
 		[HttpGet]
 		public IActionResult Painel()
 		{
-			byte[] UsuarioID;
-
-			if (HttpContext.Session.TryGetValue("ID", out UsuarioID))
+			Cliente cliente = _loginCliente.GetCliente();
+			if (cliente != null)
 			{
-				return new ContentResult() { Content = "Acesso Concedido: " + UsuarioID[0] };
+				return new ContentResult() { Content = "Usuario: " + cliente.Id + "\n" + "Email: " + cliente.Email};
 			}
 			else
 			{
