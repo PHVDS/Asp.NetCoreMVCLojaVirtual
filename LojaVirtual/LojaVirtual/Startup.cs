@@ -1,4 +1,5 @@
 ﻿using LojaVirtual.Database;
+using LojaVirtual.Libraries.Sessao;
 using LojaVirtual.Models;
 using LojaVirtual.Repositories;
 using LojaVirtual.Repositories.Contracts;
@@ -29,6 +30,7 @@ namespace LojaVirtual
 		public void ConfigureServices(IServiceCollection services)
 		{
 			//Repository
+			services.AddHttpContextAccessor();
 			services.AddScoped<IClienteRepository, ClienteRepository>();
 			services.AddScoped<INewsletterRepository, NewsletterRepository>();
 
@@ -43,6 +45,8 @@ namespace LojaVirtual
 			services.AddSession(options => { 
 			
 			});
+
+			services.AddScoped<Sessao>();
 
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 			
