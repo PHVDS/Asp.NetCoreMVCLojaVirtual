@@ -2,6 +2,7 @@
 using LojaVirtual.Libraries.Email;
 using LojaVirtual.Models;
 using LojaVirtual.Repositories.Contracts;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -102,12 +103,31 @@ namespace LojaVirtual.Controllers
 		{
 			if (cliente.Email == "paulocraazy@gmail.com" && cliente.Senha == "1234")
 			{
+				HttpContext.Session.Set("ID", new byte[] { 52 });
+				HttpContext.Session.SetString("Email", cliente.Email);
+				HttpContext.Session.SetInt32("Idade", 30);
+
 				return new ContentResult() { Content = "Logado"};
 			}
 			else
 			{
 				return new ContentResult() { Content = "Nao logado" };
 			}
+		}
+
+		[HttpGet]
+		public IActionResult Painel()
+		{
+			byte[] UsuarioID;
+
+			if (HttpContext.Session.TryGetValue("ID", out UsuarioID))
+			{
+				return new ContentResult() { Content = "Acesso Concedido: " + UsuarioID[0] };
+			}
+			else
+			{
+				return new ContentResult() { Content = "Acesso negado." };
+			}			
 		}
 
 		[HttpGet]
