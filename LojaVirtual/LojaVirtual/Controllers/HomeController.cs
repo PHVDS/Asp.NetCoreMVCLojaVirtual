@@ -1,5 +1,6 @@
 ﻿using LojaVirtual.Database;
 using LojaVirtual.Libraries.Email;
+using LojaVirtual.Libraries.Filtro;
 using LojaVirtual.Libraries.Login;
 using LojaVirtual.Models;
 using LojaVirtual.Repositories.Contracts;
@@ -119,17 +120,10 @@ namespace LojaVirtual.Controllers
 		}
 
 		[HttpGet]
+		[ClienteAutorizacao]
 		public IActionResult Painel()
 		{
-			Cliente cliente = _loginCliente.GetCliente();
-			if (cliente != null)
-			{
-				return new ContentResult() { Content = "Usuario: " + cliente.Id + "\n" + "Email: " + cliente.Email};
-			}
-			else
-			{
-				return new ContentResult() { Content = "Acesso negado." };
-			}			
+			return new ContentResult() { Content = "Aqui é o Painel" };	
 		}
 
 		[HttpGet]
