@@ -9,10 +9,12 @@ namespace LojaVirtual.Database
 {
 	public class LojaVirtualContext : DbContext
 	{
+		// EF Core - ORM = Biblioteca mapear objetos p/ BD relacionais
 		public LojaVirtualContext(DbContextOptions<LojaVirtualContext> options) : base(options)
 		{ }
 
 		public DbSet<Cliente> Clientes { get; set; }
 		public DbSet<NewsletterEmail> NewsletterEmails { get; set; }
+		public DbSet<Colaborador> Colaboradores { get; set; }
 	}
 }
