@@ -13,6 +13,6 @@ namespace LojaVirtual.Repositories.Contracts
 		void Atualizar(Colaborador colaborador);
 		void Excluir(int Id);
 		Colaborador ObterColaborador(int Id);
-		IEnumerable<Colaborador> ObterColaboradores();
+		IEnumerable<Colaborador> ObterTodosColaboradores();
 	}
 }

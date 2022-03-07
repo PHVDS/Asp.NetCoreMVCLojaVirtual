@@ -14,7 +14,7 @@ namespace LojaVirtual.Repositories
 
 		public ColaboradorRepository(LojaVirtualContext banco) 
 		{
-			_banco = _banco;
+			_banco = banco;
 		}
 		public void Atualizar(Colaborador colaborador)
 		{
@@ -46,7 +46,7 @@ namespace LojaVirtual.Repositories
 			return _banco.Colaboradores.Find(Id);
 		}
 
-		public IEnumerable<Colaborador> ObterColaboradores()
+		public IEnumerable<Colaborador> ObterTodosColaboradores()
 		{
 			return _banco.Colaboradores.ToList();
 		}
