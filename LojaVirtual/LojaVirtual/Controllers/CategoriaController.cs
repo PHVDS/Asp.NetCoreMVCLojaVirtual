@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using X.PagedList;
 
 namespace LojaVirtual.Controllers
 {
@@ -20,9 +21,10 @@ namespace LojaVirtual.Controllers
 			_categoriaRepository = categoriaRepository;
 		}
 
-		public IActionResult Index()
+		public IActionResult Index(int? pagina)
 		{
-			List<Categoria> categorias = _categoriaRepository.ObterTodasCategorias().ToList();
+			var categorias = _categoriaRepository.ObterTodasCategorias(pagina);
+
 			return View(categorias);
 		}
 
