@@ -41,7 +41,7 @@ namespace LojaVirtual.Controllers
 		}
 
 		[HttpGet]
-		public IActionResult Atualizar()
+		public IActionResult Atualizar(int id)
 		{
 			return View();
 		}
@@ -53,7 +53,7 @@ namespace LojaVirtual.Controllers
 		}
 
 		[HttpGet]
-		public IActionResult Excluir()
+		public IActionResult Excluir(int id)
 		{
 			return View();
 		}
