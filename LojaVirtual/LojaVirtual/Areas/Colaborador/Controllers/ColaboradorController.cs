@@ -37,6 +37,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 		{
 			if (ModelState.IsValid)
 			{
+				colaborador.Tipo = "C";
 				_colaboradorRepository.Cadastrar(colaborador);
 
 				TempData["MSG_S"] = Mensagem.MSG_S001;
