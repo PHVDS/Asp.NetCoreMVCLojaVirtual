@@ -12,7 +12,7 @@ using X.PagedList;
 namespace LojaVirtual.Areas.Colaborador.Controllers
 {
 	[Area("Colaborador")]
-	//[ColaboradorAutorizacao]
+	[ColaboradorAutorizacao]
 	public class CategoriaController : Controller
 	{
 		private readonly ICategoriaRepository _categoriaRepository;
