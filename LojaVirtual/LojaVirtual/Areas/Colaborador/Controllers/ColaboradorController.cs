@@ -1,4 +1,5 @@
 ﻿using LojaVirtual.Libraries.Lang;
+using LojaVirtual.Libraries.Texto;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -45,6 +46,16 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 				return RedirectToAction(nameof(Index));
 			}
 			return View();
+		}
+
+		[HttpGet]
+		public IActionResult GerarSenha(int id)
+		{
+			Models.Colaborador colaborador = _colaboradorRepository.ObterColaborador(id);
+			colaborador.Senha = KeyGenerator.GetUniqueKey(8);
+			_colaboradorRepository.Atualizar(colaborador);
+
+
 		}
 
 		[HttpGet]
