@@ -14,7 +14,6 @@ namespace LojaVirtual.Repositories.Contracts
 		void Atualizar(Colaborador colaborador);
 		void Excluir(int Id);
 		Colaborador ObterColaborador(int Id);
-		IEnumerable<Colaborador> ObterTodosColaboradores();
 		IPagedList<Colaborador> ObterTodosColaboradores(int? pagina);
 	}
 }
