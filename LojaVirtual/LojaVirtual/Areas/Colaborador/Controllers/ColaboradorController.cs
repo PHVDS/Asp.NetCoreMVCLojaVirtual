@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using LojaVirtual.Repositories.Contracts;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,14 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 {
 	public class ColaboradorController : Controller
 	{
-		public IActionResult Index()
+		private readonly IColaboradorRepository _colaboradorRepository;
+
+		public ColaboradorController(IColaboradorRepository colaboradorRepository)
+		{
+			_colaboradorRepository = colaboradorRepository;
+		}
+
+		public IActionResult Index(int? pagina)
 		{
 			return View();
 		}
