@@ -1,4 +1,5 @@
 ﻿using LojaVirtual.Libraries.Email;
+using LojaVirtual.Libraries.Filtro;
 using LojaVirtual.Libraries.Lang;
 using LojaVirtual.Libraries.Texto;
 using LojaVirtual.Repositories.Contracts;
@@ -12,6 +13,7 @@ using X.PagedList;
 namespace LojaVirtual.Areas.Colaborador.Controllers
 {
 	[Area("Colaborador")]
+	[ColaboradorAutorizacao("G")]
 	public class ColaboradorController : Controller
 	{
 		private readonly IColaboradorRepository _colaboradorRepository;
