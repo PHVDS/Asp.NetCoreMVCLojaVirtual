@@ -1,4 +1,5 @@
-﻿using LojaVirtual.Libraries.Lang;
+﻿using LojaVirtual.Libraries.Email;
+using LojaVirtual.Libraries.Lang;
 using LojaVirtual.Libraries.Texto;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Mvc;
@@ -14,10 +15,12 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 	public class ColaboradorController : Controller
 	{
 		private readonly IColaboradorRepository _colaboradorRepository;
+		private readonly GerenciarEmail _gerenciarEmail;
 
-		public ColaboradorController(IColaboradorRepository colaboradorRepository)
+		public ColaboradorController(GerenciarEmail gerenciarEmail, IColaboradorRepository colaboradorRepository)
 		{
 			_colaboradorRepository = colaboradorRepository;
+			_gerenciarEmail = gerenciarEmail;
 		}
 
 		public IActionResult Index(int? pagina)
@@ -55,7 +58,11 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			colaborador.Senha = KeyGenerator.GetUniqueKey(8);
 			_colaboradorRepository.Atualizar(colaborador);
 
+			_gerenciarEmail.EnviarSenhaParaColaboradorPorEmail(colaborador);
 
+			TempData["MSG_S"] = Mensagem.MSG_S003;
+
+			return RedirectToAction(nameof(Index));
 		}
 
 		[HttpGet]
