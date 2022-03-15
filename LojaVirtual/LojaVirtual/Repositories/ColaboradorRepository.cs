@@ -59,6 +59,11 @@ namespace LojaVirtual.Repositories
 			return _banco.Colaboradores.Find(Id);
 		}
 
+		public List<Colaborador> ObterColaboradorPorEmail(string email)
+		{
+			return _banco.Colaboradores.Where(a => a.Email == email).ToList();
+		}
+
 		public IPagedList<Colaborador> ObterTodosColaboradores(int? pagina)
 		{
 			int RegistroPorPagina = _conf.GetValue<int>("RegistroPorPagina");

@@ -1,4 +1,5 @@
 ﻿using LojaVirtual.Libraries.Lang;
+using LojaVirtual.Libraries.Validacao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -20,6 +21,7 @@ namespace LojaVirtual.Models
 		[Display(Name ="E-mail")]
 		[Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E001")]
 		[EmailAddress(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E004")]
+		[EmailUnicoColaborador]
 		public string Email { get; set; }
 
 		[Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E001")]
