@@ -39,10 +39,14 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 		[HttpPost]
 		public IActionResult Cadastrar([FromForm] Models.Colaborador colaborador)
 		{
+			ModelState.Remove("Senha");
 			if (ModelState.IsValid)
 			{
 				colaborador.Tipo = "C";
+				colaborador.Senha = KeyGenerator.GetUniqueKey(8);
 				_colaboradorRepository.Cadastrar(colaborador);
+
+				_gerenciarEmail.EnviarSenhaParaColaboradorPorEmail(colaborador);
 
 				TempData["MSG_S"] = Mensagem.MSG_S001;
 
