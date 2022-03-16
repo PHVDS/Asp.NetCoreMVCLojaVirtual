@@ -28,8 +28,13 @@ using X.PagedList;
 
 #line default
 #line hidden
+#line 5 "C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\Asp.NetCoreMvcLojaVirtual\LojaVirtual\LojaVirtual\Areas\Colaborador\Views\_ViewImports.cshtml"
+using LojaVirtual.Models.Constants;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"443455d6d9edfb3d779123eb62ad6c2c001a8ce9", @"/Areas/Colaborador/Views/Colaborador/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cbc9cba20a976018d727703f743102807edee67a", @"/Areas/Colaborador/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3ce3f0e7bb6a8aa2766c242c92f1919ac89d3e70", @"/Areas/Colaborador/Views/_ViewImports.cshtml")]
     public class Areas_Colaborador_Views_Colaborador_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<X.PagedList.PagedList<LojaVirtual.Models.Colaborador>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Cadastrar", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -73,7 +78,7 @@ using X.PagedList;
             WriteLiteral("\r\n<h1>Colaborador</h1>\r\n\r\n");
             EndContext();
             BeginContext(129, 63, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "443455d6d9edfb3d779123eb62ad6c2c001a8ce96428", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "443455d6d9edfb3d779123eb62ad6c2c001a8ce96654", async() => {
                 BeginContext(179, 9, true);
                 WriteLiteral("Cadastrar");
                 EndContext();
@@ -201,7 +206,7 @@ using X.PagedList;
             WriteLiteral("</td>\r\n                        <td>\r\n                            ");
             EndContext();
             BeginContext(1167, 99, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "443455d6d9edfb3d779123eb62ad6c2c001a8ce912975", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "443455d6d9edfb3d779123eb62ad6c2c001a8ce913201", async() => {
                 BeginContext(1251, 11, true);
                 WriteLiteral("Gerar Senha");
                 EndContext();
@@ -237,7 +242,7 @@ using X.PagedList;
             WriteLiteral("\r\n                            ");
             EndContext();
             BeginContext(1296, 96, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "443455d6d9edfb3d779123eb62ad6c2c001a8ce915519", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "443455d6d9edfb3d779123eb62ad6c2c001a8ce915745", async() => {
                 BeginContext(1379, 9, true);
                 WriteLiteral("Atualizar");
                 EndContext();
@@ -273,7 +278,7 @@ using X.PagedList;
             WriteLiteral("\r\n                            ");
             EndContext();
             BeginContext(1422, 89, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "443455d6d9edfb3d779123eb62ad6c2c001a8ce918059", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "443455d6d9edfb3d779123eb62ad6c2c001a8ce918285", async() => {
                 BeginContext(1500, 7, true);
                 WriteLiteral("Excluir");
                 EndContext();
