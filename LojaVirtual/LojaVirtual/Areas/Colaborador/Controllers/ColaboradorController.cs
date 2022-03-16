@@ -58,6 +58,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 		}
 
 		[HttpGet]
+		[ValidateHttpReferer]
 		public IActionResult GerarSenha(int id)
 		{
 			Models.Colaborador colaborador = _colaboradorRepository.ObterColaborador(id);
@@ -95,6 +96,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 		}
 
 		[HttpGet]
+		[ValidateHttpReferer]
 		public IActionResult Excluir(int id)
 		{
 			_colaboradorRepository.Excluir(id);

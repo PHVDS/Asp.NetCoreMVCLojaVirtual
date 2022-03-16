@@ -79,6 +79,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 		}
 
 		[HttpGet]
+		[ValidateHttpReferer]
 		public IActionResult Excluir(int id)
 		{
 			_categoriaRepository.Excluir(id);
