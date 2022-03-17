@@ -1,18 +1,22 @@
 ﻿using LojaVirtual.Database;
 using LojaVirtual.Models;
 using LojaVirtual.Repositories.Contracts;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using X.PagedList;
 
 namespace LojaVirtual.Repositories
 {
 	public class ClienteRepository : IClienteRepository
 	{
+		private readonly IConfiguration _conf;
 		private readonly LojaVirtualContext _banco;
-		public ClienteRepository(LojaVirtualContext banco)
+		public ClienteRepository(LojaVirtualContext banco, IConfiguration configuration)
 		{
+			_conf = configuration;
 			_banco = banco;
 		}
 		public void Atualizar(Cliente cliente)
@@ -45,9 +49,12 @@ namespace LojaVirtual.Repositories
 			return _banco.Clientes.Find(Id);
 		}
 
-		public IEnumerable<Cliente> ObterTodosClientes()
+		public IPagedList<Cliente> ObterTodosClientes(int? pagina)
 		{
-			return _banco.Clientes.ToList();
+			int RegistroPorPagina = _conf.GetValue<int>("RegistroPorPagina");
+
+			int NumeroPagina = pagina ?? 1;
+			return _banco.Clientes.ToPagedList<Cliente>(NumeroPagina, RegistroPorPagina);
 		}
 	}
 }
