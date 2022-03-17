@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace LojaVirtual.Models
 {
@@ -24,5 +21,7 @@ namespace LojaVirtual.Models
 
 		[ForeignKey("CategoriaId")]
 		public Categoria Categoria { get; set; }
+
+		public ICollection<Imagem> Imagens { get; set; }	
 	}
 }
