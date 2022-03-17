@@ -22,9 +22,9 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 		{
 			_clienteRepository = clienteRepository;
 		}
-		public IActionResult Index(int? pagina)
+		public IActionResult Index(int? pagina, string pesquisa)
 		{
-			IPagedList<Cliente> clientes = _clienteRepository.ObterTodosClientes(pagina);
+			IPagedList<Cliente> clientes = _clienteRepository.ObterTodosClientes(pagina, pesquisa);
 
 			return View(clientes);
 		}
