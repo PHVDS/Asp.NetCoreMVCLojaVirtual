@@ -10,6 +10,6 @@ namespace LojaVirtual.Models
 		public int ProdutoId { get; set; }
 
 		[ForeignKey("ProdutoId")]
-		public Produto Produto { get; set; }
+		public virtual Produto Produto { get; set; }
 	}
 }
