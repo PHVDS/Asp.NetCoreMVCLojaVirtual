@@ -15,6 +15,13 @@ function AjaxUploadImagemProduto() {
     $(".img-upload").click(function () {
         $(this).parent().find(".input-file").click();
     });
+
+    $(".input-file").change(function () {
+        //FOrmulario de dados via JS
+        var Binario = $(this).[0].files[0];
+        var Formulario = new FormData();
+        Formulario.append("file", Binario);
+    });
 }
 
 $(document).ready(function () {
