@@ -19,9 +19,12 @@ namespace LojaVirtual.Repositories
 
 		public void CadastrarImagens(List<Imagem> ListaImagens, int ProdutoId)
 		{
-			foreach (var Imagem in ListaImagens)
+			if (ListaImagens != null && ListaImagens.Count > 0)
 			{
-				Cadastrar(Imagem);
+				foreach (var Imagem in ListaImagens)
+				{
+					Cadastrar(Imagem);
+				}
 			}
 		}
 

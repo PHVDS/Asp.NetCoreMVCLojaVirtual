@@ -52,11 +52,11 @@ namespace LojaVirtual.Libraries.Arquivo
 
 			foreach (var CaminhoTemp in ListaCaminhoTemp)
 			{
-				if (string.IsNullOrEmpty(CaminhoTemp))
+				if (!string.IsNullOrEmpty(CaminhoTemp))
 				{
 					var NomeArquivo = Path.GetFileName(CaminhoTemp);
 
-					var CaminhoAbsolutoTemp = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", CaminhoTemp);
+					var CaminhoAbsolutoTemp = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads/temp", NomeArquivo);
 					var CaminhoAbsolutoDef = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads", ProdutoId.ToString(), NomeArquivo);
 
 					if (File.Exists(CaminhoAbsolutoTemp))
