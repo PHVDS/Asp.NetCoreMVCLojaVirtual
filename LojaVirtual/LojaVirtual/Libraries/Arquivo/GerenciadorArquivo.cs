@@ -22,9 +22,19 @@ namespace LojaVirtual.Libraries.Arquivo
 			return Path.Combine("/uploads/temp", NomeArquivo);
 		}
 
-		public static void ExcluirImagemProduto()
+		public static bool ExcluirImagemProduto(string caminho)
 		{
+			string Caminho = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", caminho.TrimStart('/'));
 
+			if (File.Exists(Caminho))
+			{
+				File.Delete(Caminho);
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
 	}
 }
