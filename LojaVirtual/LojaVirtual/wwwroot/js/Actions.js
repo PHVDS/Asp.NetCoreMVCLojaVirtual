@@ -17,11 +17,12 @@ function AjaxUploadImagemProduto() {
     });
 
     $(".input-file").change(function () {
-        //FOrmulario de dados via JS
+        //Formulário de dados via JavaScript
         var Binario = $(this)[0].files[0];
         var Formulario = new FormData();
         Formulario.append("file", Binario);
 
+        //Requisição Ajax enviado a Formulario
         $.ajax({
             type: "POST",
             url: "/Colaborador/Imagem/Armazenar",
@@ -29,10 +30,10 @@ function AjaxUploadImagemProduto() {
             contentType: false,
             processData: false,
             error: function () {
-                alert("Erro ao enviar arquivo!");
+                alert("Erro no envio do arquivo!");
             },
-            sucess: function (data) {
-                alert("Arquivo enviado com sucesso!" + data.caminho);
+            success: function (data) {
+                alert("Arquivo enviado com sucesso! " + data.caminho);
             }
         });
     });
