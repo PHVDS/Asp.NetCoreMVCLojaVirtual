@@ -7,7 +7,15 @@
         }
     });
     $('.dinheiro').mask('000.000.000.000.000,00', { reverse: true });
+
+    AjaxUploadImagemProduto();
 });
+
+function AjaxUploadImagemProduto() {
+    $(".img-upload").click(function () {
+        $(this).parent().find(".input-file").click();
+    });
+}
 
 $(document).ready(function () {
     $(".btn-outline-danger").click(function (e) {
