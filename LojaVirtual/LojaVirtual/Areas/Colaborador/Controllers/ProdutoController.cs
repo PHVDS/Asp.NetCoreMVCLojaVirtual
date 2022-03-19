@@ -16,8 +16,10 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 	{
 		private readonly IProdutoRepository _produtoRepository;
 		private readonly ICategoriaRepository _categoriaRepository;
-		public ProdutoController(IProdutoRepository produtoRepository, ICategoriaRepository categoriaRepository)
+		private readonly IImagemRepository _imagemRepository;
+		public ProdutoController(IImagemRepository imagemRepository, IProdutoRepository produtoRepository, ICategoriaRepository categoriaRepository)
 		{
+			_imagemRepository = imagemRepository;
 			_produtoRepository = produtoRepository;
 			_categoriaRepository = categoriaRepository;
 		}
@@ -41,9 +43,8 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			if (ModelState.IsValid)
 			{
 				_produtoRepository.Cadastrar(produto);
-
-				
-				GerenciadorArquivo.MoverImagensProduto(new List<string>(Request.Form["imagem"]), produto.Id.ToString());
+				List<Imagem> ListaImagensDef = GerenciadorArquivo.MoverImagensProduto(new List<string>(Request.Form["imagem"]), produto.Id);
+				_imagemRepository.CadastrarImagens(ListaImagensDef, produto.Id);
 
 				TempData["MSG_S"] = Mensagem.MSG_S001;
 
