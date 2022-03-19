@@ -36,5 +36,46 @@ namespace LojaVirtual.Libraries.Arquivo
 				return false;
 			}
 		}
+
+		public static List<string> MoverImagensProduto(List<string> ListaCaminhoTemp, string ProdutoId)
+		{
+			//Criar a Pasta do Produto
+			var CaminhoDefinitivoPastaProduto = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads", ProdutoId);
+			if (!Directory.Exists(CaminhoDefinitivoPastaProduto))
+			{
+				Directory.CreateDirectory(CaminhoDefinitivoPastaProduto);
+			}
+
+			//Mover a Imagem da Pasta Temp para a pasta definitiva
+			List<string> ListaCaminhoDef = new List<string>();
+
+			foreach (var CaminhoTemp in ListaCaminhoTemp)
+			{
+				if (string.IsNullOrEmpty(CaminhoTemp))
+				{
+					var NomeArquivo = Path.GetFileName(CaminhoTemp);
+
+					var CaminhoAbsolutoTemp = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", CaminhoTemp);
+					var CaminhoAbsolutoDef = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads", ProdutoId, NomeArquivo);
+
+					if (File.Exists(CaminhoAbsolutoTemp))
+					{
+						File.Copy(CaminhoAbsolutoTemp, CaminhoAbsolutoDef);
+						if (File.Exists(CaminhoAbsolutoTemp))
+						{
+							File.Delete(CaminhoAbsolutoTemp);
+						}
+
+						ListaCaminhoDef.Add(Path.Combine("/uploads", ProdutoId, NomeArquivo).Replace("\\", "/"));
+					}
+					else
+					{
+						return null;
+					}
+				}
+			}
+
+			return ListaCaminhoDef;
+		}
 	}
 }
