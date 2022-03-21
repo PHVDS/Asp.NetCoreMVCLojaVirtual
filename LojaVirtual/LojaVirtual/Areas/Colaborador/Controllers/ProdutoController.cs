@@ -50,9 +50,13 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 				return RedirectToAction(nameof(Index));
 			}
+			else
+			{
+				ViewBag.Categorias = _categoriaRepository.ObterTodasCategorias().Select(a => new SelectListItem(a.Nome, a.Id.ToString()));
+				produto.Imagens = new List<string>(Request.Form["imagem"]).Where(a => a.Trim().Length > 0).Select(a => new Imagem() { Caminho = a }).ToList();
 
-			ViewBag.Categorias = _categoriaRepository.ObterTodasCategorias().Select(a => new SelectListItem(a.Nome, a.Id.ToString()));
-			return View();
+				return View(produto);
+			}
 		}
 
 		[HttpGet]
