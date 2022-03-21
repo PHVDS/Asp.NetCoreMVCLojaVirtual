@@ -56,22 +56,39 @@ namespace LojaVirtual.Libraries.Arquivo
 				{
 					var NomeArquivo = Path.GetFileName(CaminhoTemp);
 
-					var CaminhoAbsolutoTemp = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads/temp", NomeArquivo);
-					var CaminhoAbsolutoDef = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads", ProdutoId.ToString(), NomeArquivo);
+					var CaminhoDef = Path.Combine("/uploads", ProdutoId.ToString(), NomeArquivo).Replace("\\", "/");
 
-					if (File.Exists(CaminhoAbsolutoTemp))
+					if (CaminhoDef != CaminhoTemp)
 					{
-						File.Copy(CaminhoAbsolutoTemp, CaminhoAbsolutoDef);
+						var CaminhoAbsolutoTemp = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads/temp", NomeArquivo);
+						var CaminhoAbsolutoDef = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads", ProdutoId.ToString(), NomeArquivo);
+
 						if (File.Exists(CaminhoAbsolutoTemp))
 						{
-							File.Delete(CaminhoAbsolutoTemp);
-						}
+							//Deleta arquivo no caminho de Destino.
+							if (File.Exists(CaminhoAbsolutoDef))
+							{
+								File.Delete(CaminhoAbsolutoTemp);
+							}
+							//Copia arquivo da pasta Temporaria para Destino.
+							File.Copy(CaminhoAbsolutoTemp, CaminhoAbsolutoDef);
+							
+							//Deleta arquivo da pasta temporaria.
+							if (File.Exists(CaminhoAbsolutoTemp))
+							{
+								File.Delete(CaminhoAbsolutoTemp);
+							}
 
-						ListaImagensDef.Add(new Imagem() { Caminho = Path.Combine("/uploads", ProdutoId.ToString(), NomeArquivo).Replace("\\", "/"), ProdutoId = ProdutoId });
+							ListaImagensDef.Add(new Imagem() { Caminho = Path.Combine("/uploads", ProdutoId.ToString(), NomeArquivo).Replace("\\", "/"), ProdutoId = ProdutoId });
+						}
+						else
+						{
+							return null;
+						}
 					}
 					else
 					{
-						return null;
+						ListaImagensDef.Add(new Imagem() { Caminho = Path.Combine("/uploads", ProdutoId.ToString(), NomeArquivo).Replace("\\", "/"), ProdutoId = ProdutoId });
 					}
 				}
 			}

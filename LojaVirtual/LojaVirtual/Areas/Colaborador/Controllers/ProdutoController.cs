@@ -74,14 +74,22 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			if (ModelState.IsValid)
 			{
 				_produtoRepository.Atualizar(produto);
+				List<Imagem> ListaImagensDef = GerenciadorArquivo.MoverImagensProduto(new List<string>(Request.Form["imagem"]), produto.Id);
+
+				_imagemRepository.ExcluirImagensDoProduto(produto.Id);
+				_imagemRepository.CadastrarImagens(ListaImagensDef, produto.Id);
 
 				TempData["MSG_S"] = Mensagem.MSG_S001;
 
 				return RedirectToAction(nameof(Index));
 			}
+			else
+			{
+				ViewBag.Categorias = _categoriaRepository.ObterTodasCategorias().Select(a => new SelectListItem(a.Nome, a.Id.ToString()));
+				produto.Imagens = new List<string>(Request.Form["imagem"]).Where(a => a.Trim().Length > 0).Select(a => new Imagem() { Caminho = a }).ToList();
 
-			ViewBag.Categorias = _categoriaRepository.ObterTodasCategorias().Select(a => new SelectListItem(a.Nome, a.Id.ToString()));
-			return View(produto);
+				return View(produto);
+			}
 		}
 	}
 }
