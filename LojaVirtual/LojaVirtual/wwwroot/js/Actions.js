@@ -1,4 +1,4 @@
-﻿$(document).ready(function () {
+﻿ $(document).ready(function () {
     $(".btn-danger").click(function (e) {
         var resultado = confirm("Tem certeza que quer realizar está operação?");
 
@@ -13,7 +13,7 @@
 
 function AjaxUploadImagemProduto() {
     $(".img-upload").click(function () {
-        $(this).parent().find(".input-file").click();
+        $(this).parent().parent().find(".input-file").click();
     });
 
     $(".btn-imagem-excluir").click(function () {

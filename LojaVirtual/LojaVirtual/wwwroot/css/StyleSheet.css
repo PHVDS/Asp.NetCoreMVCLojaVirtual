@@ -18,9 +18,20 @@
 .Imagens div{
     text-align: center;
 }
+
+.Imagens .container-img-thumbnail {
+    width: 100%;
+    height: 100%;
+    max-height: 180px;
+    border: 1px solid #CCC;
+    border-radius: 4px 4px 0px 0px;
+}
+
 .Imagens .img-thumbnail {
     width: 100%;
+    border: none;
 }
+
 .Imagens .input-file {
     display: none;
 }
