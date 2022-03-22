@@ -1,4 +1,5 @@
 ﻿using LojaVirtual.Libraries.Arquivo;
+using LojaVirtual.Libraries.Filtro;
 using LojaVirtual.Libraries.Lang;
 using LojaVirtual.Models;
 using LojaVirtual.Repositories.Contracts;
@@ -12,6 +13,7 @@ using System.Threading.Tasks;
 namespace LojaVirtual.Areas.Colaborador.Controllers
 {
 	[Area("Colaborador")]
+	[ColaboradorAutorizacao]
 	public class ProdutoController : Controller
 	{
 		private readonly IProdutoRepository _produtoRepository;
@@ -90,6 +92,20 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 				return View(produto);
 			}
+		}
+
+		[HttpGet]
+		[ValidateHttpReferer]
+		public IActionResult Excluir(int id)
+		{
+			Produto produto = _produtoRepository.ObterProduto(id);
+			GerenciadorArquivo.ExcluirImagensProduto(produto.Imagens.ToList());
+			_imagemRepository.ExcluirImagensDoProduto(id);
+			_produtoRepository.Excluir(id);
+
+			TempData["MSG_S"] = Mensagem.MSG_S002;
+
+			return RedirectToAction(nameof(Index));
 		}
 	}
 }
