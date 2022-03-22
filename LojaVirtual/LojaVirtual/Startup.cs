@@ -75,7 +75,9 @@ namespace LojaVirtual
 			services.AddScoped<LoginCliente>();
 			services.AddScoped<LoginColaborador>();
 
-			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+			services.AddMvc(opt => {
+				opt.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(x => "O campo deve ser preenchido!");
+			}).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 			
 			services.AddDbContext<LojaVirtualContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 		}
