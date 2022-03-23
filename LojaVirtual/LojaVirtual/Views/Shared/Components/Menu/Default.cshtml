@@ -8,46 +8,7 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-            </button>
-            <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
-                <li class="dropdown-item"><a href="#">Some action</a></li>
-                <li class="dropdown-item"><a href="#">Some other action</a></li>
-                <li class="dropdown-divider"></li>
-                <li class="dropdown-submenu">
-                    <a class="dropdown-item" tabindex="-1" href="#">Hover me for more options</a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-item"><a tabindex="-1" href="#">Second level</a></li>
-                        <li class="dropdown-submenu">
-                            <a class="dropdown-item" href="#">Even More..</a>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown-item"><a href="#">3rd level</a></li>
-                                <li class="dropdown-submenu">
-                                    <a class="dropdown-item" href="#">another level</a>
-                                    <ul class="dropdown-menu">
-                                        <li class="dropdown-item"><a href="#">4th level</a></li>
-                                        <li class="dropdown-item"><a href="#">4th level</a></li>
-                                        <li class="dropdown-submenu">
-                                            <a class="dropdown-item" href="#">another level</a>
-                                            <ul class="dropdown-menu">
-                                                <li class="dropdown-item"><a href="#">5th level</a></li>
-                                                <li class="dropdown-item"><a href="#">5th level</a></li>
-                                                <li class="dropdown-item"><a href="#">5th level</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown-item"><a href="#">3rd level</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown-item"><a href="#">Second level</a></li>
-                        <li class="dropdown-item"><a href="#">Second level</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+        
         @{
             var TodasCategorias = Model.ToList();
         }
@@ -61,28 +22,12 @@
                 <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
                     @{
                         var CategoriasPrincipais = TodasCategorias.Where(a => a.CategoriaPaiId == null).ToList();
+                        ViewData["TodasCategorias"] = TodasCategorias;
                     }
 
                     @foreach (var categoria in CategoriasPrincipais)
                     {
-                        var CategoriasFilho = TodasCategorias.Where(a => a.CategoriaPaiId == categoria.Id);
-
-                        if (CategoriasFilho.Count() > 0)
-                        {
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-item" tabindex="-1" href="#">@categoria.Nome</a>
-                                <ul class="dropdown-menu">
-                                    @foreach (var categoriaF in CategoriasFilho)
-                                    {
-                                        <li class="dropdown-item"><a href="#">@categoriaF.Nome</a></li>
-                                    }
-                                </ul>
-                            </li>
-                        }
-                        else
-                        {
-                            <li class="dropdown-item"><a href="#">@categoria.Nome</a></li>
-                        }
+                        @await Html.PartialAsync("~/Views/Shared/Components/Menu/_Submenu.cshtml", new ViewDataDictionary(ViewData) { {"CategoriaPai", categoria } });
                     }
                 </ul>
             </div>
