@@ -48,12 +48,52 @@
                 </li>
             </ul>
         </div>
+        @{
+            var TodasCategorias = Model.ToList();
+        }
+
+        @if (TodasCategorias != null && TodasCategorias.Count > 0)
+        {
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Categoria
+                </button>
+                <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                    @{
+                        var CategoriasPrincipais = TodasCategorias.Where(a => a.CategoriaPaiId == null).ToList();
+                    }
+
+                    @foreach (var categoria in CategoriasPrincipais)
+                    {
+                        var CategoriasFilho = TodasCategorias.Where(a => a.CategoriaPaiId == categoria.Id);
+
+                        if (CategoriasFilho.Count() > 0)
+                        {
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item" tabindex="-1" href="#">@categoria.Nome</a>
+                                <ul class="dropdown-menu">
+                                    @foreach (var categoriaF in CategoriasFilho)
+                                    {
+                                        <li class="dropdown-item"><a href="#">@categoriaF.Nome</a></li>
+                                    }
+                                </ul>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="dropdown-item"><a href="#">@categoria.Nome</a></li>
+                        }
+                    }
+                </ul>
+            </div>
+        }
+
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="/"><i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
             </li>
 
-            @if (Model != null && Model.Count > 0)
+            @if (TodasCategorias != null && TodasCategorias.Count > 0)
             {
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -62,7 +102,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                        @foreach (var categoria in Model)
+                        @foreach (var categoria in TodasCategorias)
                         {
                             <a class="dropdown-item" href="#">@categoria.Nome</a>
                         }
