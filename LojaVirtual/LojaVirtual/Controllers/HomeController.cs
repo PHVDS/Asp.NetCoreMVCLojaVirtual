@@ -3,6 +3,7 @@ using LojaVirtual.Libraries.Email;
 using LojaVirtual.Libraries.Filtro;
 using LojaVirtual.Libraries.Login;
 using LojaVirtual.Models;
+using LojaVirtual.Models.ViewModels;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -21,23 +22,25 @@ namespace LojaVirtual.Controllers
 		private readonly IClienteRepository _repositoryCliente;
 		private readonly INewsletterRepository _repositoryNewsletter;
 		private readonly GerenciarEmail _gerenciarEmail;
-		
-		public HomeController(LoginCliente loginCliente, IClienteRepository repositoryCliente, INewsletterRepository repositoryNewsletter, GerenciarEmail gerenciarEmail)
+		private readonly IProdutoRepository _produtoRepository;
+		public HomeController(IProdutoRepository produtoRepository, LoginCliente loginCliente, IClienteRepository repositoryCliente, INewsletterRepository repositoryNewsletter, GerenciarEmail gerenciarEmail)
 		{
 			_loginCliente = loginCliente;
 			_repositoryCliente = repositoryCliente;
 			_repositoryNewsletter = repositoryNewsletter;
 			_gerenciarEmail = gerenciarEmail;
+			_produtoRepository = produtoRepository;
 		}
 
 		[HttpGet]
-		public IActionResult Index()
+		public IActionResult Index(int? pagina, string pesquisa)
 		{
-			return View();
+			var viewModel = new IndexViewModel() { lista = _produtoRepository.ObterTodosProdutos(pagina, pesquisa) };
+			return View(viewModel);
 		}
 
 		[HttpPost]
-		public IActionResult Index([FromForm] NewsletterEmail newsletterEmail)
+		public IActionResult Index(int? pagina, string pesquisa, [FromForm] NewsletterEmail newsletterEmail)
 		{
 			if (ModelState.IsValid)
 			{
@@ -49,7 +52,8 @@ namespace LojaVirtual.Controllers
 			}
 			else
 			{
-				return View();
+				var viewModel = new IndexViewModel() { lista = _produtoRepository.ObterTodosProdutos(pagina, pesquisa) };
+				return View(viewModel);
 			}
 		}
 		public IActionResult Categoria()
