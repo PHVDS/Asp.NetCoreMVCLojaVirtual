@@ -14,5 +14,6 @@ namespace LojaVirtual.Repositories.Contracts
 		void Excluir(int Id);
 		Produto ObterProduto(int Id);
 		IPagedList<Produto> ObterTodosProdutos(int? pagina, string pesquisa);
+		IPagedList<Produto> ObterTodosProdutos(int? pagina, string pesquisa, string ordenacao);
 	}
 }

@@ -2,6 +2,7 @@
 @{
     ViewData["Title"] = "Index";
     var pesquisa = Context.Request.Query["pesquisa"];
+    var ordenacao = Context.Request.Query["ordenacao"].ToString();
 }
 
 <main role="main">
@@ -75,7 +76,7 @@
         <div class="container" id="code_prod_complex">
             <div class="row">
                 <div class="offset-md-10 col-md-2">
-                    <select id="ordenacao" asp-items="Model.ordenacao">
+                    <select id="ordenacao" asp-for="@ordenacao" class="form-control-file" asp-items="Model.ordenacao">
                         
                     </select>
                 </div>
@@ -110,7 +111,7 @@
                 }
 
             </div>
-            @Html.PagedListPager((IPagedList)Model.lista, pagina => Url.Action("Index", new { pagina = pagina, pesquisa = pesquisa}))
+            @Html.PagedListPager((IPagedList)Model.lista, pagina => Url.Action("Index", new { pagina = pagina, pesquisa = pesquisa, ordenacao = ordenacao }))
         </div>
     }
 

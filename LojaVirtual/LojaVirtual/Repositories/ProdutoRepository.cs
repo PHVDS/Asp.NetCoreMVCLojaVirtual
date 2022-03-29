@@ -43,10 +43,15 @@ namespace LojaVirtual.Repositories
 
 		public Produto ObterProduto(int Id)
 		{
-			return _banco.Produtos.Include(a=>a.Imagens).Where(a=>a.Id == Id).FirstOrDefault();
+			return _banco.Produtos.Include(a=>a.Imagens).OrderBy(a => a.Nome).Where(a=>a.Id == Id).FirstOrDefault();
 		}
 
 		public IPagedList<Produto> ObterTodosProdutos(int? pagina, string pesquisa)
+		{
+			return ObterTodosProdutos(pagina, pesquisa, "A");		
+		}
+
+		public IPagedList<Produto> ObterTodosProdutos(int? pagina, string pesquisa, string ordenacao)
 		{
 			int RegistroPorPagina = _conf.GetValue<int>("RegistroPorPagina");
 			int NumeroPagina = pagina ?? 1;
@@ -57,8 +62,19 @@ namespace LojaVirtual.Repositories
 			{
 				bancoProduto = bancoProduto.Where(a => a.Nome.Contains(pesquisa.Trim()));
 			}
-
-			return bancoProduto.Include(a=>a.Imagens).ToPagedList<Produto>(NumeroPagina, RegistroPorPagina);
+			if (ordenacao == "A")
+			{
+				bancoProduto = bancoProduto.OrderBy(a => a.Nome);
+			}
+			if (ordenacao == "ME")
+			{
+				bancoProduto = bancoProduto.OrderBy(a => a.Valor);
+			}
+			if (ordenacao == "MA")
+			{
+				bancoProduto = bancoProduto.OrderByDescending(a => a.Valor);
+			}
+			return bancoProduto.Include(a => a.Imagens).ToPagedList<Produto>(NumeroPagina, RegistroPorPagina);
 		}
 	}
 }
