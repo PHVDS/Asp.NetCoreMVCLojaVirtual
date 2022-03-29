@@ -1,6 +1,16 @@
 ﻿$(document).ready(function () {
+    MoverScrollOrdenacao();
     MudarOrdenacao();
 });
+
+function MoverScrollOrdenacao() {
+    if (window.location.hash.length > 0) {
+        var hash = window.location.hash;
+        if (hash == "#posicao-produto") {
+            window.scrollBy(0, 473);
+        }
+    }
+}
 
 function MudarOrdenacao() {
     $("#ordenacao").change(function () {
@@ -18,7 +28,7 @@ function MudarOrdenacao() {
 
         var URL = window.location.protocol + "//" + window.location.host + window.location.pathname;
 
-        var URLComParametros = URL + "?pagina=" + Pagina + "&pesquisa=" + Pesquisa + "&ordenacao=" + Ordenacao + "#code_prod_complex";
+        var URLComParametros = URL + "?pagina=" + Pagina + "&pesquisa=" + Pesquisa + "&ordenacao=" + Ordenacao + "#posicao-produto";
         window.location.href = URLComParametros;
 
     });
