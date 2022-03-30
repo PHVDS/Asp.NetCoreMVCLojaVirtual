@@ -21,13 +21,8 @@ namespace LojaVirtual.Controllers
 
 		[HttpGet]
 		[Route("/Produto/Categoria/{slug}")]
-		public IActionResult ListagemCategoria(string slug)
-		{
-			Categoria CategoriaPrincipal = _categoriaRepository.ObterCategoria(slug);
-
-			List<Categoria> lista = _categoriaRepository.ObterCategoriasRecursivas(CategoriaPrincipal).ToList();
-			ViewBag.Categorias = lista;
-			
+		public IActionResult ListagemCategoria()
+		{			
 			return View();
 		}
 
