@@ -26,18 +26,10 @@ namespace LojaVirtual.Controllers
 			return View(_categoriaRepository.ObterCategoria(slug));
 		}
 
-		public ActionResult Visualizar() 
+		[HttpGet]
+		public ActionResult Visualizar(int id) 
 		{
-			Produto produto = GetProduto();
-			return View(produto);
-		}
-
-		private Produto GetProduto()
-		{
-			return new Produto()
-			{ 
-				Id = 1, Nome = "Xbox", Descricao = "Jogos 4k", Valor = 1000.00M
-			};
+			return View(_produtoRepository.ObterProduto(id));
 		}
 	}
 }
