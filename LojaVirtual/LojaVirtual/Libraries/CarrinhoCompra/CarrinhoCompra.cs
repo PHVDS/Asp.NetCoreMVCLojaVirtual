@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using LojaVirtual.Models.ProdutoAgregador;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +17,9 @@ namespace LojaVirtual.Libraries.CarrinhoCompra
 			_cookie = cookie;
 		}
 
-		public void Cadastrar(Item item)
+		public void Cadastrar(ProdutoItem item)
 		{
-			List<Item> Lista;
+			List<ProdutoItem> Lista;
 			if (_cookie.Existe(Key))
 			{
 				Lista = Consultar();
@@ -35,12 +36,12 @@ namespace LojaVirtual.Libraries.CarrinhoCompra
 			}
 			else
 			{
-				Lista = new List<Item>();
+				Lista = new List<ProdutoItem>();
 				Lista.Add(item);
 			}
 			Salvar(Lista);
 		}
-		public void Atualizar(Item item)
+		public void Atualizar(ProdutoItem item)
 		{
 			var Lista = Consultar();
 			var ItemLocalizado = Lista.SingleOrDefault(a => a.Id == item.Id);
@@ -51,7 +52,7 @@ namespace LojaVirtual.Libraries.CarrinhoCompra
 				Salvar(Lista);
 			}
 		}
-		public void Remover(Item item)
+		public void Remover(ProdutoItem item)
 		{
 			var Lista = Consultar();
 			var ItemLocalizado = Lista.SingleOrDefault(a => a.Id == item.Id);
@@ -62,20 +63,20 @@ namespace LojaVirtual.Libraries.CarrinhoCompra
 				Salvar(Lista);
 			}
 		}
-		public List<Item> Consultar()
+		public List<ProdutoItem> Consultar()
 		{
 			if (_cookie.Existe(Key))
 			{
 				string valor = _cookie.Consultar(Key);
-				return JsonConvert.DeserializeObject<List<Item>>(valor);
+				return JsonConvert.DeserializeObject<List<ProdutoItem>>(valor);
 			}
 			else
 			{
-				return new List<Item>();
+				return new List<ProdutoItem>();
 			}
 		}
 
-		public void Salvar(List<Item> Lista)
+		public void Salvar(List<ProdutoItem> Lista)
 		{
 			string Valor = JsonConvert.SerializeObject(Lista);
 			_cookie.Cadastrar(Key, Valor);
@@ -93,11 +94,5 @@ namespace LojaVirtual.Libraries.CarrinhoCompra
 		{
 			_cookie.Remover(Key);
 		}
-	}
-
-	public class Item
-	{
-		public int? Id { get; set; }
-		public int? Quantidade { get; set; }
 	}
 }
