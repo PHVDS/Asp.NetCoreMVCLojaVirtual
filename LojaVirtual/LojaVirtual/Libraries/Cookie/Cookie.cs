@@ -13,8 +13,10 @@ namespace LojaVirtual.Libraries.Cookie
 		}
 		public void Cadastrar(string Key, string Valor)
 		{
-			CookieOptions Options = new CookieOptions();
-			Options.Expires = DateTime.Now.AddDays(7);
+			CookieOptions Options = new CookieOptions
+			{
+				Expires = DateTime.Now.AddDays(7)
+			};
 
 			_context.HttpContext.Response.Cookies.Append(Key, Valor, Options);
 		}

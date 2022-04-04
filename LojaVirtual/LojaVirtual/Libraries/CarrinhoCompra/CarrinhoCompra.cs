@@ -9,7 +9,7 @@ namespace LojaVirtual.Libraries.CarrinhoCompra
 {
 	public class CarrinhoCompra
 	{
-		private string Key = "Carrinho.Compras";
+		private readonly string Key = "Carrinho.Compras";
 		private readonly Cookie.Cookie _cookie;
 
 		public CarrinhoCompra(Cookie.Cookie cookie)
@@ -36,8 +36,10 @@ namespace LojaVirtual.Libraries.CarrinhoCompra
 			}
 			else
 			{
-				Lista = new List<ProdutoItem>();
-				Lista.Add(item);
+				Lista = new List<ProdutoItem>
+				{
+					item
+				};
 			}
 			Salvar(Lista);
 		}
