@@ -29,7 +29,8 @@ namespace LojaVirtual.Controllers
 			Produto produto = _produtoRepository.ObterProduto(id);
 			if (produto == null)
 			{
-				return View();
+
+				return View("NaoExisteItem");
 			}
 			else
 			{
@@ -40,14 +41,17 @@ namespace LojaVirtual.Controllers
 			}
 		}
 
-		public IActionResult AlterarQuantidade()
+		public IActionResult AlterarQuantidade(int id, int quantidade)
 		{
-			return View();
+			var item = new Item() { Id = id, Quantidade = quantidade};
+			_carrinhoCompra.Atualizar(item);
+			return RedirectToAction(nameof(Index));
 		}
 
-		public IActionResult RemoverItem()
+		public IActionResult RemoverItem(int id)
 		{
-			return View();
+			_carrinhoCompra.Remover(new Item() { Id = id });
+			return RedirectToAction(nameof(Index));
 		}
 	}
 }
