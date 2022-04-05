@@ -5,8 +5,10 @@
 
 <div class="container">
     <section id="order">
-
+        <br />
         <h2 class="title-doc">Carrinho de compras</h2>
+
+        <p> <a asp-controller="Home" asp-action="Index">Voltar</a></p>
 
         <div id="code_cart">
             <div class="card">
@@ -54,20 +56,20 @@
                                     </div> <!-- price-wrap .// -->
                                 </td>
                                 <td class="text-right">
-                                    <a href="" class="btn btn-outline-danger"> × Remove</a>
+                                    <a asp-controller="CarrinhoCompra" asp-action="RemoverItem" asp-route-id="@item.Id" class="btn btn-outline-danger"> × Remove</a>
                                 </td>
                             </tr>
                         }
 
                     </tbody>
                 </table>
-            </div> <!-- card.// -->
-        </div> <!-- code-wrap.// -->
+            </div> 
+        </div> 
     </section>
 
-
     <section id="parameters">
-        <h2 class="title-doc"># Description lists</h2>
+        <br />
+        <h2 class="title-doc">Lista de Descrição</h2>
         <div class="row">
 
             <aside class="col-md-4">
@@ -94,7 +96,6 @@
             <aside class="col-md-4">
                 <h4 class="subtitle-doc">
                     Resumo
-                    <a href="#" data-html="code_desc_right" class="showcode">[code]</a>
                 </h4>
                 <div id="code_desc_right">
                     <div class="box">
