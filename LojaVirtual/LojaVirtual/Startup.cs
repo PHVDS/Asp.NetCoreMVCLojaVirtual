@@ -1,26 +1,22 @@
-﻿using LojaVirtual.Database;
+﻿using AutoMapper;
+using LojaVirtual.Database;
+using LojaVirtual.Libraries.AutoMapper;
 using LojaVirtual.Libraries.CarrinhoCompra;
 using LojaVirtual.Libraries.Email;
 using LojaVirtual.Libraries.Login;
 using LojaVirtual.Libraries.Middleware;
 using LojaVirtual.Libraries.Sessao;
-using LojaVirtual.Models;
 using LojaVirtual.Repositories;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Mail;
-using System.Threading.Tasks;
 
 namespace LojaVirtual
 {
@@ -35,6 +31,9 @@ namespace LojaVirtual
 
 		public void ConfigureServices(IServiceCollection services)
 		{
+			//AutoMapper
+			services.AddAutoMapper(config => config.AddProfile<MappingProfile>());
+
 			//Repository
 			services.AddHttpContextAccessor();
 			services.AddScoped<IClienteRepository, ClienteRepository>();
@@ -45,7 +44,8 @@ namespace LojaVirtual
 			services.AddScoped<IImagemRepository, ImagemRepository>();
 
 			//SMTP
-			services.AddScoped<SmtpClient>(opt => {
+			services.AddScoped<SmtpClient>(opt =>
+			{
 				SmtpClient smtp = new SmtpClient()
 				{
 					Host = Configuration.GetValue<string>("Email:ServerSMTP"),
@@ -70,8 +70,9 @@ namespace LojaVirtual
 
 			//Session - Configuracao
 			services.AddMemoryCache(); //Guarda os dados na memoria
-			services.AddSession(options => { 
-			
+			services.AddSession(options =>
+			{
+
 			});
 
 			services.AddScoped<Sessao>();
@@ -79,10 +80,11 @@ namespace LojaVirtual
 			services.AddScoped<LoginCliente>();
 			services.AddScoped<LoginColaborador>();
 
-			services.AddMvc(opt => {
+			services.AddMvc(opt =>
+			{
 				opt.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(x => "O campo deve ser preenchido!");
 			}).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-			
+
 			services.AddDbContext<LojaVirtualContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 		}
 
@@ -106,7 +108,7 @@ namespace LojaVirtual
 			app.UseCookiePolicy();
 			app.UseSession();
 			app.UseMiddleware<ValidateAntiForgeryTokenMiddleware>();
-			
+
 			app.UseMvc(routes =>
 			{
 				routes.MapRoute(
@@ -117,7 +119,7 @@ namespace LojaVirtual
 					name: "default",
 					template: "/{controller=Home}/{action=Index}/{id?}");
 			});
-			
+
 		}
 	}
 }

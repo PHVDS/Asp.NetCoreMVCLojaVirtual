@@ -5,19 +5,19 @@ using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
+using AutoMapper;
 namespace LojaVirtual.Controllers
 {
 	public class CarrinhoCompraController : Controller
 	{
 		private readonly CarrinhoCompra _carrinhoCompra;
 		private readonly IProdutoRepository _produtoRepository;
-		public CarrinhoCompraController(CarrinhoCompra carrinhoCompra, IProdutoRepository produtoRepository)
+		private readonly IMapper _mapper;
+		public CarrinhoCompraController(IMapper mapper, CarrinhoCompra carrinhoCompra, IProdutoRepository produtoRepository)
 		{
 			_carrinhoCompra = carrinhoCompra;
 			_produtoRepository = produtoRepository;
+			_mapper = mapper;
 		}
 
 		public IActionResult Index()
@@ -30,15 +30,8 @@ namespace LojaVirtual.Controllers
 			{
 				Produto produto = _produtoRepository.ObterProduto(item.Id);
 
-				ProdutoItem produtoItem = new ProdutoItem
-				{
-					Id = produto.Id,
-					Nome = produto.Nome,
-					Imagens = produto.Imagens,
-					Valor = produto.Valor,
-					QuantidadeProdutoCarrinho = item.QuantidadeProdutoCarrinho
-				};
-
+				ProdutoItem produtoItem = _mapper.Map<ProdutoItem>(produto);
+				
 				produtoItemCompleto.Add(produtoItem);
 			}
 			return View(produtoItemCompleto);
