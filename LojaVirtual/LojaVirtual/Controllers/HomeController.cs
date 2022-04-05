@@ -67,11 +67,12 @@ namespace LojaVirtual.Controllers
 		{
 			try
 			{
-				Contato contato = new Contato();
-
-				contato.Nome = HttpContext.Request.Form["nome"];
-				contato.Email = HttpContext.Request.Form["email"];
-				contato.Texto = HttpContext.Request.Form["texto"];
+				Contato contato = new Contato
+				{
+					Nome = HttpContext.Request.Form["nome"],
+					Email = HttpContext.Request.Form["email"],
+					Texto = HttpContext.Request.Form["texto"]
+				};
 
 				var listaMensagens = new List<ValidationResult>();
 				var contexto = new ValidationContext(contato);
@@ -94,7 +95,7 @@ namespace LojaVirtual.Controllers
 					ViewData["CONTATO"] = contato;
 				}
 			}
-			catch (Exception e)
+			catch (Exception)
 			{
 
 				ViewData["MSG_E"] = "Opps! Tivemos um erro, tente novamente mais tarde!";

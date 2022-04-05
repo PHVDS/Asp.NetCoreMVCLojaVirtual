@@ -9,7 +9,7 @@ namespace LojaVirtual.Libraries.Component
 {
 	public class MenuViewComponent : ViewComponent
 	{
-		private ICategoriaRepository _categoriaRepository;
+		private readonly ICategoriaRepository _categoriaRepository;
 		public MenuViewComponent(ICategoriaRepository categoriaRepository)
 		{
 			_categoriaRepository = categoriaRepository;
