@@ -22,7 +22,26 @@ namespace LojaVirtual.Controllers
 
 		public IActionResult Index()
 		{
-			return View();
+			List<ProdutoItem> produtoItemNoCarrinho = _carrinhoCompra.Consultar();
+
+			List<ProdutoItem> produtoItemCompleto = new List<ProdutoItem>();
+
+			foreach (var item in produtoItemNoCarrinho)
+			{
+				Produto produto = _produtoRepository.ObterProduto(item.Id);
+
+				ProdutoItem produtoItem = new ProdutoItem
+				{
+					Id = produto.Id,
+					Nome = produto.Nome,
+					Imagens = produto.Imagens,
+					Valor = produto.Valor,
+					QuantidadeProdutoCarrinho = item.QuantidadeProdutoCarrinho
+				};
+
+				produtoItemCompleto.Add(produtoItem);
+			}
+			return View(produtoItemCompleto);
 		}
 
 		public IActionResult AdicionarItem(int id)
