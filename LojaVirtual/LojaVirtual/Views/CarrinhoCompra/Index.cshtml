@@ -6,9 +6,8 @@
 <div class="container">
     <section id="order">
         <br />
+        <br />
         <h2 class="title-doc">Carrinho de compras</h2>
-
-        <p> <a asp-controller="Home" asp-action="Index">Voltar</a></p>
 
         <div id="code_cart">
             <div class="card">
@@ -29,25 +28,29 @@
                                     <figure class="media">
                                         <div class="img-wrap"><img src="images/items/1.jpg" class="img-thumbnail img-sm"></div>
                                         <figcaption class="media-body">
-                                            <h6 class="title text-truncate">@item.Nome </h6>
+                                            <h6 class="title text-truncate">@item.Nome</h6>
                                             <dl class="dlist-inline small">
                                                 <dt>Size: </dt>
                                                 <dd>XXL</dd>
-                                            </dl>
-                                            <dl class="dlist-inline small">
-                                                <dt>Quantidade: </dt>
-                                                <dd>@item.QuantidadeProdutoCarrinho</dd>
                                             </dl>
                                         </figcaption>
                                     </figure>
                                 </td>
                                 <td>
-                                    <select class="form-control">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                    </select>
+                                    <div class="col-auto">
+                                        <div class="input-group mb-2">
+                                            <input type="hidden" class="inputProdutoId" value="@item.Id" />
+                                            <input type="hidden" class="inputQuantidadeEstoque" value="@item.Quantidade" />
+                                            <input type="hidden" class="inputValorUnitario" value="@item.Valor" />
+                                            <div class="input-group-prepend">
+                                                <a href="#" style="width: 30px;" class="btn btn-primary diminuir"> - </a>
+                                            </div>
+                                            <input type="text" style="width: 30px; text-align: center" readonly="readonly" class="form-control inputQuantidadeProdutoCarrinho" value="@item.QuantidadeProdutoCarrinho">
+                                            <div class="input-group-prepend">
+                                                <a href="#" style="width: 30px;" class="btn btn-primary aumentar"> + </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td>
                                     <div class="price-wrap">
@@ -60,11 +63,10 @@
                                 </td>
                             </tr>
                         }
-
                     </tbody>
                 </table>
-            </div> 
-        </div> 
+            </div>
+        </div>
     </section>
 
     <section id="parameters">

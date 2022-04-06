@@ -2,7 +2,72 @@
     MoverScrollOrdenacao();
     MudarOrdenacao();
     MudarImagemPrincipalProduto();
+    MudarQuantidadeProdutoCarrinho();
 });
+
+function numberToReal(numero) {
+    var numero = numero.toFixed(2).split('.');
+    numero[0] = "R$ " + numero[0].split(/(?=(?:...)*$)/).join('.');
+    return numero.join(',');
+}
+
+function MudarQuantidadeProdutoCarrinho() {
+    $("#order .btn-primary").click(function () {
+        var pai = $(this).parent().parent();
+        if ($(this).hasClass("diminuir")) {
+            LogicaMudarQuantidadeProdutoUnitarioCarrinho("diminuir", $(this));
+            var id = pai.find(".inputProdutoId").val();
+
+        }
+        if ($(this).hasClass("aumentar")) {
+            LogicaMudarQuantidadeProdutoUnitarioCarrinho("aumentar", $(this));
+         
+        }
+    });
+}
+
+function LogicaMudarQuantidadeProdutoUnitarioCarrinho(operacao, botao) {
+    var pai = botao.parent().parent();
+
+    var produtoId = pai.find(".inputProdutoId").val();
+    var quantidadeEstoque = parseInt(pai.find(".inputQuantidadeEstoque").val());
+    var valorUnitario = parseFloat(pai.find(".inputValorUnitario").val().replace("," , "."));
+
+    var campoQuantidadeProdutoCarrinho = pai.find(".inputQuantidadeProdutoCarrinho");
+    var quantidadeProdutoCarrinho = parseInt(campoQuantidadeProdutoCarrinho.val());
+
+    var campoValor = botao.parent().parent().parent().parent().parent().find(".price");
+
+    if (operacao == "aumentar")
+    {
+        if (quantidadeProdutoCarrinho == quantidadeEstoque) {
+            alert("Opps! Voçê atingiu o valor total do estoque disponivel!");
+        }
+        else
+        {
+            quantidadeProdutoCarrinho++;
+            campoQuantidadeProdutoCarrinho.val(quantidadeProdutoCarrinho);
+
+            var resultado = valorUnitario * quantidadeProdutoCarrinho;
+            campoValor.text(numberToReal(resultado));
+        }
+    }
+    else if (operacao == "diminuir")
+    {
+        if (quantidadeProdutoCarrinho == 1) {
+            alert("Opps! Valor Insuficiente!");
+        }
+        else
+        {
+            quantidadeProdutoCarrinho--;
+            campoQuantidadeProdutoCarrinho.val(quantidadeProdutoCarrinho);
+
+            var resultado = valorUnitario * quantidadeProdutoCarrinho;
+            campoValor.text(numberToReal(resultado));
+        }
+    }
+}
+
 function MudarImagemPrincipalProduto() {
     $(".img-small-wrap img").click(function () {
         var Caminho = $(this).attr("src");
