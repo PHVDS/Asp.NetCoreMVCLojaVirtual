@@ -35,8 +35,8 @@
                                                 <dd>XXL</dd>
                                             </dl>
                                             <dl class="dlist-inline small">
-                                                <dt>Color: </dt>
-                                                <dd>Orange color</dd>
+                                                <dt>Quantidade: </dt>
+                                                <dd>@item.QuantidadeProdutoCarrinho</dd>
                                             </dl>
                                         </figcaption>
                                     </figure>
@@ -53,7 +53,7 @@
                                     <div class="price-wrap">
                                         <var class="price">@((item.Valor * item.QuantidadeProdutoCarrinho).ToString("C"))</var>
                                         <small class="text-muted">(@item.Valor.ToString("C") cada)</small>
-                                    </div> <!-- price-wrap .// -->
+                                    </div>
                                 </td>
                                 <td class="text-right">
                                     <a asp-controller="CarrinhoCompra" asp-action="RemoverItem" asp-route-id="@item.Id" class="btn btn-outline-danger"> × Remove</a>
