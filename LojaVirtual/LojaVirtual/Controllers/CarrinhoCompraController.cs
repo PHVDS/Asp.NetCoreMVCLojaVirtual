@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using AutoMapper;
+using LojaVirtual.Libraries.Lang;
+
 namespace LojaVirtual.Controllers
 {
 	public class CarrinhoCompraController : Controller
@@ -57,9 +59,21 @@ namespace LojaVirtual.Controllers
 
 		public IActionResult AlterarQuantidade(int id, int quantidade)
 		{
-			var item = new ProdutoItem() { Id = id, QuantidadeProdutoCarrinho = quantidade};
-			_carrinhoCompra.Atualizar(item);
-			return Ok();
+			Produto produto = _produtoRepository.ObterProduto(id);
+			if (quantidade < 1)
+			{
+				return BadRequest(new { mensagem = Mensagem.MSG_E007 });
+			}
+			else if (quantidade > produto.Quantidade)
+			{
+				return BadRequest(new { mensagem = Mensagem.MSG_E008 });
+			}
+			else
+			{
+				var item = new ProdutoItem() { Id = id, QuantidadeProdutoCarrinho = quantidade };
+				_carrinhoCompra.Atualizar(item);
+				return Ok(new { mensagem = Mensagem.MSG_S001 });
+			}
 		}
 
 		public IActionResult RemoverItem(int id)
