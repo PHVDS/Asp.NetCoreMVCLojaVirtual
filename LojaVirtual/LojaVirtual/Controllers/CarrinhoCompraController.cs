@@ -59,7 +59,7 @@ namespace LojaVirtual.Controllers
 		{
 			var item = new ProdutoItem() { Id = id, QuantidadeProdutoCarrinho = quantidade};
 			_carrinhoCompra.Atualizar(item);
-			return RedirectToAction(nameof(Index));
+			return Ok();
 		}
 
 		public IActionResult RemoverItem(int id)

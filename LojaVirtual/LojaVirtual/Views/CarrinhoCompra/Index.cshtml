@@ -8,6 +8,8 @@
     <section id="order">
         <br />
         <h2 class="title-doc">Carrinho de compras</h2>
+        
+        <a asp-controller="Home" asp-action="Index" class="btn btn-link"> Voltar </a>
 
         <div id="code_cart">
             <div class="card">
@@ -42,12 +44,12 @@
                                             <input type="hidden" class="inputProdutoId" value="@item.Id" />
                                             <input type="hidden" class="inputQuantidadeEstoque" value="@item.Quantidade" />
                                             <input type="hidden" class="inputValorUnitario" value="@item.Valor" />
-                                            <div class="input-group-prepend">
+                                            <div>
                                                 <a href="#" style="width: 60px;" class="btn btn-primary diminuir"> - </a>
                                             </div>
-                                            <input type="text" style="width:60px; text-align: center" readonly="readonly" class="input-group-text form-control-file inputQuantidadeProdutoCarrinho" value="@item.QuantidadeProdutoCarrinho">
-                                            <div class="input-group-prepend">
-                                                <a href="#"  style="width: 60px;" class="btn btn-primary aumentar"> + </a>
+                                            <input type="text" style="width:60px; text-align: center" readonly="readonly" class="input-group-text inputQuantidadeProdutoCarrinho" value="@item.QuantidadeProdutoCarrinho">
+                                            <div>
+                                                <a href="#" style="width: 60px;" class="btn btn-primary aumentar"> + </a>
                                             </div>
                                         </div>
                                     </div>
