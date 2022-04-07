@@ -26,7 +26,7 @@ function AjaxUploadImagemProduto() {
             type: "GET",
             url: "/Colaborador/Imagem/Deletar?caminho=" + CampoHidden.val(),
             error: function () {
-                
+
             },
             success: function () {
                 Imagem.attr("src", "/img/imagem-padrao.png");
@@ -34,7 +34,7 @@ function AjaxUploadImagemProduto() {
                 CampoHidden.val("");
                 InputFile.val("");
             }
-        })
+        });
     });
 
     $(".input-file").change(function () {

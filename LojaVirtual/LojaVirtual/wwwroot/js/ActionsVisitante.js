@@ -15,57 +15,64 @@ function MudarQuantidadeProdutoCarrinho() {
     $("#order .btn-primary").click(function () {
         var pai = $(this).parent().parent();
         if ($(this).hasClass("diminuir")) {
-            LogicaMudarQuantidadeProdutoUnitarioCarrinho("diminuir", $(this));
+            OrquestradorDeAcoesProduto("diminuir", $(this));
             var id = pai.find(".inputProdutoId").val();
 
         }
         if ($(this).hasClass("aumentar")) {
-            LogicaMudarQuantidadeProdutoUnitarioCarrinho("aumentar", $(this));
-         
+            OrquestradorDeAcoesProduto("aumentar", $(this));
+
         }
     });
 }
 
-function LogicaMudarQuantidadeProdutoUnitarioCarrinho(operacao, botao) {
+function OrquestradorDeAcoesProduto(operacao, botao) {
+    /*
+     * Carregamento dos valores
+     */
     var pai = botao.parent().parent();
 
     var produtoId = pai.find(".inputProdutoId").val();
     var quantidadeEstoque = parseInt(pai.find(".inputQuantidadeEstoque").val());
-    var valorUnitario = parseFloat(pai.find(".inputValorUnitario").val().replace("," , "."));
+    var valorUnitario = parseFloat(pai.find(".inputValorUnitario").val().replace(",", "."));
 
     var campoQuantidadeProdutoCarrinho = pai.find(".inputQuantidadeProdutoCarrinho");
-    var quantidadeProdutoCarrinho = parseInt(campoQuantidadeProdutoCarrinho.val());
+    var quantidadeProdutoCarrinhoAntiga = parseInt(campoQuantidadeProdutoCarrinho.val());
 
     var campoValor = botao.parent().parent().parent().parent().parent().find(".price");
 
-    if (operacao == "aumentar")
-    {
-        if (quantidadeProdutoCarrinho == quantidadeEstoque) {
-            alert("Opps! Voçê atingiu o valor total do estoque disponivel!");
-        }
-        else
-        {
-            quantidadeProdutoCarrinho++;
-            campoQuantidadeProdutoCarrinho.val(quantidadeProdutoCarrinho);
+    var produto = new ProdutoQuantidadeEValor(produtoId, quantidadeEstoque, valorUnitario, quantidadeProdutoCarrinhoAntiga, 0, campoQuantidadeProdutoCarrinho, campoValor);
 
-            var resultado = valorUnitario * quantidadeProdutoCarrinho;
-            campoValor.text(numberToReal(resultado));
+    /*
+     * Chamada de Métodos
+     */
+    AlteracoesVisuaisProdutoCarrinho(produto, operacao);
+}
+function AlteracoesVisuaisProdutoCarrinho(produto, operacao) {
+    if (operacao == "aumentar") {
+        if (produto.quantidadeProdutoCarrinhoAntiga == produto.quantidadeEstoque) {
+            alert("Opps! Não possuimos estoque suficiente para a quantidade que você deseja comprar!");
+        } else {
+            produto.quantidadeProdutoCarrinhoNova = produto.quantidadeProdutoCarrinhoAntiga + 1;
+
+            AtualizarQuantidadeEValor(produto);
+        }
+    } else if (operacao == "diminuir") {
+        if (produto.quantidadeProdutoCarrinhoAntiga == 1) {
+            alert("Opps! Caso não deseje este produto clique no botão Remover");
+        } else {
+            produto.quantidadeProdutoCarrinhoNova = produto.quantidadeProdutoCarrinhoAntiga - 1;
+
+            AtualizarQuantidadeEValor(produto);
         }
     }
-    else if (operacao == "diminuir")
-    {
-        if (quantidadeProdutoCarrinho == 1) {
-            alert("Opps! Valor Insuficiente!");
-        }
-        else
-        {
-            quantidadeProdutoCarrinho--;
-            campoQuantidadeProdutoCarrinho.val(quantidadeProdutoCarrinho);
+}
 
-            var resultado = valorUnitario * quantidadeProdutoCarrinho;
-            campoValor.text(numberToReal(resultado));
-        }
-    }
+function AtualizarQuantidadeEValor(produto) {
+    produto.campoQuantidadeProdutoCarrinho.val(produto.quantidadeProdutoCarrinhoNova);
+
+    var resultado = produto.valorUnitario * produto.quantidadeProdutoCarrinhoNova;
+    produto.campoValor.text(numberToReal(resultado));
 }
 
 function MudarImagemPrincipalProduto() {
@@ -108,4 +115,21 @@ function MudarOrdenacao() {
         window.location.href = URLComParametros;
 
     });
+}
+
+/*
+ * ------------------ Classes --------------------
+ */
+class ProdutoQuantidadeEValor {
+    constructor(produtoId, quantidadeEstoque, valorUnitario, quantidadeProdutoCarrinhoAntiga, quantidadeProdutoCarrinhoNova, campoQuantidadeProdutoCarrinho, campoValor) {
+        this.produtoId = produtoId;
+        this.quantidadeEstoque = quantidadeEstoque;
+        this.valorUnitario = valorUnitario;
+
+        this.quantidadeProdutoCarrinhoAntiga = quantidadeProdutoCarrinhoAntiga;
+        this.quantidadeProdutoCarrinhoNova = quantidadeProdutoCarrinhoNova;
+
+        this.campoQuantidadeProdutoCarrinho = campoQuantidadeProdutoCarrinho;
+        this.campoValor = campoValor;
+    }
 }

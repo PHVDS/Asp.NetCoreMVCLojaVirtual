@@ -1,11 +1,11 @@
-﻿@model List<ProdutoItem>
+﻿
+@model List<ProdutoItem>
 @{
     ViewData["Title"] = "Index";
 }
 
 <div class="container">
     <section id="order">
-        <br />
         <br />
         <h2 class="title-doc">Carrinho de compras</h2>
 
@@ -43,11 +43,11 @@
                                             <input type="hidden" class="inputQuantidadeEstoque" value="@item.Quantidade" />
                                             <input type="hidden" class="inputValorUnitario" value="@item.Valor" />
                                             <div class="input-group-prepend">
-                                                <a href="#" style="width: 30px;" class="btn btn-primary diminuir"> - </a>
+                                                <a href="#" style="width: 60px;" class="btn btn-primary diminuir"> - </a>
                                             </div>
-                                            <input type="text" style="width: 30px; text-align: center" readonly="readonly" class="form-control inputQuantidadeProdutoCarrinho" value="@item.QuantidadeProdutoCarrinho">
+                                            <input type="text" style="width:60px; text-align: center" readonly="readonly" class="input-group-text form-control-file inputQuantidadeProdutoCarrinho" value="@item.QuantidadeProdutoCarrinho">
                                             <div class="input-group-prepend">
-                                                <a href="#" style="width: 30px;" class="btn btn-primary aumentar"> + </a>
+                                                <a href="#"  style="width: 60px;" class="btn btn-primary aumentar"> + </a>
                                             </div>
                                         </div>
                                     </div>
