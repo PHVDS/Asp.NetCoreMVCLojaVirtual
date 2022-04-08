@@ -106,6 +106,22 @@ function AtualizarQuantidadeEValor(produto) {
 
     var resultado = produto.valorUnitario * produto.quantidadeProdutoCarrinhoNova;
     produto.campoValor.text(numberToReal(resultado));
+
+    AtualizarSubtotal();
+}
+
+function AtualizarSubtotal() {
+    var Subtotal = 0;
+
+    var TagsComPrice = $(".price");
+
+    TagsComPrice.each(function () {
+        var ValorReais = parseFloat($(this).text().replace("R$", "").replace(".", "").replace(" ", "").replace(",", "."));
+
+        Subtotal += ValorReais;
+    })
+
+    $(".subtotal").text(numberToReal(Subtotal));
 }
 
 function MudarImagemPrincipalProduto() {

@@ -2,6 +2,7 @@
 @model List<ProdutoItem>
 @{
     ViewData["Title"] = "Index";
+    decimal Subtotal = 0;
 }
 
 <div class="container">
@@ -29,45 +30,51 @@
                     <tbody>
                         @foreach (var item in Model)
                         {
-                            <tr>
-                                <td>
-                                    <figure class="media">
-                                        <div class="img-wrap"><img src="images/items/1.jpg" class="img-thumbnail img-sm"></div>
-                                        <figcaption class="media-body">
-                                            <h6 class="title text-truncate">@item.Nome</h6>
-                                            <dl class="dlist-inline small">
-                                                <dt>Size: </dt>
-                                                <dd>XXL</dd>
-                                            </dl>
-                                        </figcaption>
-                                    </figure>
-                                </td>
-                                <td>
-                                    <div class="col-auto">
-                                        <div class="input-group mb-2">
-                                            <input type="hidden" class="inputProdutoId" value="@item.Id" />
-                                            <input type="hidden" class="inputQuantidadeEstoque" value="@item.Quantidade" />
-                                            <input type="hidden" class="inputValorUnitario" value="@item.Valor" />
-                                            <div>
-                                                <a href="#" style="width: 60px;" class="btn btn-primary diminuir"> - </a>
-                                            </div>
-                                            <input type="text" style="width:60px; text-align: center" readonly="readonly" class="input-group-text inputQuantidadeProdutoCarrinho" value="@item.QuantidadeProdutoCarrinho">
-                                            <div>
-                                                <a href="#" style="width: 60px;" class="btn btn-primary aumentar"> + </a>
-                                            </div>
+                        <tr>
+                            <td>
+                                <figure class="media">
+                                    <div class="img-wrap"><img src="images/items/1.jpg" class="img-thumbnail img-sm"></div>
+                                    <figcaption class="media-body">
+                                        <h6 class="title text-truncate">@item.Nome</h6>
+                                        <dl class="dlist-inline small">
+                                            <dt>Size: </dt>
+                                            <dd>XXL</dd>
+                                        </dl>
+                                    </figcaption>
+                                </figure>
+                            </td>
+                            <td>
+                                <div class="col-auto">
+                                    <div class="input-group mb-2">
+                                        <input type="hidden" class="inputProdutoId" value="@item.Id" />
+                                        <input type="hidden" class="inputQuantidadeEstoque" value="@item.Quantidade" />
+                                        <input type="hidden" class="inputValorUnitario" value="@item.Valor" />
+                                        <div>
+                                            <a href="#" style="width: 60px;" class="btn btn-primary diminuir"> - </a>
+                                        </div>
+                                        <input type="text" style="width:60px; text-align: center" readonly="readonly" class="input-group-text inputQuantidadeProdutoCarrinho" value="@item.QuantidadeProdutoCarrinho">
+                                        <div>
+                                            <a href="#" style="width: 60px;" class="btn btn-primary aumentar"> + </a>
                                         </div>
                                     </div>
-                                </td>
-                                <td>
-                                    <div class="price-wrap">
-                                        <var class="price">@((item.Valor * item.QuantidadeProdutoCarrinho).ToString("C"))</var>
-                                        <small class="text-muted">(@item.Valor.ToString("C") cada)</small>
-                                    </div>
-                                </td>
-                                <td class="text-right">
-                                    <a asp-controller="CarrinhoCompra" asp-action="RemoverItem" asp-route-id="@item.Id" class="btn btn-outline-danger"> × Remove</a>
-                                </td>
-                            </tr>
+                                </div>
+                            </td>
+
+                            @{
+                                var ResultadoSubtotalItem = item.Valor * item.QuantidadeProdutoCarrinho;
+                                Subtotal = Subtotal + ResultadoSubtotalItem;
+                            }
+
+                            <td>
+                                <div class="price-wrap">
+                                    <var class="price">@((ResultadoSubtotalItem).ToString("C"))</var>
+                                    <small class="text-muted">(@item.Valor.ToString("C") cada)</small>
+                                </div>
+                            </td>
+                            <td class="text-right">
+                                <a asp-controller="CarrinhoCompra" asp-action="RemoverItem" asp-route-id="@item.Id" class="btn btn-outline-danger"> × Remove</a>
+                            </td>
+                        </tr>
                         }
                     </tbody>
                 </table>
@@ -109,7 +116,7 @@
                     <div class="box">
                         <dl class="dlist-align">
                             <dt>Subtotal: </dt>
-                            <dd class="text-right">R$ 120,00</dd>
+                            <dd class="text-right subtotal">@Subtotal.ToString("C")</dd>
                         </dl>
                         <dl class="dlist-align">
                             <dt>Frete:</dt>
