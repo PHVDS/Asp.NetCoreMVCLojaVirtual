@@ -89,9 +89,10 @@ namespace LojaVirtual.Controllers
 				ValorPrazoFrete valorSEDEX10 = await _wscorreios.CalcularFrete(cepDestino.ToString(), TipoFreteConstant.SEDEX10, pacotes);
 
 				List<ValorPrazoFrete> lista = new List<ValorPrazoFrete>();
-				lista.Add(valorPAC);
-				lista.Add(valorSEDEX);
-				lista.Add(valorSEDEX10);
+
+				if (valorPAC != null) lista.Add(valorPAC);
+				if (valorSEDEX != null) lista.Add(valorSEDEX);
+				if (valorSEDEX10 != null) lista.Add(valorSEDEX10);
 
 				return Ok(lista);
 			}
