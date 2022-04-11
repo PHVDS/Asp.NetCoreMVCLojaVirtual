@@ -3,6 +3,7 @@ using LojaVirtual.Database;
 using LojaVirtual.Libraries.AutoMapper;
 using LojaVirtual.Libraries.CarrinhoCompra;
 using LojaVirtual.Libraries.Email;
+using LojaVirtual.Libraries.Gerenciador.Frete;
 using LojaVirtual.Libraries.Login;
 using LojaVirtual.Libraries.Middleware;
 using LojaVirtual.Libraries.Sessao;
@@ -17,6 +18,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Net;
 using System.Net.Mail;
+using WSCorreios;
 
 namespace LojaVirtual
 {
@@ -57,9 +59,15 @@ namespace LojaVirtual
 
 				return smtp;
 			});
+			services.AddScoped<CalcPrecoPrazoWSSoap>(options => {
+				var servico = new CalcPrecoPrazoWSSoapClient(CalcPrecoPrazoWSSoapClient.EndpointConfiguration.CalcPrecoPrazoWSSoap);
+				return servico;	
+			});
 			services.AddScoped<GerenciarEmail>();
-			services.AddScoped<Libraries.Cookie.Cookie>();
+			services.AddScoped<Cookie>();
 			services.AddScoped<CarrinhoCompra>();
+			services.AddScoped<CalcularPacote>();
+			services.AddScoped<WSCorreiosCalcularFrete>();
 
 
 			services.Configure<CookiePolicyOptions>(options =>
