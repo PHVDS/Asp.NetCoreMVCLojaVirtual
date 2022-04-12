@@ -5,28 +5,56 @@
     MudarQuantidadeProdutoCarrinho();
 
     MascaraCEP();
-    AJAXCalcularFrete();
+    AcaoCalcularFreteBtn();
+    AJAXCalcularFrete(false);
 });
 
 function MascaraCEP() {
     $(".cep").mask("00.000-000");
 }
 
-function AJAXCalcularFrete() {
+function AcaoCalcularFreteBtn() {
     $(".btn-calcular-frete").click(function () {
-        var cep = $(".cep").val().replace(".", "").replace("-", "");
+        AJAXCalcularFrete(true);
+        e.preventDefault();
+    });
+}
+
+function AJAXCalcularFrete(chamadaPorBtn) {
+    var cep = $(".cep").val().replace(".", "").replace("-", "");
+
+    if (cep.length == 8) {
+        $(".container-frete").html("<img src='\\img\\loading.gif' />");
 
         $.ajax({
             type: "GET",
             url: "/CarrinhoCompra/CalcularFrete?cepDestino=" + cep,
-            error: function(data) {
+            error: function (data) {
+                MostrarMensagemDeErro("Opps! Erro ao obter o Frete..." + data.Message);
                 console.info(data);
             },
-            success: function(data) {
+            success: function (data) {
+
+                html = "";
+
+                for (var i = 0; i < data.length; i++) {
+                    var tipoFrete = data[i].tipoFrete;
+                    var valor = data[i].valor;
+                    var prazo = data[i].prazo;
+
+                    html += "<dl class=\"dlist-align\"><dt><input type=\"radio\" name=\"frete\" value=\"" + tipoFrete + "\" /></dt><dd>" + tipoFrete + " - " + numberToReal(valor) + " (" + prazo + " dias úteis)</dd></dl>";
+                }
+
+                $(".container-frete").html(html);
                 console.info(data);
             }
         });
-    });
+    }
+    else {
+        if (chamadaPorBtn == true) {
+            MostrarMensagemDeErro("Digite o CEP para calcular o frete!");
+        }
+    }
 }
 
 function numberToReal(numero) {
@@ -111,7 +139,7 @@ function AJAXComunicarAlteracaoQuantidadeProduto(produto) {
             AtualizarQuantidadeEValor(produto);
         },
         success: function () {
-
+            AJAXCalcularFrete();
         }
     });
 }
