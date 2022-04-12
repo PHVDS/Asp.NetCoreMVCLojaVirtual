@@ -21,9 +21,16 @@ function AcaoCalcularFreteBtn() {
 }
 
 function AJAXCalcularFrete(chamadaPorBtn) {
+    if (chamadaPorBtn == false) {
+        if ($.cookie('Carrinho.CEP') != undefined) {
+            $(".cep").val($.cookie('Carrinho.CEP'));
+        }
+    }
+
     var cep = $(".cep").val().replace(".", "").replace("-", "");
 
     if (cep.length == 8) {
+        $.cookie('Carrinho.CEP', $(".cep").val());
         $(".container-frete").html("<img src='\\img\\loading.gif' />");
 
         $.ajax({
