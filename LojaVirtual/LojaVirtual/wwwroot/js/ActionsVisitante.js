@@ -28,6 +28,7 @@ function AJAXCalcularFrete(chamadaPorBtn) {
     }
 
     var cep = $(".cep").val().replace(".", "").replace("-", "");
+    $.removeCookie("Carrinho.TipoFrete");
 
     if (cep.length == 8) {
         $.cookie('Carrinho.CEP', $(".cep").val());
@@ -58,6 +59,9 @@ function AJAXCalcularFrete(chamadaPorBtn) {
                 $(".container-frete").html(html);
                 $(".container-frete").find("input[type=radio]").change(function () {
                     var valorFrete = parseFloat($(this).parent().find("input[type=hidden]").val());
+
+                    $.cookie("Carrinho.TipoFrete", $(this).val());
+
                     $(".frete").text(numberToReal(valorFrete));
 
                     var subtotal = parseFloat($(".subtotal").text().replace("R$", "").replace(".", "").replace(",","."));
@@ -71,6 +75,7 @@ function AJAXCalcularFrete(chamadaPorBtn) {
     }
     else {
         if (chamadaPorBtn == true) {
+            $(".container-frete").html("");
             MostrarMensagemDeErro("Digite o CEP para calcular o frete!");
         }
     }
