@@ -14,7 +14,7 @@ function MascaraCEP() {
 }
 
 function AcaoCalcularFreteBtn() {
-    $(".btn-calcular-frete").click(function () {
+    $(".btn-calcular-frete").click(function (e) {
         AJAXCalcularFrete(true);
         e.preventDefault();
     });
@@ -49,10 +49,15 @@ function AJAXCalcularFrete(chamadaPorBtn) {
                     var valor = data[i].valor;
                     var prazo = data[i].prazo;
 
-                    html += "<dl class=\"dlist-align\"><dt><input type=\"radio\" name=\"frete\" value=\"" + tipoFrete + "\" /></dt><dd>" + tipoFrete + " - " + numberToReal(valor) + " (" + prazo + " dias úteis)</dd></dl>";
+                    html += "<dl class=\"dlist-align\"><dt><input type=\"radio\" name=\"frete\" value=\"" + tipoFrete + "\" /><input type=\"hidden\" name=\"valor\" value=\"" + valor + "\" \/></dt><dd>" + tipoFrete + " - " + numberToReal(valor) + " (" + prazo + " dias úteis)</dd></dl>";
                 }
 
                 $(".container-frete").html(html);
+                $(".container-frete").find("input[type=radio]").change(function () {
+                    var valorFrete = parseFloat($(this).parent().find("input[type=hidden]").val());
+                    $(".frete").text(numberToReal(valorFrete));
+                    
+                });
                 console.info(data);
             }
         });
