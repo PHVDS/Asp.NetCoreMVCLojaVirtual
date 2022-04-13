@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using LojaVirtual.Controllers.Base;
 using LojaVirtual.Libraries.CarrinhoCompra;
 using LojaVirtual.Libraries.Gerenciador.Frete;
 using LojaVirtual.Libraries.Lang;
@@ -13,24 +14,13 @@ using System.Threading.Tasks;
 
 namespace LojaVirtual.Controllers
 {
-	public class CarrinhoCompraController : Controller
+	public class CarrinhoCompraController : BaseController
 	{
-		private readonly CookieCarrinhoCompra _cookieCarrinhoCompra;
-		private readonly CookieValorPrazoFrete _cookieValorPrazoFrete;
-		private readonly IProdutoRepository _produtoRepository;
-		private readonly IMapper _mapper;
-		private readonly WSCorreiosCalcularFrete _wscorreios;
-		private readonly CalcularPacote _calcularPacote;
-		public CarrinhoCompraController(CookieValorPrazoFrete cookieValorPrazoFrete, CalcularPacote calcularPacote, WSCorreiosCalcularFrete wscorreios, IMapper mapper, CookieCarrinhoCompra cookieCarrinhoCompra, IProdutoRepository produtoRepository)
-		{
-			_cookieCarrinhoCompra = cookieCarrinhoCompra;
-			_cookieValorPrazoFrete = cookieValorPrazoFrete;
-			_produtoRepository = produtoRepository;
-			_mapper = mapper;
-			_wscorreios = wscorreios;
-			_calcularPacote = calcularPacote;
+		public CarrinhoCompraController(CookieValorPrazoFrete cookieValorPrazoFrete, CalcularPacote calcularPacote, WSCorreiosCalcularFrete wscorreios, IMapper mapper, CookieCarrinhoCompra cookieCarrinhoCompra, IProdutoRepository produtoRepository) 
+			: base(cookieValorPrazoFrete, calcularPacote, wscorreios, mapper, cookieCarrinhoCompra, produtoRepository)
+		{ 
+		
 		}
-
 		public IActionResult Index()
 		{
 			List<ProdutoItem> produtoItemCompleto = CarregarProdutoDB();
@@ -105,25 +95,6 @@ namespace LojaVirtual.Controllers
 				_cookieValorPrazoFrete.Remover();
 				return BadRequest(e);
 			}
-		}
-
-		private List<ProdutoItem> CarregarProdutoDB()
-		{
-			List<ProdutoItem> produtoItemNoCarrinho = _cookieCarrinhoCompra.Consultar();
-
-			List<ProdutoItem> produtoItemCompleto = new List<ProdutoItem>();
-
-			foreach (var item in produtoItemNoCarrinho)
-			{
-				Produto produto = _produtoRepository.ObterProduto(item.Id);
-
-				ProdutoItem produtoItem = _mapper.Map<ProdutoItem>(produto);
-				produtoItem.QuantidadeProdutoCarrinho = item.QuantidadeProdutoCarrinho;
-
-				produtoItemCompleto.Add(produtoItem);
-			}
-
-			return produtoItemCompleto;
 		}
 	}
 }
