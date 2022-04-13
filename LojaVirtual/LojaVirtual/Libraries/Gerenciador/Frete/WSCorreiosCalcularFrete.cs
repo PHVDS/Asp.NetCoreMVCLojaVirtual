@@ -38,6 +38,7 @@ namespace LojaVirtual.Libraries.Gerenciador.Frete
 					.Select(list => new ValorPrazoFrete
 					{
 						TipoFrete = list.First().TipoFrete,
+						CodTipoFrete = list.First().CodTipoFrete,
 						Prazo = list.Max(c => c.Prazo),
 						Valor = list.Sum(c => c.Valor)
 					}).ToList().First();
@@ -65,6 +66,7 @@ namespace LojaVirtual.Libraries.Gerenciador.Frete
 				return new ValorPrazoFrete()
 				{
 					TipoFrete = TipoFreteConstant.ObterNomesConstant(tipoFrete),
+					CodTipoFrete = tipoFrete,
 					Prazo = int.Parse(resultado.Servicos[0].PrazoEntrega),
 					Valor = valorFinal
 				};

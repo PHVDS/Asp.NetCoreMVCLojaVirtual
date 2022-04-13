@@ -65,7 +65,8 @@ namespace LojaVirtual
 			});
 			services.AddScoped<GerenciarEmail>();
 			services.AddScoped<Cookie>();
-			services.AddScoped<CarrinhoCompra>();
+			services.AddScoped<CookieCarrinhoCompra>();
+			services.AddScoped<CookieValorPrazoFrete>();
 			services.AddScoped<CalcularPacote>();
 			services.AddScoped<WSCorreiosCalcularFrete>();
 

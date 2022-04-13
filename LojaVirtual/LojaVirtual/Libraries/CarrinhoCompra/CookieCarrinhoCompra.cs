@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace LojaVirtual.Libraries.CarrinhoCompra
 {
-	public class CarrinhoCompra
+	public class CookieCarrinhoCompra
 	{
 		private readonly string Key = "Carrinho.Compras";
 		private readonly Cookie.Cookie _cookie;
 
-		public CarrinhoCompra(Cookie.Cookie cookie)
+		public CookieCarrinhoCompra(Cookie.Cookie cookie)
 		{
 			_cookie = cookie;
 		}
@@ -31,13 +31,15 @@ namespace LojaVirtual.Libraries.CarrinhoCompra
 				}
 				else
 				{
-					ItemLocalizado.QuantidadeProdutoCarrinho = ItemLocalizado.QuantidadeProdutoCarrinho + 1;
+					ItemLocalizado.QuantidadeProdutoCarrinho += 1;
 				}
 			}
 			else
 			{
-				Lista = new List<ProdutoItem>();
-				Lista.Add(item);
+				Lista = new List<ProdutoItem>
+				{
+					item
+				};
 			}
 			Salvar(Lista);
 		}

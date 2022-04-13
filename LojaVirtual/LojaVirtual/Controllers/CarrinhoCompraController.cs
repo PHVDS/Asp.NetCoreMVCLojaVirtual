@@ -15,14 +15,16 @@ namespace LojaVirtual.Controllers
 {
 	public class CarrinhoCompraController : Controller
 	{
-		private readonly CarrinhoCompra _carrinhoCompra;
+		private readonly CookieCarrinhoCompra _cookieCarrinhoCompra;
+		private readonly CookieValorPrazoFrete _cookieValorPrazoFrete;
 		private readonly IProdutoRepository _produtoRepository;
 		private readonly IMapper _mapper;
 		private readonly WSCorreiosCalcularFrete _wscorreios;
 		private readonly CalcularPacote _calcularPacote;
-		public CarrinhoCompraController(CalcularPacote calcularPacote, WSCorreiosCalcularFrete wscorreios, IMapper mapper, CarrinhoCompra carrinhoCompra, IProdutoRepository produtoRepository)
+		public CarrinhoCompraController(CookieValorPrazoFrete cookieValorPrazoFrete, CalcularPacote calcularPacote, WSCorreiosCalcularFrete wscorreios, IMapper mapper, CookieCarrinhoCompra cookieCarrinhoCompra, IProdutoRepository produtoRepository)
 		{
-			_carrinhoCompra = carrinhoCompra;
+			_cookieCarrinhoCompra = cookieCarrinhoCompra;
+			_cookieValorPrazoFrete = cookieValorPrazoFrete;
 			_produtoRepository = produtoRepository;
 			_mapper = mapper;
 			_wscorreios = wscorreios;
@@ -46,7 +48,7 @@ namespace LojaVirtual.Controllers
 			else
 			{
 				var item = new ProdutoItem() { Id = id, QuantidadeProdutoCarrinho = 1};
-				_carrinhoCompra.Cadastrar(item);
+				_cookieCarrinhoCompra.Cadastrar(item);
 
 				return RedirectToAction(nameof(Index));
 			}
@@ -66,14 +68,14 @@ namespace LojaVirtual.Controllers
 			else
 			{
 				var item = new ProdutoItem() { Id = id, QuantidadeProdutoCarrinho = quantidade };
-				_carrinhoCompra.Atualizar(item);
+				_cookieCarrinhoCompra.Atualizar(item);
 				return Ok(new { mensagem = Mensagem.MSG_S001 });
 			}
 		}
 
 		public IActionResult RemoverItem(int id)
 		{
-			_carrinhoCompra.Remover(new ProdutoItem() { Id = id });
+			_cookieCarrinhoCompra.Remover(new ProdutoItem() { Id = id });
 			return RedirectToAction(nameof(Index));
 		}
 
@@ -94,18 +96,20 @@ namespace LojaVirtual.Controllers
 				if (valorSEDEX != null) lista.Add(valorSEDEX);
 				if (valorSEDEX10 != null) lista.Add(valorSEDEX10);
 
+				_cookieValorPrazoFrete.Cadastrar(lista);
+
 				return Ok(lista);
 			}
 			catch (Exception e)
 			{
-
+				_cookieValorPrazoFrete.Remover();
 				return BadRequest(e);
 			}
 		}
 
 		private List<ProdutoItem> CarregarProdutoDB()
 		{
-			List<ProdutoItem> produtoItemNoCarrinho = _carrinhoCompra.Consultar();
+			List<ProdutoItem> produtoItemNoCarrinho = _cookieCarrinhoCompra.Consultar();
 
 			List<ProdutoItem> produtoItemCompleto = new List<ProdutoItem>();
 
