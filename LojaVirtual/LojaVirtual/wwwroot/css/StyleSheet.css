@@ -113,5 +113,21 @@
     text-align: center;
 }
 
+.control-inline{
+    flex-wrap: nowrap;
+}
+.dlist-align dt{
+    width: 65px;
+}
+.dlist-align dd {
+    margin-left: 65px;
+    text-align: left;
+}
+.btn-continuar, .btn-continuar-comprando{
+    width: 100%;
+    min-height: 60px;
+    font-size: 30px;
+}
+
 
 
