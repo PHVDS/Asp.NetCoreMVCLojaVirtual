@@ -39,13 +39,16 @@ namespace LojaVirtual.Libraries.Cookie
 		{
 			_context.HttpContext.Response.Cookies.Delete(Key);
 		}
-		public string Consultar(string Key)
+		public string Consultar(string Key, bool Crypt = true)
 		{
-			var ValorCrypt = _context.HttpContext.Request.Cookies[Key];
+			var valor = _context.HttpContext.Request.Cookies[Key];
 
-			var Valor = StringCipher.Decrypt(ValorCrypt, _configuration.GetValue<string>("KeyCrypt"));
+			if (Crypt)
+			{
+				valor = StringCipher.Decrypt(valor, _configuration.GetValue<string>("KeyCrypt"));
+			}
 
-			return Valor; 
+			return valor; 
 		}
 		public bool Existe(string Key)
 		{

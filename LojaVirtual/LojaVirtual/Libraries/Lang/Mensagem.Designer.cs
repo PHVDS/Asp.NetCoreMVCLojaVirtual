@@ -133,6 +133,15 @@ namespace LojaVirtual.Libraries.Lang {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Tipo de Frete não foi selecionado!.
+        /// </summary>
+        public static string MSG_E009 {
+            get {
+                return ResourceManager.GetString("MSG_E009", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Registro salvo com sucesso!.
         /// </summary>
         public static string MSG_S001 {
