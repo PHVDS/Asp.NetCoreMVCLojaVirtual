@@ -18,15 +18,11 @@ namespace LojaVirtual.Controllers
 {
 	public class HomeController : Controller
 	{
-		private readonly LoginCliente _loginCliente;
-		private readonly IClienteRepository _repositoryCliente;
 		private readonly INewsletterRepository _repositoryNewsletter;
 		private readonly GerenciarEmail _gerenciarEmail;
 		private readonly IProdutoRepository _produtoRepository;
-		public HomeController(IProdutoRepository produtoRepository, LoginCliente loginCliente, IClienteRepository repositoryCliente, INewsletterRepository repositoryNewsletter, GerenciarEmail gerenciarEmail)
+		public HomeController(IProdutoRepository produtoRepository, INewsletterRepository repositoryNewsletter, GerenciarEmail gerenciarEmail)
 		{
-			_loginCliente = loginCliente;
-			_repositoryCliente = repositoryCliente;
 			_repositoryNewsletter = repositoryNewsletter;
 			_gerenciarEmail = gerenciarEmail;
 			_produtoRepository = produtoRepository;
@@ -102,56 +98,6 @@ namespace LojaVirtual.Controllers
 			}
 			
 			return View("Contato");
-		}
-
-		[HttpGet]
-		public IActionResult Login()
-		{
-			return View();
-		}
-
-		[HttpPost]
-		public IActionResult Login([FromForm]Cliente cliente)
-		{
-			Cliente clienteDB = _repositoryCliente.Login(cliente.Email, cliente.Senha);
-			if (clienteDB != null)
-			{
-				_loginCliente.Login(clienteDB);
-
-				return new RedirectResult(Url.Action(nameof(Painel)));
-			}
-			else
-			{
-				ViewData["MSG_E"] = "Usuario não encontrado, verifique os campos digitados!";
-				return View();
-			}
-		}
-
-		[HttpGet]
-		[ClienteAutorizacao]
-		public IActionResult Painel()
-		{
-			return new ContentResult() { Content = "Aqui é o Painel" };	
-		}
-
-		[HttpGet]
-		public IActionResult CadastroCliente()
-		{
-			return View();
-		}
-
-		[HttpPost]
-		public IActionResult CadastroCliente([FromForm] Cliente cliente)
-		{
-			if (ModelState.IsValid)
-			{
-				_repositoryCliente.Cadastrar(cliente);
-
-				TempData["MSG_S"] = "Cadastro feito com sucesso!";
-
-				return RedirectToAction(nameof(CadastroCliente));
-			}
-			return View();
 		}
 	}
 }

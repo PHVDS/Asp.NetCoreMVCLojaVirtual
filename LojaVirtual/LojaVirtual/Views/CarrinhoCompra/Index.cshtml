@@ -1,5 +1,6 @@
 ﻿
 @model List<ProdutoItem>
+@inject LojaVirtual.Libraries.Login.LoginCliente _loginCliente
 @{
     ViewData["Title"] = "Index";
     decimal Subtotal = 0;
@@ -141,7 +142,14 @@
                 </aside>
                 <aside class="col-md-4">
                     <div class="box">
-                        <a asp-controller="Pagamento" asp-action="Index" class="btn btn-primary btn-continuar disabled">Continuar</a>
+                        @if (_loginCliente.GetCliente() == null)
+                        {
+
+                        }
+                        else
+                        {
+                            <a asp-controller="Pagamento" asp-action="Index" class="btn btn-primary btn-continuar disabled">Continuar</a>
+                        }
                     </div>
                 </aside>
             </div>
