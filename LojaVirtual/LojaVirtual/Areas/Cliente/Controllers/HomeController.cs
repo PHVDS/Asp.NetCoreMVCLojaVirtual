@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace LojaVirtual.Areas.Cliente.Controllers
 {
+	[Area("Cliente")]
 	public class HomeController : Controller
 	{
 		private readonly LoginCliente _loginCliente;

@@ -1,5 +1,4 @@
-﻿
-@model List<ProdutoItem>
+﻿@model List<ProdutoItem>
 @inject LojaVirtual.Libraries.Login.LoginCliente _loginCliente
 @{
     ViewData["Title"] = "Index";
@@ -144,7 +143,7 @@
                     <div class="box">
                         @if (_loginCliente.GetCliente() == null)
                         {
-
+                            <a asp-controller="Home" asp-action="Login" asp-area="Cliente" class="btn btn-primary btn-continuar disabled">Continuar</a>
                         }
                         else
                         {

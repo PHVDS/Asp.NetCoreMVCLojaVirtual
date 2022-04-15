@@ -81,11 +81,11 @@ namespace LojaVirtual
 			services.AddMemoryCache(); //Guarda os dados na memoria
 			services.AddSession(options =>
 			{
-
+				options.Cookie.IsEssential = true;
 			});
 
 			services.AddScoped<Sessao>();
-			services.AddScoped<Libraries.Cookie.Cookie>();
+			services.AddScoped<Cookie>();
 			services.AddScoped<LoginCliente>();
 			services.AddScoped<LoginColaborador>();
 
