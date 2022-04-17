@@ -13703,11 +13703,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PAULO HENRIQUE\\Documents\\Visual Studio 2019\\Asp.NetCoreMvcLojaVirtual\\LojaVirtual\\LojaVirtual\\LojaVirtual.csproj",
+      "projectUniqueName": "C:\\Users\\PAULO HENRIQUE\\Documents\\Visual Studio 2019\\LojaVirtual\\src\\LojaVirtual.csproj",
       "projectName": "LojaVirtual",
-      "projectPath": "C:\\Users\\PAULO HENRIQUE\\Documents\\Visual Studio 2019\\Asp.NetCoreMvcLojaVirtual\\LojaVirtual\\LojaVirtual\\LojaVirtual.csproj",
+      "projectPath": "C:\\Users\\PAULO HENRIQUE\\Documents\\Visual Studio 2019\\LojaVirtual\\src\\LojaVirtual.csproj",
       "packagesPath": "C:\\Users\\PAULO HENRIQUE\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PAULO HENRIQUE\\Documents\\Visual Studio 2019\\Asp.NetCoreMvcLojaVirtual\\LojaVirtual\\LojaVirtual\\obj\\",
+      "outputPath": "C:\\Users\\PAULO HENRIQUE\\Documents\\Visual Studio 2019\\LojaVirtual\\src\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
