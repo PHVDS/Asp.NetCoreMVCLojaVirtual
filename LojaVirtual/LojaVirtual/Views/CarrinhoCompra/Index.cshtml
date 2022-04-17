@@ -143,7 +143,13 @@
                     <div class="box">
                         @if (_loginCliente.GetCliente() == null)
                         {
-                            <a asp-controller="Home" asp-action="Login" asp-area="Cliente" class="btn btn-primary btn-continuar disabled">Continuar</a>
+                            <a asp-controller="Home" asp-action="Login" asp-area="Cliente" 
+                               asp-route-returnUrl="@Url.Action("Index", "Pagamento", new {area = ""})" 
+                               class="btn btn-primary btn-continuar disabled">
+                                
+                                Continuar
+                        
+                            </a>
                         }
                         else
                         {

@@ -17,9 +17,9 @@ namespace LojaVirtual.Libraries.CarrinhoCompra
 			_cookie = cookie;
 		}
 
-		public void Cadastrar(List<ValorPrazoFrete> Lista)
+		public void Cadastrar(List<ValorPrazoFrete> lista)
 		{
-			var jsonString = JsonConvert.SerializeObject(Lista);
+			var jsonString = JsonConvert.SerializeObject(lista);
 			_cookie.Cadastrar(Key, jsonString);
 		}
 
