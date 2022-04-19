@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PAULO HENRIQUE\\Documents\\LojaVirtual\\src\\LojaVirtual.csproj": {}
+    "C:\\Users\\PAULO HENRIQUE\\Documents\\Visual Studio 2019\\LojaVirtual\\src\\LojaVirtual.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PAULO HENRIQUE\\Documents\\LojaVirtual\\src\\LojaVirtual.csproj": {
+    "C:\\Users\\PAULO HENRIQUE\\Documents\\Visual Studio 2019\\LojaVirtual\\src\\LojaVirtual.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PAULO HENRIQUE\\Documents\\LojaVirtual\\src\\LojaVirtual.csproj",
+        "projectUniqueName": "C:\\Users\\PAULO HENRIQUE\\Documents\\Visual Studio 2019\\LojaVirtual\\src\\LojaVirtual.csproj",
         "projectName": "LojaVirtual",
-        "projectPath": "C:\\Users\\PAULO HENRIQUE\\Documents\\LojaVirtual\\src\\LojaVirtual.csproj",
+        "projectPath": "C:\\Users\\PAULO HENRIQUE\\Documents\\Visual Studio 2019\\LojaVirtual\\src\\LojaVirtual.csproj",
         "packagesPath": "C:\\Users\\PAULO HENRIQUE\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PAULO HENRIQUE\\Documents\\LojaVirtual\\src\\obj\\",
+        "outputPath": "C:\\Users\\PAULO HENRIQUE\\Documents\\Visual Studio 2019\\LojaVirtual\\src\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

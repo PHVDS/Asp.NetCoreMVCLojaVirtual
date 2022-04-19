@@ -64,7 +64,7 @@ namespace LojaVirtual
 				return servico;	
 			});
 			services.AddScoped<GerenciarEmail>();
-			services.AddScoped<Cookie>();
+			services.AddScoped<LojaVirtual.Libraries.Cookie.Cookie>();
 			services.AddScoped<CookieCarrinhoCompra>();
 			services.AddScoped<CookieValorPrazoFrete>();
 			services.AddScoped<CalcularPacote>();
@@ -85,7 +85,7 @@ namespace LojaVirtual
 			});
 
 			services.AddScoped<Sessao>();
-			services.AddScoped<Cookie>();
+			services.AddScoped<LojaVirtual.Libraries.Cookie.Cookie>();
 			services.AddScoped<LoginCliente>();
 			services.AddScoped<LoginColaborador>();
 
