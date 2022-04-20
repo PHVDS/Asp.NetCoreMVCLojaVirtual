@@ -65,15 +65,23 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult CadastroCliente([FromForm]Models.Cliente cliente)
+		public IActionResult CadastroCliente([FromForm]Models.Cliente cliente, string returnUrl = null)
 		{
 			if (ModelState.IsValid)
 			{
 				_repositoryCliente.Cadastrar(cliente);
+				_loginCliente.Login(cliente);
 
 				TempData["MSG_S"] = "Cadastro feito com sucesso!";
 
-				return RedirectToAction(nameof(CadastroCliente));
+				if (returnUrl == null)
+				{
+					return RedirectToAction("Index", "Home", new { area = "" });
+				}
+				else
+				{
+					return LocalRedirectPermanent(returnUrl);
+				}
 			}
 			return View();
 		}
