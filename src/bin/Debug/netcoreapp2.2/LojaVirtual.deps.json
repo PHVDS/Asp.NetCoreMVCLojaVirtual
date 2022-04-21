@@ -8,7 +8,12 @@
       "TRACE",
       "DEBUG",
       "NETCOREAPP",
-      "NETCOREAPP2_2"
+      "NETCOREAPP2_2",
+      "NETCOREAPP1_0_OR_GREATER",
+      "NETCOREAPP1_1_OR_GREATER",
+      "NETCOREAPP2_0_OR_GREATER",
+      "NETCOREAPP2_1_OR_GREATER",
+      "NETCOREAPP2_2_OR_GREATER"
     ],
     "languageVersion": "7.3",
     "platform": "",
@@ -39,6 +44,7 @@
           "Microsoft.VisualStudio.Web.BrowserLink": "2.2.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.4",
           "Newtonsoft.Json": "13.0.1",
+          "Pagar.me": "2.6.11",
           "System.ServiceModel.Duplex": "4.4.4",
           "System.ServiceModel.Http": "4.4.4",
           "System.ServiceModel.NetTcp": "4.4.4",
@@ -80,6 +86,17 @@
         },
         "compile": {
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        }
+      },
+      "BouncyCastle/1.7.0": {
+        "runtime": {
+          "lib/Net40-Client/BouncyCastle.Crypto.dll": {
+            "assemblyVersion": "1.7.4137.9688",
+            "fileVersion": "1.7.4137.9688"
+          }
+        },
+        "compile": {
+          "lib/Net40-Client/BouncyCastle.Crypto.dll": {}
         }
       },
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
@@ -278,6 +295,21 @@
         },
         "compile": {
           "lib/netstandard1.6/NuGet.Frameworks.dll": {}
+        }
+      },
+      "Pagar.me/2.6.11": {
+        "dependencies": {
+          "BouncyCastle": "1.7.0",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/net45/PagarMe.dll": {
+            "assemblyVersion": "2.0.7046.32760",
+            "fileVersion": "2.0.7046.32760"
+          }
+        },
+        "compile": {
+          "lib/net45/PagarMe.dll": {}
         }
       },
       "System.Composition/1.0.31": {
@@ -3775,6 +3807,13 @@
       "path": "automapper.extensions.microsoft.dependencyinjection/6.1.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.6.1.0.nupkg.sha512"
     },
+    "BouncyCastle/1.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yvrW1NCFBC+l53Kchlk1iRYlnafpZ+o6oy0tFpFM2G28gz3H0PubyJFLc8KoYys3N0UPYo6TN2NRegpouDxRTw==",
+      "path": "bouncycastle/1.7.0",
+      "hashPath": "bouncycastle.1.7.0.nupkg.sha512"
+    },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
       "type": "package",
       "serviceable": true,
@@ -3872,6 +3911,13 @@
       "sha512": "sha512-qbXaB76XYUVLocLBs8Z9TS/ERGK2wm797feO+0JEPFvT7o7MRadOR77mqaSD4J1k8G+DlZQyq+MlkCuxrkr3ag==",
       "path": "nuget.frameworks/4.7.0",
       "hashPath": "nuget.frameworks.4.7.0.nupkg.sha512"
+    },
+    "Pagar.me/2.6.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ljmw4dcIYLjzOfIu3cawvByHX6YR7SGI8yhbcFRJAoAmeX7K31TPPwk9ZBIYaOmbhcrrGm/CplDT+RsfkKDIHQ==",
+      "path": "pagar.me/2.6.11",
+      "hashPath": "pagar.me.2.6.11.nupkg.sha512"
     },
     "System.Composition/1.0.31": {
       "type": "package",

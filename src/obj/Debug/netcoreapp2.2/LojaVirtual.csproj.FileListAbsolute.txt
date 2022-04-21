@@ -70,7 +70,6 @@ C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\bin\Debug\n
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\bin\Debug\netcoreapp2.2\LojaVirtual.pdb
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\bin\Debug\netcoreapp2.2\LojaVirtual.Views.dll
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\bin\Debug\netcoreapp2.2\LojaVirtual.Views.pdb
-C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\obj\Debug\netcoreapp2.2\LojaVirtual.csprojAssemblyReference.cache
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\obj\Debug\netcoreapp2.2\LojaVirtual.Libraries.Lang.Mensagem.resources
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\obj\Debug\netcoreapp2.2\LojaVirtual.csproj.GenerateResource.cache
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\obj\Debug\netcoreapp2.2\LojaVirtual.AssemblyInfoInputs.cache
@@ -184,3 +183,5 @@ C:\Users\PAULO HENRIQUE\Documents\LojaVirtual\src\obj\Debug\netcoreapp2.2\LojaVi
 C:\Users\PAULO HENRIQUE\Documents\LojaVirtual\src\obj\Debug\netcoreapp2.2\LojaVirtual.pdb
 C:\Users\PAULO HENRIQUE\Documents\LojaVirtual\src\obj\Debug\netcoreapp2.2\LojaVirtual.genruntimeconfig.cache
 C:\Users\PAULO HENRIQUE\Documents\LojaVirtual\src\obj\Debug\netcoreapp2.2\LojaVirtual.csproj.CopyComplete
+C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\obj\Debug\netcoreapp2.2\LojaVirtual.csproj.AssemblyReference.cache
+C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\obj\Debug\netcoreapp2.2\LojaVirtual.GeneratedMSBuildEditorConfig.editorconfig
