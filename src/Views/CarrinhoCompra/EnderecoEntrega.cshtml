@@ -10,7 +10,12 @@
         <div class="col-md-12">
             <!--Listar endereços-->
             <div class="text-center">
-                <a asp-action="CadastroEnderecoEntrega" class="btn btn-primary">Cadastrar novo endereço</a>
+                <a 
+                   asp-action="CadastroEnderecoEntrega" asp-controller="Home" asp-area="Cliente" 
+                   class="btn btn-primary" asp-route-returnUrl="@Url.Action("EnderecoEntrega", "CarrinhoCompra", new { area ="" })"
+                > 
+                Cadastrar novo endereço
+                </a>
             </div>
         </div>
         
