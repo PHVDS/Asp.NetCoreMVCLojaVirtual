@@ -4,10 +4,53 @@
     MudarImagemPrincipalProduto();
     MudarQuantidadeProdutoCarrinho();
 
+    MascaraCPF();
+    MascaraNascimento();
+    MascaraTEL();
     MascaraCEP();
+    AJAXBuscarCEP();
     AcaoCalcularFreteBtn();
     AJAXCalcularFrete(false);
 });
+
+function AJAXBuscarCEP() {
+    $("#CEP").keyup(function () {
+        if ($(this).val().length == 10) {
+            var cep = RemoverMascara($(this).val());
+            $.ajax({
+                type: "GET",
+                url: "https://viacep.com.br/ws/" + cep + "/json/",
+                dataType: "jsonp",
+                error: function (data) {
+                    console.info("ERRO");
+                    console.info(data);
+                },
+                success: function (data) {
+                    console.info("OK");
+                    console.info(data);
+
+                    $("#Estado").val(data.uf);
+                    $("#Cidade").val(data.localidade);
+                    $("#Endereco").val(data.logradouro);
+                    $("#Complemento").val(data.complemento);
+
+                }
+            });
+        }
+    });
+}
+
+function MascaraNascimento() {
+    $("#Nascimento").mask("00/00/0000");
+}
+
+function MascaraCPF() {
+    $(".cpf").mask("000.000.000-00");
+}
+
+function MascaraTEL() {
+    $(".tel").mask("(00)00000-0000");
+}
 
 function MascaraCEP() {
     $(".cep").mask("00.000-000");
@@ -130,10 +173,9 @@ function OrquestradorDeAcoesProduto(operacao, botao) {
 }
 
 function AlteracoesVisuaisProdutoCarrinho(produto, operacao) {
-    if (operacao == "aumentar") {
-        /*if (produto.quantidadeProdutoCarrinhoAntiga == produto.quantidadeEstoque) {
-            alert("Opps! Não possuimos estoque suficiente para a quantidade que você deseja comprar!");
-        } else*/ {
+    if (operacao == "aumentar")
+    {
+        {
             produto.quantidadeProdutoCarrinhoNova = produto.quantidadeProdutoCarrinhoAntiga + 1;
 
             AtualizarQuantidadeEValor(produto);
@@ -141,10 +183,10 @@ function AlteracoesVisuaisProdutoCarrinho(produto, operacao) {
             AJAXComunicarAlteracaoQuantidadeProduto(produto);
 
         }
-    } else if (operacao == "diminuir") {
-        /*if (produto.quantidadeProdutoCarrinhoAntiga == 1) {
-            alert("Opps! Caso não deseje este produto clique no botão Remover");
-        } else */ {
+    }
+    else if (operacao == "diminuir")
+    {
+        {
             produto.quantidadeProdutoCarrinhoNova = produto.quantidadeProdutoCarrinhoAntiga - 1;
 
             AtualizarQuantidadeEValor(produto);
@@ -260,4 +302,8 @@ class ProdutoQuantidadeEValor {
         this.campoQuantidadeProdutoCarrinho = campoQuantidadeProdutoCarrinho;
         this.campoValor = campoValor;
     }
+}
+
+function RemoverMascara(valor) {
+    return valor.replace(".", "").replace("-", "");
 }
