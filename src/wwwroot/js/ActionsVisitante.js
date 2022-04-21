@@ -15,25 +15,31 @@
 
 function AJAXBuscarCEP() {
     $("#CEP").keyup(function () {
+        OcultarMensagemDeErro();
+
         if ($(this).val().length == 10) {
+
             var cep = RemoverMascara($(this).val());
+            var url = "https://viacep.com.br/ws/" + cep + "/json/";
+
             $.ajax({
                 type: "GET",
-                url: "https://viacep.com.br/ws/" + cep + "/json/",
+                url: url,
                 dataType: "jsonp",
                 error: function (data) {
-                    console.info("ERRO");
-                    console.info(data);
+                    MostrarMensagemDeErro("Opps! Tivemos um erro na busca pelo CEP! Talvez o servidor esteja indisponível!");
                 },
                 success: function (data) {
-                    console.info("OK");
-                    console.info(data);
-
-                    $("#Estado").val(data.uf);
-                    $("#Cidade").val(data.localidade);
-                    $("#Endereco").val(data.logradouro);
-                    $("#Complemento").val(data.complemento);
-
+                    if (data.erro == undefined) {
+                        $("#Estado").val(data.uf);
+                        $("#Cidade").val(data.localidade);
+                        $("#Endereco").val(data.logradouro);
+                        $("#Bairro").val(data.bairro);
+                        $("#Complemento").val(data.complemento);
+                    }
+                    else {
+                        MostrarMensagemDeErro("Cep inválido!");
+                    }
                 }
             });
         }

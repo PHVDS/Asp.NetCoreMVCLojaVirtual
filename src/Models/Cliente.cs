@@ -43,6 +43,9 @@ namespace LojaVirtual.Models
 		[Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E001")]
 		public string Cidade { get; set; }
 
+		[Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E001")]
+		public string Bairro { get; set; }
+
 		[Display(Name = "Endereço")]
 		[Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E001")]
 		public string Endereco { get; set; }
