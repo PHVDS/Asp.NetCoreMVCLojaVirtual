@@ -122,19 +122,18 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 				}
 			};
 
-			Billing = new Billing
+			transaction.Billing = new Billing
+			{
+				Name = cliente.Nome,
+				Address = new Address()
 				{
-					Name = "Morty",
-					Address = new Address()
-					{
-						Country = "br",
-						State = "sp",
-						City = "Cotia",
-						Neighborhood = "Rio Cotia",
-						Street = "Rua Matrix",
-						StreetNumber = "213",
-						Zipcode = "04250000"
-					}
+					Country = "br",
+					State = cliente.Estado,
+					City = cliente.Cidade,
+					Neighborhood = cliente.Bairro,
+					Street = cliente.Endereco + " " + cliente.Complemento,
+					StreetNumber = cliente.Numero,
+					Zipcode = Mascara.Remover(cliente.CEP)
 				}
 			};
 
@@ -183,3 +182,4 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 		*/
 	}
 }
+ 

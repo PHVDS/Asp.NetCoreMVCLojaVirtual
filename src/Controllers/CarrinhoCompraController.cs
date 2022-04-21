@@ -69,6 +69,22 @@ namespace LojaVirtual.Controllers
 			return RedirectToAction(nameof(Index));
 		}
 
+		public IActionResult EnderecoEntrega()
+		{
+			return View();
+		}
+
+		[HttpGet]
+		public IActionResult CadastroEnderecoEntrega()
+		{
+			return View();
+		}
+		[HttpPost]
+		public IActionResult CadastroEnderecoEntrega([FromForm]EnderecoEntrega enderecoEntrega)
+		{
+			return View();
+		}
+
 		public async Task<IActionResult> CalcularFrete(int cepDestino)
 		{
 			try
