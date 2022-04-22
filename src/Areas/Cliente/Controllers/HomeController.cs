@@ -1,5 +1,6 @@
 ﻿using LojaVirtual.Libraries.Filtro;
 using LojaVirtual.Libraries.Login;
+using LojaVirtual.Models;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -91,12 +92,12 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 		{
 			return View();
 		}
-		/*
+		
 		[HttpPost]
 		public IActionResult CadastroEnderecoEntrega([FromForm] EnderecoEntrega enderecoEntrega)
 		{
 			return View();
 		}
-		*/
+		
 	}
 }
