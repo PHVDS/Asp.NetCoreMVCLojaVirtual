@@ -15,9 +15,11 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 	{
 		private readonly LoginCliente _loginCliente;
 		private readonly IClienteRepository _repositoryCliente;
+		private readonly IEnderecoEntregaRepository _enderecoEntregaRepository;
 
-		public HomeController(LoginCliente loginCliente, IClienteRepository repositoryCliente)
+		public HomeController(IEnderecoEntregaRepository enderecoEntregaRepository, LoginCliente loginCliente, IClienteRepository repositoryCliente)
 		{
+			_enderecoEntregaRepository = enderecoEntregaRepository;
 			_loginCliente = loginCliente;
 			_repositoryCliente = repositoryCliente;
 		}
@@ -94,8 +96,12 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 		}
 		
 		[HttpPost]
-		public IActionResult CadastroEnderecoEntrega([FromForm] EnderecoEntrega enderecoEntrega)
+		public IActionResult CadastroEnderecoEntrega([FromForm] EnderecoEntrega enderecoEntrega, string returnUrl == null)
 		{
+			if (ModelState.IsValid)
+			{
+				enderecoEntrega.ClienteId = _loginCliente.GetCliente().Id;
+			}
 			return View();
 		}
 		
