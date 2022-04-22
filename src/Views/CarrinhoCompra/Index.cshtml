@@ -144,7 +144,7 @@
                         @if (_loginCliente.GetCliente() == null)
                         {
                             <a asp-controller="Home" asp-action="Login" asp-area="Cliente" 
-                               asp-route-returnUrl="@Url.Action("Index", "Pagamento", new {area = ""})" 
+                               asp-route-returnUrl="@Url.Action("EnderecoEntrega", "CarrinhoCompra", new {area = ""})" 
                                class="btn btn-primary btn-continuar disabled">
                                 
                                 Continuar
@@ -153,7 +153,7 @@
                         }
                         else
                         {
-                            <a asp-controller="Pagamento" asp-action="Index" class="btn btn-primary btn-continuar disabled">Continuar</a>
+                            <a asp-controller="CarrinhoCompra" asp-action="EnderecoEntrega" class="btn btn-primary btn-continuar disabled">Continuar</a>
                         }
                     </div>
                 </aside>

@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using LojaVirtual.Controllers.Base;
 using LojaVirtual.Libraries.CarrinhoCompra;
+using LojaVirtual.Libraries.Filtro;
 using LojaVirtual.Libraries.Gerenciador.Frete;
 using LojaVirtual.Libraries.Lang;
+using LojaVirtual.Libraries.Login;
 using LojaVirtual.Models;
 using LojaVirtual.Models.Constants;
 using LojaVirtual.Models.ProdutoAgregador;
@@ -16,10 +18,13 @@ namespace LojaVirtual.Controllers
 {
 	public class CarrinhoCompraController : BaseController
 	{
-		public CarrinhoCompraController(CookieValorPrazoFrete cookieValorPrazoFrete, CalcularPacote calcularPacote, WSCorreiosCalcularFrete wscorreios, IMapper mapper, CookieCarrinhoCompra cookieCarrinhoCompra, IProdutoRepository produtoRepository)
+		private readonly IEnderecoEntregaRepository _enderecoEntregaRepository;
+		private readonly LoginCliente _loginCliente;
+		public CarrinhoCompraController(IEnderecoEntregaRepository enderecoEntregaRepository, LoginCliente loginCliente, CookieValorPrazoFrete cookieValorPrazoFrete, CalcularPacote calcularPacote, WSCorreiosCalcularFrete wscorreios, IMapper mapper, CookieCarrinhoCompra cookieCarrinhoCompra, IProdutoRepository produtoRepository)
 			: base(cookieValorPrazoFrete, calcularPacote, wscorreios, mapper, cookieCarrinhoCompra, produtoRepository)
 		{
-
+			_loginCliente = loginCliente;
+			_enderecoEntregaRepository = enderecoEntregaRepository;
 		}
 		public IActionResult Index()
 		{
@@ -69,10 +74,17 @@ namespace LojaVirtual.Controllers
 			return RedirectToAction(nameof(Index));
 		}
 
+		[ClienteAutorizacao]
 		public IActionResult EnderecoEntrega()
 		{
+			Cliente cliente = _loginCliente.GetCliente();
+			IList<EnderecoEntrega> enderecos = _enderecoEntregaRepository.ObterTodosEnderecoEntregaCliente(cliente.Id);
+
+			ViewBag.Cliente = cliente;
+			ViewBag.Enderecos = enderecos;
 			return View();
 		}
+
 		public async Task<IActionResult> CalcularFrete(int cepDestino)
 		{
 			try
