@@ -77,8 +77,11 @@
 
                                     <td>
                                         <div class="price-wrap">
-                                            <var class="price">@((ResultadoSubtotalItem).ToString("C"))</var>
-                                            <small class="text-muted">(@item.Valor.ToString("C") cada)</small>
+                                            <var class="price" style="text-align:center;">
+                                                @((ResultadoSubtotalItem).ToString("C"))
+                                                <br />
+                                                <small class="text-muted">(@item.Valor.ToString("C") cada)</small>
+                                            </var>
                                         </div>
                                     </td>
                                     <td class="text-right">

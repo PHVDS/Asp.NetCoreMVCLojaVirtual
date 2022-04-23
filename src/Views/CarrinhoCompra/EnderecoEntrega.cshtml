@@ -13,13 +13,17 @@
                 <tbody>
                     <tr>
                         <th scope="row">
-                            <input type="radio" name="endereco" value="0" />
+                            <input type="radio" name="endereco" value="0" id="0-end"/>
                         </th>
                         <td>
-                            <strong>Nome: </strong> Endereço do cliente.
-                            <p>
-                                @ViewBag.Cliente.CEP | @ViewBag.Cliente.Estado, @ViewBag.Cliente.Cidade, @ViewBag.Cliente.Bairro, @ViewBag.Cliente.Endereco, @ViewBag.Cliente.Complemento, @ViewBag.Cliente.Numero
-                            </p>
+                            <label for="0-end">
+                                <strong>Nome: </strong> Endereço do cliente.
+                                <p>
+                                    @ViewBag.Cliente.CEP | @ViewBag.Cliente.Cidade, @ViewBag.Cliente.Estado
+                                    <br />
+                                    @ViewBag.Cliente.Endereco, @ViewBag.Cliente.Numero, @ViewBag.Cliente.Bairro,  @ViewBag.Cliente.Complemento
+                                </p>
+                            </label>
                         </td>
                         <td>
                             <strong>Frete: </strong>
@@ -31,15 +35,17 @@
                     {
                         <tr>
                             <th scope="row">
-                                <input type="radio" name="endereco" value="0" />
+                                <input type="radio" name="endereco" value="@endereco.Id" id="@endereco.Id-end"/>
                             </th>
                             <td>
-                                <strong>Nome: </strong> @endereco.Nome
-                            <p>
-                                @endereco.CEP | @endereco.Estado, @endereco.Cidade, @endereco.Bairro
-                                <br />
-                                @endereco.Endereco, @endereco.Complemento, @endereco.Numero
-                            </p>
+                                <label for="@endereco.Id-end">
+                                    <strong>Nome: </strong> @endereco.Nome
+                                    <p>
+                                        @endereco.CEP | @endereco.Cidade, @endereco.Estado
+                                        <br />
+                                        @endereco.Endereco, @endereco.Numero, @endereco.Bairro, @endereco.Complemento
+                                    </p>
+                                </label>
                             </td>
                             <td>
                                 <strong>Frete: </strong>

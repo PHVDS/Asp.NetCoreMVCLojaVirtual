@@ -186,3 +186,4 @@ C:\Users\PAULO HENRIQUE\Documents\LojaVirtual\src\obj\Debug\netcoreapp2.2\LojaVi
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\obj\Debug\netcoreapp2.2\LojaVirtual.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Views\CarrinhoCompra\EnderecoEntrega.cshtml.g.cs
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Home\CadastroEnderecoEntrega.cshtml.g.cs
+C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\obj\Debug\netcoreapp2.2\LojaVirtual.csproj.AssemblyReference.cache
