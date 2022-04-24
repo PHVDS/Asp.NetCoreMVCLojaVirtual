@@ -95,13 +95,13 @@ function AJAXCalcularFrete(chamadaPorBtn) {
                 console.info(data);
             },
             success: function (data) {
-
+                console.info(data);
                 html = "";
 
-                for (var i = 0; i < data.length; i++) {
-                    var tipoFrete = data[i].tipoFrete;
-                    var valor = data[i].valor;
-                    var prazo = data[i].prazo;
+                for (var i = 0; i < data.listaValorPrazoFrete.length; i++) {
+                    var tipoFrete = data.listaValorPrazoFrete[i].tipoFrete;
+                    var valor = data.listaValorPrazoFrete[i].valor;
+                    var prazo = data.listaValorPrazoFrete[i].prazo;
 
                     html += "<dl class=\"dlist-align\"><dt><input type=\"radio\" name=\"frete\" value=\"" + tipoFrete + "\" /><input type=\"hidden\" name=\"valor\" value=\"" + valor + "\" \/></dt><dd>" + tipoFrete + " - " + numberToReal(valor) + " (" + prazo + " dias úteis)</dd></dl>";
                 }

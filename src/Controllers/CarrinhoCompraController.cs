@@ -5,11 +5,13 @@ using LojaVirtual.Libraries.Filtro;
 using LojaVirtual.Libraries.Gerenciador.Frete;
 using LojaVirtual.Libraries.Lang;
 using LojaVirtual.Libraries.Login;
+using LojaVirtual.Libraries.Seguranca;
 using LojaVirtual.Models;
 using LojaVirtual.Models.Constants;
 using LojaVirtual.Models.ProdutoAgregador;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -20,7 +22,7 @@ namespace LojaVirtual.Controllers
 	{
 		private readonly IEnderecoEntregaRepository _enderecoEntregaRepository;
 		private readonly LoginCliente _loginCliente;
-		public CarrinhoCompraController(IEnderecoEntregaRepository enderecoEntregaRepository, LoginCliente loginCliente, CookieValorPrazoFrete cookieValorPrazoFrete, CalcularPacote calcularPacote, WSCorreiosCalcularFrete wscorreios, IMapper mapper, CookieCarrinhoCompra cookieCarrinhoCompra, IProdutoRepository produtoRepository)
+		public CarrinhoCompraController(IEnderecoEntregaRepository enderecoEntregaRepository, LoginCliente loginCliente, CookieFrete cookieValorPrazoFrete, CalcularPacote calcularPacote, WSCorreiosCalcularFrete wscorreios, IMapper mapper, CookieCarrinhoCompra cookieCarrinhoCompra, IProdutoRepository produtoRepository)
 			: base(cookieValorPrazoFrete, calcularPacote, wscorreios, mapper, cookieCarrinhoCompra, produtoRepository)
 		{
 			_loginCliente = loginCliente;
@@ -105,18 +107,17 @@ namespace LojaVirtual.Controllers
 				var frete = new Frete()
 				{
 					CEP = cepDestino,
-					//CodigoCarrinho = HashCode,
+					CodigoCarrinho = GerarHash(_cookieCarrinhoCompra.Consultar()),
 					ListaValorPrazoFrete = lista
 
 				};
 
-				//_cookieValorPrazoFrete.Cadastrar(frete);
+				_cookieFrete.Cadastrar(frete);
 
 				return Ok(frete);
 			}
 			catch (Exception e)
 			{
-				_cookieValorPrazoFrete.Remover();
 				return BadRequest(e);
 			}
 		}

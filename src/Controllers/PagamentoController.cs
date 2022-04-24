@@ -18,7 +18,7 @@ namespace LojaVirtual.Controllers
 	public class PagamentoController : BaseController
 	{
 		private readonly Cookie _cookie;
-		public PagamentoController(Cookie cookie, CookieValorPrazoFrete cookieValorPrazoFrete, CalcularPacote calcularPacote, WSCorreiosCalcularFrete wscorreios, IMapper mapper, CookieCarrinhoCompra cookieCarrinhoCompra, IProdutoRepository produtoRepository)
+		public PagamentoController(Cookie cookie, CookieFrete cookieValorPrazoFrete, CalcularPacote calcularPacote, WSCorreiosCalcularFrete wscorreios, IMapper mapper, CookieCarrinhoCompra cookieCarrinhoCompra, IProdutoRepository produtoRepository)
 			: base(cookieValorPrazoFrete, calcularPacote, wscorreios, mapper, cookieCarrinhoCompra, produtoRepository)
 		{
 			_cookie = cookie;
@@ -27,11 +27,12 @@ namespace LojaVirtual.Controllers
 		[ClienteAutorizacao]
 		public IActionResult Index()
 		{
+			/*
 			var tipoFreteSelecionadoPeloUsuario = _cookie.Consultar("Carrinho.TipoFrete", false);
 
 			if (tipoFreteSelecionadoPeloUsuario != null)
 			{
-				var frete = _cookieValorPrazoFrete.Consultar().Where(a => a.TipoFrete == tipoFreteSelecionadoPeloUsuario).FirstOrDefault();
+				var frete = _cookieFrete.Consultar().Where(a => a.TipoFrete == tipoFreteSelecionadoPeloUsuario).FirstOrDefault();
 				
 				if (frete != null)
 				{
@@ -40,6 +41,7 @@ namespace LojaVirtual.Controllers
 					return View(produtoItemCompleto);
 				}
 			}
+			*/
 
 			TempData["MSG_E"] = Mensagem.MSG_E009;
 			return RedirectToAction("Index", "CarrinhoCompra");
