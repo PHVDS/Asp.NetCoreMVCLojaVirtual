@@ -9,6 +9,6 @@ namespace LojaVirtual.Models
 	{
 		public int CEP { get; set; }
 		public string CodigoCarrinho { get; set; }
-		public List<ValorPrazoFrete> ListaValorPrazoFrete { get; set; }
+		public List<ValorPrazoFrete> ListaValores { get; set; }
 	}
 }

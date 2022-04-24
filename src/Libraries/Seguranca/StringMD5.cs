@@ -11,11 +11,20 @@ namespace LojaVirtual.Libraries.Seguranca
 	{
 		public static string MD5Hash(string texto)
 		{
-			using (var md5 = MD5.Create())
-			{
-				var resultado = md5.ComputeHash(Encoding.ASCII.GetBytes(texto));
-				return Encoding.ASCII.GetString(resultado);
-			}
-		}
+            // Use input string to calculate MD5 hash
+            using (MD5 md5 = MD5.Create())
+            {
+                byte[] inputBytes = Encoding.ASCII.GetBytes(texto);
+                byte[] hashBytes = md5.ComputeHash(inputBytes);
+
+                // Convert the byte array to hexadecimal string
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < hashBytes.Length; i++)
+                {
+                    sb.Append(hashBytes[i].ToString("X2"));
+                }
+                return sb.ToString();
+            }
+        }
 	}
 }

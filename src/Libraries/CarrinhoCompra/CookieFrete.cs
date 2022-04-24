@@ -32,7 +32,7 @@ namespace LojaVirtual.Libraries.CarrinhoCompra
 				else
 				{
 					ItemLocalizado.CodigoCarrinho = frete.CodigoCarrinho;
-					ItemLocalizado.ListaValorPrazoFrete = frete.ListaValorPrazoFrete;
+					ItemLocalizado.ListaValores = frete.ListaValores;
 				}
 			}
 			else
@@ -52,7 +52,7 @@ namespace LojaVirtual.Libraries.CarrinhoCompra
 			if (ItemLocalizado != null)
 			{
 				ItemLocalizado.CodigoCarrinho = frete.CodigoCarrinho;
-				ItemLocalizado.ListaValorPrazoFrete = frete.ListaValorPrazoFrete;
+				ItemLocalizado.ListaValores = frete.ListaValores;
 				Salvar(Lista);
 			}
 		}

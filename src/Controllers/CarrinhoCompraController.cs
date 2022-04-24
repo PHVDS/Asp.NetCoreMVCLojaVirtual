@@ -108,7 +108,7 @@ namespace LojaVirtual.Controllers
 				{
 					CEP = cepDestino,
 					CodigoCarrinho = GerarHash(_cookieCarrinhoCompra.Consultar()),
-					ListaValorPrazoFrete = lista
+					ListaValores = lista
 
 				};
 
