@@ -14,6 +14,7 @@
                     <tr>
                         <th scope="row">
                             <input type="radio" name="endereco" value="0" id="0-end" />
+                            <input type="hidden" name="cep" value="@ViewBag.Cliente.CEP" />
                         </th>
                         <td>
                             <label for="0-end">
@@ -32,6 +33,7 @@
                         <tr>
                             <th scope="row">
                                 <input type="radio" name="endereco" value="@endereco.Id" id="@endereco.Id-end" />
+                                <input type="hidden" name="cep" value="@endereco.CEP" />
                             </th>
                             <td>
                                 <label for="@endereco.Id-end">
@@ -59,45 +61,42 @@
             <br />
             <div class="card-group">
                 <div class="card">
-
                     <div class="card-body">
-                        <h5 class="card-title fas fa-box-open"> PAC</h5>
-                        <p class="card-text">Dias.</p>
+                        <h5 class="card-title"> - </h5>
+                        <p class="card-text">-</p>
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">
-                            <input type="radio" name="frete" value="PAC" />
+                            -
                         </small>
                     </div>
                 </div>
                 <div class="card">
-
                     <div class="card-body">
-                        <h5 class="card-title fas fa-truck"> SEDEX</h5>
-                        <p class="card-text">Dias.</p>
+                        <h5 class="card-title"> - </h5>
+                        <p class="card-text">-</p>
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">
-                            <input type="radio" name="frete" value="SEDEX" />
+                            -
                         </small>
                     </div>
                 </div>
                 <div class="card">
-
                     <div class="card-body">
-                        <h5 class="card-title fas fa-shipping-fast"> SEDEX10</h5>
-                        <p class="card-text">Dias.</p>
+                        <h5 class="card-title"> - </h5>
+                        <p class="card-text">-</p>
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">
-                            <input type="radio" name="frete" value="SEDEX10" />
+                            -
                         </small>
                     </div>
                 </div>
             </div>
             <br />
 
-            <a asp-action="Index" asp-controller="Pagamento" class="form-control btn btn-primary">Continuar</a>
+            <a asp-action="Index" asp-controller="Pagamento" class="btn btn-primary btn-continuar disabled">Continuar</a>
         </div>
         
     </div>
