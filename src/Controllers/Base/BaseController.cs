@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using LojaVirtual.Libraries.CarrinhoCompra;
 using LojaVirtual.Libraries.Gerenciador.Frete;
+using LojaVirtual.Libraries.Login;
 using LojaVirtual.Libraries.Seguranca;
 using LojaVirtual.Models.ProdutoAgregador;
 using LojaVirtual.Repositories.Contracts;
@@ -21,15 +22,22 @@ namespace LojaVirtual.Controllers.Base
 		protected readonly IMapper _mapper;
 		protected readonly WSCorreiosCalcularFrete _wscorreios;
 		protected readonly CalcularPacote _calcularPacote;
+		protected readonly IEnderecoEntregaRepository _enderecoEntregaRepository;
+		protected readonly LoginCliente _loginCliente;
 
-		public BaseController(CookieFrete cookieFrete, CalcularPacote calcularPacote, WSCorreiosCalcularFrete wscorreios, IMapper mapper, CookieCarrinhoCompra cookieCarrinhoCompra, IProdutoRepository produtoRepository)
+		public BaseController(
+			LoginCliente loginCliente, IEnderecoEntregaRepository enderecoEntregaRepository, CookieFrete cookieFrete,
+			CalcularPacote calcularPacote, WSCorreiosCalcularFrete wscorreios, IMapper mapper,
+			CookieCarrinhoCompra cookieCarrinhoCompra, IProdutoRepository produtoRepository)
 		{
+			_enderecoEntregaRepository = enderecoEntregaRepository;
 			_cookieCarrinhoCompra = cookieCarrinhoCompra;
 			_cookieFrete = cookieFrete;
 			_produtoRepository = produtoRepository;
 			_mapper = mapper;
 			_wscorreios = wscorreios;
 			_calcularPacote = calcularPacote;
+			_loginCliente = loginCliente;
 		}
 		protected List<ProdutoItem> CarregarProdutoDB()
 		{

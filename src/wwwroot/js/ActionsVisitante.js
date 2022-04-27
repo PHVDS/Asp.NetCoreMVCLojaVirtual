@@ -18,6 +18,8 @@
 function AJAXEnderecoEntregaCalcularFrete() {
     $("input[name=endereco]").change(function () {
 
+        $.cookie("Carrinho.Endereco", $(this).val(), { path: "/" });
+
         var cep = RemoverMascara($(this).parent().find("input[name=cep]").val());
         EnderecoEntregaCardsLimpar();
         LimparValores();

@@ -21,13 +21,9 @@ namespace LojaVirtual.Controllers
 {
 	public class CarrinhoCompraController : BaseController
 	{
-		private readonly IEnderecoEntregaRepository _enderecoEntregaRepository;
-		private readonly LoginCliente _loginCliente;
-		public CarrinhoCompraController(IEnderecoEntregaRepository enderecoEntregaRepository, LoginCliente loginCliente, CookieFrete cookieValorPrazoFrete, CalcularPacote calcularPacote, WSCorreiosCalcularFrete wscorreios, IMapper mapper, CookieCarrinhoCompra cookieCarrinhoCompra, IProdutoRepository produtoRepository)
-			: base(cookieValorPrazoFrete, calcularPacote, wscorreios, mapper, cookieCarrinhoCompra, produtoRepository)
-		{
-			_loginCliente = loginCliente;
-			_enderecoEntregaRepository = enderecoEntregaRepository;
+		public CarrinhoCompraController(LoginCliente loginCliente, IEnderecoEntregaRepository enderecoEntregaRepository, CookieFrete cookieValorPrazoFrete, CalcularPacote calcularPacote, WSCorreiosCalcularFrete wscorreios, IMapper mapper, CookieCarrinhoCompra cookieCarrinhoCompra, IProdutoRepository produtoRepository)
+			: base(loginCliente, enderecoEntregaRepository, cookieValorPrazoFrete, calcularPacote, wscorreios, mapper, cookieCarrinhoCompra, produtoRepository)
+		{ 
 		}
 		public IActionResult Index()
 		{
