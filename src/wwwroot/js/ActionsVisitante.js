@@ -18,9 +18,10 @@
 function AJAXEnderecoEntregaCalcularFrete() {
     $("input[name=endereco]").change(function () {
         var cep = RemoverMascara($(this).parent().find("input[name=cep]").val());
-
+        EnderecoEntregaCardsLimpar();
         EnderecoEntregaCardsLoading();
-        
+        $(".btn-continuar").addClass("disabled");
+
         $.ajax({
             type: "GET",
             url: "/CarrinhoCompra/CalcularFrete?cepDestino=" + cep,
@@ -76,9 +77,16 @@ function SelecionarTipoFreteStyle(obj) {
     $(".card-body").css("background-color", "white");
     $(".card-footer").css("background-color", "rgba(0,0,0,.03)");
 
-
     obj.parent().parent().parent().find(".card-body").css("background-color", "#D3D3D3");
     obj.parent().parent().parent().find(".card-footer").css("background-color", "#D3D3D3");
+
+    AtualizarValores();
+}
+
+function AtualizarValores() {
+    var frete = $(".card-footer input[name=frete]:checked").parent().find("label").text();
+    console.info(frete);
+    $(".texto-frete").text();
 }
 
 function EnderecoEntregaCardsLoading() {
