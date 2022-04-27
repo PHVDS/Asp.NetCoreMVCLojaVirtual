@@ -41,7 +41,8 @@ function AJAXEnderecoEntregaCalcularFrete() {
                     $(".card-footer .text-muted")[i].innerHTML = "<input type=\"radio\" name=\"frete\" value=\"" + tipoFrete + "\" id='" + tipoFrete + "' /> <strong><label for='" + tipoFrete + "'>" + numberToReal(valor) + "</label></strong>";
 
                     if ($.cookie("Carrinho.TipoFrete") != undefined &&  $.cookie("Carrinho.TipoFrete") == tipoFrete) {
-                        $(".card-footer .text-muted").find("input[name=frete]").attr("checked", "checked");
+                        $(".card-footer .text-muted input[name=frete]").eq(i).attr("checked", "checked");
+                        SelecionarTipoFreteStyle($(".card-footer .text-muted input[name=frete]").eq(i));
                         $(".btn-continuar").removeClass("disabled");
                     }
                 }
