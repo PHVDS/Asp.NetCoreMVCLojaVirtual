@@ -17,8 +17,10 @@
 
 function AJAXEnderecoEntregaCalcularFrete() {
     $("input[name=endereco]").change(function () {
+
         var cep = RemoverMascara($(this).parent().find("input[name=cep]").val());
         EnderecoEntregaCardsLimpar();
+        LimparValores();
         EnderecoEntregaCardsLoading();
         $(".btn-continuar").addClass("disabled");
 
@@ -84,9 +86,18 @@ function SelecionarTipoFreteStyle(obj) {
 }
 
 function AtualizarValores() {
-    var frete = $(".card-footer input[name=frete]:checked").parent().find("label").text();
-    console.info(frete);
-    $(".texto-frete").text();
+    var produto = parseFloat($(".texto-produto").text().replace("R$", "").replace(".", "").replace(",", "."));
+    var frete = parseFloat($(".card-footer input[name=frete]:checked").parent().find("label").text().replace("R$", "").replace(".", "").replace(",", "."));
+        
+    var total = produto + frete;
+
+    $(".texto-frete").text(numberToReal(frete));
+    $(".texto-total").text(numberToReal(total));
+}
+
+function LimparValores() {
+    $(".texto-frete").text("-");
+    $(".texto-total").text("-");
 }
 
 function EnderecoEntregaCardsLoading() {
