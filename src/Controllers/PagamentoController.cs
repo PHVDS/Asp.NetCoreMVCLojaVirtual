@@ -4,6 +4,7 @@ using LojaVirtual.Libraries.CarrinhoCompra;
 using LojaVirtual.Libraries.Cookie;
 using LojaVirtual.Libraries.Filtro;
 using LojaVirtual.Libraries.Gerenciador.Frete;
+using LojaVirtual.Libraries.Gerenciador.Pagamento;
 using LojaVirtual.Libraries.Lang;
 using LojaVirtual.Libraries.Login;
 using LojaVirtual.Libraries.Texto;
@@ -21,6 +22,8 @@ namespace LojaVirtual.Controllers
 	public class PagamentoController : BaseController
 	{
 		private readonly Cookie _cookie;
+		private readonly GerenciarPagarMe _gerenciarPagarMe;
+
 		public PagamentoController(
 			LoginCliente loginCliente,
 			IEnderecoEntregaRepository enderecoEntregaRepository,
@@ -30,7 +33,8 @@ namespace LojaVirtual.Controllers
 			WSCorreiosCalcularFrete wscorreios,
 			IMapper mapper,
 			CookieCarrinhoCompra cookieCarrinhoCompra,
-			IProdutoRepository produtoRepository)
+			IProdutoRepository produtoRepository,
+			GerenciarPagarMe gerenciarPagarMe)
 			: base(
 				  loginCliente,
 				  enderecoEntregaRepository,
@@ -42,8 +46,10 @@ namespace LojaVirtual.Controllers
 				  produtoRepository)
 		{
 			_cookie = cookie;
+			_gerenciarPagarMe = gerenciarPagarMe;
 		}
 
+		[HttpGet]
 		[ClienteAutorizacao]
 		public IActionResult Index()
 		{
@@ -51,34 +57,81 @@ namespace LojaVirtual.Controllers
 
 			if (tipoFreteSelecionadoPeloUsuario != null)
 			{
-				var enderecoEntregaId = int.Parse(_cookie.Consultar("Carrinho.Endereco", false).Replace("-end", ""));
-				var cep = 0;
-
-				if (enderecoEntregaId == 0)
-				{
-					cep = int.Parse(Mascara.Remover(_loginCliente.GetCliente().CEP));
-				}
-				else
-				{
-					var endereco = _enderecoEntregaRepository.ObterEnderecoEntrega(enderecoEntregaId);
-					cep = int.Parse(Mascara.Remover(endereco.CEP));
-				}
+				var enderecoEntrega = ObterEndereco();
 				var carrinhoHash = GerarHash(_cookieCarrinhoCompra.Consultar());
+
+				int cep = int.Parse(Mascara.Remover(enderecoEntrega.CEP));
+
+				ViewBag.Frete = ObterFrete(cep.ToString());
+				List<ProdutoItem> produtoItemCompleto = CarregarProdutoDB();
+				ViewBag.Produtos = produtoItemCompleto;
+
+				return View("Index");
+			}
+			TempData["MSG_E"] = Mensagem.MSG_E009;
+			return RedirectToAction("EnderecoEntrega", "CarrinhoCompra");
+		}
+
+		[HttpPost]
+		[ClienteAutorizacao]
+		public IActionResult Index([FromForm] CartaoCredito cartaoCredito)
+		{
+			if (ModelState.IsValid)
+			{
+				EnderecoEntrega enderecoEntrega = ObterEndereco();
+				ValorPrazoFrete frete = ObterFrete(enderecoEntrega.CEP.ToString());
+				List<ProdutoItem> produtos = CarregarProdutoDB();
+
+				dynamic pagarMeResposta = _gerenciarPagarMe.GerarPagCartaoCredito(cartaoCredito, enderecoEntrega, frete, produtos);
 				
-				Frete frete = _cookieFrete.Consultar().Where(a => a.CEP == cep && a.CodigoCarrinho == carrinhoHash).FirstOrDefault();
-	
-				if (frete != null)
-				{
-					ViewBag.Frete = frete.ListaValores.Where(a => a.TipoFrete == tipoFreteSelecionadoPeloUsuario).FirstOrDefault();
-					List<ProdutoItem> produtoItemCompleto = CarregarProdutoDB();
-					
-					return View(produtoItemCompleto);
-				}
+				return new ContentResult() { Content = "Sucesso" + pagarMeResposta.TransactionId };
+			}
+			else
+			{
+				return Index();
+			}
+		}
+
+		private EnderecoEntrega ObterEndereco()
+		{
+			EnderecoEntrega enderecoEntrega = null;
+			var enderecoEntregaId = int.Parse(_cookie.Consultar("Carrinho.Endereco", false).Replace("-end", ""));
+
+			if (enderecoEntregaId == 0)
+			{
+				Cliente cliente = _loginCliente.GetCliente();
+				enderecoEntrega = new EnderecoEntrega();
+				enderecoEntrega.Nome = "Endereço do cliente";
+				enderecoEntrega.Id = 0;
+				enderecoEntrega.CEP = cliente.CEP;
+				enderecoEntrega.Estado = cliente.Estado;
+				enderecoEntrega.Cidade = cliente.Cidade;
+				enderecoEntrega.Bairro = cliente.Bairro;
+				enderecoEntrega.Endereco = cliente.Endereco;
+				enderecoEntrega.Complemento = cliente.Complemento;
+				enderecoEntrega.Numero = cliente.Numero;
+			}
+			else
+			{
+				var endereco = _enderecoEntregaRepository.ObterEnderecoEntrega(enderecoEntregaId);
 			}
 
-			TempData["MSG_E"] = Mensagem.MSG_E009;
-			return RedirectToAction("Index", "CarrinhoCompra");
+			return enderecoEntrega;
+		}
 
+		private ValorPrazoFrete ObterFrete(string cepDestino)
+		{
+			var tipoFreteSelecionadoPeloUsuario = _cookie.Consultar("Carrinho.TipoFrete", false);
+			var carrinhoHash = GerarHash(_cookieCarrinhoCompra.Consultar());
+			int cep = int.Parse(Mascara.Remover(cepDestino));
+
+			Frete frete = _cookieFrete.Consultar().Where(a => a.CEP == cep && a.CodigoCarrinho == carrinhoHash).FirstOrDefault();
+
+			if (frete != null)
+			{
+				return frete.ListaValores.Where(a => a.TipoFrete == tipoFreteSelecionadoPeloUsuario).FirstOrDefault();
+			}
+			return null;
 		}
 	}
 }

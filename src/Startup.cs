@@ -4,6 +4,7 @@ using LojaVirtual.Libraries.AutoMapper;
 using LojaVirtual.Libraries.CarrinhoCompra;
 using LojaVirtual.Libraries.Email;
 using LojaVirtual.Libraries.Gerenciador.Frete;
+using LojaVirtual.Libraries.Gerenciador.Pagamento;
 using LojaVirtual.Libraries.Login;
 using LojaVirtual.Libraries.Middleware;
 using LojaVirtual.Libraries.Sessao;
@@ -89,6 +90,8 @@ namespace LojaVirtual
 			services.AddScoped<LojaVirtual.Libraries.Cookie.Cookie>();
 			services.AddScoped<LoginCliente>();
 			services.AddScoped<LoginColaborador>();
+			services.AddScoped<GerenciarPagarMe>();
+			
 
 			services.AddMvc(opt =>
 			{

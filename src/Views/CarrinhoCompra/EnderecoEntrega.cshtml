@@ -15,7 +15,11 @@
     <br />
     <div class="row">
         <div class="col-md-12">
-            <!--Listar endereços-->
+
+            @if (ViewData["MSG_E"] != null)
+            {
+                <p class="alert alert-danger">@Html.Raw(ViewData["MSG_E"])</p>
+            }
 
             <table class="table table-hover">
                 <tbody>
@@ -109,7 +113,7 @@
                     <div class="card-body">
                         <h5 class="card-title"> Produtos </h5>
                         <p class="card-text texto-produto">@total.ToString("C")</p>
-                        
+
                     </div>
                 </div>
 
@@ -117,7 +121,7 @@
                     <div class="card-body">
                         <h5 class="card-title"> Frete </h5>
                         <p class="card-text texto-frete">-</p>
-                        
+
                     </div>
                 </div>
 
@@ -125,7 +129,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Total</h5>
                         <p class="card-text texto-total">-</p>
-                        
+
                     </div>
                 </div>
             </div>

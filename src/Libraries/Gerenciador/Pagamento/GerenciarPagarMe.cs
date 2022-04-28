@@ -4,6 +4,8 @@ using PagarMe;
 using LojaVirtual.Libraries.Login;
 using LojaVirtual.Models;
 using LojaVirtual.Libraries.Texto;
+using System.Collections.Generic;
+using LojaVirtual.Models.ProdutoAgregador;
 
 namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 {
@@ -72,8 +74,8 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 				};
 			}
 		}
-		/*
-		public object GerarPagCartaoCredito(CartaoCredito cartao)
+		
+		public object GerarPagCartaoCredito(CartaoCredito cartao, EnderecoEntrega enderecoEntrega, ValorPrazoFrete valorFrete, List<ProdutoItem> produtos)
 		{
 			Cliente cliente = _loginCliente.GetCliente();
 
@@ -84,7 +86,7 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 			{
 				Number = cartao.NumeroCartao,
 				HolderName = cartao.NomeNoCartao,
-				ExpirationDate = cartao.Vencimento,
+				ExpirationDate = cartao.VencimentoMM + cartao.VencimentoYY,
 				Cvv = cartao.CodigoSeguranca
 			};
 
@@ -141,45 +143,42 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 
 			transaction.Shipping = new Shipping
 			{
-				Name = "Rick",
-				Fee = 100,
-				DeliveryDate = Today.AddDays(4).ToString("yyyy-MM-dd"),
+				Name = enderecoEntrega.Nome,
+				Fee = Convert.ToInt32(valorFrete.Valor),
+				DeliveryDate = Today.AddDays(_configuration.GetValue<int>("Frete:DiasNaEmpresa")).AddDays(valorFrete.Prazo).ToString("yyyy-MM-dd"),
 				Expedited = false,
 				Address = new Address()
 				{
 					Country = "br",
-					State = "sp",
-					City = "Cotia",
-					Neighborhood = "Rio Cotia",
-					Street = "Rua Matrix",
-					StreetNumber = "213",
-					Zipcode = "04250000"
+					State = enderecoEntrega.Estado,
+					City = enderecoEntrega.Cidade,
+					Neighborhood = enderecoEntrega.Bairro,
+					Street = enderecoEntrega.Endereco + " " + enderecoEntrega.Complemento,
+					StreetNumber = enderecoEntrega.Numero,
+					Zipcode = enderecoEntrega.CEP
 				}
 			};
 
-			transaction.Item = new[]
+			Item[] itens = new Item[produtos.Count];
+			for(var i = 0; i < produtos.Count; i++)
 			{
-				new Item()
+				var item = produtos[i];
+				var itemA = new Item()
 				{
-					Id = "1",
-					Title = "Little Car",
-					Quantity = 1,
+					Id = item.Id.ToString(),
+					Title = item.Nome,
+					Quantity = item.QuantidadeProdutoCarrinho,
 					Tangible = true,
-					UnitPrice = 1000
-				},
-				new Item()
-				{
-					Id = "2",
-					Title = "Baby Crib",
-					Quantity = 1,
-					Tangible = true,
-					UnitPrice = 1000
-				}
-			};
+					UnitPrice = Convert.ToInt32(item.Valor),
+				};
 
+				itens[i] = itemA;
+			}
+			transaction.Item = itens;
 			transaction.Save();
+
+			return new { TransactionId = transaction.Id };
 		}
-		*/
 	}
 }
  
