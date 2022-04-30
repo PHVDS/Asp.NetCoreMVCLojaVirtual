@@ -106,7 +106,6 @@ namespace LojaVirtual.Controllers
 
 					return Index();
 				}
-				
 			}
 			else
 			{
@@ -122,16 +121,19 @@ namespace LojaVirtual.Controllers
 			if (enderecoEntregaId == 0)
 			{
 				Cliente cliente = _loginCliente.GetCliente();
-				enderecoEntrega = new EnderecoEntrega();
-				enderecoEntrega.Nome = "Endereço do cliente";
-				enderecoEntrega.Id = 0;
-				enderecoEntrega.CEP = cliente.CEP;
-				enderecoEntrega.Estado = cliente.Estado;
-				enderecoEntrega.Cidade = cliente.Cidade;
-				enderecoEntrega.Bairro = cliente.Bairro;
-				enderecoEntrega.Endereco = cliente.Endereco;
-				enderecoEntrega.Complemento = cliente.Complemento;
-				enderecoEntrega.Numero = cliente.Numero;
+
+				enderecoEntrega = new EnderecoEntrega
+				{
+					Nome = "Endereço do cliente",
+					Id = 0,
+					CEP = cliente.CEP,
+					Estado = cliente.Estado,
+					Cidade = cliente.Cidade,
+					Bairro = cliente.Bairro,
+					Endereco = cliente.Endereco,
+					Complemento = cliente.Complemento,
+					Numero = cliente.Numero
+				};
 			}
 			else
 			{

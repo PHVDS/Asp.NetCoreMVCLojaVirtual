@@ -42,12 +42,12 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 						Email = cliente.Email,
 						Documents = new[]
 						{
-						new Document{
-							Type = DocumentType.Cpf,
-							Number = Mascara.Remover(cliente.CPF)
-						},
+							new Document{
+								Type = DocumentType.Cpf,
+								Number = Mascara.Remover(cliente.CPF)
+							},
 
-					},
+						},
 						PhoneNumbers = new string[]
 						{
 						"+55" + Mascara.Remover(cliente.Telefone)
@@ -108,14 +108,14 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 					Country = "br",
 					Email = cliente.Email,
 					Documents = new[]
-						{
+					{
 						new Document{
 							Type = DocumentType.Cpf,
 							Number = Mascara.Remover(cliente.CPF)
-						},
+						}
 
 					},
-					PhoneNumbers = new string[]
+						PhoneNumbers = new string[]
 						{
 							"+55" + Mascara.Remover(cliente.Telefone)
 						},
@@ -173,7 +173,7 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 					Title = item.Nome,
 					Quantity = item.QuantidadeProdutoCarrinho,
 					Tangible = true,
-					UnitPrice = Mascara.ConverterValorPagarMe(item.Valor),
+					UnitPrice = Mascara.ConverterValorPagarMe(item.Valor)
 				};
 				valorTotal += (item.Valor * item.QuantidadeProdutoCarrinho);
 				itens[i] = itemA;
