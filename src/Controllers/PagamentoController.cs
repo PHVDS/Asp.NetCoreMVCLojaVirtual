@@ -12,9 +12,11 @@ using LojaVirtual.Models;
 using LojaVirtual.Models.ProdutoAgregador;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Mvc;
+using PagarMe;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace LojaVirtual.Controllers
@@ -82,9 +84,29 @@ namespace LojaVirtual.Controllers
 				ValorPrazoFrete frete = ObterFrete(enderecoEntrega.CEP.ToString());
 				List<ProdutoItem> produtos = CarregarProdutoDB();
 
-				dynamic pagarMeResposta = _gerenciarPagarMe.GerarPagCartaoCredito(cartaoCredito, enderecoEntrega, frete, produtos);
+				try
+				{
+					dynamic pagarMeResposta = _gerenciarPagarMe.GerarPagCartaoCredito(cartaoCredito, enderecoEntrega, frete, produtos);
+					
+					return new ContentResult() { Content = "Sucesso" + pagarMeResposta.TransactionId };
+				}
+				catch (PagarMeException e)
+				{
+					StringBuilder sb = new StringBuilder();
+
+					if (e.Error.Errors.Count() > 0)
+					{
+						sb.Append("Erro no pagamento: ");
+						foreach (var erro in e.Error.Errors)
+						{
+							sb.Append("- " + e.Message + "<br />");
+						}
+					}
+					TempData["MSG_E"] = sb.ToString();
+
+					return Index();
+				}
 				
-				return new ContentResult() { Content = "Sucesso" + pagarMeResposta.TransactionId };
 			}
 			else
 			{

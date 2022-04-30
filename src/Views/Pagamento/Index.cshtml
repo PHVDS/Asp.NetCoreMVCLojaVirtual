@@ -62,11 +62,12 @@
             </div>
             </div>
         <div class="col-md-6">
-            <div id="code_payment2">
 
+            @{await Html.RenderPartialAsync("~/Views/Shared/Mensagem.cshtml"); }
+            
+            <div id="code_payment2">
                 <article class="card">
                     <div class="card-body p-5">
-
                         <ul class="nav bg radius nav-pills nav-fill mb-3" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active show" data-toggle="pill" href="#nav-tab-card">
