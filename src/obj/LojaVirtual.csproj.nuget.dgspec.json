@@ -112,10 +112,6 @@
               "target": "Package",
               "version": "[13.0.1, )"
             },
-            "Pagar.me": {
-              "target": "Package",
-              "version": "[2.6.11, )"
-            },
             "System.ServiceModel.Duplex": {
               "target": "Package",
               "version": "[4.4.*, )"

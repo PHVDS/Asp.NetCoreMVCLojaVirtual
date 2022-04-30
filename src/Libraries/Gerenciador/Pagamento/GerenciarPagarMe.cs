@@ -94,7 +94,7 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 
 			Transaction transaction = new Transaction
 			{
-				Amount = 2100,
+				
 				Card = new Card
 				{
 					Id = card.Id
@@ -141,10 +141,13 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 
 			var Today = DateTime.Now;
 
+			var fee = Convert.ToDecimal(valorFrete.Valor);
+			decimal valorTotal = fee;
+
 			transaction.Shipping = new Shipping
 			{
 				Name = enderecoEntrega.Nome,
-				Fee = Convert.ToInt32(valorFrete.Valor),
+				Fee = Mascara.ConverterValorPagarMe(fee),
 				DeliveryDate = Today.AddDays(_configuration.GetValue<int>("Frete:DiasNaEmpresa")).AddDays(valorFrete.Prazo).ToString("yyyy-MM-dd"),
 				Expedited = false,
 				Address = new Address()
@@ -155,11 +158,12 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 					Neighborhood = enderecoEntrega.Bairro,
 					Street = enderecoEntrega.Endereco + " " + enderecoEntrega.Complemento,
 					StreetNumber = enderecoEntrega.Numero,
-					Zipcode = enderecoEntrega.CEP
+					Zipcode = Mascara.Remover(enderecoEntrega.CEP)
 				}
 			};
 
 			Item[] itens = new Item[produtos.Count];
+			
 			for(var i = 0; i < produtos.Count; i++)
 			{
 				var item = produtos[i];
@@ -169,12 +173,14 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 					Title = item.Nome,
 					Quantity = item.QuantidadeProdutoCarrinho,
 					Tangible = true,
-					UnitPrice = Convert.ToInt32(item.Valor),
+					UnitPrice = Mascara.ConverterValorPagarMe(item.Valor),
 				};
-
+				valorTotal += (item.Valor * item.QuantidadeProdutoCarrinho);
 				itens[i] = itemA;
 			}
 			transaction.Item = itens;
+			transaction.Amount = Mascara.ConverterValorPagarMe(valorTotal);
+
 			transaction.Save();
 
 			return new { TransactionId = transaction.Id };

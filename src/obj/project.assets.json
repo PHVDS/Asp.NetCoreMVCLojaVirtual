@@ -28,15 +28,6 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
-      "BouncyCastle/1.7.0": {
-        "type": "package",
-        "compile": {
-          "lib/Net40-Client/BouncyCastle.Crypto.dll": {}
-        },
-        "runtime": {
-          "lib/Net40-Client/BouncyCastle.Crypto.dll": {}
-        }
-      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -2958,19 +2949,6 @@
           "lib/netstandard1.6/NuGet.Frameworks.dll": {}
         }
       },
-      "Pagar.me/2.6.11": {
-        "type": "package",
-        "dependencies": {
-          "BouncyCastle": "1.7.0",
-          "Newtonsoft.Json": "6.0.8"
-        },
-        "compile": {
-          "lib/net45/PagarMe.dll": {}
-        },
-        "runtime": {
-          "lib/net45/PagarMe.dll": {}
-        }
-      },
       "Remotion.Linq/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -4969,22 +4947,6 @@
         "automapper.extensions.microsoft.dependencyinjection.nuspec",
         "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll",
         "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.pdb"
-      ]
-    },
-    "BouncyCastle/1.7.0": {
-      "sha512": "yvrW1NCFBC+l53Kchlk1iRYlnafpZ+o6oy0tFpFM2G28gz3H0PubyJFLc8KoYys3N0UPYo6TN2NRegpouDxRTw==",
-      "type": "package",
-      "path": "bouncycastle/1.7.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Readme.txt",
-        "bouncycastle.1.7.0.nupkg.sha512",
-        "bouncycastle.nuspec",
-        "lib/Net20/BouncyCastle.Crypto.dll",
-        "lib/Net40-Client/BouncyCastle.Crypto.dll",
-        "lib/Net40-Client/BouncyCastle.Crypto.pdb",
-        "lib/Net40-Client/crypto.xml"
       ]
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -8450,18 +8412,6 @@
         "lib/netstandard1.6/NuGet.Frameworks.xml",
         "nuget.frameworks.4.7.0.nupkg.sha512",
         "nuget.frameworks.nuspec"
-      ]
-    },
-    "Pagar.me/2.6.11": {
-      "sha512": "ljmw4dcIYLjzOfIu3cawvByHX6YR7SGI8yhbcFRJAoAmeX7K31TPPwk9ZBIYaOmbhcrrGm/CplDT+RsfkKDIHQ==",
-      "type": "package",
-      "path": "pagar.me/2.6.11",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/PagarMe.dll",
-        "pagar.me.2.6.11.nupkg.sha512",
-        "pagar.me.nuspec"
       ]
     },
     "Remotion.Linq/2.2.0": {
@@ -13739,7 +13689,6 @@
       "Microsoft.VisualStudio.Web.BrowserLink >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.4",
       "Newtonsoft.Json >= 13.0.1",
-      "Pagar.me >= 2.6.11",
       "System.ServiceModel.Duplex >= 4.4.*",
       "System.ServiceModel.Http >= 4.4.*",
       "System.ServiceModel.NetTcp >= 4.4.*",
@@ -13860,10 +13809,6 @@
             "target": "Package",
             "version": "[13.0.1, )"
           },
-          "Pagar.me": {
-            "target": "Package",
-            "version": "[2.6.11, )"
-          },
           "System.ServiceModel.Duplex": {
             "target": "Package",
             "version": "[4.4.*, )"
@@ -13898,27 +13843,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "O pacote 'BouncyCastle 1.7.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v2.2'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
-      "libraryId": "BouncyCastle",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.2"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "O pacote 'Pagar.me 2.6.11' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v2.2'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
-      "libraryId": "Pagar.me",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.2"
-      ]
-    }
-  ]
+  }
 }
