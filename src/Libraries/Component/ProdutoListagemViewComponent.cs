@@ -1,5 +1,5 @@
 ﻿using LojaVirtual.Models;
-using LojaVirtual.Models.ViewModels;
+using LojaVirtual.Models.ViewModels.Components;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using System;

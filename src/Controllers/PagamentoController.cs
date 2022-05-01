@@ -104,7 +104,7 @@ namespace LojaVirtual.Controllers
 
 				try
 				{
-					dynamic pagarMeResposta = _gerenciarPagarMe.GerarPagCartaoCredito(indexViewModel.CartaoCredito, enderecoEntrega, frete, produtos);
+					dynamic pagarMeResposta = _gerenciarPagarMe.GerarPagCartaoCredito(indexViewModel.CartaoCredito, indexViewModel.Parcelamento, enderecoEntrega, frete, produtos);
 					
 					return new ContentResult() { Content = "Sucesso" + pagarMeResposta.TransactionId };
 				}
@@ -155,7 +155,7 @@ namespace LojaVirtual.Controllers
 			}
 			else
 			{
-				var endereco = _enderecoEntregaRepository.ObterEnderecoEntrega(enderecoEntregaId);
+				_enderecoEntregaRepository.ObterEnderecoEntrega(enderecoEntregaId);
 			}
 
 			return enderecoEntrega;

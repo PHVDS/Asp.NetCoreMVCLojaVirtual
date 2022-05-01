@@ -61,7 +61,7 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 
 				return new
 				{
-					BoletoUrl = transaction.BoletoUrl,
+					transaction.BoletoUrl,
 					BarCode = transaction.BoletoBarcode,
 					Expiracao = transaction.BoletoExpirationDate
 				};
@@ -75,7 +75,7 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 			}
 		}
 		
-		public object GerarPagCartaoCredito(CartaoCredito cartao, EnderecoEntrega enderecoEntrega, ValorPrazoFrete valorFrete, List<ProdutoItem> produtos)
+		public object GerarPagCartaoCredito(CartaoCredito cartao, Parcelamento parcelamento, EnderecoEntrega enderecoEntrega, ValorPrazoFrete valorFrete, List<ProdutoItem> produtos)
 		{
 			Cliente cliente = _loginCliente.GetCliente();
 
@@ -142,8 +142,7 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 			var Today = DateTime.Now;
 
 			var fee = Convert.ToDecimal(valorFrete.Valor);
-			decimal valorTotal = fee;
-
+			
 			transaction.Shipping = new Shipping
 			{
 				Name = enderecoEntrega.Nome,
@@ -175,11 +174,11 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 					Tangible = true,
 					UnitPrice = Mascara.ConverterValorPagarMe(item.Valor)
 				};
-				valorTotal += (item.Valor * item.QuantidadeProdutoCarrinho);
 				itens[i] = itemA;
 			}
 			transaction.Item = itens;
-			transaction.Amount = Mascara.ConverterValorPagarMe(valorTotal);
+			transaction.Amount = Mascara.ConverterValorPagarMe(parcelamento.Valor);
+			transaction.Installments = parcelamento.Numero;
 
 			transaction.Save();
 
@@ -196,8 +195,10 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 
 			for (int quantidadeParcelas = 1; quantidadeParcelas <= maxParcelamento; quantidadeParcelas++)
 			{
-				Parcelamento parcelamento = new Parcelamento();
-				parcelamento.Numero = quantidadeParcelas;
+				Parcelamento parcelamento = new Parcelamento
+				{
+					Numero = quantidadeParcelas
+				};
 
 				if (quantidadeParcelas > parcelaPagaVendedor)
 				{

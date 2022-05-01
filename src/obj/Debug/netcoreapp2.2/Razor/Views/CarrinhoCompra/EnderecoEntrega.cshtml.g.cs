@@ -29,17 +29,22 @@ using LojaVirtual.Models.ViewModels;
 #line default
 #line hidden
 #line 7 "C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\Views\_ViewImports.cshtml"
-using LojaVirtual.Models.ProdutoAgregador;
+using LojaVirtual.Models.ViewModels.Components;
 
 #line default
 #line hidden
 #line 8 "C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\Views\_ViewImports.cshtml"
+using LojaVirtual.Models.ProdutoAgregador;
+
+#line default
+#line hidden
+#line 9 "C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\Views\_ViewImports.cshtml"
 using LojaVirtual.Models;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c80fd3f98f08aab5cd28e2eb1cec71be56e7cb53", @"/Views/CarrinhoCompra/EnderecoEntrega.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"57c8cffc9397c11418479049ac7a5ddc1acbe5b0", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dddbd845b15387b977e94fb1fe494168e8805463", @"/Views/_ViewImports.cshtml")]
     public class Views_CarrinhoCompra_EnderecoEntrega : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "CadastroEnderecoEntrega", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -327,7 +332,7 @@ WriteAttributeValue("", 1984, endereco.Id, 1984, 12, false);
             WriteLiteral("\r\n                </tbody>\r\n            </table>\r\n\r\n            <div class=\"text-center\">\r\n                ");
             EndContext();
             BeginContext(2660, 289, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c80fd3f98f08aab5cd28e2eb1cec71be56e7cb5317933", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c80fd3f98f08aab5cd28e2eb1cec71be56e7cb5318119", async() => {
                 BeginContext(2882, 63, true);
                 WriteLiteral("\r\n                    Cadastrar novo endereço\r\n                ");
                 EndContext();
@@ -446,7 +451,7 @@ WriteAttributeValue("", 1984, endereco.Id, 1984, 12, false);
             ");
             EndContext();
             BeginContext(5273, 109, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c80fd3f98f08aab5cd28e2eb1cec71be56e7cb5323768", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c80fd3f98f08aab5cd28e2eb1cec71be56e7cb5323954", async() => {
                 BeginContext(5369, 9, true);
                 WriteLiteral("Continuar");
                 EndContext();

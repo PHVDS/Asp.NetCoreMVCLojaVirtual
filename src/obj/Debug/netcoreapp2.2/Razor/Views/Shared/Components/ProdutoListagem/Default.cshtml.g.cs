@@ -29,17 +29,22 @@ using LojaVirtual.Models.ViewModels;
 #line default
 #line hidden
 #line 7 "C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\Views\_ViewImports.cshtml"
-using LojaVirtual.Models.ProdutoAgregador;
+using LojaVirtual.Models.ViewModels.Components;
 
 #line default
 #line hidden
 #line 8 "C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\Views\_ViewImports.cshtml"
+using LojaVirtual.Models.ProdutoAgregador;
+
+#line default
+#line hidden
+#line 9 "C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\Views\_ViewImports.cshtml"
 using LojaVirtual.Models;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5376f5fced8c057685c9ea1698a2198831d18240", @"/Views/Shared/Components/ProdutoListagem/Default.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"57c8cffc9397c11418479049ac7a5ddc1acbe5b0", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dddbd845b15387b977e94fb1fe494168e8805463", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Components_ProdutoListagem_Default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ProdutoListagemViewModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("id", new global::Microsoft.AspNetCore.Html.HtmlString("ordenacao"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -98,7 +103,7 @@ using LojaVirtual.Models;
             WriteLiteral("    <div class=\"container\" id=\"code_prod_complex\">\r\n        <div class=\"row\">\r\n            <div class=\"offset-md-10 col-md-2\">\r\n                ");
             EndContext();
             BeginContext(412, 120, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5376f5fced8c057685c9ea1698a2198831d182407825", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5376f5fced8c057685c9ea1698a2198831d182408011", async() => {
                 BeginContext(505, 18, true);
                 WriteLiteral("\r\n                ");
                 EndContext();
@@ -141,7 +146,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.Items = Model.ordenacao;
             WriteLiteral("                ");
             EndContext();
             BeginContext(703, 1448, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5376f5fced8c057685c9ea1698a2198831d1824010621", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5376f5fced8c057685c9ea1698a2198831d1824010807", async() => {
                 BeginContext(782, 158, true);
                 WriteLiteral("\r\n                    <div class=\"col-md-3\">\r\n                        <figure class=\"card card-product\">\r\n                            <div class=\"img-wrap\">\r\n");
                 EndContext();
@@ -175,7 +180,7 @@ WriteAttributeValue("", 1115, produto.Imagens.ElementAt(0).Caminho, 1115, 37, fa
                 WriteLiteral("                                    ");
                 EndContext();
                 BeginContext(1302, 38, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5376f5fced8c057685c9ea1698a2198831d1824012532", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5376f5fced8c057685c9ea1698a2198831d1824012718", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -211,7 +216,7 @@ WriteAttributeValue("", 1115, produto.Imagens.ElementAt(0).Caminho, 1115, 37, fa
                 WriteLiteral("</h4>\r\n\r\n                            </figcaption>\r\n                            <div class=\"bottom-wrap\">\r\n                                ");
                 EndContext();
                 BeginContext(1675, 157, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5376f5fced8c057685c9ea1698a2198831d1824014822", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5376f5fced8c057685c9ea1698a2198831d1824015008", async() => {
                     BeginContext(1807, 21, true);
                     WriteLiteral("Adicionar ao Carrinho");
                     EndContext();
