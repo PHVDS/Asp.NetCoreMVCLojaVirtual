@@ -10,6 +10,7 @@ using LojaVirtual.Libraries.Login;
 using LojaVirtual.Libraries.Texto;
 using LojaVirtual.Models;
 using LojaVirtual.Models.ProdutoAgregador;
+using LojaVirtual.Models.ViewModels.Pagamento;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -91,17 +92,19 @@ namespace LojaVirtual.Controllers
 
 		[HttpPost]
 		[ClienteAutorizacao]
-		public IActionResult Index([FromForm] CartaoCredito cartaoCredito)
+		public IActionResult Index([FromForm] IndexViewModel indexViewModel)
 		{
 			if (ModelState.IsValid)
 			{
 				EnderecoEntrega enderecoEntrega = ObterEndereco();
 				ValorPrazoFrete frete = ObterFrete(enderecoEntrega.CEP.ToString());
 				List<ProdutoItem> produtos = CarregarProdutoDB();
+				var parcela = _gerenciarPagarMe.CalcularPagamentoParcelado(ObterValorTotalCompra(produtos, frete))
+					.Where(a => a.Numero == indexViewModel.Parcelamento.Numero).First();
 
 				try
 				{
-					dynamic pagarMeResposta = _gerenciarPagarMe.GerarPagCartaoCredito(cartaoCredito, enderecoEntrega, frete, produtos);
+					dynamic pagarMeResposta = _gerenciarPagarMe.GerarPagCartaoCredito(indexViewModel.CartaoCredito, enderecoEntrega, frete, produtos);
 					
 					return new ContentResult() { Content = "Sucesso" + pagarMeResposta.TransactionId };
 				}
