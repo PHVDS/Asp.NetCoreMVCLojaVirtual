@@ -12,6 +12,7 @@ using LojaVirtual.Models;
 using LojaVirtual.Models.ProdutoAgregador;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using PagarMe;
 using System;
 using System.Collections.Generic;
@@ -61,12 +62,26 @@ namespace LojaVirtual.Controllers
 			{
 				var enderecoEntrega = ObterEndereco();
 				var carrinhoHash = GerarHash(_cookieCarrinhoCompra.Consultar());
-
 				int cep = int.Parse(Mascara.Remover(enderecoEntrega.CEP));
-
-				ViewBag.Frete = ObterFrete(cep.ToString());
 				List<ProdutoItem> produtoItemCompleto = CarregarProdutoDB();
+				var frete = ObterFrete(cep.ToString());
+
+				var total = ObterValorTotalCompra(produtoItemCompleto, frete);
+				var parcelamento = _gerenciarPagarMe.CalcularPagamentoParcelado(total);
+
+				ViewBag.Frete = frete;
 				ViewBag.Produtos = produtoItemCompleto;
+				ViewBag.Parcelamentos = parcelamento.Select(a => new SelectListItem(
+					String.Format
+					(
+						"{0}x {1} {2} - TOTAL: {3}",
+						a.Numero,
+						a.ValorPorParcela.ToString("C"),
+						a.Juros ? "c/ juros" : "s/ juros",
+						a.Valor.ToString("C")
+					),
+						a.Numero.ToString()
+				)).ToList();
 
 				return View("Index");
 			}
@@ -156,6 +171,17 @@ namespace LojaVirtual.Controllers
 				return frete.ListaValores.Where(a => a.TipoFrete == tipoFreteSelecionadoPeloUsuario).FirstOrDefault();
 			}
 			return null;
+		}
+
+		private decimal ObterValorTotalCompra(List<ProdutoItem> produtos, ValorPrazoFrete frete)
+		{
+			decimal total = Convert.ToDecimal(frete.Valor);
+
+			foreach (var produto in produtos)
+			{
+				total += produto.Valor;
+			}
+			return total;
 		}
 	}
 }
