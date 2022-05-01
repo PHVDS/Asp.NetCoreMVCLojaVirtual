@@ -185,6 +185,41 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 
 			return new { TransactionId = transaction.Id };
 		}
+
+		public List<Parcelamento> CalcularPagamentoParcelado(decimal valor)
+		{
+			List<Parcelamento> listaParcelamento = new List<Parcelamento>();
+
+			int maxParcelamento = _configuration.GetValue<int>("Pagamento:PagarMe:MaxParcelas");
+			int parcelaPagaVendedor = _configuration.GetValue<int>("Pagamento:PagarMe:ParcelaPagaVendedor");
+			decimal juros = _configuration.GetValue<decimal>("Pagamento:PagarMe:Juros");
+
+			for (int quantidadeParcelas = 1; quantidadeParcelas <= maxParcelamento; quantidadeParcelas++)
+			{
+				Parcelamento parcelamento = new Parcelamento();
+				parcelamento.Numero = quantidadeParcelas;
+
+				if (quantidadeParcelas > parcelaPagaVendedor)
+				{
+					//Juros -> quantidadeParcelas = (4 - (3parcelas = parcelaPagaVendedor)) + 5%
+					int quantidadeParcelasComJuros = quantidadeParcelas - parcelaPagaVendedor;
+					decimal valorDoJuros =  (valor * juros) / 100;
+
+					parcelamento.Valor = (quantidadeParcelasComJuros * valorDoJuros) + valor;
+					parcelamento.ValorPorParcela = parcelamento.Valor / parcelamento.Numero;
+					parcelamento.Juros = true;
+				}
+				else
+				{
+					parcelamento.Valor = valor;
+					parcelamento.ValorPorParcela = parcelamento.Valor / parcelamento.Numero;
+					parcelamento.Juros = false;
+				}
+
+				listaParcelamento.Add(parcelamento);
+			}
+			return listaParcelamento;
+		}
 	}
 }
  
