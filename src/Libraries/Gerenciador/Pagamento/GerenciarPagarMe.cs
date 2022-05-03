@@ -19,7 +19,7 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 			_loginCliente = loginCliente;
 		}
 
-		public object GerarBoleto(decimal valor)
+		public Boleto GerarBoleto(decimal valor)
 		{
 			try
 			{
@@ -59,16 +59,17 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 
 				transaction.Save();
 
-				return new
+				return new Boleto
 				{
-					transaction.BoletoUrl,
+					TransacaoId = transaction.Id,
+					BoletoURL = transaction.BoletoUrl,
 					BarCode = transaction.BoletoBarcode,
 					Expiracao = transaction.BoletoExpirationDate
 				};
 			}
 			catch (Exception e)
 			{
-				return new 
+				return new Boleto
 				{ 
 					Erro = e.Message
 				};

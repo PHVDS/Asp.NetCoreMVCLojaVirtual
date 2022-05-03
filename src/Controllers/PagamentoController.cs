@@ -61,28 +61,12 @@ namespace LojaVirtual.Controllers
 
 			if (tipoFreteSelecionadoPeloUsuario != null)
 			{
-				var enderecoEntrega = ObterEndereco();
-				var carrinhoHash = GerarHash(_cookieCarrinhoCompra.Consultar());
-				int cep = int.Parse(Mascara.Remover(enderecoEntrega.CEP));
 				List<ProdutoItem> produtoItemCompleto = CarregarProdutoDB();
-				var frete = ObterFrete(cep.ToString());
-
-				var total = ObterValorTotalCompra(produtoItemCompleto, frete);
-				var parcelamento = _gerenciarPagarMe.CalcularPagamentoParcelado(total);
+				ValorPrazoFrete frete = ObterFrete();
 
 				ViewBag.Frete = frete;
 				ViewBag.Produtos = produtoItemCompleto;
-				ViewBag.Parcelamentos = parcelamento.Select(a => new SelectListItem(
-					String.Format
-					(
-						"{0}x {1} {2} - TOTAL: {3}",
-						a.Numero,
-						a.ValorPorParcela.ToString("C"),
-						a.Juros ? "c/ juros" : "s/ juros",
-						a.Valor.ToString("C")
-					),
-						a.Numero.ToString()
-				)).ToList();
+				ViewBag.Parcelamentos = CalcularParcelamento(produtoItemCompleto);
 
 				return View("Index");
 			}
@@ -97,14 +81,13 @@ namespace LojaVirtual.Controllers
 			if (ModelState.IsValid)
 			{
 				EnderecoEntrega enderecoEntrega = ObterEndereco();
-				ValorPrazoFrete frete = ObterFrete(enderecoEntrega.CEP.ToString());
+				ValorPrazoFrete frete = ObterFrete();
 				List<ProdutoItem> produtos = CarregarProdutoDB();
-				var parcela = _gerenciarPagarMe.CalcularPagamentoParcelado(ObterValorTotalCompra(produtos, frete))
-					.Where(a => a.Numero == indexViewModel.Parcelamento.Numero).First();
+				Parcelamento parcela = BuscarParcelamento(produtos, indexViewModel.Parcelamento.Numero);
 
 				try
 				{
-					dynamic pagarMeResposta = _gerenciarPagarMe.GerarPagCartaoCredito(indexViewModel.CartaoCredito, indexViewModel.Parcelamento, enderecoEntrega, frete, produtos);
+					dynamic pagarMeResposta = _gerenciarPagarMe.GerarPagCartaoCredito(indexViewModel.CartaoCredito, parcela, enderecoEntrega, frete, produtos);
 					
 					return new ContentResult() { Content = "Sucesso" + pagarMeResposta.TransactionId };
 				}
@@ -128,6 +111,28 @@ namespace LojaVirtual.Controllers
 			else
 			{
 				return Index();
+			}
+		}
+
+		public IActionResult BoletoBancario()
+		{
+			EnderecoEntrega enderecoEntrega = ObterEndereco();
+			ValorPrazoFrete frete = ObterFrete();
+			List<ProdutoItem> produtos = CarregarProdutoDB();
+			var valorTotal = ObterValorTotalCompra(produtos);
+
+
+			Boleto boleto = _gerenciarPagarMe.GerarBoleto(valorTotal);
+
+			if (boleto.Erro != null)
+			{
+				TempData["MSG_E"] = boleto.Erro;
+				return RedirectToAction(nameof(Index));
+			}
+			else
+			{
+				return new ContentResult() { Content = "Sucesso! Boleto -" + boleto.TransacaoId };
+				//return View("PedidoSucesso");
 			}
 		}
 
@@ -161,11 +166,12 @@ namespace LojaVirtual.Controllers
 			return enderecoEntrega;
 		}
 
-		private ValorPrazoFrete ObterFrete(string cepDestino)
+		private ValorPrazoFrete ObterFrete()
 		{
+			var enderecoEntrega = ObterEndereco();
+			int cep = int.Parse(Mascara.Remover(enderecoEntrega.CEP));
 			var tipoFreteSelecionadoPeloUsuario = _cookie.Consultar("Carrinho.TipoFrete", false);
 			var carrinhoHash = GerarHash(_cookieCarrinhoCompra.Consultar());
-			int cep = int.Parse(Mascara.Remover(cepDestino));
 
 			Frete frete = _cookieFrete.Consultar().Where(a => a.CEP == cep && a.CodigoCarrinho == carrinhoHash).FirstOrDefault();
 
@@ -176,8 +182,9 @@ namespace LojaVirtual.Controllers
 			return null;
 		}
 
-		private decimal ObterValorTotalCompra(List<ProdutoItem> produtos, ValorPrazoFrete frete)
+		private decimal ObterValorTotalCompra(List<ProdutoItem> produtos)
 		{
+			ValorPrazoFrete frete = ObterFrete();
 			decimal total = Convert.ToDecimal(frete.Valor);
 
 			foreach (var produto in produtos)
@@ -185,6 +192,30 @@ namespace LojaVirtual.Controllers
 				total += produto.Valor;
 			}
 			return total;
+		}
+
+		private List<SelectListItem> CalcularParcelamento(List<ProdutoItem> produtos)
+		{
+			var total = ObterValorTotalCompra(produtos);
+			var parcelamento = _gerenciarPagarMe.CalcularPagamentoParcelado(total);
+
+			return parcelamento.Select(a => new SelectListItem(
+				String.Format
+				(
+					"{0}x {1} {2} - TOTAL: {3}",
+					a.Numero,
+					a.ValorPorParcela.ToString("C"),
+					a.Juros ? "c/ juros" : "s/ juros",
+					a.Valor.ToString("C")
+				),
+					a.Numero.ToString()
+			)).ToList();
+		}
+
+		private Parcelamento BuscarParcelamento(List<ProdutoItem> produtos, int numero)
+		{
+			return _gerenciarPagarMe.CalcularPagamentoParcelado(ObterValorTotalCompra(produtos))
+					.Where(a => a.Numero == numero).First();
 		}
 	}
 }
