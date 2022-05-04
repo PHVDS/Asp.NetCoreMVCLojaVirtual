@@ -23,6 +23,8 @@ using System.Threading.Tasks;
 
 namespace LojaVirtual.Controllers
 {
+	[ClienteAutorizacao]
+	[ValidateCookiePagamentoController]
 	public class PagamentoController : BaseController
 	{
 		private readonly Cookie _cookie;
@@ -54,28 +56,19 @@ namespace LojaVirtual.Controllers
 		}
 
 		[HttpGet]
-		[ClienteAutorizacao]
 		public IActionResult Index()
 		{
-			var tipoFreteSelecionadoPeloUsuario = _cookie.Consultar("Carrinho.TipoFrete", false);
+			List<ProdutoItem> produtoItemCompleto = CarregarProdutoDB();
+			ValorPrazoFrete frete = ObterFrete();
 
-			if (tipoFreteSelecionadoPeloUsuario != null)
-			{
-				List<ProdutoItem> produtoItemCompleto = CarregarProdutoDB();
-				ValorPrazoFrete frete = ObterFrete();
+			ViewBag.Frete = frete;
+			ViewBag.Produtos = produtoItemCompleto;
+			ViewBag.Parcelamentos = CalcularParcelamento(produtoItemCompleto);
 
-				ViewBag.Frete = frete;
-				ViewBag.Produtos = produtoItemCompleto;
-				ViewBag.Parcelamentos = CalcularParcelamento(produtoItemCompleto);
-
-				return View("Index");
-			}
-			TempData["MSG_E"] = Mensagem.MSG_E009;
-			return RedirectToAction("EnderecoEntrega", "CarrinhoCompra");
+			return View("Index");
 		}
 
 		[HttpPost]
-		[ClienteAutorizacao]
 		public IActionResult Index([FromForm] IndexViewModel indexViewModel)
 		{
 			if (ModelState.IsValid)
