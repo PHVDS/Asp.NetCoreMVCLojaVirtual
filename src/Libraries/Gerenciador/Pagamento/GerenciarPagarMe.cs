@@ -19,64 +19,47 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 			_loginCliente = loginCliente;
 		}
 
-		public Boleto GerarBoleto(decimal valor)
+		public Transaction GerarBoleto(decimal valor)
 		{
-			try
+			Cliente cliente = _loginCliente.GetCliente();
+
+			PagarMeService.DefaultApiKey = _configuration.GetValue<String>("Pagamento:PagarMe:ApiKey");
+			PagarMeService.DefaultEncryptionKey = _configuration.GetValue<String>("Pagamento:PagarMe:EncryptionKey");
+
+			Transaction transaction = new Transaction
 			{
-				Cliente cliente = _loginCliente.GetCliente();
+				Amount = Convert.ToInt32(valor),
+				PaymentMethod = PaymentMethod.Boleto,
 
-				PagarMeService.DefaultApiKey = _configuration.GetValue<String>("Pagamento:PagarMe:ApiKey");
-				PagarMeService.DefaultEncryptionKey = _configuration.GetValue<String>("Pagamento:PagarMe:EncryptionKey");
-
-				Transaction transaction = new Transaction
+				Customer = new Customer
 				{
-					Amount = Convert.ToInt32(valor),
-					PaymentMethod = PaymentMethod.Boleto,
-
-					Customer = new Customer
+					ExternalId = cliente.Id.ToString(),
+					Name = cliente.Nome,
+					Type = CustomerType.Individual,
+					Country = "br",
+					Email = cliente.Email,
+					Documents = new[]
 					{
-						ExternalId = cliente.Id.ToString(),
-						Name = cliente.Nome,
-						Type = CustomerType.Individual,
-						Country = "br",
-						Email = cliente.Email,
-						Documents = new[]
-						{
 							new Document{
 								Type = DocumentType.Cpf,
 								Number = Mascara.Remover(cliente.CPF)
 							},
 
 						},
-						PhoneNumbers = new string[]
-						{
+					PhoneNumbers = new string[]
+					{
 						"+55" + Mascara.Remover(cliente.Telefone)
-						},
+					},
 
-						Birthday = cliente.Nascimento.ToString("yyyy-MM-dd")
-					}
-				};
+					Birthday = cliente.Nascimento.ToString("yyyy-MM-dd")
+				}
+			};
 
-				transaction.Save();
-
-				return new Boleto
-				{
-					TransacaoId = transaction.Id,
-					BoletoURL = transaction.BoletoUrl,
-					BarCode = transaction.BoletoBarcode,
-					Expiracao = transaction.BoletoExpirationDate
-				};
-			}
-			catch (Exception e)
-			{
-				return new Boleto
-				{ 
-					Erro = e.Message
-				};
-			}
+			transaction.Save();
+			return transaction;
 		}
-		
-		public object GerarPagCartaoCredito(CartaoCredito cartao, Parcelamento parcelamento, EnderecoEntrega enderecoEntrega, ValorPrazoFrete valorFrete, List<ProdutoItem> produtos)
+
+		public Transaction GerarPagCartaoCredito(CartaoCredito cartao, Parcelamento parcelamento, EnderecoEntrega enderecoEntrega, ValorPrazoFrete valorFrete, List<ProdutoItem> produtos)
 		{
 			Cliente cliente = _loginCliente.GetCliente();
 
@@ -95,7 +78,6 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 
 			Transaction transaction = new Transaction
 			{
-				
 				Card = new Card
 				{
 					Id = card.Id
@@ -183,7 +165,7 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 
 			transaction.Save();
 
-			return new { TransactionId = transaction.Id };
+			return transaction;
 		}
 
 		public List<Parcelamento> CalcularPagamentoParcelado(decimal valor)
@@ -205,9 +187,9 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 				{
 					//Juros -> quantidadeParcelas = (4 - (3parcelas = parcelaPagaVendedor)) + 5%
 					int quantidadeParcelasComJuros = quantidadeParcelas - parcelaPagaVendedor;
-					decimal valorDoJuros =  (valor * juros) / 100;
+					decimal valorDoJuros =  valor * juros / 100;
 
-					parcelamento.Valor = (quantidadeParcelasComJuros * valorDoJuros) + valor;
+					parcelamento.Valor = quantidadeParcelasComJuros * valorDoJuros + valor;
 					parcelamento.ValorPorParcela = parcelamento.Valor / parcelamento.Numero;
 					parcelamento.Juros = true;
 				}

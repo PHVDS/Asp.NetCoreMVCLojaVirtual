@@ -87,23 +87,14 @@ namespace LojaVirtual.Controllers
 
 				try
 				{
-					dynamic pagarMeResposta = _gerenciarPagarMe.GerarPagCartaoCredito(indexViewModel.CartaoCredito, parcela, enderecoEntrega, frete, produtos);
+					Transaction transaction = _gerenciarPagarMe.GerarPagCartaoCredito(indexViewModel.CartaoCredito, parcela, enderecoEntrega, frete, produtos);
 					
-					return new ContentResult() { Content = "Sucesso" + pagarMeResposta.TransactionId };
+					return new ContentResult() { Content = "Sucesso! Cartão de Crédito" + transaction.Id };
 				}
 				catch (PagarMeException e)
 				{
-					StringBuilder sb = new StringBuilder();
 
-					if (e.Error.Errors.Count() > 0)
-					{
-						sb.Append("Erro no pagamento: ");
-						foreach (var erro in e.Error.Errors)
-						{
-							sb.Append("- " + e.Message + "<br />");
-						}
-					}
-					TempData["MSG_E"] = sb.ToString();
+					TempData["MSG_E"] = MontarMensagensDeErro(e);
 
 					return Index();
 				}
@@ -121,18 +112,16 @@ namespace LojaVirtual.Controllers
 			List<ProdutoItem> produtos = CarregarProdutoDB();
 			var valorTotal = ObterValorTotalCompra(produtos);
 
-
-			Boleto boleto = _gerenciarPagarMe.GerarBoleto(valorTotal);
-
-			if (boleto.Erro != null)
+			try
 			{
-				TempData["MSG_E"] = boleto.Erro;
-				return RedirectToAction(nameof(Index));
-			}
-			else
-			{
-				return new ContentResult() { Content = "Sucesso! Boleto -" + boleto.TransacaoId };
+				Transaction transaction = _gerenciarPagarMe.GerarBoleto(valorTotal);
+				return new ContentResult() { Content = "Sucesso! Boleto -" + transaction.Id };
 				//return View("PedidoSucesso");
+			}
+			catch (PagarMeException e)
+			{
+				TempData["MSG_E"] = MontarMensagensDeErro(e);
+				return RedirectToAction(nameof(Index));
 			}
 		}
 
@@ -216,6 +205,21 @@ namespace LojaVirtual.Controllers
 		{
 			return _gerenciarPagarMe.CalcularPagamentoParcelado(ObterValorTotalCompra(produtos))
 					.Where(a => a.Numero == numero).First();
+		}
+
+		private string MontarMensagensDeErro(PagarMeException e)
+		{
+			StringBuilder sb = new StringBuilder();
+
+			if (e.Error.Errors.Count() > 0)
+			{
+				sb.Append("Erro no pagamento: ");
+				foreach (var erro in e.Error.Errors)
+				{
+					sb.Append("- " + e.Message + "<br />");
+				}
+			}
+			return sb.ToString();
 		}
 	}
 }
