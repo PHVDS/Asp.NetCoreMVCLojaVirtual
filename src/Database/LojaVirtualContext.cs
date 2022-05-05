@@ -19,6 +19,8 @@ namespace LojaVirtual.Database
 		public DbSet<Colaborador> Colaboradores { get; set; }
 		public DbSet<Categoria> Categorias { get; set; }
 		public DbSet<EnderecoEntrega> EnderecosEntrega { get; set; }
+		public DbSet<Pedido> Pedidos { get; set; }
+		public DbSet<PedidoSituacao> PedidoSituacoes { get; set; }
 
 		public DbSet<Produto> Produtos { get; set; }
 		public DbSet<Imagem> Imagens { get; set; }

@@ -70,5 +70,8 @@ namespace LojaVirtual.Models
 
 		[ForeignKey("ClienteId")]
 		public virtual ICollection<EnderecoEntrega> EnderecosEntrega { get; set; }
+
+		[ForeignKey("ClienteId")]
+		public virtual ICollection<Pedido> Pedidos { get; set; }
 	}
 }
