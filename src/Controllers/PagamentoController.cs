@@ -126,19 +126,7 @@ namespace LojaVirtual.Controllers
 			if (enderecoEntregaId == 0)
 			{
 				Cliente cliente = _loginCliente.GetCliente();
-
-				enderecoEntrega = new EnderecoEntrega
-				{
-					Nome = "Endereço do cliente",
-					Id = 0,
-					CEP = cliente.CEP,
-					Estado = cliente.Estado,
-					Cidade = cliente.Cidade,
-					Bairro = cliente.Bairro,
-					Endereco = cliente.Endereco,
-					Complemento = cliente.Complemento,
-					Numero = cliente.Numero
-				};
+				enderecoEntrega = _mapper.Map<EnderecoEntrega>(cliente);
 			}
 			else
 			{
