@@ -93,7 +93,7 @@ namespace LojaVirtual.Controllers
 
 					Pedido pedido = SalvarPedido(produtos, transaction);
 
-					return new ContentResult() { Content = "Sucesso! Cartão de Crédito" + transaction.Id };
+					return new RedirectToActionResult("Index", "Pedido", new { id = pedido.Id });
 				}
 				catch (PagarMeException e)
 				{
@@ -109,21 +109,6 @@ namespace LojaVirtual.Controllers
 			}
 		}
 
-		private Pedido SalvarPedido(List<ProdutoItem> produtos, Transaction transaction)
-		{
-			Pedido pedido = _mapper.Map<Pedido>(transaction).MapExtensao(produtos);
-			pedido.Situacao = PedidoSituacaoConstant.AGUARDANDO_PAGAMENTO;
-			
-			_pedidoRepository.Cadastrar(pedido);
-
-			TransactionProduto transactionProduto = new TransactionProduto { Transaction = transaction, Produtos = produtos };
-			PedidoSituacao pedidoSituacao = _mapper.Map<PedidoSituacao>(pedido).MapExtensao(transactionProduto);
-			pedidoSituacao.Situacao = PedidoSituacaoConstant.AGUARDANDO_PAGAMENTO;
-			
-			_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
-			return pedido;
-		}
-
 		public IActionResult BoletoBancario()
 		{
 			EnderecoEntrega enderecoEntrega = ObterEndereco();
@@ -134,14 +119,30 @@ namespace LojaVirtual.Controllers
 			try
 			{
 				Transaction transaction = _gerenciarPagarMe.GerarBoleto(valorTotal);
-				return new ContentResult() { Content = "Sucesso! Boleto -" + transaction.Id };
-				//return View("PedidoSucesso");
+				Pedido pedido = SalvarPedido(produtos, transaction);
+
+				return new RedirectToActionResult("Index", "Pedido", new { id = pedido.Id });
 			}
 			catch (PagarMeException e)
 			{
 				TempData["MSG_E"] = MontarMensagensDeErro(e);
 				return RedirectToAction(nameof(Index));
 			}
+		}
+
+		private Pedido SalvarPedido(List<ProdutoItem> produtos, Transaction transaction)
+		{
+			Pedido pedido = _mapper.Map<Pedido>(transaction).MapExtensao(produtos);
+			pedido.Situacao = PedidoSituacaoConstant.AGUARDANDO_PAGAMENTO;
+
+			_pedidoRepository.Cadastrar(pedido);
+
+			TransactionProduto transactionProduto = new TransactionProduto { Transaction = transaction, Produtos = produtos };
+			PedidoSituacao pedidoSituacao = _mapper.Map<PedidoSituacao>(pedido).MapExtensao(transactionProduto);
+			pedidoSituacao.Situacao = PedidoSituacaoConstant.AGUARDANDO_PAGAMENTO;
+
+			_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+			return pedido;
 		}
 
 		private EnderecoEntrega ObterEndereco()
