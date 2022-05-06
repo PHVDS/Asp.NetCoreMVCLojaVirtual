@@ -9,11 +9,13 @@ using LojaVirtual.Libraries.Lang;
 using LojaVirtual.Libraries.Login;
 using LojaVirtual.Libraries.Texto;
 using LojaVirtual.Models;
+using LojaVirtual.Models.Constants;
 using LojaVirtual.Models.ProdutoAgregador;
 using LojaVirtual.Models.ViewModels.Pagamento;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Newtonsoft.Json;
 using PagarMe;
 using System;
 using System.Collections.Generic;
@@ -88,7 +90,7 @@ namespace LojaVirtual.Controllers
 				{
 					Transaction transaction = _gerenciarPagarMe.GerarPagCartaoCredito(indexViewModel.CartaoCredito, parcela, enderecoEntrega, frete, produtos);
 
-					SalvarPedido(produtos, transaction);
+					Pedido pedido = SalvarPedido(produtos, transaction);
 
 					return new ContentResult() { Content = "Sucesso! Cartão de Crédito" + transaction.Id };
 				}
@@ -106,32 +108,30 @@ namespace LojaVirtual.Controllers
 			}
 		}
 
-		private void SalvarPedido(List<ProdutoItem> produtos, Transaction transaction)
+		private Pedido SalvarPedido(List<ProdutoItem> produtos, Transaction transaction)
 		{
-			Pedido pedido = new Pedido
-			{
-				ClienteId = int.Parse(transaction.Customer.Id),
-				TransactionId = transaction.Id,
-				FreteEmpresa = "ECT - Correios",
-				FormaPagamento = (transaction.PaymentMethod == 0) ? "Cartão de Crédito" : "Boleto",
-				ValorTotal = ObterValorTotalCompra(produtos),
-				DadosTransaction = transaction,
-				DadosProdutos = produtos,
-				DataRegistro = DateTime.Now,
-				Situacao = "",
-			};
+			Pedido pedido = _mapper.Map<Pedido>(transaction);
 
+			pedido.ValorTotal = ObterValorTotalCompra(produtos);
+			pedido.DadosProdutos = JsonConvert.SerializeObject(produtos);
+			pedido.Situacao = PedidoSituacaoConstant.AGUARDANDO_PAGAMENTO;
+			
 			_pedidoRepository.Cadastrar(pedido);
 
 			PedidoSituacao pedidoSituacao = new PedidoSituacao
 			{
 				PedidoId = pedido.Id,
 				Data = DateTime.Now,
-				Dados = new { Transaction = transaction, Produtos = produtos },
-				Situacao = ""
+				Dados = JsonConvert.SerializeObject(
+					new TransactionProduto 
+					{ 
+						Transaction = transaction, Produtos = produtos 
+					}),
+				Situacao = PedidoSituacaoConstant.AGUARDANDO_PAGAMENTO
 			};
 
 			_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+			return pedido;
 		}
 
 		public IActionResult BoletoBancario()
