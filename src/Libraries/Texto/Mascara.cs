@@ -21,5 +21,13 @@ namespace LojaVirtual.Libraries.Texto
 
 			return valorInt;
 		}
+
+		public static decimal ConverterPagarMeIntToDecimal(int valor)
+		{
+			string valorPagarMeString =  valor.ToString();
+			string valorDecimalString = valorPagarMeString.Substring(0, valorPagarMeString.Length - 2) + "." + valorPagarMeString.Substring(valorPagarMeString.Length - 2);
+
+			return decimal.Parse(valorDecimalString);
+		}
 	}
 }

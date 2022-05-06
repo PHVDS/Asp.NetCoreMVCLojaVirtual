@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using LojaVirtual.Controllers.Base;
+using LojaVirtual.Libraries.AutoMapper;
 using LojaVirtual.Libraries.CarrinhoCompra;
 using LojaVirtual.Libraries.Cookie;
 using LojaVirtual.Libraries.Filtro;
@@ -110,26 +111,15 @@ namespace LojaVirtual.Controllers
 
 		private Pedido SalvarPedido(List<ProdutoItem> produtos, Transaction transaction)
 		{
-			Pedido pedido = _mapper.Map<Pedido>(transaction);
-
-			pedido.ValorTotal = ObterValorTotalCompra(produtos);
-			pedido.DadosProdutos = JsonConvert.SerializeObject(produtos);
+			Pedido pedido = _mapper.Map<Pedido>(transaction).MapExtensao(produtos);
 			pedido.Situacao = PedidoSituacaoConstant.AGUARDANDO_PAGAMENTO;
 			
 			_pedidoRepository.Cadastrar(pedido);
 
-			PedidoSituacao pedidoSituacao = new PedidoSituacao
-			{
-				PedidoId = pedido.Id,
-				Data = DateTime.Now,
-				Dados = JsonConvert.SerializeObject(
-					new TransactionProduto 
-					{ 
-						Transaction = transaction, Produtos = produtos 
-					}),
-				Situacao = PedidoSituacaoConstant.AGUARDANDO_PAGAMENTO
-			};
-
+			TransactionProduto transactionProduto = new TransactionProduto { Transaction = transaction, Produtos = produtos };
+			PedidoSituacao pedidoSituacao = _mapper.Map<PedidoSituacao>(pedido).MapExtensao(transactionProduto);
+			pedidoSituacao.Situacao = PedidoSituacaoConstant.AGUARDANDO_PAGAMENTO;
+			
 			_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
 			return pedido;
 		}

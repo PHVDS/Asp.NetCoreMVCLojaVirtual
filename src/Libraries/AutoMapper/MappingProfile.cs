@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using LojaVirtual.Libraries.Texto;
 using LojaVirtual.Models;
 using LojaVirtual.Models.ProdutoAgregador;
 using Newtonsoft.Json;
@@ -25,7 +26,26 @@ namespace LojaVirtual.Libraries.AutoMapper
 				.ForMember(dest => dest.FreteEmpresa, opt => opt.MapFrom(origem => "ECT - Correios"))
 				.ForMember(dest => dest.FormaPagamento, opt => opt.MapFrom(origem => (origem.PaymentMethod == 0) ? "Cartão de Crédito" : "Boleto"))
 				.ForMember(dest => dest.DadosTransaction, opt => opt.MapFrom(origem => JsonConvert.SerializeObject(origem)))
-				.ForMember(dest => dest.DataRegistro, opt => opt.MapFrom(origem => DateTime.Now));
+				.ForMember(dest => dest.DataRegistro, opt => opt.MapFrom(origem => DateTime.Now))
+				.ForMember(dest => dest.ValorTotal, opt => opt.MapFrom(origem => Mascara.ConverterPagarMeIntToDecimal(origem.Amount)));
+
+			CreateMap<List<ProdutoItem>, Pedido>()
+				.ForMember(dest => dest.DadosProdutos, opt => opt.MapFrom(origem => JsonConvert.SerializeObject(origem)));
+
+			CreateMap<Pedido, PedidoSituacao>()
+				.ForMember(dest => dest.PedidoId, opt => opt.MapFrom(origem => origem.Id))
+				.ForMember(dest => dest.Data, opt => opt.MapFrom(origem => DateTime.Now));
+
+			CreateMap<TransactionProduto, PedidoSituacao>()
+				.ForMember(dest => dest.Dados, opt => opt.MapFrom(origem => JsonConvert.SerializeObject(origem)));
+		}
+	}
+
+	public static class Extensao
+	{
+		public static TDestination MapExtensao<TSource, TDestination>(this TDestination destination, TSource source)
+		{
+			return Mapper.Map(source, destination);
 		}
 	}
 }
