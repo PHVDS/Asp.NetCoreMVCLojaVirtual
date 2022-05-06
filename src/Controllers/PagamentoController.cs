@@ -29,8 +29,12 @@ namespace LojaVirtual.Controllers
 	{
 		private readonly Cookie _cookie;
 		private readonly GerenciarPagarMe _gerenciarPagarMe;
+		private readonly IPedidoRepository _pedidoRepository;
+		private readonly IPedidoSituacaoRepository _pedidoSituacaoRepository;
 
 		public PagamentoController(
+			IPedidoSituacaoRepository pedidoSituacaoRepository,
+			IPedidoRepository pedidoRepository,
 			LoginCliente loginCliente,
 			IEnderecoEntregaRepository enderecoEntregaRepository,
 			Cookie cookie,
@@ -51,6 +55,8 @@ namespace LojaVirtual.Controllers
 				  cookieCarrinhoCompra,
 				  produtoRepository)
 		{
+			_pedidoSituacaoRepository = pedidoSituacaoRepository;
+			_pedidoRepository = pedidoRepository;
 			_cookie = cookie;
 			_gerenciarPagarMe = gerenciarPagarMe;
 		}
@@ -81,7 +87,9 @@ namespace LojaVirtual.Controllers
 				try
 				{
 					Transaction transaction = _gerenciarPagarMe.GerarPagCartaoCredito(indexViewModel.CartaoCredito, parcela, enderecoEntrega, frete, produtos);
-					
+
+					SalvarPedido(produtos, transaction);
+
 					return new ContentResult() { Content = "Sucesso! Cartão de Crédito" + transaction.Id };
 				}
 				catch (PagarMeException e)
@@ -96,6 +104,34 @@ namespace LojaVirtual.Controllers
 			{
 				return Index();
 			}
+		}
+
+		private void SalvarPedido(List<ProdutoItem> produtos, Transaction transaction)
+		{
+			Pedido pedido = new Pedido
+			{
+				ClienteId = int.Parse(transaction.Customer.Id),
+				TransactionId = transaction.Id,
+				FreteEmpresa = "ECT - Correios",
+				FormaPagamento = (transaction.PaymentMethod == 0) ? "Cartão de Crédito" : "Boleto",
+				ValorTotal = ObterValorTotalCompra(produtos),
+				DadosTransaction = transaction,
+				DadosProdutos = produtos,
+				DataRegistro = DateTime.Now,
+				Situacao = "",
+			};
+
+			_pedidoRepository.Cadastrar(pedido);
+
+			PedidoSituacao pedidoSituacao = new PedidoSituacao
+			{
+				PedidoId = pedido.Id,
+				Data = DateTime.Now,
+				Dados = new { Transaction = transaction, Produtos = produtos },
+				Situacao = ""
+			};
+
+			_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
 		}
 
 		public IActionResult BoletoBancario()

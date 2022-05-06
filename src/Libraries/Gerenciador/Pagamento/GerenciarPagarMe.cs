@@ -78,6 +78,8 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 
 			Transaction transaction = new Transaction
 			{
+				PaymentMethod = PaymentMethod.CreditCard,
+
 				Card = new Card
 				{
 					Id = card.Id
