@@ -21,7 +21,9 @@ namespace LojaVirtual.Libraries.AutoMapper
 				.ForMember(destino => destino.Id, opt => opt.MapFrom(origem => 0))
 				.ForMember(destino => destino.Nome, opt => opt.MapFrom(origem => string.Format("Endereço do cliente ({0})", origem.Nome)));
 
-			CreateMap<Transaction, Pedido>()
+			CreateMap<Transaction, TransacaoPagarMe>();
+
+			CreateMap<TransacaoPagarMe, Pedido>()
 				.ForMember(dest => dest.ClienteId, opt => opt.MapFrom(origem => int.Parse(origem.Customer.Id)))
 				.ForMember(dest => dest.TransactionId, opt => opt.MapFrom(origem => origem.Id))
 				.ForMember(dest => dest.FreteEmpresa, opt => opt.MapFrom(origem => "ECT - Correios"))

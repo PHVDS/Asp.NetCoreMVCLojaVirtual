@@ -132,12 +132,14 @@ namespace LojaVirtual.Controllers
 
 		private Pedido SalvarPedido(List<ProdutoItem> produtos, Transaction transaction)
 		{
-			Pedido pedido = _mapper.Map<Pedido>(transaction).MapExtensao(produtos);
+			TransacaoPagarMe transacaoPagarMe = _mapper.Map<TransacaoPagarMe>(transaction);
+
+			Pedido pedido = _mapper.Map<Pedido>(transacaoPagarMe).MapExtensao(produtos);
 			pedido.Situacao = PedidoSituacaoConstant.AGUARDANDO_PAGAMENTO;
 
 			_pedidoRepository.Cadastrar(pedido);
 
-			TransactionProduto transactionProduto = new TransactionProduto { Transaction = transaction, Produtos = produtos };
+			TransactionProduto transactionProduto = new TransactionProduto { Transaction = transacaoPagarMe, Produtos = produtos };
 			PedidoSituacao pedidoSituacao = _mapper.Map<PedidoSituacao>(pedido).MapExtensao(transactionProduto);
 			pedidoSituacao.Situacao = PedidoSituacaoConstant.AGUARDANDO_PAGAMENTO;
 

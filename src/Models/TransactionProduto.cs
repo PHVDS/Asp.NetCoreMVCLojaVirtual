@@ -9,7 +9,7 @@ namespace LojaVirtual.Models
 {
 	public class TransactionProduto
 	{
-		public Transaction Transaction { get; set; }
+		public TransacaoPagarMe Transaction { get; set; }
 		public List<ProdutoItem> Produtos { get; set; }
 	}
 }
