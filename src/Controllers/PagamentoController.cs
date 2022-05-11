@@ -91,7 +91,7 @@ namespace LojaVirtual.Controllers
 				{
 					Transaction transaction = _gerenciarPagarMe.GerarPagCartaoCredito(indexViewModel.CartaoCredito, parcela, enderecoEntrega, frete, produtos);
 
-					Pedido pedido = SalvarPedido(produtos, transaction);
+					Pedido pedido = ProcessarPedido(produtos, transaction);
 
 					return new RedirectToActionResult("Index", "Pedido", new { id = pedido.Id });
 				}
@@ -119,7 +119,7 @@ namespace LojaVirtual.Controllers
 			try
 			{
 				Transaction transaction = _gerenciarPagarMe.GerarBoleto(valorTotal);
-				Pedido pedido = SalvarPedido(produtos, transaction);
+				Pedido pedido = ProcessarPedido(produtos, transaction);
 
 				return new RedirectToActionResult("Index", "Pedido", new { id = pedido.Id });
 			}
@@ -130,23 +130,46 @@ namespace LojaVirtual.Controllers
 			}
 		}
 
-		private Pedido SalvarPedido(List<ProdutoItem> produtos, Transaction transaction)
+		private Pedido ProcessarPedido(List<ProdutoItem> produtos, Transaction transaction)
 		{
-			TransacaoPagarMe transacaoPagarMe = _mapper.Map<TransacaoPagarMe>(transaction);
+			TransacaoPagarMe transacaoPagarMe;
+			Pedido pedido;
+			SalvarPedido(produtos, transaction, out transacaoPagarMe, out pedido);
+			SalvarPedidoSituacao(produtos, transacaoPagarMe, pedido);
+			DarBaixaNoEstoque(produtos);
 
-			Pedido pedido = _mapper.Map<TransacaoPagarMe, Pedido>(transacaoPagarMe);
+			return pedido;
+		}
+
+		private void DarBaixaNoEstoque(List<ProdutoItem> produtos)
+		{
+			foreach (var produto in produtos)
+			{
+				Produto produtoDB = _produtoRepository.ObterProduto(produto.Id);
+				produtoDB.Quantidade -= produto.QuantidadeProdutoCarrinho;
+
+				_produtoRepository.Atualizar(produtoDB);
+			}
+		}
+
+		private void SalvarPedidoSituacao(List<ProdutoItem> produtos, TransacaoPagarMe transacaoPagarMe, Pedido pedido)
+		{
+			TransactionProduto transactionProduto = new TransactionProduto { Transaction = transacaoPagarMe, Produtos = produtos };
+			PedidoSituacao pedidoSituacao = _mapper.Map<Pedido, PedidoSituacao>(pedido);
+			pedidoSituacao = _mapper.Map<TransactionProduto, PedidoSituacao>(transactionProduto, pedidoSituacao);
+			pedidoSituacao.Situacao = PedidoSituacaoConstant.AGUARDANDO_PAGAMENTO;
+
+			_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+		}
+
+		private void SalvarPedido(List<ProdutoItem> produtos, Transaction transaction, out TransacaoPagarMe transacaoPagarMe, out Pedido pedido)
+		{
+			transacaoPagarMe = _mapper.Map<TransacaoPagarMe>(transaction);
+			pedido = _mapper.Map<TransacaoPagarMe, Pedido>(transacaoPagarMe);
 			pedido = _mapper.Map<List<ProdutoItem>, Pedido>(produtos, pedido);
 			pedido.Situacao = PedidoSituacaoConstant.AGUARDANDO_PAGAMENTO;
 
 			_pedidoRepository.Cadastrar(pedido);
-
-			TransactionProduto transactionProduto = new TransactionProduto { Transaction = transacaoPagarMe, Produtos = produtos };
-			PedidoSituacao pedidoSituacao = _mapper.Map<Pedido, PedidoSituacao>(pedido);
-			pedidoSituacao = _mapper.Map<TransactionProduto, PedidoSituacao>(transactionProduto, pedidoSituacao);	
-			pedidoSituacao.Situacao = PedidoSituacaoConstant.AGUARDANDO_PAGAMENTO;
-
-			_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
-			return pedido;
 		}
 
 		private EnderecoEntrega ObterEndereco()
