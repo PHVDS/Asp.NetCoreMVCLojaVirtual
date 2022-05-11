@@ -17,7 +17,6 @@ namespace LojaVirtual.Models
 		public string CardCvv { get; set; }
 		public string CardLastDigits { get; set; }
 		public string CardFirstDigits { get; set; }
-		public CardBrand CardBrand { get; set; }
 		public string CardEmvResponse { get; set; }
 		public string PostbackUrl { get; set; }
 		public PaymentMethod PaymentMethod { get; set; }
@@ -32,7 +31,6 @@ namespace LojaVirtual.Models
 		public bool? Async { get; set; }
 		public string LocalTime { get; set; }
 		public AbstractModel Metadata { get; set; }
-		public SplitRule[] SplitRules { get; set; }
 		public Billing Billing { get; set; }
 		public Shipping Shipping { get; set; }
 		public Item[] Item { get; set; }
