@@ -43,8 +43,13 @@ using LojaVirtual.Models;
 
 #line default
 #line hidden
+#line 10 "C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\Views\_ViewImports.cshtml"
+using LojaVirtual.Models.Constants;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"90bf8810b8ada9d3ee751695c390250beced2f08", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dddbd845b15387b977e94fb1fe494168e8805463", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0b8a29b42ba5db06f7db8a4e3f9711dddd8cfcee", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<NewsletterEmail>
     {
         #line hidden
@@ -147,7 +152,7 @@ using LojaVirtual.Models;
     ");
             EndContext();
             BeginContext(3486, 43, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("vc:produto-listagem", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90bf8810b8ada9d3ee751695c390250beced2f087818", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("vc:produto-listagem", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90bf8810b8ada9d3ee751695c390250beced2f087993", async() => {
             }
             );
             __ProdutoListagemViewComponentTagHelper = CreateTagHelper<global::AspNetCore.Views_Home_Index.__Generated__ProdutoListagemViewComponentTagHelper>();

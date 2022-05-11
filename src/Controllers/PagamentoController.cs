@@ -118,7 +118,7 @@ namespace LojaVirtual.Controllers
 
 			try
 			{
-				Transaction transaction = _gerenciarPagarMe.GerarBoleto(valorTotal);
+				Transaction transaction = _gerenciarPagarMe.GerarBoleto(valorTotal, produtos, enderecoEntrega, frete);
 				Pedido pedido = ProcessarPedido(produtos, transaction);
 
 				return new RedirectToActionResult("Index", "Pedido", new { id = pedido.Id });

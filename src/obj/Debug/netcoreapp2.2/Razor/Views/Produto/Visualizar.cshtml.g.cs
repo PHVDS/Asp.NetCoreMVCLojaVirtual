@@ -43,8 +43,13 @@ using LojaVirtual.Models;
 
 #line default
 #line hidden
+#line 10 "C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\Views\_ViewImports.cshtml"
+using LojaVirtual.Models.Constants;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"be5150f45ebfda2721e5ed3cd6e9d0f1b37172d0", @"/Views/Produto/Visualizar.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dddbd845b15387b977e94fb1fe494168e8805463", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0b8a29b42ba5db06f7db8a4e3f9711dddd8cfcee", @"/Views/_ViewImports.cshtml")]
     public class Views_Produto_Visualizar : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Produto>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("src", new global::Microsoft.AspNetCore.Html.HtmlString("~/img/imagem-produto.png"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -132,12 +137,12 @@ WriteAttributeValue("", 722, Model.Imagens.ElementAt(0).Caminho, 722, 35, false)
             WriteLiteral("                                        ");
             EndContext();
             BeginContext(967, 177, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "be5150f45ebfda2721e5ed3cd6e9d0f1b37172d08166", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "be5150f45ebfda2721e5ed3cd6e9d0f1b37172d08341", async() => {
                 BeginContext(1016, 46, true);
                 WriteLiteral("\r\n                                            ");
                 EndContext();
                 BeginContext(1062, 36, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "be5150f45ebfda2721e5ed3cd6e9d0f1b37172d08591", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "be5150f45ebfda2721e5ed3cd6e9d0f1b37172d08766", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -311,7 +316,7 @@ WriteAttributeValue("", 1665, imagem.Caminho, 1665, 15, false);
             WriteLiteral("</dd>\r\n                            </dl> \r\n                            <hr>\r\n                            ");
             EndContext();
             BeginContext(3654, 184, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "be5150f45ebfda2721e5ed3cd6e9d0f1b37172d017796", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "be5150f45ebfda2721e5ed3cd6e9d0f1b37172d017971", async() => {
                 BeginContext(3774, 60, true);
                 WriteLiteral(" <i class=\"fas fa-shopping-cart\"></i> Adicionar ao Carrinho ");
                 EndContext();

@@ -19,7 +19,7 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 			_loginCliente = loginCliente;
 		}
 
-		public Transaction GerarBoleto(decimal valor)
+		public Transaction GerarBoleto(decimal valor, List<ProdutoItem> produtos, EnderecoEntrega enderecoEntrega, ValorPrazoFrete valorFrete)
 		{
 			Cliente cliente = _loginCliente.GetCliente();
 
@@ -54,6 +54,44 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 					Birthday = cliente.Nascimento.ToString("yyyy-MM-dd")
 				}
 			};
+
+			var Today = DateTime.Now;
+			var fee = Convert.ToDecimal(valorFrete.Valor);
+
+			transaction.Shipping = new Shipping
+			{
+				Name = enderecoEntrega.Nome,
+				Fee = Mascara.ConverterValorPagarMe(fee),
+				DeliveryDate = Today.AddDays(_configuration.GetValue<int>("Frete:DiasNaEmpresa")).AddDays(valorFrete.Prazo).ToString("yyyy-MM-dd"),
+				Expedited = false,
+				Address = new Address()
+				{
+					Country = "br",
+					State = enderecoEntrega.Estado,
+					City = enderecoEntrega.Cidade,
+					Neighborhood = enderecoEntrega.Bairro,
+					Street = enderecoEntrega.Endereco + " " + enderecoEntrega.Complemento,
+					StreetNumber = enderecoEntrega.Numero,
+					Zipcode = Mascara.Remover(enderecoEntrega.CEP)
+				}
+			};
+
+			Item[] itens = new Item[produtos.Count];
+
+			for (var i = 0; i < produtos.Count; i++)
+			{
+				var item = produtos[i];
+				var itemA = new Item()
+				{
+					Id = item.Id.ToString(),
+					Title = item.Nome,
+					Quantity = item.QuantidadeProdutoCarrinho,
+					Tangible = true,
+					UnitPrice = Mascara.ConverterValorPagarMe(item.Valor)
+				};
+				itens[i] = itemA;
+			}
+			transaction.Item = itens;
 
 			transaction.Save();
 			transaction.Customer.Gender = (cliente.Sexo == "M") ? Gender.Male : Gender.Female;
@@ -126,7 +164,6 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 			};
 
 			var Today = DateTime.Now;
-
 			var fee = Convert.ToDecimal(valorFrete.Valor);
 			
 			transaction.Shipping = new Shipping
