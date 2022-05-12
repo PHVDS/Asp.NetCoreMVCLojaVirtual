@@ -129,5 +129,18 @@
     font-size: 30px;
 }
 
+.numero-pedido{
+    font-size: 24px;
+    border: 1px solid #0026ff;
+    color: #fff;
+    background-color: #0094ff;
+    border-radius: 5px;
+    width: 250px;
+    padding: 15px 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+
 
 
