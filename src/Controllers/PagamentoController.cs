@@ -213,7 +213,7 @@ namespace LojaVirtual.Controllers
 
 			foreach (var produto in produtos)
 			{
-				total += produto.Valor;
+				total += produto.Valor * produto.QuantidadeProdutoCarrinho;
 			}
 			return total;
 		}

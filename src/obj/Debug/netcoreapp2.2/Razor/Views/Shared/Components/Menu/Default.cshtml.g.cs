@@ -48,8 +48,13 @@ using LojaVirtual.Models.Constants;
 
 #line default
 #line hidden
+#line 11 "C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\Views\_ViewImports.cshtml"
+using LojaVirtual.Libraries.Texto;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c4ab2c67f87643f947d43af675b56c4f6d7978ec", @"/Views/Shared/Components/Menu/Default.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0b8a29b42ba5db06f7db8a4e3f9711dddd8cfcee", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9b67822f79b06fe272afc198f05ce4aa37924497", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Components_Menu_Default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Categoria>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("nav-link"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -207,7 +212,7 @@ WriteAttributeValue(" ", 2410, (ViewContext.RouteData.Values["controller"].ToStr
             WriteLiteral(">\r\n                <a class=\"nav-link\" href=\"/Home/Contato\"><i class=\"far fa-address-book\"></i> Contato </a>\r\n            </li>\r\n        </ul>\r\n        ");
             EndContext();
             BeginContext(2715, 890, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c4ab2c67f87643f947d43af675b56c4f6d7978ec13642", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c4ab2c67f87643f947d43af675b56c4f6d7978ec13816", async() => {
                 BeginContext(2767, 79, true);
                 WriteLiteral("\r\n            <input class=\"form-control mr-sm-2\" type=\"search\" name=\"pesquisa\"");
                 EndContext();
@@ -231,7 +236,7 @@ WriteAttributeValue("", 2854, pesquisa, 2854, 9, false);
                 WriteLiteral("                ");
                 EndContext();
                 BeginContext(3102, 149, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c4ab2c67f87643f947d43af675b56c4f6d7978ec15077", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c4ab2c67f87643f947d43af675b56c4f6d7978ec15251", async() => {
                     BeginContext(3183, 32, true);
                     WriteLiteral("<i class=\"fas fa-user-alt\"></i> ");
                     EndContext();
@@ -275,7 +280,7 @@ WriteAttributeValue("", 2854, pesquisa, 2854, 9, false);
                 WriteLiteral("                ");
                 EndContext();
                 BeginContext(3317, 122, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c4ab2c67f87643f947d43af675b56c4f6d7978ec17818", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c4ab2c67f87643f947d43af675b56c4f6d7978ec17992", async() => {
                     BeginContext(3397, 38, true);
                     WriteLiteral("<i class=\"fas fa-user-alt\"></i> Entrar");
                     EndContext();
@@ -310,7 +315,7 @@ WriteAttributeValue("", 2854, pesquisa, 2854, 9, false);
                 WriteLiteral("            ");
                 EndContext();
                 BeginContext(3468, 120, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c4ab2c67f87643f947d43af675b56c4f6d7978ec20120", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c4ab2c67f87643f947d43af675b56c4f6d7978ec20294", async() => {
                     BeginContext(3539, 45, true);
                     WriteLiteral("<i class=\"fas fa-shopping-cart\"></i> Carrinho");
                     EndContext();

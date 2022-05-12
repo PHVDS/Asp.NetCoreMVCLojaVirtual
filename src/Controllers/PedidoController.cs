@@ -29,8 +29,10 @@ namespace LojaVirtual.Controllers
 					{ 
 						ContractResolver = new ProdutoItemResolver<List<ProdutoItem>>()
 					}
-				);
-			ViewBag.Transacao = JsonConvert.DeserializeObject<TransacaoPagarMe>(pedido.DadosTransaction);
+			);
+			var transacao = JsonConvert.DeserializeObject<TransacaoPagarMe>(pedido.DadosTransaction);
+
+			ViewBag.Transacao = transacao;
 
 			return View(pedido);
 		}
