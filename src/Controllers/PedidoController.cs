@@ -30,6 +30,7 @@ namespace LojaVirtual.Controllers
 						ContractResolver = new ProdutoItemResolver<List<ProdutoItem>>()
 					}
 				);
+			ViewBag.Transacao = JsonConvert.DeserializeObject<TransacaoPagarMe>(pedido.DadosTransaction);
 
 			return View(pedido);
 		}
