@@ -3,6 +3,7 @@ using LojaVirtual.Controllers.Base;
 using LojaVirtual.Libraries.AutoMapper;
 using LojaVirtual.Libraries.CarrinhoCompra;
 using LojaVirtual.Libraries.Cookie;
+using LojaVirtual.Libraries.Email;
 using LojaVirtual.Libraries.Filtro;
 using LojaVirtual.Libraries.Gerenciador.Frete;
 using LojaVirtual.Libraries.Gerenciador.Pagamento;
@@ -34,8 +35,10 @@ namespace LojaVirtual.Controllers
 		private readonly GerenciarPagarMe _gerenciarPagarMe;
 		private readonly IPedidoRepository _pedidoRepository;
 		private readonly IPedidoSituacaoRepository _pedidoSituacaoRepository;
+		private readonly GerenciarEmail _gerenciarEmail;
 
 		public PagamentoController(
+			GerenciarEmail gerenciarEmail,
 			IPedidoSituacaoRepository pedidoSituacaoRepository,
 			IPedidoRepository pedidoRepository,
 			LoginCliente loginCliente,
@@ -58,6 +61,7 @@ namespace LojaVirtual.Controllers
 				  cookieCarrinhoCompra,
 				  produtoRepository)
 		{
+			_gerenciarEmail = gerenciarEmail;
 			_pedidoSituacaoRepository = pedidoSituacaoRepository;
 			_pedidoRepository = pedidoRepository;
 			_cookie = cookie;
@@ -132,11 +136,15 @@ namespace LojaVirtual.Controllers
 
 		private Pedido ProcessarPedido(List<ProdutoItem> produtos, Transaction transaction)
 		{
-			TransacaoPagarMe transacaoPagarMe;
-			Pedido pedido;
-			SalvarPedido(produtos, transaction, out transacaoPagarMe, out pedido);
+			SalvarPedido(produtos, transaction, out TransacaoPagarMe transacaoPagarMe, out Pedido pedido);
+			
 			SalvarPedidoSituacao(produtos, transacaoPagarMe, pedido);
+			
 			DarBaixaNoEstoque(produtos);
+			
+			_cookieCarrinhoCompra.RemoverTodos();
+
+			_gerenciarEmail.EnviarDadosDoPedido(_loginCliente.GetCliente(), pedido);
 
 			return pedido;
 		}
