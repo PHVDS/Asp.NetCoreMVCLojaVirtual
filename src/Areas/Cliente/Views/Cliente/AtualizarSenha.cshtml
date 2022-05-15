@@ -1,18 +1,15 @@
 ﻿@model Cliente
 @{
     ViewData["Title"] = "Atualizar senha";
-    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <form method="post">
     <main role="main">
 
-        <section class="container" style="margin-top: 50px">
+        <section class="container" style="margin-top: 20px">
+            <a asp-action="Index" asp-controller="Cliente" class="btn btn-link" style="font-size:20px;">Voltar</a>
             <div class="row">
                 <aside class="col-sm-6">
-                    <h3 class="subtitle-doc">
-                        Atualizar senha
-                    </h3>
                     <div id="code_register_1">
                         <div class="card">
                             <header class="card-header">

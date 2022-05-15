@@ -195,3 +195,5 @@ C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\obj\Debug\n
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Cliente\AtualizarSenha.cshtml.g.cs
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\EnderecoEntrega\Cadastrar.cshtml.g.cs
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\EnderecoEntrega\Index.cshtml.g.cs
+C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\EnderecoEntrega\Atualizar.cshtml.g.cs
+C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\_ViewStart.cshtml.g.cs

@@ -1,6 +1,5 @@
-﻿
-@{
-    ViewData["Title"] = "Listagem de endereços para entrega";
+﻿@{
+    ViewData["Title"] = "Listagem de endereços";
 }
 
 <div class="container">
@@ -8,7 +7,7 @@
     <br />
     <div class="row">
         <div class="col-md-12">
-            <a asp-action="Index" asp-controller="Cliente" class="btn btn-link">Voltar</a>
+            <a asp-action="Index" asp-controller="Cliente" class="btn btn-link" style="font-size:20px;">Voltar</a>
 
             @{ await Html.RenderPartialAsync("~/Views/Shared/_Mensagem.cshtml"); }
 
@@ -44,7 +43,7 @@
                                 </label>
                             </td>
                             <td>
-                            <a asp-action="Atualizar" asp-route-id="@endereco.Id">Editar</a>
+                            <a asp-action="Atualizar" asp-route-id="@endereco.Id">Editar |</a>
                             <a asp-action="Excluir" asp-route-id="@endereco.Id">Excluir</a>
                         </td>
                         </tr>
@@ -54,8 +53,7 @@
             </table>
 
             <div class="text-center">
-                <a asp-action="CadastroEnderecoEntrega" asp-controller="Home" asp-area="Cliente"
-                   class="btn btn-outline-primary" asp-route-returnUrl="@Url.Action("EnderecoEntrega", "CarrinhoCompra", new { area ="" })">
+                <a asp-action="Cadastrar" class="btn btn-outline-primary">
                     Cadastrar novo endereço
                 </a>
             </div>

@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace LojaVirtual.Areas.Cliente.Controllers
 {
+	[Area("Cliente")]
 	[ClienteAutorizacao]
 	public class EnderecoEntregaController : Controller
 	{
@@ -58,9 +59,20 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 		}
 
 		[HttpGet]
-		public IActionResult Atualizar()
+		public IActionResult Atualizar(int id)
 		{
-			return View();
+			Models.Cliente cliente = _loginCliente.GetCliente();
+			EnderecoEntrega enderecoEntrega = _enderecoEntregaRepository.ObterEnderecoEntrega(id);
+
+			if (enderecoEntrega.ClienteId != cliente.Id)
+			{
+				return new ContentResult()
+				{
+					Content = "Acesso negado."
+				};
+			}
+			
+			return View(enderecoEntrega);
 		}
 
 		[HttpPost]

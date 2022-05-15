@@ -83,22 +83,23 @@ namespace LojaVirtual
 
 			//Session - Configuracao
 			services.AddMemoryCache(); //Guarda os dados na memoria
-			services.AddSession(options =>
-			{
-				options.Cookie.IsEssential = true;
-			});
-
+			
 			services.AddScoped<Sessao>();
 			services.AddScoped<LojaVirtual.Libraries.Cookie.Cookie>();
 			services.AddScoped<LoginCliente>();
 			services.AddScoped<LoginColaborador>();
 			services.AddScoped<GerenciarPagarMe>();
 			
-
 			services.AddMvc(opt =>
 			{
 				opt.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(x => "O campo deve ser preenchido!");
-			}).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+			}).SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+			.AddSessionStateTempDataProvider();
+
+			services.AddSession(options =>
+			{
+				options.Cookie.IsEssential = true;
+			});
 
 			services.AddDbContext<LojaVirtualContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 		}

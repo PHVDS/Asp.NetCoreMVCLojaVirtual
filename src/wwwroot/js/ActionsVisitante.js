@@ -175,7 +175,10 @@ function AJAXCalcularFrete(chamadaPorBtn) {
     $(".btn-continuar").addClass("disabled");
     if (chamadaPorBtn == false) {
         if ($.cookie('Carrinho.CEP') != undefined) {
-            $(".cep").val($.cookie('Carrinho.CEP'));
+
+            if ($(".no-cep").length <= 0) {
+                $(".cep").val($.cookie('Carrinho.CEP'));
+            }
         }
     }
     if ($(".cep").length > 0) {
