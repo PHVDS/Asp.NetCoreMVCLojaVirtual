@@ -191,3 +191,4 @@ C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\bin\Debug\n
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\bin\Debug\netcoreapp2.2\PagarMeCore.pdb
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Mensagem.cshtml.g.cs
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Views\Pedido\Index.cshtml.g.cs
+C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Cliente\Index.cshtml.g.cs
