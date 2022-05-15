@@ -40,8 +40,7 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 
 				if (returnUrl == null)
 				{
-					//se der erro coloca RedirectToAction
-					return new RedirectToActionResult("Index", "Home", new { area = "" });
+					return RedirectToAction("Index", "Home", new { area = "" });
 				}
 				else
 				{
@@ -61,34 +60,6 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 			_loginCliente.Logout();
 
 			return RedirectToAction("Index", "Home", new { area = "" });
-		}
-
-		[HttpGet]
-		public IActionResult CadastroCliente()
-		{
-			return View();
-		}
-
-		[HttpPost]
-		public IActionResult CadastroCliente([FromForm]Models.Cliente cliente, string returnUrl = null)
-		{
-			if (ModelState.IsValid)
-			{
-				_repositoryCliente.Cadastrar(cliente);
-				_loginCliente.Login(cliente);
-
-				TempData["MSG_S"] = "Cadastro feito com sucesso!";
-
-				if (returnUrl == null)
-				{
-					return RedirectToAction("Index", "Home", new { area = "" });
-				}
-				else
-				{
-					return LocalRedirectPermanent(returnUrl);
-				}
-			}
-			return View();
 		}
 	}
 }

@@ -29,6 +29,34 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 		}
 
 		[HttpGet]
+		public IActionResult Cadastrar()
+		{
+			return View();
+		}
+
+		[HttpPost]
+		public IActionResult Cadastrar([FromForm] Models.Cliente cliente, string returnUrl = null)
+		{
+			if (ModelState.IsValid)
+			{
+				_clienteRepository.Cadastrar(cliente);
+				_loginCliente.Login(cliente);
+
+				TempData["MSG_S"] = Mensagem.MSG_S001;
+
+				if (returnUrl == null)
+				{
+					return RedirectToAction("Index", "Home", new { area = "" });
+				}
+				else
+				{
+					return LocalRedirectPermanent(returnUrl);
+				}
+			}
+			return View();
+		}
+
+		[HttpGet]
 		public IActionResult Atualizar()
 		{
 			Models.Cliente cliente = _clienteRepository.ObterCliente(_loginCliente.GetCliente().Id);
