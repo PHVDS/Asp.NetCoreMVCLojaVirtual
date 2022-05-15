@@ -40,7 +40,8 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 
 				if (returnUrl == null)
 				{
-					return new RedirectResult(Url.Action(nameof(Painel)));
+					//se der erro coloca RedirectToAction
+					return new RedirectToActionResult("Index", "Home", new { area = "" });
 				}
 				else
 				{
@@ -49,16 +50,17 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 			}
 			else
 			{
-				ViewData["MSG_E"] = "Usuario não encontrado, verifique os campos digitados!";
+				ViewData["MSG_E"] = "Usuario não encontrado, verifique o e-mail e senha se estão corretos!";
 				return View();
 			}
 		}
 
 		[HttpGet]
-		[ClienteAutorizacao]
-		public IActionResult Painel()
+		public IActionResult Sair()
 		{
-			return new ContentResult() { Content = "Aqui é o Painel" };
+			_loginCliente.Logout();
+
+			return RedirectToAction("Index", "Home", new { area = "" });
 		}
 
 		[HttpGet]
