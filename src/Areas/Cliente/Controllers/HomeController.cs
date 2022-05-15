@@ -90,32 +90,5 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 			}
 			return View();
 		}
-
-		[HttpGet]
-		public IActionResult CadastroEnderecoEntrega()
-		{
-			return View();
-		}
-		
-		[HttpPost]
-		public IActionResult CadastroEnderecoEntrega([FromForm] EnderecoEntrega enderecoEntrega, string returnUrl = null)
-		{
-			if (ModelState.IsValid)
-			{
-				enderecoEntrega.ClienteId = _loginCliente.GetCliente().Id;
-				_enderecoEntregaRepository.Cadastrar(enderecoEntrega);
-
-				if (returnUrl == null)
-				{
-
-				}
-				else
-				{
-					return LocalRedirectPermanent(returnUrl);
-				}
-			}
-			return View();
-		}
-		
 	}
 }

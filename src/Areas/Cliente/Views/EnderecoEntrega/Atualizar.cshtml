@@ -1,6 +1,6 @@
 ﻿@model EnderecoEntrega
 @{
-    ViewData["Title"] = "Cadastro de endereço";
+    ViewData["Title"] = "Atualização de endereço";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -11,16 +11,19 @@
             <div class="row">
                 <aside class="col-sm-6">
                     <h3 class="subtitle-doc">
-                        Cadastro de endereço
+                        Atualização de endereço
                     </h3>
                     <div id="code_register_1">
                         <div class="card">
                             <header class="card-header">
-                                
-                                <h4 class="card-title mt-2">Cadastre-se</h4>
+
+                                <h4 class="card-title mt-2">Atualizar</h4>
                             </header>
                             <article class="card-body">
+
                                 @{ await Html.RenderPartialAsync("~/Views/Shared/_Mensagem.cshtml"); }
+                                <input type="hidden" asp-for="Id">
+
                                 <div class="form-group">
                                     <label asp-for="Nome">Nome do endereço</label>
                                     <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome do endereço">
@@ -77,7 +80,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-primary btn-block"> Cadastrar </button>
+                                    <button type="submit" class="btn btn-primary btn-block"> Salvar </button>
                                 </div>
                             </article>
                         </div>

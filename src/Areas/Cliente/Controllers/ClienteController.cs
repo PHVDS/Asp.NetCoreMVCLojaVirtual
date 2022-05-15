@@ -1,7 +1,7 @@
 ﻿using LojaVirtual.Libraries.Filtro;
 using LojaVirtual.Libraries.Lang;
 using LojaVirtual.Libraries.Login;
-using LojaVirtual.Repositories;
+using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -13,9 +13,9 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 	public class ClienteController : Controller
 	{
 		private readonly LoginCliente _loginCliente;
-		private readonly ClienteRepository _clienteRepository;
+		private readonly IClienteRepository _clienteRepository;
 
-		public ClienteController(LoginCliente loginCliente, ClienteRepository clienteRepository)
+		public ClienteController(LoginCliente loginCliente, IClienteRepository clienteRepository)
 		{
 			_loginCliente = loginCliente;
 			_clienteRepository = clienteRepository;
