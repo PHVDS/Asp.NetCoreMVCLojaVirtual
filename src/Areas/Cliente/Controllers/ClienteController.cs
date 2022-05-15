@@ -26,7 +26,7 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 		{
 			return View();
 		}
-		
+
 		[ClienteAutorizacao]
 		[HttpGet]
 		public IActionResult Atualizar()
@@ -47,7 +47,50 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 			{
 				cliente.Senha = _loginCliente.GetCliente().Senha;
 				_clienteRepository.Atualizar(cliente);
+
 				_loginCliente.Login(cliente);
+
+				TempData["MSG_S"] = Mensagem.MSG_S001;
+
+				return RedirectToAction(nameof(Index));
+
+			}
+			return View();
+		}
+
+		[ClienteAutorizacao]
+		[HttpGet]
+		public IActionResult AtualizarSenha()
+		{
+			return View();
+		}
+
+		[ClienteAutorizacao]
+		[HttpPost]
+		public IActionResult AtualizarSenha(Models.Cliente cliente)
+		{
+			ModelState.Remove("Nome");
+			ModelState.Remove("Nascimento");
+			ModelState.Remove("Sexo");
+			ModelState.Remove("CPF");
+			ModelState.Remove("Telefone");
+			ModelState.Remove("Email");
+			ModelState.Remove("CEP");
+			ModelState.Remove("Estado");
+			ModelState.Remove("Cidade");
+			ModelState.Remove("Bairro");
+			ModelState.Remove("Endereco");
+			ModelState.Remove("Complemento");
+			ModelState.Remove("Numero");
+			ModelState.Remove("Situacao");
+
+			if (ModelState.IsValid)
+			{
+				Models.Cliente clienteDB = _clienteRepository.ObterCliente(_loginCliente.GetCliente().Id);
+				clienteDB.Senha = _loginCliente.GetCliente().Senha;
+				_clienteRepository.Atualizar(clienteDB);
+
+				_loginCliente.Login(clienteDB);
 
 				TempData["MSG_S"] = Mensagem.MSG_S001;
 
