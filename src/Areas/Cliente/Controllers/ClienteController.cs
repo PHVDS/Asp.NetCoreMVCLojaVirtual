@@ -11,7 +11,6 @@ using System.Threading.Tasks;
 namespace LojaVirtual.Areas.Cliente.Controllers
 {
 	[Area("Cliente")]
-	[ClienteAutorizacao]
 	public class ClienteController : Controller
 	{
 		private readonly LoginCliente _loginCliente;
@@ -23,6 +22,7 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 			_clienteRepository = clienteRepository;
 		}
 
+		[ClienteAutorizacao]
 		public IActionResult Index()
 		{
 			return View();
@@ -56,6 +56,7 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 			return View();
 		}
 
+		[ClienteAutorizacao]
 		[HttpGet]
 		public IActionResult Atualizar()
 		{
@@ -64,6 +65,7 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 			return View(cliente);
 		}
 
+		[ClienteAutorizacao]
 		[HttpPost]
 		public IActionResult Atualizar(Models.Cliente cliente)
 		{
@@ -85,12 +87,14 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 			return View();
 		}
 
+		[ClienteAutorizacao]
 		[HttpGet]
 		public IActionResult AtualizarSenha()
 		{
 			return View();
 		}
 
+		[ClienteAutorizacao]
 		[HttpPost]
 		public IActionResult AtualizarSenha(Models.Cliente cliente)
 		{

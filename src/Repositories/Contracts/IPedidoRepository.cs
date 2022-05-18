@@ -12,6 +12,6 @@ namespace LojaVirtual.Repositories.Contracts
 		void Cadastrar(Pedido pedido);
 		void Atualizar(Pedido pedido);
 		Pedido ObterPedido(int Id);
-		IPagedList<Pedido> ObterTodosProdutos(int? pagina, int clienteId);
+		IPagedList<Pedido> ObterTodosPedidos(int? pagina, int clienteId);
 	}
 }

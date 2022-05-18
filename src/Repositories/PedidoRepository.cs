@@ -38,7 +38,7 @@ namespace LojaVirtual.Repositories
 			return _banco.Pedidos.Include(a => a.PedidoSituacoes).Where(a => a.Id == Id).FirstOrDefault();
 		}
 
-		public IPagedList<Pedido> ObterTodosProdutos(int? pagina, int clienteId)
+		public IPagedList<Pedido> ObterTodosPedidos(int? pagina, int clienteId)
 		{
 			int RegistroPorPagina = _conf.GetValue<int>("RegistroPorPagina");
 			int NumeroPagina = pagina ?? 1;
