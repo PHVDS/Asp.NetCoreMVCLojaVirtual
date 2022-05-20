@@ -28,7 +28,7 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 
 			Transaction transaction = new Transaction
 			{
-				Amount = Convert.ToInt32(valor),
+				Amount = Mascara.ConverterValorPagarMe(valor),
 				PaymentMethod = PaymentMethod.Boleto,
 
 				Customer = new Customer
