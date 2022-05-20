@@ -30,9 +30,19 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 
 		public IActionResult Visualizar(int id)
 		{
+			Models.Cliente cliente = _loginCliente.GetCliente();
+
 			Pedido pedido =  _pedidoRepository.ObterPedido(id);
 
-			return View();
+			if (pedido.ClienteId != cliente.Id)
+			{
+				return new ContentResult()
+				{
+					Content = "Você não tem permissão!"
+				};
+			}
+
+			return View(pedido);
 		}
 	}
 }

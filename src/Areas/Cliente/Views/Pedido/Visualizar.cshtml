@@ -14,19 +14,21 @@
 <br />
 <div class="container">
     <div class="row">
+        <div class="col-md-12 text-center">
+            <vc:pedido-situacao pedido="@Model"/>
+        </div>
+    </div>
+    <br />
+    <div class="row">
         <div class="col-md-12">
-            @foreach (var pedidoSituacao in Model.PedidoSituacoes)
-            {
-            <span>
-                @pedidoSituacao.Situacao - @pedidoSituacao.Data
-            </span>
-                
-            }
-
+            
             <h3>Dados do Pedido</h3>
             <table class="table table-bordered">
                 <tr>
-                    <td><stron>Cliente:</stron> @transacaoPagarMe.Customer.Name</td>
+                    <td colspan="2"><strong>Situação do Pedido:</strong> @Model.Situacao</td>
+                </tr>
+                <tr>
+                    <td><strong>Cliente:</strong> @transacaoPagarMe.Customer.Name</td>
                     <td><strong>Nascimento:</strong> @aniversario.ToString("dd/MM/yyyy")</td>
                 </tr>
                 <tr>
@@ -78,16 +80,19 @@
                 }
 
                 <tr>
-                    <td colspan="1"><strong>FRETE</strong></td>
+                    <td colspan="3"><strong>FRETE</strong></td>
                     <td>@Mascara.ConverterPagarMeIntToDecimal(transacaoPagarMe.Shipping.Fee).ToString("C")</td>
                 </tr>
 
                 <tr>
-                    <td colspan="1"><strong>TOTAL</strong></td>
+                    <td colspan="3"><strong>TOTAL</strong></td>
                     <td>@Model.ValorTotal.ToString("C")</td>
                 </tr>
-
             </table>
+            <br />
+
+            <button class="container btn btn-outline-primary btn-lg btn-imprimir"> Imprimir </button>
+
         </div>
     </div>
 </div>
