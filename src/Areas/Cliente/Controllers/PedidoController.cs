@@ -23,7 +23,7 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 		public IActionResult Index(int? pagina)
 		{
 			Models.Cliente cliente = _loginCliente.GetCliente();
-			var pedidos = _pedidoRepository.ObterTodosPedidos(pagina, cliente.Id);
+			var pedidos = _pedidoRepository.ObterTodosPedidosCliente(pagina, cliente.Id);
 			
 			return View(pedidos);
 		}

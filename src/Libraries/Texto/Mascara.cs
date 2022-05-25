@@ -31,5 +31,14 @@ namespace LojaVirtual.Libraries.Texto
 
 			return dec;
 		}
+
+		public static int ExtrairCodigoPedido(string codigoPedido, out string transactionId)
+		{
+			string[] resultadoSepracao = codigoPedido.Split("-");
+
+			transactionId = resultadoSepracao[1];
+
+			return int.Parse(resultadoSepracao[0]);
+		}
 	}
 }

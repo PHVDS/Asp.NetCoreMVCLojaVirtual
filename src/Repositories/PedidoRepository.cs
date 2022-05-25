@@ -1,4 +1,5 @@
 ﻿using LojaVirtual.Database;
+using LojaVirtual.Libraries.Texto;
 using LojaVirtual.Models;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.EntityFrameworkCore;
@@ -38,7 +39,28 @@ namespace LojaVirtual.Repositories
 			return _banco.Pedidos.Include(a => a.PedidoSituacoes).Where(a => a.Id == Id).FirstOrDefault();
 		}
 
-		public IPagedList<Pedido> ObterTodosPedidos(int? pagina, int clienteId)
+		public IPagedList<Pedido> ObterTodosPedidos(int? pagina, string codigoPedido, string cpf)
+		{
+			int RegistroPorPagina = _conf.GetValue<int>("RegistroPorPagina");
+			int NumeroPagina = pagina ?? 1;
+
+			var query = _banco.Pedidos.Include(a => a.PedidoSituacoes).Include(a=> a.Cliente).AsQueryable();
+
+			if (cpf != null)
+			{
+				query = query.Where(a => a.Cliente.CPF == cpf);
+			}
+			if (codigoPedido != null)
+			{
+				string transacaoId = string.Empty;
+				int id = Mascara.ExtrairCodigoPedido(codigoPedido, out transacaoId);
+				query = query.Where(a => a.Id == id && a.TransactionId == transacaoId);
+			}
+
+			return query.ToPagedList<Pedido>(NumeroPagina, RegistroPorPagina);
+		}
+
+		public IPagedList<Pedido> ObterTodosPedidosCliente(int? pagina, int clienteId)
 		{
 			int RegistroPorPagina = _conf.GetValue<int>("RegistroPorPagina");
 			int NumeroPagina = pagina ?? 1;

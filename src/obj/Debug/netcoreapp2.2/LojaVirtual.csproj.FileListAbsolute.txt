@@ -200,3 +200,4 @@ C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\obj\Debug\n
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Pedido\Index.cshtml.g.cs
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Pedido\Visualizar.cshtml.g.cs
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\PedidoSituacao\Default.cshtml.g.cs
+C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2019\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Areas\Colaborador\Views\Pedido\Index.cshtml.g.cs
