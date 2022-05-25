@@ -1,4 +1,6 @@
-﻿using LojaVirtual.Repositories.Contracts;
+﻿using LojaVirtual.Libraries.Filtro;
+using LojaVirtual.Models;
+using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -8,6 +10,7 @@ using System.Threading.Tasks;
 namespace LojaVirtual.Areas.Colaborador.Controllers
 {
 	[Area("Colaborador")]
+	[ColaboradorAutorizacao]
 	public class PedidoController : Controller
 	{
 		private readonly IPedidoRepository _pedidoRepository;
@@ -22,6 +25,13 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			var pedidos = _pedidoRepository.ObterTodosPedidos(pagina, codigoPedido, cpf);
 
 			return View(pedidos);
+		}
+
+		public IActionResult Visualizar(int id)
+		{
+			Pedido pedido = _pedidoRepository.ObterPedido(id);
+
+			return View(pedido);
 		}
 	}
 }

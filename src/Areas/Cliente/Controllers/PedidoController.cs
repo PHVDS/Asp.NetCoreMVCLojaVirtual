@@ -1,4 +1,5 @@
-﻿using LojaVirtual.Libraries.Login;
+﻿using LojaVirtual.Libraries.Filtro;
+using LojaVirtual.Libraries.Login;
 using LojaVirtual.Models;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Mvc;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 namespace LojaVirtual.Areas.Cliente.Controllers
 {
 	[Area("Cliente")]
+	[ClienteAutorizacao]
 	public class PedidoController : Controller
 	{
 		private readonly LoginCliente _loginCliente;
