@@ -1,10 +1,12 @@
 ﻿using AutoMapper;
+using Coravel;
 using LojaVirtual.Database;
 using LojaVirtual.Libraries.AutoMapper;
 using LojaVirtual.Libraries.CarrinhoCompra;
 using LojaVirtual.Libraries.Email;
 using LojaVirtual.Libraries.Gerenciador.Frete;
 using LojaVirtual.Libraries.Gerenciador.Pagamento;
+using LojaVirtual.Libraries.Gerenciador.Scheduler.Invocable;
 using LojaVirtual.Libraries.Login;
 using LojaVirtual.Libraries.Middleware;
 using LojaVirtual.Libraries.Sessao;
@@ -102,6 +104,9 @@ namespace LojaVirtual
 			});
 
 			services.AddDbContext<LojaVirtualContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+			services.AddTransient<PedidoPagamentoSituacao>();
+			services.AddScheduler();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -136,6 +141,9 @@ namespace LojaVirtual
 					template: "/{controller=Home}/{action=Index}/{id?}");
 			});
 
+			app.ApplicationServices.UseScheduler(scheduler => {
+				scheduler.Schedule<PedidoPagamentoSituacao>().EveryTenSeconds();
+			});
 		}
 	}
 }

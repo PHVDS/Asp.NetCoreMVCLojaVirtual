@@ -30,6 +30,7 @@
       "LojaVirtual/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "6.1.0",
+          "Coravel": "2.5.1",
           "Microsoft.AspNetCore": "2.2.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Mvc": "2.2.0",
@@ -86,6 +87,22 @@
         },
         "compile": {
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        }
+      },
+      "Coravel/2.5.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Memory": "2.2.0",
+          "Microsoft.Extensions.Hosting.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Coravel.dll": {
+            "assemblyVersion": "2.5.1.0",
+            "fileVersion": "2.5.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Coravel.dll": {}
         }
       },
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
@@ -3791,6 +3808,13 @@
       "sha512": "sha512-vqbyqXknln1NFn80fbyJVPqJ3LMZhhhq8wMAl4BGTIH6GmK3gtGofuvo8bnWXXuD07y1lnMEuCmiNacvdtxPkw==",
       "path": "automapper.extensions.microsoft.dependencyinjection/6.1.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.6.1.0.nupkg.sha512"
+    },
+    "Coravel/2.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-p6DWhQovsGY2BYFz/X2/Yq07qAXgU2jdNqmuG6LUDn48W120TP3/LjVx5HVtsiBRVE4u37NV9yYdXONgEL56gg==",
+      "path": "coravel/2.5.1",
+      "hashPath": "coravel.2.5.1.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
       "type": "package",

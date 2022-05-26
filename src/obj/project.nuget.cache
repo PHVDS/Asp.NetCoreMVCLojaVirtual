@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "3j9wilZvvxuGeN6ELlGUY5VA42s6c3OMChbrXJoBdBeaiKdseNks1AULK1u/xRvtm72mNhCrpUZe1JXGpVz2rA==",
+  "dgSpecHash": "hBpQ4m5RJLfBF7rxC0OshDm9fP9Mjo+Mwq8HcBD1w6vwf5v5rqZhoa+wKiMxDCGXM5O0QeGLHEFoD1M/0CD7lw==",
   "success": true,
   "projectFilePath": "C:\\Users\\PAULO HENRIQUE\\Documents\\Visual Studio 2019\\LojaVirtual\\src\\LojaVirtual.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PAULO HENRIQUE\\.nuget\\packages\\automapper\\8.1.0\\automapper.8.1.0.nupkg.sha512",
     "C:\\Users\\PAULO HENRIQUE\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\6.1.0\\automapper.extensions.microsoft.dependencyinjection.6.1.0.nupkg.sha512",
+    "C:\\Users\\PAULO HENRIQUE\\.nuget\\packages\\coravel\\2.5.1\\coravel.2.5.1.nupkg.sha512",
     "C:\\Users\\PAULO HENRIQUE\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore\\2.2.0\\microsoft.aspnetcore.2.2.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",

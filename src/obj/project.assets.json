@@ -28,6 +28,20 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
+      "Coravel/2.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Memory": "2.1.1",
+          "Microsoft.Extensions.Hosting.Abstractions": "2.1.1",
+          "Microsoft.Extensions.Logging.Abstractions": "2.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Coravel.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Coravel.dll": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -4947,6 +4961,18 @@
         "automapper.extensions.microsoft.dependencyinjection.nuspec",
         "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll",
         "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.pdb"
+      ]
+    },
+    "Coravel/2.5.1": {
+      "sha512": "p6DWhQovsGY2BYFz/X2/Yq07qAXgU2jdNqmuG6LUDn48W120TP3/LjVx5HVtsiBRVE4u37NV9yYdXONgEL56gg==",
+      "type": "package",
+      "path": "coravel/2.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "coravel.2.5.1.nupkg.sha512",
+        "coravel.nuspec",
+        "lib/netstandard2.0/Coravel.dll"
       ]
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -13675,6 +13701,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 6.1.0",
+      "Coravel >= 2.5.1",
       "Microsoft.AspNetCore >= 2.2.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Mvc >= 2.2.0",
@@ -13745,6 +13772,10 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[6.1.0, )"
+          },
+          "Coravel": {
+            "target": "Package",
+            "version": "[2.5.1, )"
           },
           "Microsoft.AspNetCore": {
             "target": "Package",
