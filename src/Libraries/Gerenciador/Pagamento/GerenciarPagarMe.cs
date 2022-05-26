@@ -244,6 +244,13 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 			}
 			return listaParcelamento;
 		}
+
+		public Transaction ObterTransacao(string transactionId)
+		{
+			PagarMeService.DefaultApiKey = _configuration.GetValue<String>("Pagamento:PagarMe:ApiKey");
+
+			return PagarMeService.GetDefaultService().Transactions.Find(transactionId);
+		}
 	}
 }
  

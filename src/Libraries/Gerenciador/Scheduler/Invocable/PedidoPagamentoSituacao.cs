@@ -1,4 +1,11 @@
-﻿using Coravel.Invocable;
+﻿using AutoMapper;
+using Coravel.Invocable;
+using LojaVirtual.Libraries.Gerenciador.Pagamento;
+using LojaVirtual.Models;
+using LojaVirtual.Models.Constants;
+using LojaVirtual.Repositories.Contracts;
+using Newtonsoft.Json;
+using PagarMe;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -9,8 +16,55 @@ namespace LojaVirtual.Libraries.Gerenciador.Scheduler.Invocable
 {
 	public class PedidoPagamentoSituacao : IInvocable
 	{
+		private readonly IPedidoSituacaoRepository _pedidoSituacaoRepository;
+		private readonly IMapper _mapper;
+		private readonly IPedidoRepository _pedidoRepository;
+		private readonly GerenciarPagarMe _gerenciarPagarMe;
+		public PedidoPagamentoSituacao(IPedidoSituacaoRepository pedidoSituacaoRepository, IMapper mapper, IPedidoRepository pedidoRepository, GerenciarPagarMe gerenciarPagarMe)
+		{
+			_pedidoSituacaoRepository = pedidoSituacaoRepository;
+			_mapper = mapper;
+			_pedidoRepository = pedidoRepository;
+			_gerenciarPagarMe = gerenciarPagarMe;
+		}
+
 		public Task Invoke()
 		{
+			var pedidosRealizados = _pedidoRepository.ObterTodosPedidosRealizados();
+
+			foreach (var pedido in pedidosRealizados)
+			{
+				string situacao = String.Empty;
+				var transaction = _gerenciarPagarMe.ObterTransacao(pedido.TransactionId);
+
+				if (transaction.Status == TransactionStatus.Refused)
+				{
+					situacao = PedidoSituacaoConstant.PAGAMENTO_REJEITADO;
+				}
+
+				if (transaction.Status == TransactionStatus.Authorized || transaction.Status == TransactionStatus.Paid)
+				{
+					situacao = PedidoSituacaoConstant.PAGAMENTO_APROVADO;
+				}
+
+				if (situacao != null)
+				{
+					TransacaoPagarMe transacaoPagarMe = _mapper.Map<Transaction, TransacaoPagarMe>(transaction);
+					PedidoSituacao pedidoSituacao = new PedidoSituacao
+					{
+						PedidoId = pedido.Id,
+						Situacao = situacao,
+						Data = transaction.DateUpdated.Value,
+						Dados = JsonConvert.SerializeObject(transacaoPagarMe)
+					};
+
+					_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+					pedido.Situacao = situacao;
+					_pedidoRepository.Atualizar(pedido);
+				}
+			}
+
+
 			Debug.WriteLine("--Executado--");
 
 			return Task.CompletedTask;
