@@ -34,8 +34,13 @@ namespace LojaVirtual.Libraries.Gerenciador.Scheduler.Invocable
 
 			foreach (var pedido in pedidosRealizados)
 			{
-				string situacao = String.Empty;
+				string situacao = null;
 				var transaction = _gerenciarPagarMe.ObterTransacao(pedido.TransactionId);
+
+				if (transaction.Status == TransactionStatus.WaitingPayment && transaction.PaymentMethod == PaymentMethod.Boleto && DateTime.Now > pedido.DataRegistro.AddDays(6))
+				{
+					situacao = PedidoSituacaoConstant.PAGAMENTO_NAO_REALIZADO;
+				}
 
 				if (transaction.Status == TransactionStatus.Refused)
 				{
@@ -50,6 +55,8 @@ namespace LojaVirtual.Libraries.Gerenciador.Scheduler.Invocable
 				if (situacao != null)
 				{
 					TransacaoPagarMe transacaoPagarMe = _mapper.Map<Transaction, TransacaoPagarMe>(transaction);
+					transacaoPagarMe.Customer.Gender = (pedido.Cliente.Sexo == "M") ? Gender.Male : Gender.Female;
+
 					PedidoSituacao pedidoSituacao = new PedidoSituacao
 					{
 						PedidoId = pedido.Id,

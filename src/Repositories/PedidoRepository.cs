@@ -72,6 +72,7 @@ namespace LojaVirtual.Repositories
 		public List<Pedido> ObterTodosPedidosRealizados()
 		{
 			return _banco.Pedidos.Include(a => a.PedidoSituacoes)
+				.Include(a => a.Cliente)
 				.Where(a => a.Situacao == PedidoSituacaoConstant.PEDIDO_REALIZADO).ToList();
 		}
 	}

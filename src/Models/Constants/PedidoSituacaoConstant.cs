@@ -10,6 +10,7 @@ namespace LojaVirtual.Models.Constants
 		public const string PEDIDO_REALIZADO = "Pedido Realizado";
 		public const string PAGAMENTO_APROVADO = "Pagamento Aprovado";
 		public const string PAGAMENTO_REJEITADO = "Pagamento Rejeitado";
+		public const string PAGAMENTO_NAO_REALIZADO = "Pagamento Não Realizado";
 		public const string NF_EMITIDA = "NF Emitida";
 		public const string EM_TRANSPORTE = "Em Transporte";
 		public const string ENTREGUE = "Entregue";
