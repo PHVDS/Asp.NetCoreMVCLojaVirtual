@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using Coravel.Invocable;
 using LojaVirtual.Libraries.Gerenciador.Pagamento;
+using LojaVirtual.Libraries.Json.Resolver;
 using LojaVirtual.Models;
 using LojaVirtual.Models.Constants;
+using LojaVirtual.Models.ProdutoAgregador;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
@@ -22,13 +24,15 @@ namespace LojaVirtual.Libraries.Gerenciador.Scheduler.Invocable
 		private readonly IConfiguration _configuration;
 		private readonly IPedidoRepository _pedidoRepository;
 		private readonly GerenciarPagarMe _gerenciarPagarMe;
-		public PedidoPagamentoSituacao(IPedidoSituacaoRepository pedidoSituacaoRepository, IMapper mapper, IConfiguration configuration, IPedidoRepository pedidoRepository, GerenciarPagarMe gerenciarPagarMe)
+		private readonly IProdutoRepository _produtoRepository;
+		public PedidoPagamentoSituacao(IProdutoRepository produtoRepository, IPedidoSituacaoRepository pedidoSituacaoRepository, IMapper mapper, IConfiguration configuration, IPedidoRepository pedidoRepository, GerenciarPagarMe gerenciarPagarMe)
 		{
 			_pedidoSituacaoRepository = pedidoSituacaoRepository;
 			_mapper = mapper;
 			_configuration = configuration;
 			_pedidoRepository = pedidoRepository;
 			_gerenciarPagarMe = gerenciarPagarMe;
+			_produtoRepository = produtoRepository;
 		}
 
 		public Task Invoke()
@@ -45,11 +49,14 @@ namespace LojaVirtual.Libraries.Gerenciador.Scheduler.Invocable
 				if (transaction.Status == TransactionStatus.WaitingPayment && transaction.PaymentMethod == PaymentMethod.Boleto && DateTime.Now > pedido.DataRegistro.AddDays(toleranciaDias))
 				{
 					situacao = PedidoSituacaoConstant.PAGAMENTO_NAO_REALIZADO;
+					DevolverProdutosEstoque(pedido);
 				}
 
 				if (transaction.Status == TransactionStatus.Refused)
 				{
 					situacao = PedidoSituacaoConstant.PAGAMENTO_REJEITADO;
+					DevolverProdutosEstoque(pedido);
+
 				}
 
 				if (transaction.Status == TransactionStatus.Authorized || transaction.Status == TransactionStatus.Paid)
@@ -75,11 +82,26 @@ namespace LojaVirtual.Libraries.Gerenciador.Scheduler.Invocable
 					_pedidoRepository.Atualizar(pedido);
 				}
 			}
-
-
 			Debug.WriteLine("--Executado--");
 
 			return Task.CompletedTask;
+		}
+
+		private void DevolverProdutosEstoque(Pedido pedido)
+		{
+			List<ProdutoItem> produtos = JsonConvert.DeserializeObject<List<ProdutoItem>>(pedido.DadosProdutos,
+				new JsonSerializerSettings()
+				{
+					ContractResolver = new ProdutoItemResolver<List<ProdutoItem>>()
+				});
+
+			foreach (var produto in produtos)
+			{
+				Produto produtoDB = _produtoRepository.ObterProduto(produto.Id);
+				produtoDB.Quantidade += produto.QuantidadeProdutoCarrinho;
+
+				_produtoRepository.Atualizar(produtoDB);
+			}
 		}
 	}
 }
