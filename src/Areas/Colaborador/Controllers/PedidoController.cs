@@ -1,5 +1,6 @@
 ﻿using LojaVirtual.Libraries.Filtro;
 using LojaVirtual.Models;
+using LojaVirtual.Models.Constants;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -14,10 +15,12 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 	public class PedidoController : Controller
 	{
 		private readonly IPedidoRepository _pedidoRepository;
+		private readonly IPedidoSituacaoRepository _pedidoSituacaoRepository;
 
-		public PedidoController(IPedidoRepository pedidoRepository)
+		public PedidoController(IPedidoRepository pedidoRepository, IPedidoSituacaoRepository pedidoSituacaoRepository)
 		{
 			_pedidoRepository = pedidoRepository;
+			_pedidoSituacaoRepository = pedidoSituacaoRepository;
 		}
 
 		public IActionResult Index(int? pagina, string codigoPedido, string cpf)
@@ -32,6 +35,29 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			Pedido pedido = _pedidoRepository.ObterPedido(id);
 
 			return View(pedido);
+		}
+
+		public IActionResult NFE(int id)
+		{
+			string url =  HttpContext.Request.Form["nfe_url"];
+
+			Pedido pedido = _pedidoRepository.ObterPedido(id);
+			pedido.NFE = url;
+			pedido.Situacao = PedidoSituacaoConstant.NF_EMITIDA;
+
+			var pedidoSituacao = new PedidoSituacao
+			{
+				Data = DateTime.Now,
+				Dados = url,
+				PedidoId = id,
+				Situacao = PedidoSituacaoConstant.NF_EMITIDA
+			};
+
+			_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+
+			_pedidoRepository.Atualizar(pedido);
+
+			return RedirectToAction(nameof(Visualizar), new { id = id});
 		}
 	}
 }
