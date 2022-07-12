@@ -64,6 +64,12 @@ namespace LojaVirtual.Libraries.Gerenciador.Scheduler.Invocable
 					situacao = PedidoSituacaoConstant.PAGAMENTO_APROVADO;
 				}
 
+				if (transaction.Status == TransactionStatus.Refunded)
+				{
+					situacao = PedidoSituacaoConstant.ESTORNO;
+					DevolverProdutosEstoque(pedido);
+				}
+
 				if (situacao != null)
 				{
 					TransacaoPagarMe transacaoPagarMe = _mapper.Map<Transaction, TransacaoPagarMe>(transaction);
