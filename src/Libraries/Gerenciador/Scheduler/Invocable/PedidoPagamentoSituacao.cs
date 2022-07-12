@@ -4,6 +4,7 @@ using LojaVirtual.Libraries.Gerenciador.Pagamento;
 using LojaVirtual.Models;
 using LojaVirtual.Models.Constants;
 using LojaVirtual.Repositories.Contracts;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using PagarMe;
 using System;
@@ -18,12 +19,14 @@ namespace LojaVirtual.Libraries.Gerenciador.Scheduler.Invocable
 	{
 		private readonly IPedidoSituacaoRepository _pedidoSituacaoRepository;
 		private readonly IMapper _mapper;
+		private readonly IConfiguration _configuration;
 		private readonly IPedidoRepository _pedidoRepository;
 		private readonly GerenciarPagarMe _gerenciarPagarMe;
-		public PedidoPagamentoSituacao(IPedidoSituacaoRepository pedidoSituacaoRepository, IMapper mapper, IPedidoRepository pedidoRepository, GerenciarPagarMe gerenciarPagarMe)
+		public PedidoPagamentoSituacao(IPedidoSituacaoRepository pedidoSituacaoRepository, IMapper mapper, IConfiguration configuration, IPedidoRepository pedidoRepository, GerenciarPagarMe gerenciarPagarMe)
 		{
 			_pedidoSituacaoRepository = pedidoSituacaoRepository;
 			_mapper = mapper;
+			_configuration = configuration;
 			_pedidoRepository = pedidoRepository;
 			_gerenciarPagarMe = gerenciarPagarMe;
 		}
@@ -37,7 +40,9 @@ namespace LojaVirtual.Libraries.Gerenciador.Scheduler.Invocable
 				string situacao = null;
 				var transaction = _gerenciarPagarMe.ObterTransacao(pedido.TransactionId);
 
-				if (transaction.Status == TransactionStatus.WaitingPayment && transaction.PaymentMethod == PaymentMethod.Boleto && DateTime.Now > pedido.DataRegistro.AddDays(6))
+				int toleranciaDias = _configuration.GetValue<int>("Pagamento:PagarMe:BoletoDiaExpiracao") + _configuration.GetValue<int>("Pagamento:PagarMe:BoletoDiaToleranciaVencido");
+				
+				if (transaction.Status == TransactionStatus.WaitingPayment && transaction.PaymentMethod == PaymentMethod.Boleto && DateTime.Now > pedido.DataRegistro.AddDays(toleranciaDias))
 				{
 					situacao = PedidoSituacaoConstant.PAGAMENTO_NAO_REALIZADO;
 				}

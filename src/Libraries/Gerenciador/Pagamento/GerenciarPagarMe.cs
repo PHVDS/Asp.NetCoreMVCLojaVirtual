@@ -25,11 +25,14 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 
 			PagarMeService.DefaultApiKey = _configuration.GetValue<String>("Pagamento:PagarMe:ApiKey");
 			PagarMeService.DefaultEncryptionKey = _configuration.GetValue<String>("Pagamento:PagarMe:EncryptionKey");
+			int DaysExpire = _configuration.GetValue<int>("Pagamento:PagarMe:BoletoDiaExpiracao");
 
 			Transaction transaction = new Transaction
 			{
 				Amount = Mascara.ConverterValorPagarMe(valor),
 				PaymentMethod = PaymentMethod.Boleto,
+				BoletoExpirationDate = DateTime.Now.AddDays(DaysExpire),
+
 
 				Customer = new Customer
 				{
