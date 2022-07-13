@@ -53,7 +53,7 @@
                             <td>@pedido.ValorTotal.ToString("C")</td>
                             <td>@pedido.FormaPagamento</td>
                             <td>@pedido.Situacao</td>
-                            <td>@pedido.NFE</td>
+                            <td>@Html.Raw(pedido.NFE == null ? "-" : "<a href='" + pedido.NFE + "' target='_blank'> NF-e </a>")</td>
                             <td>
                                 <a asp-action="Visualizar" asp-route-id="@pedido.Id">Visualizar</a>
                             </td>

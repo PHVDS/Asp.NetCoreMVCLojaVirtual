@@ -59,5 +59,28 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 			return RedirectToAction(nameof(Visualizar), new { id = id});
 		}
+
+		public IActionResult RegistrarRastreamento(int id)
+		{
+			string codRastreamento = HttpContext.Request.Form["cod_rastreamento"];
+
+			Pedido pedido = _pedidoRepository.ObterPedido(id);
+			pedido.FreteCodRastreamento = codRastreamento;
+			pedido.Situacao = PedidoSituacaoConstant.EM_TRANSPORTE;
+
+			var pedidoSituacao = new PedidoSituacao
+			{
+				Data = DateTime.Now,
+				Dados = codRastreamento,
+				PedidoId = id,
+				Situacao = PedidoSituacaoConstant.EM_TRANSPORTE
+			};
+
+			_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+
+			_pedidoRepository.Atualizar(pedido);
+
+			return RedirectToAction(nameof(Visualizar), new { id = id });
+		}
 	}
 }
