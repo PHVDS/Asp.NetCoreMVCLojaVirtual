@@ -106,6 +106,7 @@ namespace LojaVirtual
 			services.AddDbContext<LojaVirtualContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
 			services.AddTransient<PedidoPagamentoSituacao>();
+			services.AddTransient<PedidoEntregueJob>();
 			services.AddScheduler();
 		}
 
@@ -143,6 +144,7 @@ namespace LojaVirtual
 
 			app.ApplicationServices.UseScheduler(scheduler => {
 				scheduler.Schedule<PedidoPagamentoSituacao>().EveryTenSeconds();
+				scheduler.Schedule<PedidoEntregueJob>().EveryTenSeconds();
 			});
 		}
 	}

@@ -37,7 +37,7 @@ namespace LojaVirtual.Libraries.Gerenciador.Scheduler.Invocable
 
 		public Task Invoke()
 		{
-			var pedidosRealizados = _pedidoRepository.ObterTodosPedidosRealizados();
+			var pedidosRealizados = _pedidoRepository.ObterTodosPedidosPorSituacao(PedidoSituacaoConstant.PEDIDO_REALIZADO);
 
 			foreach (var pedido in pedidosRealizados)
 			{

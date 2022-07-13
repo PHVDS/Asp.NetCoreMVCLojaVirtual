@@ -57,7 +57,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 			_pedidoRepository.Atualizar(pedido);
 
-			return RedirectToAction(nameof(Visualizar), new { id = id});
+			return RedirectToAction(nameof(Visualizar), new { id = id });
 		}
 
 		public IActionResult RegistrarRastreamento(int id)
