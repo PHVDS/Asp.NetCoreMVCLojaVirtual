@@ -1,25 +1,97 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PAULO HENRIQUE\\Documents\\Visual Studio 2019\\LojaVirtual\\src\\LojaVirtual.csproj": {}
+    "C:\\Users\\Paulo Henrique\\source\\repos\\PHVDS\\LojaVirtual\\src\\LojaVirtual.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PAULO HENRIQUE\\Documents\\Visual Studio 2019\\LojaVirtual\\src\\LojaVirtual.csproj": {
-      "version": "1.0.0",
+    "C:\\Users\\Paulo Henrique\\source\\repos\\PHVDS\\Correios.NET-1.3.1\\src\\Correios.NET\\Correios.NET.csproj": {
+      "version": "1.3.1",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PAULO HENRIQUE\\Documents\\Visual Studio 2019\\LojaVirtual\\src\\LojaVirtual.csproj",
-        "projectName": "LojaVirtual",
-        "projectPath": "C:\\Users\\PAULO HENRIQUE\\Documents\\Visual Studio 2019\\LojaVirtual\\src\\LojaVirtual.csproj",
-        "packagesPath": "C:\\Users\\PAULO HENRIQUE\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PAULO HENRIQUE\\Documents\\Visual Studio 2019\\LojaVirtual\\src\\obj\\",
+        "projectUniqueName": "C:\\Users\\Paulo Henrique\\source\\repos\\PHVDS\\Correios.NET-1.3.1\\src\\Correios.NET\\Correios.NET.csproj",
+        "projectName": "Correios.NET",
+        "projectPath": "C:\\Users\\Paulo Henrique\\source\\repos\\PHVDS\\Correios.NET-1.3.1\\src\\Correios.NET\\Correios.NET.csproj",
+        "packagesPath": "C:\\Users\\Paulo Henrique\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Paulo Henrique\\Source\\Repos\\PHVDS\\Correios.NET-1.3.1\\src\\Correios.NET\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\PAULO HENRIQUE\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Paulo Henrique\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "AngleSharp": {
+              "target": "Package",
+              "version": "[0.14.0, )"
+            },
+            "Microsoft.SourceLink.GitHub": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Paulo Henrique\\source\\repos\\PHVDS\\LojaVirtual\\src\\LojaVirtual.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Paulo Henrique\\source\\repos\\PHVDS\\LojaVirtual\\src\\LojaVirtual.csproj",
+        "projectName": "LojaVirtual",
+        "projectPath": "C:\\Users\\Paulo Henrique\\source\\repos\\PHVDS\\LojaVirtual\\src\\LojaVirtual.csproj",
+        "packagesPath": "C:\\Users\\Paulo Henrique\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Paulo Henrique\\source\\repos\\PHVDS\\LojaVirtual\\src\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Paulo Henrique\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,7 +104,11 @@
         "frameworks": {
           "netcoreapp2.2": {
             "targetAlias": "netcoreapp2.2",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Paulo Henrique\\source\\repos\\PHVDS\\Correios.NET-1.3.1\\src\\Correios.NET\\Correios.NET.csproj": {
+                "projectPath": "C:\\Users\\Paulo Henrique\\source\\repos\\PHVDS\\Correios.NET-1.3.1\\src\\Correios.NET\\Correios.NET.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -72,7 +148,15 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
+            "Microsoft.AspNetCore.Razor.Runtime": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.AspNetCore.StaticFiles": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[2.2.0, )"
             },
@@ -96,7 +180,7 @@
             },
             "Microsoft.NET.Sdk.Razor": {
               "target": "Package",
-              "version": "[3.1.22, )"
+              "version": "[2.2.0, )"
             },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
@@ -143,11 +227,12 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

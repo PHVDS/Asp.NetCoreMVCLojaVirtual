@@ -172,7 +172,7 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 			transaction.Shipping = new Shipping
 			{
 				Name = enderecoEntrega.Nome,
-				Fee = Mascara.ConverterValorPagarMe(fee),
+				Fee = Mascara.ConverterValorPagarMe(fee),	
 				DeliveryDate = Today.AddDays(_configuration.GetValue<int>("Frete:DiasNaEmpresa")).AddDays(valorFrete.Prazo).ToString("yyyy-MM-dd"),
 				Expedited = false,
 				Address = new Address()

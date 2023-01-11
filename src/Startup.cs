@@ -70,7 +70,7 @@ namespace LojaVirtual
 				return servico;	
 			});
 			services.AddScoped<GerenciarEmail>();
-			services.AddScoped<LojaVirtual.Libraries.Cookie.Cookie>();
+			services.AddScoped<Libraries.Cookie.Cookie>();
 			services.AddScoped<CookieCarrinhoCompra>();
 			services.AddScoped<CookieFrete>();
 			services.AddScoped<CalcularPacote>();
@@ -87,7 +87,7 @@ namespace LojaVirtual
 			services.AddMemoryCache(); //Guarda os dados na memoria
 			
 			services.AddScoped<Sessao>();
-			services.AddScoped<LojaVirtual.Libraries.Cookie.Cookie>();
+			services.AddScoped<Libraries.Cookie.Cookie>();
 			services.AddScoped<LoginCliente>();
 			services.AddScoped<LoginColaborador>();
 			services.AddScoped<GerenciarPagarMe>();
@@ -107,6 +107,7 @@ namespace LojaVirtual
 
 			services.AddTransient<PedidoPagamentoSituacao>();
 			services.AddTransient<PedidoEntregueJob>();
+			services.AddTransient<PedidoFinalizadoJob>();
 			services.AddScheduler();
 		}
 
@@ -142,9 +143,11 @@ namespace LojaVirtual
 					template: "/{controller=Home}/{action=Index}/{id?}");
 			});
 
+			// Scheduler - Coravel
 			app.ApplicationServices.UseScheduler(scheduler => {
 				scheduler.Schedule<PedidoPagamentoSituacao>().EveryTenSeconds();
 				scheduler.Schedule<PedidoEntregueJob>().EveryTenSeconds();
+				scheduler.Schedule<PedidoFinalizadoJob>().EveryTenSeconds();
 			});
 		}
 	}
