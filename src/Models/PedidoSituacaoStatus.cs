@@ -10,5 +10,6 @@ namespace LojaVirtual.Models
 		public string Situacao { get; set; }
 		public DateTime? Data { get; set; }
 		public bool Concluido { get; set; }
+		public string Cor { get; set; }
 	}
 }

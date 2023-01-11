@@ -11,39 +11,54 @@ namespace LojaVirtual.Libraries.Component
 	public class PedidoSituacaoViewComponent : ViewComponent
 	{
 		List<PedidoSituacaoStatus> TimeLine1 { get; set; }
+
+		List<string> StatusTimeline1 = new List<string>()
+		{
+			PedidoSituacaoConstant.PEDIDO_REALIZADO,
+			PedidoSituacaoConstant.PAGAMENTO_APROVADO,
+			PedidoSituacaoConstant.NF_EMITIDA,
+			PedidoSituacaoConstant.EM_TRANSPORTE,
+			PedidoSituacaoConstant.ENTREGUE,
+			PedidoSituacaoConstant.FINALIZADO
+		};
+		List<PedidoSituacaoStatus> TimeLine2 { get; set; }
+		List<string> StatusTimeline2 = new List<string>()
+		{
+			PedidoSituacaoConstant.PAGAMENTO_NAO_REALIZADO
+		};
+
 		public PedidoSituacaoViewComponent()
 		{
-			TimeLine1 = new List<PedidoSituacaoStatus>
-			{
-				new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.PEDIDO_REALIZADO, Concluido = false },
-				new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.PAGAMENTO_APROVADO, Concluido = false },					new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.NF_EMITIDA, Concluido = false },
-				new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.EM_TRANSPORTE, Concluido = false },
-				new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.ENTREGUE, Concluido = false },
-				new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.FINALIZADO, Concluido = false }
-			};
+			TimeLine1 = new List<PedidoSituacaoStatus>();
+			TimeLine1.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.PEDIDO_REALIZADO, Concluido = false, Cor = "complete" });
+			TimeLine1.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.PAGAMENTO_APROVADO, Concluido = false, Cor = "complete" });
+			TimeLine1.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.NF_EMITIDA, Concluido = false, Cor = "complete" });
+			TimeLine1.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.EM_TRANSPORTE, Concluido = false, Cor = "complete" });
+			TimeLine1.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.ENTREGUE, Concluido = false, Cor = "complete" });
+			TimeLine1.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.FINALIZADO, Concluido = false, Cor = "complete" });
+
+			TimeLine2 = new List<PedidoSituacaoStatus>();
+			TimeLine2.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.PEDIDO_REALIZADO, Concluido = false, Cor = "complete" });
+			TimeLine2.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.PAGAMENTO_NAO_REALIZADO, Concluido = false, Cor = "complete-red" });
 		}
 
 		public async Task<IViewComponentResult> InvokeAsync(Pedido pedido)
 		{
 			List<PedidoSituacaoStatus> timeline = null;
 
-			var listaStatusTimeline1 = new List<string>()
-			{
-				PedidoSituacaoConstant.PEDIDO_REALIZADO,
-				PedidoSituacaoConstant.PAGAMENTO_APROVADO,
-				PedidoSituacaoConstant.NF_EMITIDA,
-				PedidoSituacaoConstant.EM_TRANSPORTE,
-				PedidoSituacaoConstant.ENTREGUE,
-				PedidoSituacaoConstant.FINALIZADO
-			};
-
-			if (listaStatusTimeline1.Contains(pedido.Situacao))
+			if (StatusTimeline1.Contains(pedido.Situacao))
 			{
 				timeline = TimeLine1;
-
-				foreach(var pedidoSituacao in pedido.PedidoSituacoes)	
+			}
+			if (StatusTimeline2.Contains(pedido.Situacao))
+			{
+				timeline = TimeLine2;
+			}
+			if (timeline != null)
+			{
+				foreach (var pedidoSituacao in pedido.PedidoSituacoes)
 				{
-					var pedidoSituacaoTimeline = TimeLine1.Where(a=> a.Situacao == pedidoSituacao.Situacao).FirstOrDefault();
+					var pedidoSituacaoTimeline = TimeLine1.Where(a => a.Situacao == pedidoSituacao.Situacao).FirstOrDefault();
 					pedidoSituacaoTimeline.Data = pedidoSituacao.Data;
 					pedidoSituacaoTimeline.Concluido = true;
 				}

@@ -3,18 +3,21 @@
     ViewData["Title"] = "Default";
 }
 
-<ul class="timeline" id="timeline">
+@if (Model != null)
+{
+    <ul class="timeline" id="timeline">
     @foreach (var pedidoStatus in Model)
     {
-        <li class="li @((pedidoStatus.Concluido) ? "complete" : "")">
+        <li class="li @((pedidoStatus.Concluido) ? pedidoStatus.Cor : "")">
             <div class="timestamp">
 
-                <span class="date">@((pedidoStatus.Data != null) ? pedidoStatus.Data.ToString() : "-")<span>
+                <span class="date"> @((pedidoStatus.Data != null) ? pedidoStatus.Data.ToString() : "-")<span>
             </div>
             <div class="status">
                 <h4> @pedidoStatus.Situacao </h4>
             </div>
         </li>
     }
-</ul>
+    </ul>
+}
 
