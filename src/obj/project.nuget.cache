@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z8vbDg8K+6YUrjN95wGXIQ9hluTJdMnblstePDqbM9LIz43RTKRH3vOCx6whFpkiwAbkPzQIvYH9jeMYRLk8BA==",
+  "dgSpecHash": "wGAnFxgdCwS2lb1/LnmDMKhtEpWVxfQTbIMk3eZAytaB7fkZ+Ns2uIXabbmAVCSXdh/EchKWc+Pm868EYXobQg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Paulo Henrique\\source\\repos\\PHVDS\\LojaVirtual\\src\\LojaVirtual.csproj",
+  "projectFilePath": "C:\\Users\\Paulo Henrique\\Source\\Repos\\PHVDS\\LojaVirtual\\src\\LojaVirtual.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Paulo Henrique\\.nuget\\packages\\anglesharp\\0.14.0\\anglesharp.0.14.0.nupkg.sha512",
     "C:\\Users\\Paulo Henrique\\.nuget\\packages\\automapper\\8.1.0\\automapper.8.1.0.nupkg.sha512",

@@ -14822,11 +14822,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Paulo Henrique\\source\\repos\\PHVDS\\LojaVirtual\\src\\LojaVirtual.csproj",
+      "projectUniqueName": "C:\\Users\\Paulo Henrique\\Source\\Repos\\PHVDS\\LojaVirtual\\src\\LojaVirtual.csproj",
       "projectName": "LojaVirtual",
-      "projectPath": "C:\\Users\\Paulo Henrique\\source\\repos\\PHVDS\\LojaVirtual\\src\\LojaVirtual.csproj",
+      "projectPath": "C:\\Users\\Paulo Henrique\\Source\\Repos\\PHVDS\\LojaVirtual\\src\\LojaVirtual.csproj",
       "packagesPath": "C:\\Users\\Paulo Henrique\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Paulo Henrique\\source\\repos\\PHVDS\\LojaVirtual\\src\\obj\\",
+      "outputPath": "C:\\Users\\Paulo Henrique\\Source\\Repos\\PHVDS\\LojaVirtual\\src\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -14846,8 +14846,8 @@
         "netcoreapp2.2": {
           "targetAlias": "netcoreapp2.2",
           "projectReferences": {
-            "C:\\Users\\Paulo Henrique\\source\\repos\\PHVDS\\Correios.NET-1.3.1\\src\\Correios.NET\\Correios.NET.csproj": {
-              "projectPath": "C:\\Users\\Paulo Henrique\\source\\repos\\PHVDS\\Correios.NET-1.3.1\\src\\Correios.NET\\Correios.NET.csproj"
+            "C:\\Users\\Paulo Henrique\\Source\\Repos\\PHVDS\\Correios.NET-1.3.1\\src\\Correios.NET\\Correios.NET.csproj": {
+              "projectPath": "C:\\Users\\Paulo Henrique\\Source\\Repos\\PHVDS\\Correios.NET-1.3.1\\src\\Correios.NET\\Correios.NET.csproj"
             }
           }
         }

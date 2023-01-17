@@ -1,4 +1,5 @@
 ﻿using LojaVirtual.Libraries.Filtro;
+using LojaVirtual.Libraries.Gerenciador.Pagamento;
 using LojaVirtual.Models;
 using LojaVirtual.Models.Constants;
 using LojaVirtual.Repositories.Contracts;
@@ -16,9 +17,11 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 	{
 		private readonly IPedidoRepository _pedidoRepository;
 		private readonly IPedidoSituacaoRepository _pedidoSituacaoRepository;
+		private readonly GerenciarPagarMe _gerenciarPagarMe;
 
-		public PedidoController(IPedidoRepository pedidoRepository, IPedidoSituacaoRepository pedidoSituacaoRepository)
+		public PedidoController(GerenciarPagarMe gerenciarPagarMe, IPedidoRepository pedidoRepository, IPedidoSituacaoRepository pedidoSituacaoRepository)
 		{
+			_gerenciarPagarMe = gerenciarPagarMe;
 			_pedidoRepository = pedidoRepository;
 			_pedidoSituacaoRepository = pedidoSituacaoRepository;
 		}
@@ -39,7 +42,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 		public IActionResult NFE(int id)
 		{
-			string url =  HttpContext.Request.Form["nfe_url"];
+			string url = HttpContext.Request.Form["nfe_url"];
 
 			Pedido pedido = _pedidoRepository.ObterPedido(id);
 			pedido.NFE = url;
@@ -81,6 +84,15 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			_pedidoRepository.Atualizar(pedido);
 
 			return RedirectToAction(nameof(Visualizar), new { id = id });
+		}
+
+		public IActionResult RegistrarCancelamentoCartaoCredito(int id)
+		{
+			string motivo = HttpContext.Request.Form["motivo"];
+
+			Pedido pedido = _pedidoRepository.ObterPedido(id);
+
+			_gerenciarPagarMe.EstornoCartaoCredito(pedido.TransactionId);
 		}
 	}
 }
