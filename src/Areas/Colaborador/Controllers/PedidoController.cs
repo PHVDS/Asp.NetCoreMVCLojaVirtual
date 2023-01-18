@@ -1,9 +1,13 @@
 ﻿using LojaVirtual.Libraries.Filtro;
 using LojaVirtual.Libraries.Gerenciador.Pagamento;
+using LojaVirtual.Libraries.Json.Resolver;
 using LojaVirtual.Models;
 using LojaVirtual.Models.Constants;
+using LojaVirtual.Models.ProdutoAgregador;
+using LojaVirtual.Repositories;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,12 +22,14 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 		private readonly IPedidoRepository _pedidoRepository;
 		private readonly IPedidoSituacaoRepository _pedidoSituacaoRepository;
 		private readonly GerenciarPagarMe _gerenciarPagarMe;
+		private readonly IProdutoRepository _produtoRepository;
 
-		public PedidoController(GerenciarPagarMe gerenciarPagarMe, IPedidoRepository pedidoRepository, IPedidoSituacaoRepository pedidoSituacaoRepository)
+		public PedidoController(IProdutoRepository produtoRepository, GerenciarPagarMe gerenciarPagarMe, IPedidoRepository pedidoRepository, IPedidoSituacaoRepository pedidoSituacaoRepository)
 		{
 			_gerenciarPagarMe = gerenciarPagarMe;
 			_pedidoRepository = pedidoRepository;
 			_pedidoSituacaoRepository = pedidoSituacaoRepository;
+			_produtoRepository = produtoRepository;
 		}
 
 		public IActionResult Index(int? pagina, string codigoPedido, string cpf)
@@ -93,6 +99,41 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			Pedido pedido = _pedidoRepository.ObterPedido(id);
 
 			_gerenciarPagarMe.EstornoCartaoCredito(pedido.TransactionId);
+
+			pedido.Situacao = PedidoSituacaoConstant.ESTORNO;
+
+			var pedidoSituacao = new PedidoSituacao
+			{
+				Data = DateTime.Now,
+				Dados = JsonConvert.SerializeObject(new DadosCancelamento() { Motivo = motivo}),
+				PedidoId = id,
+				Situacao = PedidoSituacaoConstant.ESTORNO
+			};
+
+			_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+
+			_pedidoRepository.Atualizar(pedido);
+
+			DevolverProdutosEstoque(pedido);
+
+			return RedirectToAction(nameof(Visualizar), new { id = id });
 		}
+		private void DevolverProdutosEstoque(Pedido pedido)
+		{
+			List<ProdutoItem> produtos = JsonConvert.DeserializeObject<List<ProdutoItem>>(pedido.DadosProdutos,
+				new JsonSerializerSettings()
+				{
+					ContractResolver = new ProdutoItemResolver<List<ProdutoItem>>()
+				});
+
+			foreach (var produto in produtos)
+			{
+				Produto produtoDB = _produtoRepository.ObterProduto(produto.Id);
+				produtoDB.Quantidade += produto.QuantidadeProdutoCarrinho;
+
+				_produtoRepository.Atualizar(produtoDB);
+			}
+		}
+
 	}
 }
