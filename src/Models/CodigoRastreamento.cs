@@ -1,0 +1,12 @@
+﻿using LojaVirtual.Libraries.Lang;
+using System.ComponentModel.DataAnnotations;
+
+namespace LojaVirtual.Models
+{
+    public class CodigoRastreamento
+    {
+		[Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E001")]
+		[MinLength(5, ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E002")]
+		public string Codigo { get; set; }
+    }
+}

@@ -1,8 +1,8 @@
-﻿@model Pedido
+﻿@model VisualizarViewModel
 @{
     ViewData["Title"] = "Visualizar";
-    TransacaoPagarMe transacaoPagarMe = JsonConvert.DeserializeObject<TransacaoPagarMe>(Model.DadosTransaction);
-    List<ProdutoItem> produtoItems = JsonConvert.DeserializeObject<List<ProdutoItem>>(Model.DadosProdutos,
+    TransacaoPagarMe transacaoPagarMe = JsonConvert.DeserializeObject<TransacaoPagarMe>(Model.Pedido.DadosTransaction);
+    List<ProdutoItem> produtoItems = JsonConvert.DeserializeObject<List<ProdutoItem>>(Model.Pedido.DadosProdutos,
         new JsonSerializerSettings()
         {
             ContractResolver = new ProdutoItemResolver<List<ProdutoItem>>()
@@ -15,34 +15,34 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 text-center">
-            <vc:pedido-situacao pedido="@Model" />
+            <vc:pedido-situacao pedido="@Model.Pedido" />
         </div>
     </div>
     <br />
 
     <div class="row">
         <div class="col-md-12">
-            @if (Model.Situacao == PedidoSituacaoConstant.PAGAMENTO_APROVADO)
+            @if (Model.Pedido.Situacao == PedidoSituacaoConstant.PAGAMENTO_APROVADO)
             {
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#nfe">
                     Registrar NF-E
                 </button>
             }
-            @if (Model.Situacao == PedidoSituacaoConstant.NF_EMITIDA)
+            @if (Model.Pedido.Situacao == PedidoSituacaoConstant.NF_EMITIDA)
             {
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#rastreamento">
                     Registrar Cod. Rastreamento
                 </button>
             }
-            @if (Model.Situacao == PedidoSituacaoConstant.NF_EMITIDA || Model.Situacao == PedidoSituacaoConstant.PAGAMENTO_APROVADO)
+            @if (Model.Pedido.Situacao == PedidoSituacaoConstant.NF_EMITIDA || Model.Pedido.Situacao == PedidoSituacaoConstant.PAGAMENTO_APROVADO)
             {
-                if (Model.FormaPagamento == MetodoPagamentoConstant.CartaoCredito)
+                if (Model.Pedido.FormaPagamento == MetodoPagamentoConstant.CartaoCredito)
                 {
                     <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#cancelar-cartao">
                         Cancelar
                     </button>
                 }
-                if (Model.FormaPagamento == MetodoPagamentoConstant.Boleto)
+                if (Model.Pedido.FormaPagamento == MetodoPagamentoConstant.Boleto)
                 {
                     <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#cancelar-boleto">
                         Cancelar
@@ -58,15 +58,15 @@
             <h3>Dados do Pedido</h3>
             <table class="table table-bordered">
                 <tr>
-                    <td colspan="2"><strong>Situação do Pedido:</strong> @Model.Situacao</td>
+                    <td colspan="2"><strong>Situação do Pedido:</strong> @Model.Pedido.Situacao</td>
                 </tr>
                 <tr>
                     <td><strong>Cliente:</strong> @transacaoPagarMe.Customer.Name</td>
                     <td><strong>Nascimento:</strong> @aniversario.ToString("dd/MM/yyyy")</td>
                 </tr>
                 <tr>
-                    <td><strong>Forma de Pagamento:</strong> @Model.FormaPagamento</td>
-                    <td><strong>Nota Fiscal Eletrônica: </strong> @Html.Raw(Model.NFE == null ? "-" : "<a href='" + Model.NFE + "' target='_blank'> NF-e </a>")</td>
+                    <td><strong>Forma de Pagamento:</strong> @Model.Pedido.FormaPagamento</td>
+                    <td><strong>Nota Fiscal Eletrônica: </strong> @Html.Raw(Model.Pedido.NFE == null ? "-" : "<a href='" + Model.Pedido.NFE + "' target='_blank'> NF-e </a>")</td>
                 </tr>
             </table>
 
@@ -87,9 +87,9 @@
                     <td><strong>Número: </strong> @transacaoPagarMe.Shipping.Address.StreetNumber</td>
                 </tr>
                 <tr>
-                    <td colspan="2"><strong>Transportadora: </strong> @Model.FreteEmpresa</td>
+                    <td colspan="2"><strong>Transportadora: </strong> @Model.Pedido.FreteEmpresa</td>
                     <td><strong>Valor do Frete: </strong> @Mascara.ConverterPagarMeIntToDecimal(transacaoPagarMe.Shipping.Fee).ToString("C")</td>
-                    <td><strong>Rastreamento: </strong> @Html.Raw(Model.FreteCodRastreamento == null ? "-" : "<a href='https://linkcorreios.com.br/" + Model.FreteCodRastreamento + "' target='_blank'> " + Model.FreteCodRastreamento + " </a>")</td>
+                    <td><strong>Rastreamento: </strong> @Html.Raw(Model.Pedido.FreteCodRastreamento == null ? "-" : "<a href='https://linkcorreios.com.br/" + Model.Pedido.FreteCodRastreamento + "' target='_blank'> " + Model.Pedido.FreteCodRastreamento + " </a>")</td>
                 </tr>
             </table>
 
@@ -119,7 +119,7 @@
 
                 <tr>
                     <td colspan="3"><strong>TOTAL</strong></td>
-                    <td>@Model.ValorTotal.ToString("C")</td>
+                    <td>@Model.Pedido.ValorTotal.ToString("C")</td>
                 </tr>
             </table>
             <br />
@@ -132,7 +132,7 @@
 </div>
 
 <!-- Modal -->
-<form method="post" asp-action="NFE" asp-route-id="@Model.Id">
+<form method="post" asp-action="NFE" asp-route-id="@Model.Pedido.Id">
     <div class="modal fade" id="nfe" tabindex="-1" role="dialog" aria-labelledby="nfe" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -145,7 +145,7 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="control-nfe">Link NF-e:</label>
-                        <input type="url" class="form-control" name="nfe_url" id="control-nfe" placeholder="URL NF-e">
+                        <input type="url" class="form-control" asp-for="@Model.NFE.NFE_URL" id="control-nfe" placeholder="URL NF-e">
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -157,7 +157,7 @@
     </div>
 </form>
 <!-- Modal Cartão de Credito-->
-<form method="post" asp-action="RegistrarCancelamentoCartaoCredito" asp-route-id="@Model.Id">
+<form method="post" asp-action="RegistrarCancelamentoCartaoCredito" asp-route-id="@Model.Pedido.Id">
     <div class="modal fade" id="cancelar-cartao" tabindex="-1" role="dialog" aria-labelledby="cancelar-cartao" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -170,7 +170,7 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="motivo">Motivo: </label>
-                        <input type="url" class="form-control" name="motivo" id="control-nfe">
+                        <input type="url" class="form-control" asp-for="@Model.CartaoCredito.Motivo" id="control-nfe">
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -182,7 +182,7 @@
     </div>
 </form>
 
-<form method="post" asp-action="RegistrarRastreamento" asp-route-id="@Model.Id">
+<form method="post" asp-action="RegistrarRastreamento" asp-route-id="@Model.Pedido.Id">
 <div class="modal fade" id="rastreamento" tabindex="-1" role="dialog" aria-labelledby="rastreamento" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -195,7 +195,7 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label for="cod_rastreamento">Código:</label>
-                    <input type="text" class="form-control" name="cod_rastreamento" id="cod_rastreamento" placeholder="Código de Rastreamento">
+                    <input type="text" class="form-control" asp-for="@Model.CodigoRastreamento.Codigo" id="cod_rastreamento" placeholder="Código de Rastreamento">
                 </div>
             </div>
             <div class="modal-footer">

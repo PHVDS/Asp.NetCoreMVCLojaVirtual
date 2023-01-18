@@ -1,15 +1,23 @@
-﻿namespace LojaVirtual.Models
+﻿using LojaVirtual.Libraries.Lang;
+using System.ComponentModel.DataAnnotations;
+
+namespace LojaVirtual.Models
 {
     public class DadosCancelamento
     {
-        public string Motivo { get; set; }
-        public string bank_code { get; set; }
-        public string agencia { get; set; }
-        public string agencia_dv { get; set; }
-        public string conta { get; set; }
-        public string conta_dv { get; set; }
-        public string document_number { get; set; }
-        public string legal_name { get; set; }
-        public string type { get; set; }
+		[Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E001")]
+		public string Motivo { get; set; }
+        public string FormaPagamento { get; set; }
+        public string BancoCodigo { get; set; }
+        public string Agencia { get; set; }
+        public string AgenciaDV { get; set; }
+        public string Conta { get; set; }
+        public string ContaDV { get; set; }
+        public string CPF { get; set; }
+		
+        [MinLength(5, ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E002")]
+		public string Nome { get; set; }
+        
+        public string TipoConta { get; set; }
     }
 }

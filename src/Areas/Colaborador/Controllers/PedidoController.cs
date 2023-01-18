@@ -4,6 +4,7 @@ using LojaVirtual.Libraries.Json.Resolver;
 using LojaVirtual.Models;
 using LojaVirtual.Models.Constants;
 using LojaVirtual.Models.ProdutoAgregador;
+using LojaVirtual.Models.ViewModels.Pedido;
 using LojaVirtual.Repositories;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Mvc;
@@ -43,7 +44,12 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 		{
 			Pedido pedido = _pedidoRepository.ObterPedido(id);
 
-			return View(pedido);
+			var viewModel = new VisualizarViewModel()
+			{
+				Pedido = pedido
+			};
+
+			return View(viewModel);
 		}
 
 		public IActionResult NFE(int id)
