@@ -52,75 +52,99 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			return View(viewModel);
 		}
 
-		public IActionResult NFE(int id)
+		public IActionResult NFE([FromForm]VisualizarViewModel visualizarViewModel, int id)
 		{
-			string url = HttpContext.Request.Form["nfe_url"];
+			ModelState.Remove("Pedido");
+			ModelState.Remove("CodigoRastreamento");
+			ModelState.Remove("CartaoCredito");
+			ModelState.Remove("Boleto");
 
-			Pedido pedido = _pedidoRepository.ObterPedido(id);
-			pedido.NFE = url;
-			pedido.Situacao = PedidoSituacaoConstant.NF_EMITIDA;
-
-			var pedidoSituacao = new PedidoSituacao
+			if (ModelState.IsValid)
 			{
-				Data = DateTime.Now,
-				Dados = url,
-				PedidoId = id,
-				Situacao = PedidoSituacaoConstant.NF_EMITIDA
-			};
+				string url = visualizarViewModel.NFE.NFE_URL;
 
-			_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+				Pedido pedido = _pedidoRepository.ObterPedido(id);
+				pedido.NFE = url;
+				pedido.Situacao = PedidoSituacaoConstant.NF_EMITIDA;
 
-			_pedidoRepository.Atualizar(pedido);
+				var pedidoSituacao = new PedidoSituacao
+				{
+					Data = DateTime.Now,
+					Dados = url,
+					PedidoId = id,
+					Situacao = PedidoSituacaoConstant.NF_EMITIDA
+				};
+
+				_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+
+				_pedidoRepository.Atualizar(pedido);
+			}
 
 			return RedirectToAction(nameof(Visualizar), new { id = id });
 		}
 
-		public IActionResult RegistrarRastreamento(int id)
+		public IActionResult RegistrarRastreamento([FromForm]VisualizarViewModel visualizarViewModel, int id)
 		{
-			string codRastreamento = HttpContext.Request.Form["cod_rastreamento"];
+			ModelState.Remove("Pedido");
+			ModelState.Remove("NFE");
+			ModelState.Remove("CartaoCredito");
+			ModelState.Remove("Boleto");
 
-			Pedido pedido = _pedidoRepository.ObterPedido(id);
-			pedido.FreteCodRastreamento = codRastreamento;
-			pedido.Situacao = PedidoSituacaoConstant.EM_TRANSPORTE;
-
-			var pedidoSituacao = new PedidoSituacao
+			if (ModelState.IsValid)
 			{
-				Data = DateTime.Now,
-				Dados = codRastreamento,
-				PedidoId = id,
-				Situacao = PedidoSituacaoConstant.EM_TRANSPORTE
-			};
+				string codRastreamento = visualizarViewModel.CodigoRastreamento.Codigo;
 
-			_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+				Pedido pedido = _pedidoRepository.ObterPedido(id);
+				pedido.FreteCodRastreamento = codRastreamento;
+				pedido.Situacao = PedidoSituacaoConstant.EM_TRANSPORTE;
 
-			_pedidoRepository.Atualizar(pedido);
+				var pedidoSituacao = new PedidoSituacao
+				{
+					Data = DateTime.Now,
+					Dados = codRastreamento,
+					PedidoId = id,
+					Situacao = PedidoSituacaoConstant.EM_TRANSPORTE
+				};
 
+				_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+
+				_pedidoRepository.Atualizar(pedido);
+			}
+			
 			return RedirectToAction(nameof(Visualizar), new { id = id });
 		}
 
-		public IActionResult RegistrarCancelamentoCartaoCredito(int id)
+		public IActionResult RegistrarCancelamentoCartaoCredito([FromForm]VisualizarViewModel visualizarViewModel, int id)
 		{
-			string motivo = HttpContext.Request.Form["motivo"];
+			ModelState.Remove("Pedido");
+			ModelState.Remove("NFE");
+			ModelState.Remove("CartaoCredito");
+			ModelState.Remove("Boleto");
 
-			Pedido pedido = _pedidoRepository.ObterPedido(id);
-
-			_gerenciarPagarMe.EstornoCartaoCredito(pedido.TransactionId);
-
-			pedido.Situacao = PedidoSituacaoConstant.ESTORNO;
-
-			var pedidoSituacao = new PedidoSituacao
+			if (ModelState.IsValid)
 			{
-				Data = DateTime.Now,
-				Dados = JsonConvert.SerializeObject(new DadosCancelamento() { Motivo = motivo}),
-				PedidoId = id,
-				Situacao = PedidoSituacaoConstant.ESTORNO
-			};
+				visualizarViewModel.CartaoCredito.FormaPagamento = MetodoPagamentoConstant.CartaoCredito;
 
-			_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+				Pedido pedido = _pedidoRepository.ObterPedido(id);
 
-			_pedidoRepository.Atualizar(pedido);
+				_gerenciarPagarMe.EstornoCartaoCredito(pedido.TransactionId);
 
-			DevolverProdutosEstoque(pedido);
+				pedido.Situacao = PedidoSituacaoConstant.ESTORNO;
+
+				var pedidoSituacao = new PedidoSituacao
+				{
+					Data = DateTime.Now,
+					Dados = JsonConvert.SerializeObject(visualizarViewModel.CartaoCredito),
+					PedidoId = id,
+					Situacao = PedidoSituacaoConstant.ESTORNO
+				};
+
+				_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+
+				_pedidoRepository.Atualizar(pedido);
+
+				DevolverProdutosEstoque(pedido);
+			}
 
 			return RedirectToAction(nameof(Visualizar), new { id = id });
 		}
