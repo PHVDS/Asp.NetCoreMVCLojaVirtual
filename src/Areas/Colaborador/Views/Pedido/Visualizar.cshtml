@@ -170,7 +170,74 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="motivo">Motivo: </label>
-                        <input type="url" class="form-control" asp-for="@Model.CartaoCredito.Motivo" id="control-nfe">
+                        <input type="text" class="form-control" asp-for="@Model.CartaoCredito.Motivo" id="motivo">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!-- Modal Cancelar Boleto-->
+<form method="post" asp-action="RegistrarCancelamentoCartaoCredito" asp-route-id="@Model.Pedido.Id">
+    <div class="modal fade" id="cancelar-boleto" tabindex="-1" role="dialog" aria-labelledby="cancelar-boleto" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cancelar pedido (Boleto Bancário)</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    
+                    <div class="form-group">
+                        <label for="motivo">Motivo: </label>
+                        <textarea class="form-control" asp-for="@Model.CartaoCredito.Motivo" id="motivo" placeholder="Motivo do cancelamento"> </textarea>
+                        <span asp-validation-for="@Model.CartaoCredito.Motivo" class="text-danger"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="codigo_banco"> Código Banco: </label>
+                        <input type="text" class="form-control" asp-for="@Model.CartaoCredito.BancoCodigo" id="codigo_banco" placeholder="Código banco">
+                        <span asp-validation-for="@Model.CartaoCredito.BancoCodigo" class="text-danger"></span>
+                        <a href="https://portal.febraban.org.br/pagina/3164/12/pt-br/associados" target="_blank"> Consultar </a>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="agencia"> Agência: </label>
+                        <input type="text" class="form-control" asp-for="@Model.CartaoCredito.Agencia" id="agencia" placeholder="Agência">
+                        -
+                        <input type="text" maxlength="2" class="form-control" asp-for="@Model.CartaoCredito.AgenciaDV" id="agencia_dv">
+                        <span asp-validation-for="@Model.CartaoCredito.Agencia" class="text-danger"></span>
+                        <span asp-validation-for="@Model.CartaoCredito.AgenciaDV" class="text-danger"></span>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cc"> Conta Corrente: </label>
+                        <input type="text" class="form-control" asp-for="@Model.CartaoCredito.Conta" id="cc" placeholder="Conta">
+                        -
+                        <input type="text" class="form-control" asp-for="@Model.CartaoCredito.ContaDV" id="cc_dv">
+                        <span asp-validation-for="@Model.CartaoCredito.Conta" class="text-danger"></span>
+                        <span asp-validation-for="@Model.CartaoCredito.ContaDV" class="text-danger"></span>
+                    
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nome"> Nome do proprietário da conta: </label>
+                        <input type="text" class="form-control" asp-for="@Model.CartaoCredito.Nome" id="nome" placeholder="Nome proprietário da conta">
+                        <span asp-validation-for="@Model.CartaoCredito.Nome" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cpf"> CPF do proprietário da conta: </label>
+                        <input type="text" class="form-control" asp-for="@Model.CartaoCredito.CPF" id="cpf" placeholder="CPF proprietário da conta">
+                        <span asp-validation-for="@Model.CartaoCredito.CPF" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="modal-footer">
