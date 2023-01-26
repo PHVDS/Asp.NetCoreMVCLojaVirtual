@@ -265,6 +265,19 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 
 			return transaction;
 		}
+
+		public Transaction EstornoBoletoBancario(string transactionId, DadosCancelamento boleto)
+		{
+			PagarMeService.DefaultApiKey = _configuration.GetValue<String>("Pagamento:PagarMe:ApiKey");
+
+			var transaction = PagarMeService.GetDefaultService().Transactions.Find(transactionId);
+
+
+
+			transaction.Refund();
+
+			return transaction;
+		}
 	}
 }
  

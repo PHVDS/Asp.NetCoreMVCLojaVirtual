@@ -118,7 +118,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 		{
 			ModelState.Remove("Pedido");
 			ModelState.Remove("NFE");
-			ModelState.Remove("CartaoCredito");
+			ModelState.Remove("CodigoRastreamento");
 			ModelState.Remove("Boleto");
 
 			if (ModelState.IsValid)
@@ -135,6 +135,41 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 				{
 					Data = DateTime.Now,
 					Dados = JsonConvert.SerializeObject(visualizarViewModel.CartaoCredito),
+					PedidoId = id,
+					Situacao = PedidoSituacaoConstant.ESTORNO
+				};
+
+				_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+
+				_pedidoRepository.Atualizar(pedido);
+
+				DevolverProdutosEstoque(pedido);
+			}
+
+			return RedirectToAction(nameof(Visualizar), new { id = id });
+		}
+
+		public IActionResult RegistrarCancelamentoBoleto([FromForm] VisualizarViewModel visualizarViewModel, int id)
+		{
+			ModelState.Remove("Pedido");
+			ModelState.Remove("NFE");
+			ModelState.Remove("CartaoCredito");
+			ModelState.Remove("CodigoRastreamento");
+
+			if (ModelState.IsValid)
+			{
+				visualizarViewModel.CartaoCredito.FormaPagamento = MetodoPagamentoConstant.Boleto;
+
+				Pedido pedido = _pedidoRepository.ObterPedido(id);
+
+				_gerenciarPagarMe.EstornoBoletoBancario(pedido.TransactionId, visualizarViewModel.Boleto);
+
+				pedido.Situacao = PedidoSituacaoConstant.ESTORNO;
+
+				var pedidoSituacao = new PedidoSituacao
+				{
+					Data = DateTime.Now,
+					Dados = JsonConvert.SerializeObject(visualizarViewModel.Boleto),
 					PedidoId = id,
 					Situacao = PedidoSituacaoConstant.ESTORNO
 				};
