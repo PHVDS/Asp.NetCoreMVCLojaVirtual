@@ -6,6 +6,7 @@ using LojaVirtual.Models;
 using LojaVirtual.Libraries.Texto;
 using System.Collections.Generic;
 using LojaVirtual.Models.ProdutoAgregador;
+using AutoMapper;
 
 namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 {
@@ -13,8 +14,10 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 	{
 		private readonly LoginCliente _loginCliente;
 		private readonly IConfiguration _configuration;
-		public GerenciarPagarMe(IConfiguration configuration, LoginCliente loginCliente)
+		private readonly IMapper _mapper;
+		public GerenciarPagarMe(IMapper mapper, IConfiguration configuration, LoginCliente loginCliente)
 		{
+			_mapper = mapper;
 			_configuration = configuration;
 			_loginCliente = loginCliente;
 		}
@@ -272,9 +275,9 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 
 			var transaction = PagarMeService.GetDefaultService().Transactions.Find(transactionId);
 
+			var bankAccount = _mapper.Map<DadosCancelamento, BankAccount>(boleto);
 
-
-			transaction.Refund();
+			transaction.Refund(bankAccount);
 
 			return transaction;
 		}

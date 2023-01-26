@@ -158,7 +158,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 			if (ModelState.IsValid)
 			{
-				visualizarViewModel.CartaoCredito.FormaPagamento = MetodoPagamentoConstant.Boleto;
+				visualizarViewModel.Boleto.FormaPagamento = MetodoPagamentoConstant.Boleto;
 
 				Pedido pedido = _pedidoRepository.ObterPedido(id);
 
