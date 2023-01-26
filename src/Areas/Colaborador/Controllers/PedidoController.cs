@@ -79,8 +79,13 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 				_pedidoRepository.Atualizar(pedido);
 			}
+			else
+			{
+				ViewBag.MODAL_NFE = true;
+			}
 
-			return RedirectToAction(nameof(Visualizar), new { id = id });
+			visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
+			return View(nameof(Visualizar), visualizarViewModel);
 		}
 
 		public IActionResult RegistrarRastreamento([FromForm]VisualizarViewModel visualizarViewModel, int id)
@@ -110,8 +115,13 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 				_pedidoRepository.Atualizar(pedido);
 			}
-			
-			return RedirectToAction(nameof(Visualizar), new { id = id });
+			else
+			{
+				ViewBag.MODAL_RASTREAMENTO = true;
+			}
+
+			visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
+			return View(nameof(Visualizar), visualizarViewModel);
 		}
 
 		public IActionResult RegistrarCancelamentoCartaoCredito([FromForm]VisualizarViewModel visualizarViewModel, int id)
@@ -145,8 +155,13 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 				DevolverProdutosEstoque(pedido);
 			}
+			else
+			{
+				ViewBag.MODAL_CARTAOCREDITO = true;
+			}
 
-			return RedirectToAction(nameof(Visualizar), new { id = id });
+			visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
+			return View(nameof(Visualizar), visualizarViewModel);
 		}
 
 		public IActionResult RegistrarCancelamentoBoleto([FromForm] VisualizarViewModel visualizarViewModel, int id)
@@ -180,8 +195,13 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 				DevolverProdutosEstoque(pedido);
 			}
+			else
+			{
+				ViewBag.MODAL_BOLETOBANCARIO = true;
+			}
 
-			return RedirectToAction(nameof(Visualizar), new { id = id });
+			visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
+			return View(nameof(Visualizar), visualizarViewModel);
 		}
 		private void DevolverProdutosEstoque(Pedido pedido)
 		{

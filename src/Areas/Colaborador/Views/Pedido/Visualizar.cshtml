@@ -10,8 +10,36 @@
     var aniversario = DateTime.Parse(transacaoPagarMe.Customer.Birthday);
 }
 
+@section script{
+    @if (ViewBag.MODAL_NFE != null)
+    {
+        <script type="text/javascript">
+            $('#nfe').modal();
+        </script>
+    }
+    @if (ViewBag.MODAL_RASTREAMENTO != null)
+    {
+        <script type="text/javascript">
+            $('#rastreamento').modal();
+        </script>
+    }
+    @if (ViewBag.MODAL_CARTAOCREDITO != null)
+    {
+        <script type="text/javascript">
+            $('#cancelar-cartao').modal();
+        </script>
+    }
+    @if (ViewBag.MODAL_BOLETOBANCARIO != null)
+    {
+        <script type="text/javascript">
+            $('#cancelar-boleto').modal();
+        </script>
+    }
+}
+
 <br />
 <br />
+
 <div class="container">
     <div class="row">
         <div class="col-md-12 text-center">
@@ -131,7 +159,7 @@
     </div>
 </div>
 
-<!-- Modal -->
+<!-- Modal NFE-->
 <form method="post" asp-action="NFE" asp-route-id="@Model.Pedido.Id">
     <div class="modal fade" id="nfe" tabindex="-1" role="dialog" aria-labelledby="nfe" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -146,6 +174,7 @@
                     <div class="form-group">
                         <label for="control-nfe">Link NF-e:</label>
                         <input type="url" class="form-control" asp-for="@Model.NFE.NFE_URL" id="control-nfe" placeholder="URL NF-e">
+                        <span asp-validation-for="@Model.NFE.NFE_URL" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -171,6 +200,7 @@
                     <div class="form-group">
                         <label for="motivo">Motivo: </label>
                         <textarea class="form-control" asp-for="@Model.CartaoCredito.Motivo" id="motivo" placeholder="Motivo do cancelamento"> </textarea>
+                        <span asp-validation-for="@Model.CartaoCredito.Motivo" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -253,6 +283,7 @@
                 <div class="form-group">
                     <label for="cod_rastreamento">Código:</label>
                     <input type="text" class="form-control" asp-for="@Model.CodigoRastreamento.Codigo" id="cod_rastreamento" placeholder="Código de Rastreamento">
+                        <span asp-validation-for="@Model.CodigoRastreamento.Codigo" class="text-danger"></span>
                 </div>
             </div>
             <div class="modal-footer">

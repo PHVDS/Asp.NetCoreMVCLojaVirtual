@@ -5,7 +5,7 @@
         public Models.Pedido Pedido { get; set; }
         public NFE NFE { get; set; }
         public CodigoRastreamento CodigoRastreamento { get; set; }
-        public DadosCancelamento CartaoCredito { get; set; }
-        public DadosCancelamento Boleto { get; set; }
+        public DadosCancelamentoCartao CartaoCredito { get; set; }
+        public DadosCancelamentoBoleto Boleto { get; set; }
     }
 }

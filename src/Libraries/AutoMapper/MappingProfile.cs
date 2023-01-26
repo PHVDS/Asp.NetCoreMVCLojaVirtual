@@ -53,7 +53,7 @@ namespace LojaVirtual.Libraries.AutoMapper
 					ReferenceLoopHandling = ReferenceLoopHandling.Ignore
 				})));
 
-			CreateMap<DadosCancelamento, BankAccount>()
+			CreateMap<DadosCancelamentoBoleto, BankAccount>()
 				.ForMember(dest => dest.BankCode, opt => opt.MapFrom(origem => origem.BancoCodigo))
 				.ForMember(dest => dest.Agencia, opt => opt.MapFrom(origem => origem.Agencia))
 				.ForMember(dest => dest.AgenciaDv, opt => opt.MapFrom(origem => origem.AgenciaDV))
