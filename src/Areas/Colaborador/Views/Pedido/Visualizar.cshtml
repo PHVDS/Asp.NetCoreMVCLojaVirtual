@@ -140,6 +140,23 @@
                 </tr>
             </table>
 
+            @if (Model.Pedido.Situacao == PedidoSituacaoConstant.DEVOLVER_ENTREGUE)
+            {
+                var devolucao = Model.Pedido.PedidoSituacoes.FirstOrDefault(a => a.Situacao == PedidoSituacaoConstant.DEVOLVER);
+                DadosDevolucao dadosDevolucao = JsonConvert.DeserializeObject<DadosDevolucao>(devolucao.Dados);
+
+                var devolucaoEntregue = Model.Pedido.PedidoSituacoes.FirstOrDefault(a => a.Situacao == PedidoSituacaoConstant.DEVOLVER_ENTREGUE);
+                var dadosCorreiosDevolucao = JsonConvert.DeserializeObject<Correios.NET.Models.Package>(devolucaoEntregue.Dados);    
+                <h3>Devolução</h3>
+                <table class="table table-bordered">
+                    <tr>
+                        <td><strong>Transportadora: </strong> @Model.Pedido.FreteEmpresa</td>
+                        <td><strong>Data da devolução (Na Loja): </strong> @dadosCorreiosDevolucao.DeliveryDate.ToString()</td>
+                        <td><strong>Rastreamento: </strong> @Html.Raw(dadosDevolucao.CodigoRastreamento == null ? "-" : "<a href='https://linkcorreios.com.br/" + dadosDevolucao.CodigoRastreamento + "' target='_blank'> " + dadosDevolucao.CodigoRastreamento + " </a>")</td>
+                    </tr>
+                </table>
+            }
+
             <h3>Lista de Produtos</h3>
             <table class="table table-bordered">
                 <tr>
