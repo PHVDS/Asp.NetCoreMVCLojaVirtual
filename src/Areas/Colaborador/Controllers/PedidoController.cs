@@ -59,6 +59,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			ModelState.Remove("CartaoCredito");
 			ModelState.Remove("Boleto");
 			ModelState.Remove("Devolucao");
+			ModelState.Remove("DevolucaoMotivoRejeicao");
 
 			if (ModelState.IsValid)
 			{
@@ -96,6 +97,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			ModelState.Remove("CartaoCredito");
 			ModelState.Remove("Boleto");
 			ModelState.Remove("Devolucao");
+			ModelState.Remove("DevolucaoMotivoRejeicao");
 
 			if (ModelState.IsValid)
 			{
@@ -133,6 +135,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			ModelState.Remove("CodigoRastreamento");
 			ModelState.Remove("Boleto");
 			ModelState.Remove("Devolucao");
+			ModelState.Remove("DevolucaoMotivoRejeicao");
 
 			if (ModelState.IsValid)
 			{
@@ -174,6 +177,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			ModelState.Remove("CartaoCredito");
 			ModelState.Remove("CodigoRastreamento");
 			ModelState.Remove("Devolucao");
+			ModelState.Remove("DevolucaoMotivoRejeicao");
 
 			if (ModelState.IsValid)
 			{
@@ -215,6 +219,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			ModelState.Remove("CartaoCredito");
 			ModelState.Remove("CodigoRastreamento");
 			ModelState.Remove("Boleto");
+			ModelState.Remove("DevolucaoMotivoRejeicao");
 			
 
 			if (ModelState.IsValid)
@@ -240,6 +245,77 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			}
 
 			visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
+			return View(nameof(Visualizar), visualizarViewModel);
+		}
+
+		public IActionResult RegistrarDevolucaoPedidoRejeicao([FromForm] VisualizarViewModel visualizarViewModel, int id)
+		{
+			ModelState.Remove("Pedido");
+			ModelState.Remove("NFE");
+			ModelState.Remove("CartaoCredito");
+			ModelState.Remove("CodigoRastreamento");
+			ModelState.Remove("Boleto");
+
+
+			if (ModelState.IsValid)
+			{
+				Pedido pedido = _pedidoRepository.ObterPedido(id);
+				pedido.Situacao = PedidoSituacaoConstant.DEVOLUCAO_REJEITADA;
+
+				var pedidoSituacao = new PedidoSituacao
+				{
+					Data = DateTime.Now,
+					Dados = visualizarViewModel.DevolucaoMotivoRejeicao,
+					PedidoId = id,
+					Situacao = PedidoSituacaoConstant.DEVOLUCAO_REJEITADA
+				};
+
+				_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+
+				_pedidoRepository.Atualizar(pedido);
+			}
+			else
+			{
+				ViewBag.MODAL_DEVOLVER_REJEITAR = true;
+			}
+
+			visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
+			return View(nameof(Visualizar), visualizarViewModel);
+		}
+
+		public IActionResult RegistrarDevolucaoPedidoAprovadoCartaoCredito(int id)
+		{
+			Pedido pedido = _pedidoRepository.ObterPedido(id);
+
+			if (pedido.Situacao == PedidoSituacaoConstant.DEVOLVER_ENTREGUE)
+			{
+				var pedidoSituacao = new PedidoSituacao
+				{
+					Data = DateTime.Now,
+					PedidoId = id,
+					Situacao = PedidoSituacaoConstant.DEVOLUCAO_ACEITA
+				};
+
+				_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+
+				_gerenciarPagarMe.EstornoCartaoCredito(pedido.TransactionId);
+
+				pedidoSituacao = new PedidoSituacao
+				{
+					Data = DateTime.Now,
+					PedidoId = id,
+					Situacao = PedidoSituacaoConstant.ESTORNO
+				};
+
+				_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+
+				DevolverProdutosEstoque(pedido);
+
+				pedido.Situacao = PedidoSituacaoConstant.ESTORNO;
+				_pedidoRepository.Atualizar(pedido);
+			}
+			VisualizarViewModel visualizarViewModel = new VisualizarViewModel();
+			visualizarViewModel.Pedido = pedido;
 			return View(nameof(Visualizar), visualizarViewModel);
 		}
 

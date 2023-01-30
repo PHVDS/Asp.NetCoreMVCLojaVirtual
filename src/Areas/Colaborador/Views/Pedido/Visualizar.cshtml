@@ -41,6 +41,12 @@
             $('#devolver').modal();
         </script>
     }
+    @if (ViewBag.MODAL_DEVOLVER_REJEITAR != null)
+    {
+        <script type="text/javascript">
+            $('#devolver_rejeitar').modal();
+        </script>
+    }
 }
 
 <br />
@@ -55,7 +61,7 @@
     <br />
 
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 text-center">
             @if (Model.Pedido.Situacao == PedidoSituacaoConstant.PAGAMENTO_APROVADO)
             {
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#nfe">
@@ -94,6 +100,27 @@
                         Devolver
                     </button>
                 }
+            }
+            
+            @if (Model.Pedido.Situacao == PedidoSituacaoConstant.DEVOLVER_ENTREGUE)
+            {
+                if (Model.Pedido.FormaPagamento == MetodoPagamentoConstant.CartaoCredito)
+                {
+                    <button type="button" class="btn btn-success" asp-action="RegistrarDevolucaoPedidoAprovadoCartaoCredito" asp-route-id="@Model.Pedido.Id">
+                        Aceitar Devolução
+                    </button>
+                }
+                
+                if (Model.Pedido.FormaPagamento == MetodoPagamentoConstant.Boleto)
+                {
+                    <button type="button" class="btn btn-success">
+                        Aceitar Devolução
+                    </button>
+                }
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#devolver_rejeitar">
+                        Rejeitar Devolução
+                    </button>
+
             }
 
         </div>
@@ -338,7 +365,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Cancelar pedido (Cartão de crédito)</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Devolução do Pedido</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -356,6 +383,33 @@
                         <span asp-validation-for="@Model.Devolucao.CodigoRastreamento" class="text-danger"></span>
                     </div>
 
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!--Modal Registrar Devolucao-->
+<form method="post" asp-action="RegistrarDevolucaoPedidoRejeicao" asp-route-id="@Model.Pedido.Id">
+    <div class="modal fade" id="devolver_rejeitar" tabindex="-1" role="dialog" aria-labelledby="devolver_rejeitar" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Rejeitar Devolução</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label asp-for="@Model.Devolucao.Motivo"> </label>
+                        <textarea class="form-control" asp-for="@Model.Devolucao.Motivo" id="motivo" placeholder="Motivo da Devolução"> </textarea>
+                        <span asp-validation-for="@Model.Devolucao.Motivo" class="text-danger"></span>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>

@@ -1,4 +1,7 @@
-﻿namespace LojaVirtual.Models.ViewModels.Pedido
+﻿using LojaVirtual.Libraries.Lang;
+using System.ComponentModel.DataAnnotations;
+
+namespace LojaVirtual.Models.ViewModels.Pedido
 {
     public class VisualizarViewModel
     {
@@ -8,5 +11,8 @@
         public DadosCancelamentoCartao CartaoCredito { get; set; }
         public DadosCancelamentoBoleto Boleto { get; set; }
         public DadosDevolucao Devolucao { get; set; }
+
+		[Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E001")]
+		public string DevolucaoMotivoRejeicao { get; set; }
     }
 }
