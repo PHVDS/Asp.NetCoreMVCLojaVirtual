@@ -319,6 +319,56 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			return View(nameof(Visualizar), visualizarViewModel);
 		}
 
+		public IActionResult RegistrarDevolucaoPedidoAprovadoBoleto([FromForm] VisualizarViewModel visualizarViewModel, int id)
+		{
+			ModelState.Remove("Pedido");
+			ModelState.Remove("NFE");
+			ModelState.Remove("CartaoCredito");
+			ModelState.Remove("CodigoRastreamento");
+			ModelState.Remove("Devolucao");
+			ModelState.Remove("DevolucaoMotivoRejeicao");
+			ModelState.Remove("Boleto.Motivo");
+
+			Pedido pedido = _pedidoRepository.ObterPedido(id);
+
+			if (ModelState.IsValid)
+			{
+				var pedidoSituacao = new PedidoSituacao
+				{
+					Data = DateTime.Now,
+					PedidoId = id,
+					Situacao = PedidoSituacaoConstant.DEVOLUCAO_ACEITA
+				};
+				_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+
+				visualizarViewModel.Boleto.FormaPagamento = MetodoPagamentoConstant.Boleto;
+
+				_gerenciarPagarMe.EstornoBoletoBancario(pedido.TransactionId, visualizarViewModel.Boleto);
+
+				pedidoSituacao = new PedidoSituacao
+				{
+					Data = DateTime.Now,
+					Dados = JsonConvert.SerializeObject(visualizarViewModel.Boleto),
+					PedidoId = id,
+					Situacao = PedidoSituacaoConstant.ESTORNO
+				};
+
+				_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+
+				pedido.Situacao = PedidoSituacaoConstant.ESTORNO;
+				_pedidoRepository.Atualizar(pedido);
+
+				DevolverProdutosEstoque(pedido);
+			}
+			else
+			{
+				ViewBag.MODAL_DEVOLVER_BOLETOBANCARIO = true;
+			}
+
+			visualizarViewModel.Pedido = pedido;
+			return View(nameof(Visualizar), visualizarViewModel);
+		}
+
 		private void DevolverProdutosEstoque(Pedido pedido)
 		{
 			List<ProdutoItem> produtos = JsonConvert.DeserializeObject<List<ProdutoItem>>(pedido.DadosProdutos,

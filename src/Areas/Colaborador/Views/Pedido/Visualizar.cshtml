@@ -47,6 +47,12 @@
             $('#devolver_rejeitar').modal();
         </script>
     }
+    @if (ViewBag.MODAL_DEVOLVER_BOLETOBANCARIO != null)
+    {
+        <script type="text/javascript">
+            $('#devolver_aprovar_boleto').modal();
+        </script>
+    }
 }
 
 <br />
@@ -113,7 +119,7 @@
                 
                 if (Model.Pedido.FormaPagamento == MetodoPagamentoConstant.Boleto)
                 {
-                    <button type="button" class="btn btn-success">
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#devolver_aprovar_boleto">
                         Aceitar Devolução
                     </button>
                 }
@@ -409,6 +415,57 @@
                         <label asp-for="@Model.Devolucao.Motivo"> </label>
                         <textarea class="form-control" asp-for="@Model.Devolucao.Motivo" id="motivo" placeholder="Motivo da Devolução"> </textarea>
                         <span asp-validation-for="@Model.Devolucao.Motivo" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!-- Modal Devolver Aprovar Boleto-->
+<form method="post" asp-action="RegistrarDevolucaoPedidoAprovadoBoleto" asp-route-id="@Model.Pedido.Id">
+    <div class="modal fade" id="devolver_aprovar_boleto" tabindex="-1" role="dialog" aria-labelledby="devolver_aprovar_boleto" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Devolver Dinheiro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label for="codigo_banco"> Código Banco: </label>
+                        <input type="text" class="form-control" asp-for="@Model.Boleto.BancoCodigo" id="codigo_banco" placeholder="Código banco">
+                        <span asp-validation-for="@Model.Boleto.BancoCodigo" class="text-danger"></span>
+                        <a href="https://portal.febraban.org.br/pagina/3164/12/pt-br/associados" target="_blank"> Consultar </a>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="agencia"> Agência: </label>
+                        <input type="text" class="form-control" asp-for="@Model.Boleto.Agencia" id="agencia" placeholder="Agência">
+                        -
+                        <input type="text" maxlength="2" class="form-control" asp-for="@Model.Boleto.AgenciaDV" id="agencia_dv">
+                        <span asp-validation-for="@Model.Boleto.Agencia" class="text-danger"></span>
+                        <span asp-validation-for="@Model.Boleto.AgenciaDV" class="text-danger"></span>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cc"> Conta Corrente: </label>
+                        <input type="text" class="form-control" asp-for="@Model.Boleto.Nome" id="nome" placeholder="Nome proprietário da conta">
+                        <span asp-validation-for="@Model.Boleto.Nome" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cpf"> CPF do proprietário da conta: </label>
+                        <input type="text" class="form-control" asp-for="@Model.Boleto.CPF" id="cpf" placeholder="CPF proprietário da conta">
+                        <span asp-validation-for="@Model.Boleto.CPF" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="modal-footer">
