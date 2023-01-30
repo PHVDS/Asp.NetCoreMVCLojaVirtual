@@ -58,6 +58,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			ModelState.Remove("CodigoRastreamento");
 			ModelState.Remove("CartaoCredito");
 			ModelState.Remove("Boleto");
+			ModelState.Remove("Devolucao");
 
 			if (ModelState.IsValid)
 			{
@@ -94,6 +95,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			ModelState.Remove("NFE");
 			ModelState.Remove("CartaoCredito");
 			ModelState.Remove("Boleto");
+			ModelState.Remove("Devolucao");
 
 			if (ModelState.IsValid)
 			{
@@ -130,6 +132,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			ModelState.Remove("NFE");
 			ModelState.Remove("CodigoRastreamento");
 			ModelState.Remove("Boleto");
+			ModelState.Remove("Devolucao");
 
 			if (ModelState.IsValid)
 			{
@@ -170,6 +173,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			ModelState.Remove("NFE");
 			ModelState.Remove("CartaoCredito");
 			ModelState.Remove("CodigoRastreamento");
+			ModelState.Remove("Devolucao");
 
 			if (ModelState.IsValid)
 			{
@@ -203,6 +207,42 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
 			return View(nameof(Visualizar), visualizarViewModel);
 		}
+
+		public IActionResult RegistrarDevolucaoPedido([FromForm] VisualizarViewModel visualizarViewModel, int id)
+		{
+			ModelState.Remove("Pedido");
+			ModelState.Remove("NFE");
+			ModelState.Remove("CartaoCredito");
+			ModelState.Remove("CodigoRastreamento");
+			ModelState.Remove("Boleto");
+			
+
+			if (ModelState.IsValid)
+			{
+				Pedido pedido = _pedidoRepository.ObterPedido(id);
+				pedido.Situacao = PedidoSituacaoConstant.DEVOLVER;
+
+				var pedidoSituacao = new PedidoSituacao
+				{
+					Data = DateTime.Now,
+					Dados = JsonConvert.SerializeObject(visualizarViewModel.Devolucao),
+					PedidoId = id,
+					Situacao = PedidoSituacaoConstant.DEVOLVER
+				};
+
+				_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+
+				_pedidoRepository.Atualizar(pedido);
+			}
+			else
+			{
+				ViewBag.MODAL_DEVOLVER = true;
+			}
+
+			visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
+			return View(nameof(Visualizar), visualizarViewModel);
+		}
+
 		private void DevolverProdutosEstoque(Pedido pedido)
 		{
 			List<ProdutoItem> produtos = JsonConvert.DeserializeObject<List<ProdutoItem>>(pedido.DadosProdutos,

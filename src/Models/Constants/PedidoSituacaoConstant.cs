@@ -11,15 +11,19 @@ namespace LojaVirtual.Models.Constants
 		public const string PAGAMENTO_APROVADO = "Pagamento Aprovado";
 		public const string PAGAMENTO_REJEITADO = "Pagamento Rejeitado";
 		public const string PAGAMENTO_NAO_REALIZADO = "Pagamento Não Realizado";
+		
 		public const string NF_EMITIDA = "NF Emitida";
 		public const string EM_TRANSPORTE = "Em Transporte";
 		public const string ENTREGUE = "Entregue";
 		public const string FINALIZADO = "Finalizado";
-		public const string EM_CANCELAMENTO = "Em Cancelamento";
-		public const string EM_ANALISE = "Em Análise";
-		public const string cANCELAMENTO_ACEITO = "Cancelamento Aceito";
-		public const string cANCELAMENTO_REJEITADO = "Cancelamento Rejeitado";
 		public const string ESTORNO = "Estorno";
+		
+		public const string DEVOLVER = "Devolver (Em Transporte)";
+		public const string DEVOLVER_ENTREGUE = "Devolver (Entregue)";
+
+		public const string DEVOLUCAO_ACEITA = "Devolução Aceita";
+		public const string DEVOLUCAO_REJEITADA = "Devolução Rejeitada";
+		
 
 		public static string ObterNomesConstant(string codigo)
 		{

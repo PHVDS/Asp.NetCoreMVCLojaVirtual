@@ -7,5 +7,6 @@
         public CodigoRastreamento CodigoRastreamento { get; set; }
         public DadosCancelamentoCartao CartaoCredito { get; set; }
         public DadosCancelamentoBoleto Boleto { get; set; }
+        public DadosDevolucao Devolucao { get; set; }
     }
 }
