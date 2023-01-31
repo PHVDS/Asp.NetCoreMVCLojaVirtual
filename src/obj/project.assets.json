@@ -52,6 +52,19 @@
           }
         }
       },
+      "BouncyCastle.NetCore/1.8.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Coravel/2.5.1": {
         "type": "package",
         "dependencies": {
@@ -6039,6 +6052,20 @@
         "runtime": {
           "bin/placeholder/Correios.NET.dll": {}
         }
+      },
+      "PagarMeCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "BouncyCastle.NetCore": "1.8.5",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "bin/placeholder/PagarMeCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PagarMeCore.dll": {}
+        }
       }
     }
   },
@@ -6092,6 +6119,31 @@
         "automapper.extensions.microsoft.dependencyinjection.nuspec",
         "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll",
         "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.pdb"
+      ]
+    },
+    "BouncyCastle.NetCore/1.8.5": {
+      "sha512": "6uxsQw2UXrt82VQAWC2td3oBSJjUZ3P4u4DliagB8wf67KsU53V8sW9xwdF+IwZOOZFR0TCZuv/YKZ2BlrfAag==",
+      "type": "package",
+      "path": "bouncycastle.netcore/1.8.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bouncycastle.netcore.1.8.5.nupkg.sha512",
+        "bouncycastle.netcore.nuspec",
+        "lib/Mono/BouncyCastle.Crypto.dll",
+        "lib/Mono/BouncyCastle.Crypto.xml",
+        "lib/MonoAndroid/BouncyCastle.Crypto.dll",
+        "lib/MonoAndroid/BouncyCastle.Crypto.xml",
+        "lib/MonoMac/BouncyCastle.Crypto.dll",
+        "lib/MonoMac/BouncyCastle.Crypto.xml",
+        "lib/MonoTouch/BouncyCastle.Crypto.dll",
+        "lib/MonoTouch/BouncyCastle.Crypto.xml",
+        "lib/net20/BouncyCastle.Crypto.dll",
+        "lib/net20/BouncyCastle.Crypto.xml",
+        "lib/netstandard2.0/BouncyCastle.Crypto.dll",
+        "lib/netstandard2.0/BouncyCastle.Crypto.xml",
+        "lib/xamarinios/BouncyCastle.Crypto.dll",
+        "lib/xamarinios/BouncyCastle.Crypto.xml"
       ]
     },
     "Coravel/2.5.1": {
@@ -14785,6 +14837,11 @@
       "type": "project",
       "path": "../../Correios.NET-1.3.1/src/Correios.NET/Correios.NET.csproj",
       "msbuildProject": "../../Correios.NET-1.3.1/src/Correios.NET/Correios.NET.csproj"
+    },
+    "PagarMeCore/1.0.0": {
+      "type": "project",
+      "path": "../../PagarMe/PagarMeCore/PagarMeCore.csproj",
+      "msbuildProject": "../../PagarMe/PagarMeCore/PagarMeCore.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -14808,6 +14865,7 @@
       "Microsoft.VisualStudio.Web.BrowserLink >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.4",
       "Newtonsoft.Json >= 13.0.1",
+      "PagarMeCore >= 1.0.0",
       "System.ServiceModel.Duplex >= 4.4.*",
       "System.ServiceModel.Http >= 4.4.*",
       "System.ServiceModel.NetTcp >= 4.4.*",
@@ -14848,6 +14906,9 @@
           "projectReferences": {
             "C:\\Users\\Paulo Henrique\\Source\\Repos\\PHVDS\\Correios.NET-1.3.1\\src\\Correios.NET\\Correios.NET.csproj": {
               "projectPath": "C:\\Users\\Paulo Henrique\\Source\\Repos\\PHVDS\\Correios.NET-1.3.1\\src\\Correios.NET\\Correios.NET.csproj"
+            },
+            "C:\\Users\\Paulo Henrique\\Source\\Repos\\PHVDS\\PagarMe\\PagarMeCore\\PagarMeCore.csproj": {
+              "projectPath": "C:\\Users\\Paulo Henrique\\Source\\Repos\\PHVDS\\PagarMe\\PagarMeCore\\PagarMeCore.csproj"
             }
           }
         }

@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "wGAnFxgdCwS2lb1/LnmDMKhtEpWVxfQTbIMk3eZAytaB7fkZ+Ns2uIXabbmAVCSXdh/EchKWc+Pm868EYXobQg==",
+  "dgSpecHash": "v2le79C2GEtuGTWRGsOsBwQJM9EDiEo3Smwel56JH245TNR8c/HL/4TRhGc7NiXQ9KyWc1MEqkj3BcoOq6RbOQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Paulo Henrique\\Source\\Repos\\PHVDS\\LojaVirtual\\src\\LojaVirtual.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Paulo Henrique\\.nuget\\packages\\anglesharp\\0.14.0\\anglesharp.0.14.0.nupkg.sha512",
     "C:\\Users\\Paulo Henrique\\.nuget\\packages\\automapper\\8.1.0\\automapper.8.1.0.nupkg.sha512",
     "C:\\Users\\Paulo Henrique\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\6.1.0\\automapper.extensions.microsoft.dependencyinjection.6.1.0.nupkg.sha512",
+    "C:\\Users\\Paulo Henrique\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\Paulo Henrique\\.nuget\\packages\\coravel\\2.5.1\\coravel.2.5.1.nupkg.sha512",
     "C:\\Users\\Paulo Henrique\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Users\\Paulo Henrique\\.nuget\\packages\\microsoft.aspnetcore\\2.2.0\\microsoft.aspnetcore.2.2.0.nupkg.sha512",
@@ -320,7 +321,8 @@
     "C:\\Users\\Paulo Henrique\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
     "C:\\Users\\Paulo Henrique\\.nuget\\packages\\system.xml.xpath.xdocument\\4.3.0\\system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Paulo Henrique\\.nuget\\packages\\x.pagedlist\\7.6.0\\x.pagedlist.7.6.0.nupkg.sha512",
-    "C:\\Users\\Paulo Henrique\\.nuget\\packages\\x.pagedlist.mvc.core\\7.6.0\\x.pagedlist.mvc.core.7.6.0.nupkg.sha512"
+    "C:\\Users\\Paulo Henrique\\.nuget\\packages\\x.pagedlist.mvc.core\\7.6.0\\x.pagedlist.mvc.core.7.6.0.nupkg.sha512",
+    "C:\\Users\\Paulo Henrique\\.nuget\\packages\\pagarmecore\\1.0.0\\pagarmecore.1.0.0.nupkg.sha512"
   ],
   "logs": []
 }
