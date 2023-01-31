@@ -20,9 +20,9 @@ namespace LojaVirtual.Models.Constants
 		
 		public const string DEVOLVER = "Devolver (Em Transporte)";
 		public const string DEVOLVER_ENTREGUE = "Devolver (Entregue)";
-
 		public const string DEVOLUCAO_ACEITA = "Devolução Aceita";
 		public const string DEVOLUCAO_REJEITADA = "Devolução Rejeitada";
+		public const string DEVOLVER_ESTORNO = "Estorno (Devolução de Mercadoria)";
 		
 
 		public static string ObterNomesConstant(string codigo)

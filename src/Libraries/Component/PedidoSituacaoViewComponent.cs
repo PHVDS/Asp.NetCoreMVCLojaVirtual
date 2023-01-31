@@ -32,6 +32,21 @@ namespace LojaVirtual.Libraries.Component
 		{
 			PedidoSituacaoConstant.ESTORNO
 		};
+		
+		List<PedidoSituacaoStatus> TimeLine4 { get; set; }
+		List<string> StatusTimeline4 = new List<string>()
+		{
+			PedidoSituacaoConstant.DEVOLVER,
+			PedidoSituacaoConstant.DEVOLVER_ENTREGUE,
+			PedidoSituacaoConstant.DEVOLUCAO_ACEITA,
+			PedidoSituacaoConstant.DEVOLVER_ESTORNO
+		};
+		
+		List<PedidoSituacaoStatus> TimeLine5 { get; set; }
+		List<string> StatusTimeline5 = new List<string>()
+		{
+			PedidoSituacaoConstant.DEVOLUCAO_REJEITADA
+		};
 
 		public PedidoSituacaoViewComponent()
 		{
@@ -53,6 +68,26 @@ namespace LojaVirtual.Libraries.Component
 			TimeLine3.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.NF_EMITIDA, Concluido = false, Cor = "complete" });
 			TimeLine3.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.ESTORNO, Concluido = false, Cor = "complete-red" });
 
+			TimeLine4 = new List<PedidoSituacaoStatus>();
+			TimeLine4.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.PEDIDO_REALIZADO, Concluido = false, Cor = "complete" });
+			TimeLine4.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.PAGAMENTO_APROVADO, Concluido = false, Cor = "complete" });
+			TimeLine4.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.NF_EMITIDA, Concluido = false, Cor = "complete" });
+			TimeLine4.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.EM_TRANSPORTE, Concluido = false, Cor = "complete" });
+			TimeLine4.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.ENTREGUE, Concluido = false, Cor = "complete" });
+			TimeLine4.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.DEVOLVER, Concluido = false, Cor = "complete" });
+			TimeLine4.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.DEVOLVER_ENTREGUE, Concluido = false, Cor = "complete" });
+			TimeLine4.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.DEVOLUCAO_ACEITA, Concluido = false, Cor = "complete" });
+			TimeLine4.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.DEVOLVER_ESTORNO, Concluido = false, Cor = "complete" });
+
+			TimeLine5 = new List<PedidoSituacaoStatus>();
+			TimeLine5.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.PEDIDO_REALIZADO, Concluido = false, Cor = "complete" });
+			TimeLine5.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.PAGAMENTO_APROVADO, Concluido = false, Cor = "complete" });
+			TimeLine5.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.NF_EMITIDA, Concluido = false, Cor = "complete" });
+			TimeLine5.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.EM_TRANSPORTE, Concluido = false, Cor = "complete" });
+			TimeLine5.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.ENTREGUE, Concluido = false, Cor = "complete" });
+			TimeLine5.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.DEVOLVER, Concluido = false, Cor = "complete" });
+			TimeLine5.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.DEVOLVER_ENTREGUE, Concluido = false, Cor = "complete" });
+			TimeLine5.Add(new PedidoSituacaoStatus() { Situacao = PedidoSituacaoConstant.DEVOLUCAO_REJEITADA, Concluido = false, Cor = "complete-red" });
 		}
 
 		public async Task<IViewComponentResult> InvokeAsync(Pedido pedido)
@@ -63,10 +98,12 @@ namespace LojaVirtual.Libraries.Component
 			{
 				timeline = TimeLine1;
 			}
+
 			if (StatusTimeline2.Contains(pedido.Situacao))
 			{
 				timeline = TimeLine2;
 			}
+
 			if (StatusTimeline3.Contains(pedido.Situacao))
 			{
 				timeline = TimeLine3;
@@ -78,6 +115,17 @@ namespace LojaVirtual.Libraries.Component
 					timeline.Remove(timeline.FirstOrDefault(a => a.Situacao == PedidoSituacaoConstant.NF_EMITIDA));
 				}
 			}
+
+			if (StatusTimeline4.Contains(pedido.Situacao))
+			{
+				timeline = TimeLine4;
+			}
+
+			if (StatusTimeline5.Contains(pedido.Situacao))
+			{
+				timeline = TimeLine5;
+			}
+
 			if (timeline != null)
 			{
 				foreach (var pedidoSituacao in pedido.PedidoSituacoes)

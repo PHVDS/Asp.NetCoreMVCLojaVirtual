@@ -255,6 +255,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			ModelState.Remove("CartaoCredito");
 			ModelState.Remove("CodigoRastreamento");
 			ModelState.Remove("Boleto");
+			ModelState.Remove("Devolucao");
 
 
 			if (ModelState.IsValid)
@@ -304,14 +305,14 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 				{
 					Data = DateTime.Now,
 					PedidoId = id,
-					Situacao = PedidoSituacaoConstant.ESTORNO
+					Situacao = PedidoSituacaoConstant.DEVOLVER_ESTORNO
 				};
 
 				_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
 
 				DevolverProdutosEstoque(pedido);
 
-				pedido.Situacao = PedidoSituacaoConstant.ESTORNO;
+				pedido.Situacao = PedidoSituacaoConstant.DEVOLVER_ESTORNO;
 				_pedidoRepository.Atualizar(pedido);
 			}
 			VisualizarViewModel visualizarViewModel = new VisualizarViewModel();
@@ -350,12 +351,12 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 					Data = DateTime.Now,
 					Dados = JsonConvert.SerializeObject(visualizarViewModel.Boleto),
 					PedidoId = id,
-					Situacao = PedidoSituacaoConstant.ESTORNO
+					Situacao = PedidoSituacaoConstant.DEVOLVER_ESTORNO
 				};
 
 				_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
 
-				pedido.Situacao = PedidoSituacaoConstant.ESTORNO;
+				pedido.Situacao = PedidoSituacaoConstant.DEVOLVER_ESTORNO;
 				_pedidoRepository.Atualizar(pedido);
 
 				DevolverProdutosEstoque(pedido);

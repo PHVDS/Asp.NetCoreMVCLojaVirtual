@@ -173,12 +173,17 @@
                 </tr>
             </table>
 
-            @if (Model.Pedido.Situacao == PedidoSituacaoConstant.DEVOLVER_ENTREGUE)
+            @{
+                var devolucaoEntregue = Model.Pedido.PedidoSituacoes.FirstOrDefault(a => a.Situacao == PedidoSituacaoConstant.DEVOLVER_ENTREGUE);
+            }            
+                
+            @if (devolucaoEntregue != null)
             {
                 var devolucao = Model.Pedido.PedidoSituacoes.FirstOrDefault(a => a.Situacao == PedidoSituacaoConstant.DEVOLVER);
                 DadosDevolucao dadosDevolucao = JsonConvert.DeserializeObject<DadosDevolucao>(devolucao.Dados);
 
-                var devolucaoEntregue = Model.Pedido.PedidoSituacoes.FirstOrDefault(a => a.Situacao == PedidoSituacaoConstant.DEVOLVER_ENTREGUE);
+                var devolucaoRejeicaoMotivo = Model.Pedido.PedidoSituacoes.FirstOrDefault(a => a.Situacao == PedidoSituacaoConstant.DEVOLUCAO_REJEITADA);
+
                 var dadosCorreiosDevolucao = JsonConvert.DeserializeObject<Correios.NET.Models.Package>(devolucaoEntregue.Dados);    
                 <h3>Devolução</h3>
                 <table class="table table-bordered">
@@ -187,6 +192,14 @@
                         <td><strong>Data da devolução (Na Loja): </strong> @dadosCorreiosDevolucao.DeliveryDate.ToString()</td>
                         <td><strong>Rastreamento: </strong> @Html.Raw(dadosDevolucao.CodigoRastreamento == null ? "-" : "<a href='https://linkcorreios.com.br/" + dadosDevolucao.CodigoRastreamento + "' target='_blank'> " + dadosDevolucao.CodigoRastreamento + " </a>")</td>
                     </tr>
+
+                    @if (devolucaoRejeicaoMotivo != null)
+                    {
+                        <tr>
+                            <td colspan="3"><strong style="color: red;">Motivo da Rejeição: </strong> @devolucaoRejeicaoMotivo.Dados</td>
+                        </tr>
+                    }
+
                 </table>
             }
 
@@ -412,9 +425,9 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label asp-for="@Model.Devolucao.Motivo"> </label>
-                        <textarea class="form-control" asp-for="@Model.Devolucao.Motivo" id="motivo" placeholder="Motivo da Devolução"> </textarea>
-                        <span asp-validation-for="@Model.Devolucao.Motivo" class="text-danger"></span>
+                        <label asp-for="@Model.DevolucaoMotivoRejeicao"> </label>
+                        <textarea class="form-control" asp-for="@Model.DevolucaoMotivoRejeicao" id="motivo" placeholder="Motivo da Rejeição"> </textarea>
+                        <span asp-validation-for="@Model.DevolucaoMotivoRejeicao" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="modal-footer">
