@@ -112,9 +112,9 @@
             {
                 if (Model.Pedido.FormaPagamento == MetodoPagamentoConstant.CartaoCredito)
                 {
-                    <button type="button" class="btn btn-success" asp-action="RegistrarDevolucaoPedidoAprovadoCartaoCredito" asp-route-id="@Model.Pedido.Id">
+                    <a class="btn btn-success" asp-action="RegistrarDevolucaoPedidoAprovadoCartaoCredito" asp-route-id="@Model.Pedido.Id">
                         Aceitar Devolução
-                    </button>
+                    </a>
                 }
                 
                 if (Model.Pedido.FormaPagamento == MetodoPagamentoConstant.Boleto)
