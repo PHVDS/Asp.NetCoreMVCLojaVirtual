@@ -281,3 +281,4 @@ C:\Users\Paulo Henrique\Source\Repos\PHVDS\LojaVirtual\src\obj\Debug\netcoreapp2
 C:\Users\Paulo Henrique\Source\Repos\PHVDS\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
 C:\Users\Paulo Henrique\Source\Repos\PHVDS\LojaVirtual\src\bin\Debug\netcoreapp2.2\PagarMeCore.dll
 C:\Users\Paulo Henrique\Source\Repos\PHVDS\LojaVirtual\src\bin\Debug\netcoreapp2.2\PagarMeCore.pdb
+C:\Users\Paulo Henrique\Source\Repos\PHVDS\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Views\Error\Error500.g.cshtml.cs

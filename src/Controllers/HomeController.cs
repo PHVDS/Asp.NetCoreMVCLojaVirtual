@@ -31,7 +31,8 @@ namespace LojaVirtual.Controllers
 		[HttpGet]
 		public IActionResult Index()
 		{
-			return View();
+			throw new Exception("Oppss, aconteceu algo inesperado!" + "Volte em alguns instantes!");
+			//return View();
 		}
 
 		[HttpPost]
