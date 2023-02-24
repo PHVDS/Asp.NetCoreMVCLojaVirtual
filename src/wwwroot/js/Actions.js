@@ -8,8 +8,18 @@
     });
     $('.dinheiro').mask('000.000.000.000.000,00', { reverse: true });
 
-    AJAXUploadImagemProduto();
-});
+     AJAXUploadImagemProduto();
+     CategoriaSlug();
+ });
+
+function CategoriaSlug() {
+    if ($("#form-categoria").length > 0) {
+        $("input[name=Nome]").keyup(function myfunction() {
+            $("input[name=Slug]").val(convertToSlug($(this).val()));
+        });
+        
+    }
+}
 
 function AJAXUploadImagemProduto() {
     $(".img-upload").click(function () {
@@ -83,3 +93,10 @@ $(document).ready(function () {
         }
     });
 });
+
+function convertToSlug(Text) {
+    return Text
+        .toLowerCase()
+        .replace(/ /g, '-')
+        .replace(/[^\w-]+/g, '');
+}
