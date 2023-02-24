@@ -12,7 +12,9 @@ namespace LojaVirtual.Database
 	{
 		// EF Core - ORM = Biblioteca mapear objetos p/ BD relacionais
 		public LojaVirtualContext(DbContextOptions<LojaVirtualContext> options) : base(options)
-		{ }
+		{
+			ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
+		}
 
 		public DbSet<Cliente> Clientes { get; set; }
 		public DbSet<NewsletterEmail> NewsletterEmails { get; set; }

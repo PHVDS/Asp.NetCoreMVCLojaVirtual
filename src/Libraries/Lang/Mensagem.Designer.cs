@@ -19,7 +19,7 @@ namespace LojaVirtual.Libraries.Lang {
     // através de uma ferramenta como ResGen ou Visual Studio.
     // Para adicionar ou remover um associado, edite o arquivo .ResX e execute ResGen novamente
     // com a opção /str, ou recrie o projeto do VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Mensagem {
@@ -147,6 +147,15 @@ namespace LojaVirtual.Libraries.Lang {
         public static string MSG_E010 {
             get {
                 return ResourceManager.GetString("MSG_E010", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a O valor do campo {0} já está sendo utilizado por outro registro!.
+        /// </summary>
+        public static string MSG_E011 {
+            get {
+                return ResourceManager.GetString("MSG_E011", resourceCulture);
             }
         }
         

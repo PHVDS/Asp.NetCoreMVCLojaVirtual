@@ -92,5 +92,10 @@ namespace LojaVirtual.Repositories
 		{
 			return _banco.Categorias;
 		}
+
+		public Categoria ObterCategoriaNome(string nome)
+		{
+			return _banco.Categorias.Where(a => a.Nome == nome).FirstOrDefault();
+		}
 	}
 }

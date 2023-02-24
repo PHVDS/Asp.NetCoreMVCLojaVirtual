@@ -1,4 +1,5 @@
 ﻿using LojaVirtual.Libraries.Lang;
+using LojaVirtual.Libraries.Validacao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -13,6 +14,7 @@ namespace LojaVirtual.Models
 		[Display(Name = "Código")]
 		public int Id { get; set; }
 
+		[NomeCategoriaUnico(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E011")]
 		[Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E001")]
 		[MinLength(4, ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E002")]
 		public string Nome { get; set; }
