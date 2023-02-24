@@ -239,14 +239,14 @@
         }
       }
     },
-    "C:\\Users\\Paulo Henrique\\source\\repos\\PHVDS\\PagarMe\\PagarMeCore\\PagarMeCore.csproj": {
+    "C:\\Users\\Paulo Henrique\\Source\\Repos\\PHVDS\\PagarMe\\PagarMeCore\\PagarMeCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Paulo Henrique\\source\\repos\\PHVDS\\PagarMe\\PagarMeCore\\PagarMeCore.csproj",
+        "projectUniqueName": "C:\\Users\\Paulo Henrique\\Source\\Repos\\PHVDS\\PagarMe\\PagarMeCore\\PagarMeCore.csproj",
         "projectName": "PagarMeCore",
-        "projectPath": "C:\\Users\\Paulo Henrique\\source\\repos\\PHVDS\\PagarMe\\PagarMeCore\\PagarMeCore.csproj",
+        "projectPath": "C:\\Users\\Paulo Henrique\\Source\\Repos\\PHVDS\\PagarMe\\PagarMeCore\\PagarMeCore.csproj",
         "packagesPath": "C:\\Users\\Paulo Henrique\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Paulo Henrique\\source\\repos\\PHVDS\\PagarMe\\PagarMeCore\\obj\\",
+        "outputPath": "C:\\Users\\Paulo Henrique\\Source\\Repos\\PHVDS\\PagarMe\\PagarMeCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
