@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fnATZNkKxQ8Vzf1ZO5CaDJhNSEnK7L3Ys6SYlktA2fIxgZQfpCS1sqzzvOnCWmI2r8cB0SRwsgcoiatr9LlYzA==",
+  "dgSpecHash": "gco/PBprnLca6urrFRH6QUpznMRTNy1JkpYudQWHraEk8PJshMxBRYM+TWC4oJA0y9yOfTmxOtduDqnKyxtQEw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Paulo Henrique\\Source\\Repos\\PHVDS\\LojaVirtual\\src\\LojaVirtual.csproj",
   "expectedPackageFiles": [
@@ -217,6 +217,10 @@
     "C:\\Users\\Paulo Henrique\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Paulo Henrique\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Paulo Henrique\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Paulo Henrique\\.nuget\\packages\\serilog\\2.5.0\\serilog.2.5.0.nupkg.sha512",
+    "C:\\Users\\Paulo Henrique\\.nuget\\packages\\serilog.aspnetcore\\2.1.1\\serilog.aspnetcore.2.1.1.nupkg.sha512",
+    "C:\\Users\\Paulo Henrique\\.nuget\\packages\\serilog.extensions.logging\\2.0.0\\serilog.extensions.logging.2.0.0.nupkg.sha512",
+    "C:\\Users\\Paulo Henrique\\.nuget\\packages\\serilog.sinks.file\\4.0.0\\serilog.sinks.file.4.0.0.nupkg.sha512",
     "C:\\Users\\Paulo Henrique\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\Paulo Henrique\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Paulo Henrique\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
@@ -313,6 +317,7 @@
     "C:\\Users\\Paulo Henrique\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.1\\system.threading.tasks.extensions.4.5.1.nupkg.sha512",
     "C:\\Users\\Paulo Henrique\\.nuget\\packages\\system.threading.tasks.parallel\\4.3.0\\system.threading.tasks.parallel.4.3.0.nupkg.sha512",
     "C:\\Users\\Paulo Henrique\\.nuget\\packages\\system.threading.thread\\4.3.0\\system.threading.thread.4.3.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.threading.timer\\4.0.1\\system.threading.timer.4.0.1.nupkg.sha512",
     "C:\\Users\\Paulo Henrique\\.nuget\\packages\\system.valuetuple\\4.3.0\\system.valuetuple.4.3.0.nupkg.sha512",
     "C:\\Users\\Paulo Henrique\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Paulo Henrique\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
