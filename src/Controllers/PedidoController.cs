@@ -28,12 +28,14 @@ namespace LojaVirtual.Controllers
 		{
 			Pedido pedido = _pedidoRepository.ObterPedido(id);
 
+			if (pedido == null)
+			{
+				return new StatusCodeResult(404);
+			}
+
 			if (pedido.ClienteId != _loginCliente.GetCliente().Id)
 			{
-				return new ContentResult()
-				{
-					Content = "Acesso negado. Cliente não autorizado para este pedido."
-				};
+				return new StatusCodeResult(403);
 			}
 
 			ViewBag.Produtos = JsonConvert.DeserializeObject<List<ProdutoItem>>(

@@ -28,7 +28,7 @@ namespace LojaVirtual.Libraries.Filtro
 			{
 				if (colaborador.Tipo == ColaboradorTipoConstant.Comun && _tipoColaboradorAutorizado == ColaboradorTipoConstant.Gerente)
 				{
-					context.Result = new ForbidResult();
+					context.Result = new StatusCodeResult(403);
 				}
 			}
 		}

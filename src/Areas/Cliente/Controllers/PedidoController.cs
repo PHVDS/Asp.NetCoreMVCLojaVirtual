@@ -38,10 +38,7 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 
 			if (pedido.ClienteId != cliente.Id)
 			{
-				return new ContentResult()
-				{
-					Content = "Você não tem permissão!"
-				};
+				return new StatusCodeResult(403);
 			}
 
 			return View(pedido);
