@@ -7,6 +7,7 @@ using LojaVirtual.Models.Constants;
 using LojaVirtual.Models.ProdutoAgregador;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using PagarMe;
 using System;
@@ -25,8 +26,10 @@ namespace LojaVirtual.Libraries.Gerenciador.Scheduler.Invocable
 		private readonly IPedidoRepository _pedidoRepository;
 		private readonly GerenciarPagarMe _gerenciarPagarMe;
 		private readonly IProdutoRepository _produtoRepository;
-		public PedidoPagamentoSituacao(IProdutoRepository produtoRepository, IPedidoSituacaoRepository pedidoSituacaoRepository, IMapper mapper, IConfiguration configuration, IPedidoRepository pedidoRepository, GerenciarPagarMe gerenciarPagarMe)
+		private readonly ILogger<PedidoPagamentoSituacao> _logger;
+		public PedidoPagamentoSituacao(ILogger<PedidoPagamentoSituacao> logger, IProdutoRepository produtoRepository, IPedidoSituacaoRepository pedidoSituacaoRepository, IMapper mapper, IConfiguration configuration, IPedidoRepository pedidoRepository, GerenciarPagarMe gerenciarPagarMe)
 		{
+			_logger = logger;
 			_pedidoSituacaoRepository = pedidoSituacaoRepository;
 			_mapper = mapper;
 			_configuration = configuration;
@@ -37,6 +40,7 @@ namespace LojaVirtual.Libraries.Gerenciador.Scheduler.Invocable
 
 		public Task Invoke()
 		{
+			_logger.LogInformation("> PedidoPagamentoSituacao: Iniciando");
 			var pedidosRealizados = _pedidoRepository.ObterTodosPedidosPorSituacao(PedidoSituacaoConstant.PEDIDO_REALIZADO);
 
 			foreach (var pedido in pedidosRealizados)
@@ -88,7 +92,7 @@ namespace LojaVirtual.Libraries.Gerenciador.Scheduler.Invocable
 					_pedidoRepository.Atualizar(pedido);
 				}
 			}
-			Debug.WriteLine("--Executado--");
+			_logger.LogInformation("> PedidoPagamentoSituacao: Finalizado");
 
 			return Task.CompletedTask;
 		}

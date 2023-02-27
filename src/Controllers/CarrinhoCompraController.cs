@@ -11,6 +11,7 @@ using LojaVirtual.Models.Constants;
 using LojaVirtual.Models.ProdutoAgregador;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -21,9 +22,11 @@ namespace LojaVirtual.Controllers
 {
 	public class CarrinhoCompraController : BaseController
 	{
-		public CarrinhoCompraController(LoginCliente loginCliente, IEnderecoEntregaRepository enderecoEntregaRepository, CookieFrete cookieValorPrazoFrete, CalcularPacote calcularPacote, WSCorreiosCalcularFrete wscorreios, IMapper mapper, CookieCarrinhoCompra cookieCarrinhoCompra, IProdutoRepository produtoRepository)
+		private readonly ILogger<CarrinhoCompraController> _logger;
+		public CarrinhoCompraController(ILogger<CarrinhoCompraController> logger, LoginCliente loginCliente, IEnderecoEntregaRepository enderecoEntregaRepository, CookieFrete cookieValorPrazoFrete, CalcularPacote calcularPacote, WSCorreiosCalcularFrete wscorreios, IMapper mapper, CookieCarrinhoCompra cookieCarrinhoCompra, IProdutoRepository produtoRepository)
 			: base(loginCliente, enderecoEntregaRepository, cookieValorPrazoFrete, calcularPacote, wscorreios, mapper, cookieCarrinhoCompra, produtoRepository)
 		{ 
+			_logger = logger;
 		}
 		public IActionResult Index()
 		{
@@ -130,6 +133,7 @@ namespace LojaVirtual.Controllers
 			}
 			catch (Exception e)
 			{
+				_logger.LogError(e, "> CarrinhoCompraController - CalcularFrete");
 				return BadRequest(e);
 			}
 		}

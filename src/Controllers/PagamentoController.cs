@@ -17,6 +17,7 @@ using LojaVirtual.Models.ViewModels.Pagamento;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using PagarMe;
 using System;
@@ -36,8 +37,10 @@ namespace LojaVirtual.Controllers
 		private readonly IPedidoRepository _pedidoRepository;
 		private readonly IPedidoSituacaoRepository _pedidoSituacaoRepository;
 		private readonly GerenciarEmail _gerenciarEmail;
+		private readonly ILogger<PagamentoController> _logger;
 
 		public PagamentoController(
+			ILogger<PagamentoController> logger,
 			GerenciarEmail gerenciarEmail,
 			IPedidoSituacaoRepository pedidoSituacaoRepository,
 			IPedidoRepository pedidoRepository,
@@ -66,6 +69,7 @@ namespace LojaVirtual.Controllers
 			_pedidoRepository = pedidoRepository;
 			_cookie = cookie;
 			_gerenciarPagarMe = gerenciarPagarMe;
+			_logger	= logger;
 		}
 
 		[HttpGet]
@@ -101,7 +105,7 @@ namespace LojaVirtual.Controllers
 				}
 				catch (PagarMeException e)
 				{
-
+					_logger.LogError(e, "> PagamentoController - Index");
 					TempData["MSG_E"] = MontarMensagensDeErro(e);
 
 					return Index();
@@ -129,6 +133,7 @@ namespace LojaVirtual.Controllers
 			}
 			catch (PagarMeException e)
 			{
+				_logger.LogError(e, "> PagamentoController - BoletoBancario");
 				TempData["MSG_E"] = MontarMensagensDeErro(e);
 				return RedirectToAction(nameof(Index));
 			}

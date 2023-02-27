@@ -4,6 +4,7 @@ using LojaVirtual.Models.Constants;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
 using System.Linq;
@@ -16,9 +17,11 @@ namespace LojaVirtual.Libraries.Gerenciador.Scheduler.Invocable
 		private readonly IPedidoRepository _pedidoRepository;
 		private readonly IPedidoSituacaoRepository _pedidoSituacaoRepository;
 		private readonly IConfiguration _configuration;
+		private readonly ILogger<PedidoFinalizadoJob> _logger;
 
-		public PedidoFinalizadoJob(IConfiguration configuration, IPedidoRepository pedidoRepository, IPedidoSituacaoRepository pedidoSituacaoRepository)
+		public PedidoFinalizadoJob(ILogger<PedidoFinalizadoJob> logger, IConfiguration configuration, IPedidoRepository pedidoRepository, IPedidoSituacaoRepository pedidoSituacaoRepository)
 		{
+			_logger = logger;
 			_pedidoRepository = pedidoRepository;
 			_pedidoSituacaoRepository = pedidoSituacaoRepository;
 			_configuration = configuration;
@@ -26,6 +29,8 @@ namespace LojaVirtual.Libraries.Gerenciador.Scheduler.Invocable
 
 		public Task Invoke()
 		{
+			_logger.LogInformation("> PedidoFinalizadoJob: Iniciando");
+
 			var pedidos = _pedidoRepository.ObterTodosPedidosPorSituacao(PedidoSituacaoConstant.ENTREGUE);
 			foreach (var pedido in pedidos)
 			{
@@ -51,6 +56,7 @@ namespace LojaVirtual.Libraries.Gerenciador.Scheduler.Invocable
 					}
 				}
 			}
+			_logger.LogInformation("> PedidoFinalizadoJob: Finalizado");
 			return Task.CompletedTask;
 			
 		}

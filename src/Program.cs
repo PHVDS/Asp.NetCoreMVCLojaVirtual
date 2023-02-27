@@ -16,7 +16,7 @@ namespace LojaVirtual
 
 			Log.Logger = new LoggerConfiguration()
 				.MinimumLevel
-				.Debug().MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+				.Debug().MinimumLevel.Override("Microsoft", LogEventLevel.Error)
 				.Enrich.FromLogContext()
 				.WriteTo.File(caminhoLog)
 				.CreateLogger();

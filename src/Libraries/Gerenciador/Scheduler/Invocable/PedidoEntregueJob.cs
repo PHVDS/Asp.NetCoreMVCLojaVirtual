@@ -2,6 +2,7 @@
 using LojaVirtual.Models;
 using LojaVirtual.Models.Constants;
 using LojaVirtual.Repositories.Contracts;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -14,15 +15,19 @@ namespace LojaVirtual.Libraries.Gerenciador.Scheduler.Invocable
 	{
 		private readonly IPedidoRepository _pedidoRepository;
 		private readonly IPedidoSituacaoRepository _pedidoSituacaoRepository;
+		private readonly ILogger<PedidoEntregueJob> _logger;
 
-		public PedidoEntregueJob(IPedidoRepository pedidoRepository, IPedidoSituacaoRepository pedidoSituacaoRepository)
+		public PedidoEntregueJob(ILogger<PedidoEntregueJob> logger, IPedidoRepository pedidoRepository, IPedidoSituacaoRepository pedidoSituacaoRepository)
 		{
+			_logger = logger;
 			_pedidoRepository = pedidoRepository;
 			_pedidoSituacaoRepository = pedidoSituacaoRepository;
 		}
 		
 		public Task Invoke()
 		{
+			_logger.LogInformation("> PedidoEntregueJob: Iniciando");
+
 			var pedidos =  _pedidoRepository.ObterTodosPedidosPorSituacao(PedidoSituacaoConstant.EM_TRANSPORTE);
 			foreach (var pedido in pedidos)
 			{
@@ -43,7 +48,7 @@ namespace LojaVirtual.Libraries.Gerenciador.Scheduler.Invocable
 					_pedidoRepository.Atualizar(pedido);
 				}
 			}
-
+			_logger.LogInformation("> PedidoEntregueJob: Finalizado");
 			return Task.CompletedTask;
 		}
 	}

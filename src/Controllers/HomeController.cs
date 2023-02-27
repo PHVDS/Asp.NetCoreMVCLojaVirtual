@@ -7,6 +7,7 @@ using LojaVirtual.Models.ViewModels;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -21,8 +22,10 @@ namespace LojaVirtual.Controllers
 		private readonly INewsletterRepository _repositoryNewsletter;
 		private readonly GerenciarEmail _gerenciarEmail;
 		private readonly IProdutoRepository _produtoRepository;
-		public HomeController(IProdutoRepository produtoRepository, INewsletterRepository repositoryNewsletter, GerenciarEmail gerenciarEmail)
+		private readonly ILogger<HomeController> _logger;
+		public HomeController(ILogger<HomeController> logger, IProdutoRepository produtoRepository, INewsletterRepository repositoryNewsletter, GerenciarEmail gerenciarEmail)
 		{
+			_logger = logger;
 			_repositoryNewsletter = repositoryNewsletter;
 			_gerenciarEmail = gerenciarEmail;
 			_produtoRepository = produtoRepository;
@@ -91,10 +94,12 @@ namespace LojaVirtual.Controllers
 					ViewData["CONTATO"] = contato;
 				}
 			}
-			catch (Exception)
+			catch (Exception e)
 			{
 
 				ViewData["MSG_E"] = "Opps! Tivemos um erro, tente novamente mais tarde!";
+
+				_logger.LogError(e, "HomeController > ContaAcao - Exception");
 			}
 			
 			return View("Contato");
