@@ -54,13 +54,8 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 		public IActionResult NFE([FromForm]VisualizarViewModel visualizarViewModel, int id)
 		{
-			ModelState.Remove("Pedido");
-			ModelState.Remove("CodigoRastreamento");
-			ModelState.Remove("CartaoCredito");
-			ModelState.Remove("Boleto");
-			ModelState.Remove("Devolucao");
-			ModelState.Remove("DevolucaoMotivoRejeicao");
-
+			ValidarFormulario(nameof(visualizarViewModel.NFE));
+			
 			if (ModelState.IsValid)
 			{
 				string url = visualizarViewModel.NFE.NFE_URL;
@@ -90,12 +85,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 		public IActionResult RegistrarRastreamento([FromForm]VisualizarViewModel visualizarViewModel, int id)
 		{
-			ModelState.Remove("Pedido");
-			ModelState.Remove("NFE");
-			ModelState.Remove("CartaoCredito");
-			ModelState.Remove("Boleto");
-			ModelState.Remove("Devolucao");
-			ModelState.Remove("DevolucaoMotivoRejeicao");
+			ValidarFormulario(nameof(visualizarViewModel.CodigoRastreamento));
 
 			if (ModelState.IsValid)
 			{
@@ -126,12 +116,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 		public IActionResult RegistrarCancelamentoCartaoCredito([FromForm]VisualizarViewModel visualizarViewModel, int id)
 		{
-			ModelState.Remove("Pedido");
-			ModelState.Remove("NFE");
-			ModelState.Remove("CodigoRastreamento");
-			ModelState.Remove("Boleto");
-			ModelState.Remove("Devolucao");
-			ModelState.Remove("DevolucaoMotivoRejeicao");
+			ValidarFormulario(nameof(visualizarViewModel.CartaoCredito));
 
 			if (ModelState.IsValid)
 			{
@@ -166,12 +151,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 		public IActionResult RegistrarCancelamentoBoleto([FromForm] VisualizarViewModel visualizarViewModel, int id)
 		{
-			ModelState.Remove("Pedido");
-			ModelState.Remove("NFE");
-			ModelState.Remove("CartaoCredito");
-			ModelState.Remove("CodigoRastreamento");
-			ModelState.Remove("Devolucao");
-			ModelState.Remove("DevolucaoMotivoRejeicao");
+			ValidarFormulario(nameof(visualizarViewModel.Boleto));
 
 			if (ModelState.IsValid)
 			{
@@ -206,13 +186,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 		public IActionResult RegistrarDevolucaoPedido([FromForm] VisualizarViewModel visualizarViewModel, int id)
 		{
-			ModelState.Remove("Pedido");
-			ModelState.Remove("NFE");
-			ModelState.Remove("CartaoCredito");
-			ModelState.Remove("CodigoRastreamento");
-			ModelState.Remove("Boleto");
-			ModelState.Remove("DevolucaoMotivoRejeicao");
-			
+			ValidarFormulario(nameof(visualizarViewModel.Devolucao));
 
 			if (ModelState.IsValid)
 			{
@@ -240,12 +214,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 		public IActionResult RegistrarDevolucaoPedidoRejeicao([FromForm] VisualizarViewModel visualizarViewModel, int id)
 		{
-			ModelState.Remove("Pedido");
-			ModelState.Remove("NFE");
-			ModelState.Remove("CartaoCredito");
-			ModelState.Remove("CodigoRastreamento");
-			ModelState.Remove("Boleto");
-			ModelState.Remove("Devolucao");
+			ValidarFormulario(nameof(visualizarViewModel.DevolucaoMotivoRejeicao));
 
 
 			if (ModelState.IsValid)
@@ -312,13 +281,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 		public IActionResult RegistrarDevolucaoPedidoAprovadoBoleto([FromForm] VisualizarViewModel visualizarViewModel, int id)
 		{
-			ModelState.Remove("Pedido");
-			ModelState.Remove("NFE");
-			ModelState.Remove("CartaoCredito");
-			ModelState.Remove("CodigoRastreamento");
-			ModelState.Remove("Devolucao");
-			ModelState.Remove("DevolucaoMotivoRejeicao");
-			ModelState.Remove("Boleto.Motivo");
+			ValidarFormulario(nameof(visualizarViewModel.Boleto), "Boleto.Motivo");
 
 			Pedido pedido = _pedidoRepository.ObterPedido(id);
 
@@ -356,6 +319,27 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 				ViewBag.MODAL_DEVOLVER_BOLETOBANCARIO = true;
 				visualizarViewModel.Pedido = pedido;
 				return View(nameof(Visualizar), visualizarViewModel);
+		}
+
+		private void ValidarFormulario(string formularioParaValidar, params string[] removerFormularios)
+		{
+			//ModelState -> Validações
+			var propriedades = new VisualizarViewModel().GetType().GetProperties();
+
+			foreach (var propriedade in propriedades)
+			{
+				//Pedido != NFE = true -> Sai da validação
+				//NFE != NFE = false -> Continua na validação
+				if (propriedade.Name != formularioParaValidar)
+				{
+					ModelState.Remove(propriedade.Name);
+				}
+			}
+
+			foreach (var removerFormulario in removerFormularios)
+			{
+				ModelState.Remove(removerFormulario);
+			}
 		}
 	}
 }
