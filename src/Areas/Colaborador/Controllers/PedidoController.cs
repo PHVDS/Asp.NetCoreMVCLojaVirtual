@@ -155,7 +155,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 				_pedidoRepository.Atualizar(pedido);
 
-				DevolverProdutosEstoque(pedido);
+				_produtoRepository.DevolverProdutoAoEstoque(pedido);
 
 				return RedirectToAction(nameof(Visualizar), new { id = id });
 			}
@@ -195,7 +195,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 				_pedidoRepository.Atualizar(pedido);
 
-				DevolverProdutosEstoque(pedido);
+				_produtoRepository.DevolverProdutoAoEstoque(pedido);
 
 				return RedirectToAction(nameof(Visualizar), new { id = id });
 			}
@@ -298,7 +298,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 				_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
 
-				DevolverProdutosEstoque(pedido);
+				_produtoRepository.DevolverProdutoAoEstoque(pedido);
 
 				pedido.Situacao = PedidoSituacaoConstant.DEVOLVER_ESTORNO;
 				_pedidoRepository.Atualizar(pedido);
@@ -349,7 +349,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 				pedido.Situacao = PedidoSituacaoConstant.DEVOLVER_ESTORNO;
 				_pedidoRepository.Atualizar(pedido);
 
-				DevolverProdutosEstoque(pedido);
+				_produtoRepository.DevolverProdutoAoEstoque(pedido);
 
 				return RedirectToAction(nameof(Visualizar), new { id = id });
 			}
@@ -357,23 +357,5 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 				visualizarViewModel.Pedido = pedido;
 				return View(nameof(Visualizar), visualizarViewModel);
 		}
-
-		private void DevolverProdutosEstoque(Pedido pedido)
-		{
-			List<ProdutoItem> produtos = JsonConvert.DeserializeObject<List<ProdutoItem>>(pedido.DadosProdutos,
-				new JsonSerializerSettings()
-				{
-					ContractResolver = new ProdutoItemResolver<List<ProdutoItem>>()
-				});
-
-			foreach (var produto in produtos)
-			{
-				Produto produtoDB = _produtoRepository.ObterProduto(produto.Id);
-				produtoDB.Estoque += produto.UnidadesPedidas;
-
-				_produtoRepository.Atualizar(produtoDB);
-			}
-		}
-
 	}
 }

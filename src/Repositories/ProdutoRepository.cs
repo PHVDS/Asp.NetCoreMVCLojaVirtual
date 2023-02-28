@@ -1,9 +1,11 @@
 ﻿using LojaVirtual.Database;
+using LojaVirtual.Libraries.Json.Resolver;
 using LojaVirtual.Models;
 using LojaVirtual.Models.ProdutoAgregador;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,6 +35,23 @@ namespace LojaVirtual.Repositories
 		{
 			_banco.Add(produto);
 			_banco.SaveChanges();
+		}
+
+		public void DevolverProdutoAoEstoque(Pedido pedido)
+		{
+			List<ProdutoItem> produtos = JsonConvert.DeserializeObject<List<ProdutoItem>>(pedido.DadosProdutos,
+				new JsonSerializerSettings()
+				{
+					ContractResolver = new ProdutoItemResolver<List<ProdutoItem>>()
+				});
+
+			foreach (var produto in produtos)
+			{
+				Produto produtoDB = ObterProduto(produto.Id);
+				produtoDB.Estoque += produto.UnidadesPedidas;
+
+				Atualizar(produtoDB);
+			}
 		}
 
 		public void Excluir(int Id)

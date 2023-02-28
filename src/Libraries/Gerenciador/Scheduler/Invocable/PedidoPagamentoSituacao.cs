@@ -53,13 +53,13 @@ namespace LojaVirtual.Libraries.Gerenciador.Scheduler.Invocable
 				if (transaction.Status == TransactionStatus.WaitingPayment && transaction.PaymentMethod == PaymentMethod.Boleto && DateTime.Now > pedido.DataRegistro.AddDays(toleranciaDias))
 				{
 					situacao = PedidoSituacaoConstant.PAGAMENTO_NAO_REALIZADO;
-					DevolverProdutosEstoque(pedido);
+					_produtoRepository.DevolverProdutoAoEstoque(pedido);
 				}
 
 				if (transaction.Status == TransactionStatus.Refused)
 				{
 					situacao = PedidoSituacaoConstant.PAGAMENTO_REJEITADO;
-					DevolverProdutosEstoque(pedido);
+					_produtoRepository.DevolverProdutoAoEstoque(pedido);
 
 				}
 
@@ -71,7 +71,7 @@ namespace LojaVirtual.Libraries.Gerenciador.Scheduler.Invocable
 				if (transaction.Status == TransactionStatus.Refunded)
 				{
 					situacao = PedidoSituacaoConstant.ESTORNO;
-					DevolverProdutosEstoque(pedido);
+					_produtoRepository.DevolverProdutoAoEstoque(pedido);
 				}
 
 				if (situacao != null)
@@ -95,23 +95,6 @@ namespace LojaVirtual.Libraries.Gerenciador.Scheduler.Invocable
 			_logger.LogInformation("> PedidoPagamentoSituacao: Finalizado");
 
 			return Task.CompletedTask;
-		}
-
-		private void DevolverProdutosEstoque(Pedido pedido)
-		{
-			List<ProdutoItem> produtos = JsonConvert.DeserializeObject<List<ProdutoItem>>(pedido.DadosProdutos,
-				new JsonSerializerSettings()
-				{
-					ContractResolver = new ProdutoItemResolver<List<ProdutoItem>>()
-				});
-
-			foreach (var produto in produtos)
-			{
-				Produto produtoDB = _produtoRepository.ObterProduto(produto.Id);
-				produtoDB.Estoque += produto.UnidadesPedidas;
-
-				_produtoRepository.Atualizar(produtoDB);
-			}
 		}
 	}
 }
