@@ -52,10 +52,10 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			return View(viewModel);
 		}
 
-		public IActionResult NFE([FromForm]VisualizarViewModel visualizarViewModel, int id)
+		public IActionResult NFE([FromForm] VisualizarViewModel visualizarViewModel, int id)
 		{
 			ValidarFormulario(nameof(visualizarViewModel.NFE));
-			
+
 			if (ModelState.IsValid)
 			{
 				string url = visualizarViewModel.NFE.NFE_URL;
@@ -64,26 +64,18 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 				pedido.NFE = url;
 				pedido.Situacao = PedidoSituacaoConstant.NF_EMITIDA;
 
-				var pedidoSituacao = new PedidoSituacao
-				{
-					Data = DateTime.Now,
-					Dados = url,
-					PedidoId = id,
-					Situacao = PedidoSituacaoConstant.NF_EMITIDA
-				};
-
-				_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+				SalvarPedidoSituacao(id, url, PedidoSituacaoConstant.NF_EMITIDA);
 
 				_pedidoRepository.Atualizar(pedido);
 
 				return RedirectToAction(nameof(Visualizar), new { id = id });
 			}
-				ViewBag.MODAL_NFE = true;
-				visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
-				return View(nameof(Visualizar), visualizarViewModel);
+			ViewBag.MODAL_NFE = true;
+			visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
+			return View(nameof(Visualizar), visualizarViewModel);
 		}
 
-		public IActionResult RegistrarRastreamento([FromForm]VisualizarViewModel visualizarViewModel, int id)
+		public IActionResult RegistrarRastreamento([FromForm] VisualizarViewModel visualizarViewModel, int id)
 		{
 			ValidarFormulario(nameof(visualizarViewModel.CodigoRastreamento));
 
@@ -95,26 +87,18 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 				pedido.FreteCodRastreamento = codRastreamento;
 				pedido.Situacao = PedidoSituacaoConstant.EM_TRANSPORTE;
 
-				var pedidoSituacao = new PedidoSituacao
-				{
-					Data = DateTime.Now,
-					Dados = codRastreamento,
-					PedidoId = id,
-					Situacao = PedidoSituacaoConstant.EM_TRANSPORTE
-				};
-
-				_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+				SalvarPedidoSituacao(id, codRastreamento, PedidoSituacaoConstant.EM_TRANSPORTE);
 
 				_pedidoRepository.Atualizar(pedido);
 
 				return RedirectToAction(nameof(Visualizar), new { id = id });
 			}
-				ViewBag.MODAL_RASTREAMENTO = true;
-				visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
-				return View(nameof(Visualizar), visualizarViewModel);
+			ViewBag.MODAL_RASTREAMENTO = true;
+			visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
+			return View(nameof(Visualizar), visualizarViewModel);
 		}
 
-		public IActionResult RegistrarCancelamentoCartaoCredito([FromForm]VisualizarViewModel visualizarViewModel, int id)
+		public IActionResult RegistrarCancelamentoCartaoCredito([FromForm] VisualizarViewModel visualizarViewModel, int id)
 		{
 			ValidarFormulario(nameof(visualizarViewModel.CartaoCredito));
 
@@ -128,15 +112,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 				pedido.Situacao = PedidoSituacaoConstant.ESTORNO;
 
-				var pedidoSituacao = new PedidoSituacao
-				{
-					Data = DateTime.Now,
-					Dados = JsonConvert.SerializeObject(visualizarViewModel.CartaoCredito),
-					PedidoId = id,
-					Situacao = PedidoSituacaoConstant.ESTORNO
-				};
-
-				_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+				SalvarPedidoSituacao(id, visualizarViewModel.CartaoCredito, PedidoSituacaoConstant.ESTORNO);
 
 				_pedidoRepository.Atualizar(pedido);
 
@@ -144,9 +120,9 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 				return RedirectToAction(nameof(Visualizar), new { id = id });
 			}
-				ViewBag.MODAL_CARTAOCREDITO = true;
-				visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
-				return View(nameof(Visualizar), visualizarViewModel);
+			ViewBag.MODAL_CARTAOCREDITO = true;
+			visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
+			return View(nameof(Visualizar), visualizarViewModel);
 		}
 
 		public IActionResult RegistrarCancelamentoBoleto([FromForm] VisualizarViewModel visualizarViewModel, int id)
@@ -163,15 +139,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 				pedido.Situacao = PedidoSituacaoConstant.ESTORNO;
 
-				var pedidoSituacao = new PedidoSituacao
-				{
-					Data = DateTime.Now,
-					Dados = JsonConvert.SerializeObject(visualizarViewModel.Boleto),
-					PedidoId = id,
-					Situacao = PedidoSituacaoConstant.ESTORNO
-				};
-
-				_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+				SalvarPedidoSituacao(id, visualizarViewModel.Boleto, PedidoSituacaoConstant.ESTORNO);
 
 				_pedidoRepository.Atualizar(pedido);
 
@@ -179,9 +147,9 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 				return RedirectToAction(nameof(Visualizar), new { id = id });
 			}
-				ViewBag.MODAL_BOLETOBANCARIO = true;
-				visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
-				return View(nameof(Visualizar), visualizarViewModel);
+			ViewBag.MODAL_BOLETOBANCARIO = true;
+			visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
+			return View(nameof(Visualizar), visualizarViewModel);
 		}
 
 		public IActionResult RegistrarDevolucaoPedido([FromForm] VisualizarViewModel visualizarViewModel, int id)
@@ -193,23 +161,15 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 				Pedido pedido = _pedidoRepository.ObterPedido(id);
 				pedido.Situacao = PedidoSituacaoConstant.DEVOLVER;
 
-				var pedidoSituacao = new PedidoSituacao
-				{
-					Data = DateTime.Now,
-					Dados = JsonConvert.SerializeObject(visualizarViewModel.Devolucao),
-					PedidoId = id,
-					Situacao = PedidoSituacaoConstant.DEVOLVER
-				};
-
-				_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+				SalvarPedidoSituacao(id, visualizarViewModel.Devolucao, PedidoSituacaoConstant.DEVOLVER);
 
 				_pedidoRepository.Atualizar(pedido);
 
 				return RedirectToAction(nameof(Visualizar), new { id = id });
 			}
-				ViewBag.MODAL_DEVOLVER = true;
-				visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
-				return View(nameof(Visualizar), visualizarViewModel);
+			ViewBag.MODAL_DEVOLVER = true;
+			visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
+			return View(nameof(Visualizar), visualizarViewModel);
 		}
 
 		public IActionResult RegistrarDevolucaoPedidoRejeicao([FromForm] VisualizarViewModel visualizarViewModel, int id)
@@ -222,23 +182,15 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 				Pedido pedido = _pedidoRepository.ObterPedido(id);
 				pedido.Situacao = PedidoSituacaoConstant.DEVOLUCAO_REJEITADA;
 
-				var pedidoSituacao = new PedidoSituacao
-				{
-					Data = DateTime.Now,
-					Dados = visualizarViewModel.DevolucaoMotivoRejeicao,
-					PedidoId = id,
-					Situacao = PedidoSituacaoConstant.DEVOLUCAO_REJEITADA
-				};
-
-				_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+				SalvarPedidoSituacao(id, visualizarViewModel.DevolucaoMotivoRejeicao, PedidoSituacaoConstant.DEVOLUCAO_REJEITADA);
 
 				_pedidoRepository.Atualizar(pedido);
 
 				return RedirectToAction(nameof(Visualizar), new { id = id });
 			}
-				ViewBag.MODAL_DEVOLVER_REJEITAR = true;
-				visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
-				return View(nameof(Visualizar), visualizarViewModel);
+			ViewBag.MODAL_DEVOLVER_REJEITAR = true;
+			visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
+			return View(nameof(Visualizar), visualizarViewModel);
 		}
 
 		public IActionResult RegistrarDevolucaoPedidoAprovadoCartaoCredito(int id)
@@ -247,25 +199,11 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 			if (pedido.Situacao == PedidoSituacaoConstant.DEVOLVER_ENTREGUE)
 			{
-				var pedidoSituacao = new PedidoSituacao
-				{
-					Data = DateTime.Now,
-					PedidoId = id,
-					Situacao = PedidoSituacaoConstant.DEVOLUCAO_ACEITA
-				};
-
-				_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+				SalvarPedidoSituacao(id, "", PedidoSituacaoConstant.DEVOLUCAO_ACEITA);
 
 				_gerenciarPagarMe.EstornoCartaoCredito(pedido.TransactionId);
 
-				pedidoSituacao = new PedidoSituacao
-				{
-					Data = DateTime.Now,
-					PedidoId = id,
-					Situacao = PedidoSituacaoConstant.DEVOLVER_ESTORNO
-				};
-
-				_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+				SalvarPedidoSituacao(id, "", PedidoSituacaoConstant.DEVOLVER_ESTORNO);
 
 				_produtoRepository.DevolverProdutoAoEstoque(pedido);
 
@@ -287,27 +225,13 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 			if (ModelState.IsValid)
 			{
-				var pedidoSituacao = new PedidoSituacao
-				{
-					Data = DateTime.Now,
-					PedidoId = id,
-					Situacao = PedidoSituacaoConstant.DEVOLUCAO_ACEITA
-				};
-				_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+				SalvarPedidoSituacao(id, "", PedidoSituacaoConstant.DEVOLUCAO_ACEITA);
 
 				visualizarViewModel.Boleto.FormaPagamento = MetodoPagamentoConstant.Boleto;
 
 				_gerenciarPagarMe.EstornoBoletoBancario(pedido.TransactionId, visualizarViewModel.Boleto);
 
-				pedidoSituacao = new PedidoSituacao
-				{
-					Data = DateTime.Now,
-					Dados = JsonConvert.SerializeObject(visualizarViewModel.Boleto),
-					PedidoId = id,
-					Situacao = PedidoSituacaoConstant.DEVOLVER_ESTORNO
-				};
-
-				_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+				SalvarPedidoSituacao(id, visualizarViewModel.Boleto, PedidoSituacaoConstant.DEVOLVER_ESTORNO);
 
 				pedido.Situacao = PedidoSituacaoConstant.DEVOLVER_ESTORNO;
 				_pedidoRepository.Atualizar(pedido);
@@ -316,9 +240,9 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 				return RedirectToAction(nameof(Visualizar), new { id = id });
 			}
-				ViewBag.MODAL_DEVOLVER_BOLETOBANCARIO = true;
-				visualizarViewModel.Pedido = pedido;
-				return View(nameof(Visualizar), visualizarViewModel);
+			ViewBag.MODAL_DEVOLVER_BOLETOBANCARIO = true;
+			visualizarViewModel.Pedido = pedido;
+			return View(nameof(Visualizar), visualizarViewModel);
 		}
 
 		private void ValidarFormulario(string formularioParaValidar, params string[] removerFormularios)
@@ -340,6 +264,19 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			{
 				ModelState.Remove(removerFormulario);
 			}
+		}
+
+		private void SalvarPedidoSituacao(int pedidoId, object dados, string situacao)
+		{
+			var pedidoSituacao = new PedidoSituacao
+			{
+				Data = DateTime.Now,
+				Dados = JsonConvert.SerializeObject(dados),
+				PedidoId = pedidoId,
+				Situacao = situacao
+			};
+
+			_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
 		}
 	}
 }
