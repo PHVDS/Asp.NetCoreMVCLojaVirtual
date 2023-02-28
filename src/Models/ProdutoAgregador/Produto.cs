@@ -27,7 +27,7 @@ namespace LojaVirtual.Models.ProdutoAgregador
 		[Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E001")]
 		[Range(0, 100000, ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E006")]
 		[JsonIgnore]
-		public int Quantidade { get; set; }
+		public int Estoque { get; set; }
 
 		//Frete - Correios
 		[Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E001")]

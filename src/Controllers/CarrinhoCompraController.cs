@@ -58,7 +58,7 @@ namespace LojaVirtual.Controllers
 			{
 				return BadRequest(new { mensagem = Mensagem.MSG_E007 });
 			}
-			else if (quantidade > produto.Quantidade)
+			else if (quantidade > produto.Estoque)
 			{
 				return BadRequest(new { mensagem = Mensagem.MSG_E008 });
 			}
