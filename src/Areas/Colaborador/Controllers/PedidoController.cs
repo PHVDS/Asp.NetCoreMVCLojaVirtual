@@ -56,22 +56,19 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 		{
 			ValidarFormulario(nameof(visualizarViewModel.NFE));
 
+			Pedido pedido = _pedidoRepository.ObterPedido(id);
+
 			if (ModelState.IsValid)
 			{
 				string url = visualizarViewModel.NFE.NFE_URL;
 
-				Pedido pedido = _pedidoRepository.ObterPedido(id);
-				pedido.NFE = url;
-				pedido.Situacao = PedidoSituacaoConstant.NF_EMITIDA;
-
 				SalvarPedidoSituacao(id, url, PedidoSituacaoConstant.NF_EMITIDA);
-
-				_pedidoRepository.Atualizar(pedido);
+				SalvarPedido(pedido, PedidoSituacaoConstant.NF_EMITIDA, url);
 
 				return RedirectToAction(nameof(Visualizar), new { id = id });
 			}
 			ViewBag.MODAL_NFE = true;
-			visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
+			visualizarViewModel.Pedido = pedido;
 			return View(nameof(Visualizar), visualizarViewModel);
 		}
 
@@ -79,22 +76,19 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 		{
 			ValidarFormulario(nameof(visualizarViewModel.CodigoRastreamento));
 
+			Pedido pedido = _pedidoRepository.ObterPedido(id);
+
 			if (ModelState.IsValid)
 			{
 				string codRastreamento = visualizarViewModel.CodigoRastreamento.Codigo;
 
-				Pedido pedido = _pedidoRepository.ObterPedido(id);
-				pedido.FreteCodRastreamento = codRastreamento;
-				pedido.Situacao = PedidoSituacaoConstant.EM_TRANSPORTE;
-
 				SalvarPedidoSituacao(id, codRastreamento, PedidoSituacaoConstant.EM_TRANSPORTE);
-
-				_pedidoRepository.Atualizar(pedido);
+				SalvarPedido(pedido, PedidoSituacaoConstant.EM_TRANSPORTE, null, codRastreamento);
 
 				return RedirectToAction(nameof(Visualizar), new { id = id });
 			}
 			ViewBag.MODAL_RASTREAMENTO = true;
-			visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
+			visualizarViewModel.Pedido = pedido;
 			return View(nameof(Visualizar), visualizarViewModel);
 		}
 
@@ -102,26 +96,23 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 		{
 			ValidarFormulario(nameof(visualizarViewModel.CartaoCredito));
 
+			Pedido pedido = _pedidoRepository.ObterPedido(id);
+
 			if (ModelState.IsValid)
 			{
 				visualizarViewModel.CartaoCredito.FormaPagamento = MetodoPagamentoConstant.CartaoCredito;
 
-				Pedido pedido = _pedidoRepository.ObterPedido(id);
-
 				_gerenciarPagarMe.EstornoCartaoCredito(pedido.TransactionId);
 
-				pedido.Situacao = PedidoSituacaoConstant.ESTORNO;
-
 				SalvarPedidoSituacao(id, visualizarViewModel.CartaoCredito, PedidoSituacaoConstant.ESTORNO);
-
-				_pedidoRepository.Atualizar(pedido);
+				SalvarPedido(pedido, PedidoSituacaoConstant.ESTORNO);
 
 				_produtoRepository.DevolverProdutoAoEstoque(pedido);
 
 				return RedirectToAction(nameof(Visualizar), new { id = id });
 			}
 			ViewBag.MODAL_CARTAOCREDITO = true;
-			visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
+			visualizarViewModel.Pedido = pedido;
 			return View(nameof(Visualizar), visualizarViewModel);
 		}
 
@@ -129,26 +120,23 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 		{
 			ValidarFormulario(nameof(visualizarViewModel.Boleto));
 
+			Pedido pedido = _pedidoRepository.ObterPedido(id);
+
 			if (ModelState.IsValid)
 			{
 				visualizarViewModel.Boleto.FormaPagamento = MetodoPagamentoConstant.Boleto;
 
-				Pedido pedido = _pedidoRepository.ObterPedido(id);
-
 				_gerenciarPagarMe.EstornoBoletoBancario(pedido.TransactionId, visualizarViewModel.Boleto);
 
-				pedido.Situacao = PedidoSituacaoConstant.ESTORNO;
-
 				SalvarPedidoSituacao(id, visualizarViewModel.Boleto, PedidoSituacaoConstant.ESTORNO);
-
-				_pedidoRepository.Atualizar(pedido);
+				SalvarPedido(pedido, PedidoSituacaoConstant.ESTORNO);
 
 				_produtoRepository.DevolverProdutoAoEstoque(pedido);
 
 				return RedirectToAction(nameof(Visualizar), new { id = id });
 			}
 			ViewBag.MODAL_BOLETOBANCARIO = true;
-			visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
+			visualizarViewModel.Pedido = pedido;
 			return View(nameof(Visualizar), visualizarViewModel);
 		}
 
@@ -156,19 +144,17 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 		{
 			ValidarFormulario(nameof(visualizarViewModel.Devolucao));
 
+			Pedido pedido = _pedidoRepository.ObterPedido(id);
+
 			if (ModelState.IsValid)
 			{
-				Pedido pedido = _pedidoRepository.ObterPedido(id);
-				pedido.Situacao = PedidoSituacaoConstant.DEVOLVER;
-
 				SalvarPedidoSituacao(id, visualizarViewModel.Devolucao, PedidoSituacaoConstant.DEVOLVER);
-
-				_pedidoRepository.Atualizar(pedido);
+				SalvarPedido(pedido, PedidoSituacaoConstant.DEVOLVER);
 
 				return RedirectToAction(nameof(Visualizar), new { id = id });
 			}
 			ViewBag.MODAL_DEVOLVER = true;
-			visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
+			visualizarViewModel.Pedido = pedido;
 			return View(nameof(Visualizar), visualizarViewModel);
 		}
 
@@ -176,20 +162,17 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 		{
 			ValidarFormulario(nameof(visualizarViewModel.DevolucaoMotivoRejeicao));
 
+			Pedido pedido = _pedidoRepository.ObterPedido(id);
 
 			if (ModelState.IsValid)
 			{
-				Pedido pedido = _pedidoRepository.ObterPedido(id);
-				pedido.Situacao = PedidoSituacaoConstant.DEVOLUCAO_REJEITADA;
-
 				SalvarPedidoSituacao(id, visualizarViewModel.DevolucaoMotivoRejeicao, PedidoSituacaoConstant.DEVOLUCAO_REJEITADA);
-
-				_pedidoRepository.Atualizar(pedido);
+				SalvarPedido(pedido, PedidoSituacaoConstant.DEVOLUCAO_REJEITADA);
 
 				return RedirectToAction(nameof(Visualizar), new { id = id });
 			}
 			ViewBag.MODAL_DEVOLVER_REJEITAR = true;
-			visualizarViewModel.Pedido = _pedidoRepository.ObterPedido(id);
+			visualizarViewModel.Pedido = pedido;
 			return View(nameof(Visualizar), visualizarViewModel);
 		}
 
@@ -199,16 +182,12 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 			if (pedido.Situacao == PedidoSituacaoConstant.DEVOLVER_ENTREGUE)
 			{
-				SalvarPedidoSituacao(id, "", PedidoSituacaoConstant.DEVOLUCAO_ACEITA);
-
 				_gerenciarPagarMe.EstornoCartaoCredito(pedido.TransactionId);
-
-				SalvarPedidoSituacao(id, "", PedidoSituacaoConstant.DEVOLVER_ESTORNO);
-
 				_produtoRepository.DevolverProdutoAoEstoque(pedido);
 
-				pedido.Situacao = PedidoSituacaoConstant.DEVOLVER_ESTORNO;
-				_pedidoRepository.Atualizar(pedido);
+				SalvarPedidoSituacao(id, "", PedidoSituacaoConstant.DEVOLUCAO_ACEITA);
+				SalvarPedidoSituacao(id, "", PedidoSituacaoConstant.DEVOLVER_ESTORNO);
+				SalvarPedido(pedido, PedidoSituacaoConstant.DEVOLVER_ESTORNO);
 
 				return RedirectToAction(nameof(Visualizar), new { id = id });
 			}
@@ -225,18 +204,13 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 
 			if (ModelState.IsValid)
 			{
-				SalvarPedidoSituacao(id, "", PedidoSituacaoConstant.DEVOLUCAO_ACEITA);
-
 				visualizarViewModel.Boleto.FormaPagamento = MetodoPagamentoConstant.Boleto;
-
 				_gerenciarPagarMe.EstornoBoletoBancario(pedido.TransactionId, visualizarViewModel.Boleto);
-
-				SalvarPedidoSituacao(id, visualizarViewModel.Boleto, PedidoSituacaoConstant.DEVOLVER_ESTORNO);
-
-				pedido.Situacao = PedidoSituacaoConstant.DEVOLVER_ESTORNO;
-				_pedidoRepository.Atualizar(pedido);
-
 				_produtoRepository.DevolverProdutoAoEstoque(pedido);
+
+				SalvarPedidoSituacao(id, "", PedidoSituacaoConstant.DEVOLUCAO_ACEITA);
+				SalvarPedidoSituacao(id, visualizarViewModel.Boleto, PedidoSituacaoConstant.DEVOLVER_ESTORNO);
+				SalvarPedido(pedido, PedidoSituacaoConstant.DEVOLVER_ESTORNO);
 
 				return RedirectToAction(nameof(Visualizar), new { id = id });
 			}
@@ -277,6 +251,21 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			};
 
 			_pedidoSituacaoRepository.Cadastrar(pedidoSituacao);
+		}
+
+		private void SalvarPedido(Pedido pedido, string situacao, string nfe = null, string codRastreamento = null)
+		{
+			pedido.Situacao = situacao;
+			if (nfe != null)
+			{
+				pedido.NFE = nfe;
+			}
+			if (codRastreamento != null)
+			{
+				pedido.FreteCodRastreamento = codRastreamento;
+			}
+
+			_pedidoRepository.Atualizar(pedido);
 		}
 	}
 }
