@@ -1,4 +1,5 @@
 ﻿@model VisualizarViewModel
+@inject Microsoft.Extensions.Configuration.IConfiguration _config
 @{
     ViewData["Title"] = "Visualizar";
     TransacaoPagarMe transacaoPagarMe = JsonConvert.DeserializeObject<TransacaoPagarMe>(Model.Pedido.DadosTransaction);
@@ -8,6 +9,8 @@
             ContractResolver = new ProdutoItemResolver<List<ProdutoItem>>()
         });
     var aniversario = DateTime.Parse(transacaoPagarMe.Customer.Birthday);
+
+    double DiasParaDevolver = double.Parse(_config.GetSection("Finalizado").GetSection("Days").Value) - 1;
 }
 
 @section script{
@@ -100,7 +103,7 @@
             {
                 var pedidoSituacao = Model.Pedido.PedidoSituacoes.FirstOrDefault(a => a.Situacao == PedidoSituacaoConstant.ENTREGUE);
 
-                if (pedidoSituacao != null && DateTime.Now <= pedidoSituacao.Data.AddDays(7))
+                if (pedidoSituacao != null && DateTime.Now <= pedidoSituacao.Data.AddDays(DiasParaDevolver))
                 {
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#devolver">
                         Devolver
