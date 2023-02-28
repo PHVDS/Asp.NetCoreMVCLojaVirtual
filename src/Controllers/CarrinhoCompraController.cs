@@ -44,7 +44,7 @@ namespace LojaVirtual.Controllers
 			}
 			else
 			{
-				var item = new ProdutoItem() { Id = id, QuantidadeProdutoCarrinho = 1};
+				var item = new ProdutoItem() { Id = id, UnidadesPedidas = 1};
 				_cookieCarrinhoCompra.Cadastrar(item);
 
 				return RedirectToAction(nameof(Index));
@@ -64,7 +64,7 @@ namespace LojaVirtual.Controllers
 			}
 			else
 			{
-				var item = new ProdutoItem() { Id = id, QuantidadeProdutoCarrinho = quantidade };
+				var item = new ProdutoItem() { Id = id, UnidadesPedidas = quantidade };
 				_cookieCarrinhoCompra.Atualizar(item);
 				return Ok(new { mensagem = Mensagem.MSG_S001 });
 			}

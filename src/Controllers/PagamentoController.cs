@@ -159,7 +159,7 @@ namespace LojaVirtual.Controllers
 			foreach (var produto in produtos)
 			{
 				Produto produtoDB = _produtoRepository.ObterProduto(produto.Id);
-				produtoDB.Estoque -= produto.QuantidadeProdutoCarrinho;
+				produtoDB.Estoque -= produto.UnidadesPedidas;
 
 				_produtoRepository.Atualizar(produtoDB);
 			}
@@ -226,7 +226,7 @@ namespace LojaVirtual.Controllers
 
 			foreach (var produto in produtos)
 			{
-				total += produto.Valor * produto.QuantidadeProdutoCarrinho;
+				total += produto.Valor * produto.UnidadesPedidas;
 			}
 			return total;
 		}

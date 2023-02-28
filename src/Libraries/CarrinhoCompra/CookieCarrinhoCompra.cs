@@ -31,7 +31,7 @@ namespace LojaVirtual.Libraries.CarrinhoCompra
 				}
 				else
 				{
-					ItemLocalizado.QuantidadeProdutoCarrinho += 1;
+					ItemLocalizado.UnidadesPedidas += 1;
 				}
 			}
 			else
@@ -50,7 +50,7 @@ namespace LojaVirtual.Libraries.CarrinhoCompra
 
 			if (ItemLocalizado != null)
 			{
-				ItemLocalizado.QuantidadeProdutoCarrinho = item.QuantidadeProdutoCarrinho;
+				ItemLocalizado.UnidadesPedidas = item.UnidadesPedidas;
 				Salvar(Lista);
 			}
 		}

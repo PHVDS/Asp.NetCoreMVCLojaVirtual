@@ -91,7 +91,7 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 				{
 					Id = item.Id.ToString(),
 					Title = item.Nome,
-					Quantity = item.QuantidadeProdutoCarrinho,
+					Quantity = item.UnidadesPedidas,
 					Tangible = true,
 					UnitPrice = Mascara.ConverterValorPagarMe(item.Valor)
 				};
@@ -199,7 +199,7 @@ namespace LojaVirtual.Libraries.Gerenciador.Pagamento
 				{
 					Id = item.Id.ToString(),
 					Title = item.Nome,
-					Quantity = item.QuantidadeProdutoCarrinho,
+					Quantity = item.UnidadesPedidas,
 					Tangible = true,
 					UnitPrice = Mascara.ConverterValorPagarMe(item.Valor)
 				};

@@ -62,7 +62,7 @@
                                                 <div>
                                                     <a href="#" style="width: 45px;" class="btn btn-primary diminuir"> - </a>
                                                 </div>
-                                                <input type="text" style="width:55px; text-align: center" readonly="readonly" class="input-group-text inputQuantidadeProdutoCarrinho" value="@item.QuantidadeProdutoCarrinho">
+                                                <input type="text" style="width:55px; text-align: center" readonly="readonly" class="input-group-text inputQuantidadeProdutoCarrinho" value="@item.UnidadesPedidas">
                                                 <div>
                                                     <a href="#" style="width: 45px;" class="btn btn-primary aumentar"> + </a>
                                                 </div>
@@ -71,7 +71,7 @@
                                     </td>
 
                                     @{
-                                        var ResultadoSubtotalItem = item.Valor * item.QuantidadeProdutoCarrinho;
+                                        var ResultadoSubtotalItem = item.Valor * item.UnidadesPedidas;
                                         Subtotal = Subtotal + ResultadoSubtotalItem;
                                     }
 

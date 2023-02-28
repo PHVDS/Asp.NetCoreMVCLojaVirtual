@@ -369,7 +369,7 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			foreach (var produto in produtos)
 			{
 				Produto produtoDB = _produtoRepository.ObterProduto(produto.Id);
-				produtoDB.Estoque += produto.QuantidadeProdutoCarrinho;
+				produtoDB.Estoque += produto.UnidadesPedidas;
 
 				_produtoRepository.Atualizar(produtoDB);
 			}

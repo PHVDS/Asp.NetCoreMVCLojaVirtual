@@ -5,7 +5,7 @@
 
     foreach (ProdutoItem produto in produtos)
     {
-        decimal resultado = produto.Valor * produto.QuantidadeProdutoCarrinho;
+        decimal resultado = produto.Valor * produto.UnidadesPedidas;
         total += resultado;
     }
 }
