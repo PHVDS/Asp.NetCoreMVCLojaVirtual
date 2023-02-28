@@ -5322,3 +5322,834 @@
 2023-02-28 14:02:20.799 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
 2023-02-28 14:02:20.800 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
 2023-02-28 14:02:20.801 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:02:30.768 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:02:30.774 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:02:30.775 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:02:30.776 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:02:30.777 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:02:30.777 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:02:30.779 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:02:50.073 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:02:50.828 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:02:50.835 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:02:50.836 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:02:50.842 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:02:50.843 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:02:50.855 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:03:00.071 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:03:00.675 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:03:00.679 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:03:00.680 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:03:00.681 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:03:00.682 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:03:00.686 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:03:10.065 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:03:10.718 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:03:10.724 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:03:10.725 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:03:10.728 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:03:10.728 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:03:10.733 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:03:20.068 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:03:20.628 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:03:20.633 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:03:20.634 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:03:20.634 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:03:20.635 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:03:20.641 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:03:30.077 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:03:31.158 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:03:31.163 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:03:31.164 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:03:31.165 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:03:31.165 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:03:31.166 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:03:40.074 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:03:41.641 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:03:41.652 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:03:41.653 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:03:41.654 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:03:41.654 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:03:41.659 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:03:50.070 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:03:50.844 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:03:50.853 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:03:50.854 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:03:50.855 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:03:50.855 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:03:50.861 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:04:00.074 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:04:00.688 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:04:00.692 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:04:00.692 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:04:00.694 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:04:00.694 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:04:00.699 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:04:10.067 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:04:10.848 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:04:10.852 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:04:10.853 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:04:10.858 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:04:10.859 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:04:10.864 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:04:20.077 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:04:20.999 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:04:21.003 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:04:21.004 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:04:21.005 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:04:21.005 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:04:21.015 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:04:30.089 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:04:30.774 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:04:30.788 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:04:30.789 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:04:30.790 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:04:30.791 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:04:30.803 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:04:40.069 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:04:40.727 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:04:40.734 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:04:40.734 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:04:40.736 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:04:40.737 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:04:40.743 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:04:50.070 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:04:50.835 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:04:50.851 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:04:50.852 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:04:50.854 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:04:50.855 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:04:50.863 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:05:00.076 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:05:00.655 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:05:00.662 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:05:00.663 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:05:00.664 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:05:00.664 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:05:00.676 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:05:10.077 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:05:10.950 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:05:10.956 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:05:10.957 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:05:10.962 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:05:10.962 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:05:10.969 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:05:20.066 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:05:20.900 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:05:20.902 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:05:20.902 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:05:20.903 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:05:20.903 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:05:20.904 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:05:30.070 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:05:30.726 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:05:30.729 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:05:30.730 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:05:30.731 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:05:30.732 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:05:30.734 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:05:40.069 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:05:40.740 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:05:40.741 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:05:40.741 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:05:40.742 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:05:40.742 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:05:40.743 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:06:01.615 -03:00 [INF] --- SERVIDOR INICIANDO ---
+2023-02-28 14:06:10.550 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:06:13.054 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:06:13.063 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:06:13.065 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:06:13.067 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:06:13.069 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:06:13.081 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:06:20.499 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:06:21.020 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:06:21.046 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:06:21.047 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:06:21.048 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:06:21.049 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:06:21.059 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:06:30.512 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:06:31.008 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:06:31.009 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:06:31.009 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:06:31.010 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:06:31.010 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:06:31.012 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:06:40.513 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:06:41.005 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:06:41.013 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:06:41.014 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:06:41.016 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:06:41.019 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:06:41.027 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:06:50.508 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:06:51.378 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:06:51.386 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:06:51.387 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:06:51.388 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:06:51.388 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:06:51.395 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:06:53.476 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'LojaVirtual.Models.ProdutoAgregador.ProdutoItem' does not contain a definition for 'QuantidadeProdutoCarrinho'
+   at CallSite.Target(Closure , CallSite , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at AspNetCore.Views_Pagamento_Index.ExecuteAsync() in C:\Users\Paulo Henrique\Source\Repos\PHVDS\LojaVirtual\src\Views\Pagamento\Index.cshtml:line 30
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at LojaVirtual.Libraries.Middleware.ValidateAntiForgeryTokenMiddleware.Invoke(HttpContext context) in C:\Users\Paulo Henrique\Source\Repos\PHVDS\LojaVirtual\src\Libraries\Middleware\ValidateAntiForgeryTokenMiddleware.cs:line 31
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2023-02-28 14:07:00.511 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:07:01.024 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:07:01.030 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:07:01.030 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:07:01.031 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:07:01.031 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:07:01.036 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:07:10.500 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:07:11.004 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:07:11.011 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:07:11.012 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:07:11.013 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:07:11.013 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:07:11.019 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:07:20.513 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:07:21.011 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:07:21.016 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:07:21.016 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:07:21.021 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:07:21.021 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:07:21.026 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:07:30.511 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:07:31.060 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:07:31.061 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:07:31.061 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:07:31.062 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:07:31.063 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:07:31.066 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:07:40.499 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:07:41.073 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:07:41.080 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:07:41.081 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:07:41.082 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:07:41.083 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:07:41.087 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:07:50.513 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:07:51.010 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:07:51.015 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:07:51.015 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:07:51.016 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:07:51.016 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:07:51.021 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:07:52.672 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'LojaVirtual.Models.ProdutoAgregador.ProdutoItem' does not contain a definition for 'QuantidadeProdutoCarrinho'
+   at CallSite.Target(Closure , CallSite , Object )
+   at AspNetCore.Views_Pagamento_Index.ExecuteAsync() in C:\Users\Paulo Henrique\Source\Repos\PHVDS\LojaVirtual\src\Views\Pagamento\Index.cshtml:line 30
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at LojaVirtual.Libraries.Middleware.ValidateAntiForgeryTokenMiddleware.Invoke(HttpContext context) in C:\Users\Paulo Henrique\Source\Repos\PHVDS\LojaVirtual\src\Libraries\Middleware\ValidateAntiForgeryTokenMiddleware.cs:line 31
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2023-02-28 14:08:05.428 -03:00 [INF] --- SERVIDOR INICIANDO ---
+2023-02-28 14:08:10.680 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:08:18.883 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:08:18.889 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:08:19.507 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:08:19.508 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:08:19.510 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:08:19.516 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:08:20.566 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:08:21.105 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:08:21.114 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:08:21.115 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:08:21.117 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:08:21.117 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:08:21.126 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:08:30.568 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:08:30.975 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'LojaVirtual.Models.ProdutoAgregador.ProdutoItem' does not contain a definition for 'QuantidadeProdutoCarrinho'
+   at CallSite.Target(Closure , CallSite , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at AspNetCore.Views_Pagamento_Index.ExecuteAsync() in C:\Users\Paulo Henrique\Source\Repos\PHVDS\LojaVirtual\src\Views\Pagamento\Index.cshtml:line 30
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at LojaVirtual.Libraries.Middleware.ValidateAntiForgeryTokenMiddleware.Invoke(HttpContext context) in C:\Users\Paulo Henrique\Source\Repos\PHVDS\LojaVirtual\src\Libraries\Middleware\ValidateAntiForgeryTokenMiddleware.cs:line 31
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-02-28 14:08:31.060 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:08:31.175 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:08:31.176 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:08:31.177 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:08:31.177 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:08:31.191 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:08:40.557 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:08:41.044 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:08:41.055 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:08:41.055 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:08:41.056 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:08:41.057 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:08:41.062 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:08:50.569 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:08:51.108 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:08:51.112 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:08:51.112 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:08:51.113 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:08:51.113 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:08:51.117 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:09:00.562 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:09:01.085 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:09:01.093 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:09:01.094 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:09:01.095 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:09:01.096 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:09:01.110 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:09:10.561 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:09:11.080 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:09:11.089 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:09:11.090 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:09:11.092 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:09:11.093 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:09:11.102 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:09:20.567 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:09:21.092 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:09:21.093 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:09:21.094 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:09:21.095 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:09:21.095 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:09:21.098 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:09:30.559 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:09:31.425 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:09:31.431 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:09:31.432 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:09:31.438 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:09:31.439 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:09:31.451 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:09:40.578 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:09:41.267 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:09:41.273 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:09:41.274 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:09:41.275 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:09:41.275 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:09:41.280 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:09:50.557 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:09:51.151 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:09:51.158 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:09:51.159 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:09:51.160 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:09:51.160 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:09:51.165 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:10:00.562 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:10:01.178 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:10:01.183 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:10:01.183 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:10:01.185 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:10:01.185 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:10:01.190 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:10:10.563 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:10:11.108 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:10:11.113 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:10:11.114 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:10:11.114 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:10:11.115 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:10:11.118 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:10:20.568 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:10:22.337 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:10:22.340 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:10:22.341 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:10:22.343 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:10:22.343 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:10:22.345 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:10:30.568 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:10:31.101 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:10:31.102 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:10:31.102 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:10:31.103 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:10:31.103 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:10:31.105 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:10:40.561 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:10:41.231 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:10:41.244 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:10:41.245 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:10:41.246 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:10:41.246 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:10:41.252 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:10:50.563 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:10:54.435 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:10:54.439 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:10:54.440 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:10:54.445 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:10:54.446 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:10:54.450 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:11:00.583 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:11:02.336 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:11:02.408 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:11:02.412 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:11:02.419 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:11:02.419 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:11:02.471 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:11:10.579 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:11:11.374 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:11:11.400 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:11:11.401 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:11:11.405 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:11:11.406 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:11:11.433 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:11:20.560 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:11:21.379 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:11:21.388 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:11:21.389 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:11:21.391 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:11:21.392 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:11:21.400 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:11:30.562 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:11:31.164 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:11:31.165 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:11:31.166 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:11:31.229 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:11:31.231 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:11:31.276 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:11:40.572 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:11:41.339 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:11:41.343 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:11:41.344 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:11:41.346 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:11:41.346 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:11:41.351 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:11:50.558 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:11:51.049 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:11:51.055 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:11:51.056 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:11:51.060 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:11:51.061 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:11:51.072 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:12:00.566 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:12:01.182 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:12:01.183 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:12:01.185 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:12:01.187 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:12:01.187 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:12:01.189 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:12:10.556 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:12:11.293 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:12:11.316 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:12:11.317 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:12:11.318 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:12:11.319 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:12:11.328 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:12:20.564 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:12:21.081 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:12:21.097 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:12:21.098 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:12:21.105 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:12:21.106 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:12:21.115 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:12:30.571 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:12:31.268 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:12:31.278 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:12:31.278 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:12:31.279 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:12:31.280 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:12:31.284 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:12:40.568 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:12:41.149 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:12:41.178 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:12:41.179 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:12:41.192 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:12:41.193 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:12:41.202 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:12:50.570 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:12:51.051 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:12:51.067 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:12:51.067 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:12:51.069 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:12:51.070 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:12:51.084 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:13:00.557 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:13:01.114 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:13:01.121 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:13:01.122 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:13:01.123 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:13:01.124 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:13:01.133 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:13:10.570 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:13:11.095 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:13:11.116 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:13:11.116 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:13:11.132 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:13:11.132 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:13:11.231 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:13:20.559 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:13:21.124 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:13:21.129 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:13:21.129 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:13:21.130 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:13:21.131 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:13:21.139 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:13:30.560 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:13:31.132 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:13:31.143 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:13:31.144 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:13:31.145 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:13:31.145 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:13:31.156 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:13:40.568 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:13:41.295 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:13:41.302 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:13:41.304 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:13:41.305 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:13:41.305 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:13:41.315 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:13:50.558 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:13:51.195 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:13:51.201 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:13:51.201 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:13:51.202 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:13:51.203 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:13:51.207 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:14:00.572 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:14:01.140 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:14:01.142 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:14:01.142 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:14:01.144 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:14:01.144 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:14:01.147 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:14:05.744 -03:00 [ERR] > PagamentoController - BoletoBancario
+PagarMe.PagarMeException: Exception of type 'PagarMe.PagarMeException' was thrown.
+   at PagarMe.PagarMeRequest.<Execute>b__24_0() in C:\Users\Paulo Henrique\Source\Repos\PHVDS\PagarMe\PagarMe.Shared\PagarMeRequest.cs:line 117
+   at PagarMe.TLS.UseTLS12IfAvailable[T](Func`1 requestCode) in C:\Users\Paulo Henrique\Source\Repos\PHVDS\PagarMe\PagarMe.Shared\TLS.cs:line 43
+   at PagarMe.PagarMeRequest.Execute() in C:\Users\Paulo Henrique\Source\Repos\PHVDS\PagarMe\PagarMe.Shared\PagarMeRequest.cs:line 78
+   at PagarMe.Base.Model.Save() in C:\Users\Paulo Henrique\Source\Repos\PHVDS\PagarMe\PagarMe.Shared\Base\Model.cs:line 131
+   at LojaVirtual.Libraries.Gerenciador.Pagamento.GerenciarPagarMe.GerarBoleto(Decimal valor, List`1 produtos, EnderecoEntrega enderecoEntrega, ValorPrazoFrete valorFrete) in C:\Users\Paulo Henrique\Source\Repos\PHVDS\LojaVirtual\src\Libraries\Gerenciador\Pagamento\GerenciarPagarMe.cs:line 102
+   at LojaVirtual.Controllers.PagamentoController.BoletoBancario() in C:\Users\Paulo Henrique\Source\Repos\PHVDS\LojaVirtual\src\Controllers\PagamentoController.cs:line 129
+2023-02-28 14:14:10.556 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:14:11.160 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:14:11.165 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:14:11.167 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:14:11.169 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:14:11.169 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:14:11.174 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:14:20.562 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:14:21.195 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:14:21.201 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:14:21.202 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:14:21.204 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:14:21.204 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:14:21.210 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:14:30.559 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:14:31.535 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:14:31.547 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:14:31.547 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:14:31.548 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:14:31.549 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:14:31.560 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:14:40.571 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:14:41.769 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:14:41.779 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:14:41.780 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:14:41.781 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:14:41.782 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:14:41.796 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:14:50.566 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:14:51.469 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:14:51.484 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:14:51.485 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:14:51.486 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:14:51.487 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:14:51.498 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:15:00.568 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:15:01.412 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:15:01.423 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:15:01.424 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:15:01.425 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:15:01.426 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:15:01.435 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:15:10.561 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:15:11.216 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:15:11.225 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:15:11.225 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:15:11.227 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:15:11.227 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:15:11.232 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:15:20.567 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:15:21.175 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:15:21.176 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:15:21.177 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:15:21.178 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:15:21.178 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:15:21.180 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:15:30.563 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:15:31.327 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:15:31.334 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:15:31.334 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:15:31.335 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:15:31.336 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:15:31.344 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:15:40.562 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:15:41.243 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:15:41.244 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:15:41.244 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:15:41.245 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:15:41.245 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:15:41.247 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:15:50.567 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:15:51.191 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:15:51.192 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:15:51.192 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:15:51.193 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:15:51.194 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:15:51.199 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:16:00.557 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:16:01.303 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:16:01.304 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:16:01.305 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:16:01.306 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:16:01.307 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:16:01.309 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:16:10.569 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:16:12.344 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:16:12.345 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:16:12.345 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:16:12.346 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:16:12.346 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:16:12.348 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:16:20.565 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:16:21.293 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:16:21.294 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:16:21.294 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:16:21.295 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:16:21.296 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:16:21.297 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:16:30.562 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:16:31.137 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:16:31.146 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:16:31.146 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:16:31.148 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:16:31.148 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:16:31.156 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:16:40.562 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:16:41.107 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:16:41.115 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:16:41.115 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:16:41.116 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:16:41.116 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:16:41.122 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:16:50.573 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:16:51.089 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:16:51.094 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:16:51.095 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:16:51.096 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:16:51.096 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:16:51.100 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:17:00.557 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:17:01.255 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:17:01.258 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:17:01.259 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:17:01.260 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:17:01.260 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:17:01.264 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:17:10.611 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:17:11.877 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:17:11.897 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:17:11.898 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:17:11.910 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:17:11.910 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:17:11.924 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:17:20.558 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:17:21.207 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:17:21.211 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:17:21.211 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:17:21.212 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:17:21.212 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:17:21.217 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:17:30.567 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:17:31.227 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:17:31.232 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:17:31.232 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:17:31.233 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:17:31.233 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:17:31.237 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:17:40.567 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:17:41.103 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:17:41.108 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:17:41.109 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:17:41.110 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:17:41.111 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:17:41.118 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:17:50.567 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:17:51.127 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:17:51.137 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:17:51.138 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:17:51.139 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:17:51.140 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:17:51.152 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:18:00.559 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:18:01.243 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:18:01.252 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:18:01.252 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:18:01.254 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:18:01.255 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:18:01.263 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:18:10.571 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:18:11.280 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:18:11.292 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:18:11.292 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:18:11.294 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:18:11.294 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:18:11.299 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:18:20.571 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:18:21.211 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:18:21.217 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:18:21.218 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:18:21.222 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:18:21.222 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:18:21.227 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:18:30.568 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:18:31.149 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:18:31.157 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:18:31.157 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:18:31.172 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:18:31.173 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:18:31.181 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:18:40.555 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:18:41.229 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:18:41.238 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:18:41.239 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:18:41.241 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:18:41.241 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:18:41.254 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:18:50.559 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:18:51.187 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:18:51.193 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:18:51.193 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:18:51.194 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:18:51.195 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:18:51.204 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:19:00.558 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:19:01.297 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:19:01.309 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:19:01.309 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:19:01.312 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:19:01.313 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:19:01.321 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:19:10.565 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:19:11.135 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:19:11.136 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:19:11.136 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:19:11.141 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:19:11.144 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:19:11.146 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:19:20.566 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:19:21.139 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:19:21.148 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:19:21.149 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:19:21.154 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:19:21.155 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:19:21.163 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:19:30.573 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:19:31.141 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:19:31.149 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:19:31.149 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:19:31.150 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:19:31.151 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:19:31.158 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:19:40.565 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:19:41.093 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:19:41.096 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:19:41.097 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:19:41.098 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:19:41.099 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:19:41.101 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:19:50.565 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:19:51.136 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:19:51.142 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:19:51.143 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:19:51.145 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:19:51.145 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:19:51.153 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:20:00.569 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:20:01.090 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:20:01.092 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:20:01.093 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:20:01.097 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:20:01.099 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:20:01.105 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:20:10.565 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:20:11.064 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:20:11.075 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:20:11.075 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:20:11.078 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:20:11.079 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:20:11.090 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:20:20.562 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:20:21.055 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:20:21.056 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:20:21.056 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:20:21.057 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:20:21.058 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:20:21.060 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-02-28 14:20:30.566 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-02-28 14:20:31.079 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-02-28 14:20:31.081 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-02-28 14:20:31.082 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-02-28 14:20:31.085 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-02-28 14:20:31.086 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-02-28 14:20:31.089 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
