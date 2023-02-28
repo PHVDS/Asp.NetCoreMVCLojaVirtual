@@ -100,5 +100,10 @@ namespace LojaVirtual.Repositories
 			}
 			return bancoProduto.Include(a => a.Imagens).ToPagedList<Produto>(NumeroPagina, RegistroPorPagina);
 		}
+
+		public int QuantidadeTotalProdutos()
+		{
+			return _banco.Produtos.Count();
+		}
 	}
 }

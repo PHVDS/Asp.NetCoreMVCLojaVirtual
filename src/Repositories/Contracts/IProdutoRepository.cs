@@ -17,5 +17,6 @@ namespace LojaVirtual.Repositories.Contracts
 		Produto ObterProduto(int Id);
 		IPagedList<Produto> ObterTodosProdutos(int? pagina, string pesquisa);
 		IPagedList<Produto> ObterTodosProdutos(int? pagina, string pesquisa, string ordenacao, IEnumerable<Categoria> categorias);
+		int QuantidadeTotalProdutos();
 	}
 }

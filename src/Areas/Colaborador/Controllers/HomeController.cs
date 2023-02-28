@@ -4,7 +4,9 @@ using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace LojaVirtual.Areas.Colaborador.Controllers
@@ -14,11 +16,25 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 	{
 		private readonly IColaboradorRepository _repositoryColaborador;
 		private readonly LoginColaborador _loginColaborador;
-
-		public HomeController(IColaboradorRepository colaboradorRepository, LoginColaborador loginColaborador)
+		private readonly IClienteRepository _clienteRepository;
+		private readonly IProdutoRepository _produtoRepository;
+		private readonly INewsletterRepository _newsletterRepository;
+		private readonly IPedidoRepository _pedidoRepository;
+		public HomeController(
+			IPedidoRepository pedidoRepository, 
+			IClienteRepository clienteRepository, 
+			IProdutoRepository produtoRepository, 
+			INewsletterRepository newsletterRepository, 
+			IColaboradorRepository colaboradorRepository, 
+			LoginColaborador loginColaborador
+		)
 		{
 			_repositoryColaborador = colaboradorRepository;
 			_loginColaborador = loginColaborador;
+			_produtoRepository = produtoRepository;
+			_newsletterRepository = newsletterRepository;
+			_pedidoRepository = pedidoRepository;
+			_clienteRepository = clienteRepository;
 		}
 
 		[HttpGet]
@@ -67,7 +83,32 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 		[ColaboradorAutorizacao]
 		public IActionResult Painel()
 		{
+			ViewBag.Clientes = _clienteRepository.QuantidadeTotalClientes();
+			ViewBag.Newsletter = _newsletterRepository.QuantidadeTotalNewsletters();
+			ViewBag.Produtos = _produtoRepository.QuantidadeTotalProdutos();
+			ViewBag.NumeroPedidos = _pedidoRepository.QuantidadeTotalPedidos();
+			ViewBag.ValorTotalPedidos = _pedidoRepository.ValorTotalPedidos();
+
+			ViewBag.QuantidadeBoletoBancario = _pedidoRepository.QuantidadeTotalBoletoBancario();
+			ViewBag.QuantidadeCartaoCredito = _pedidoRepository.QuantidadeTotalCartaoCredito();
+			
 			return View();
+		}
+
+		public IActionResult GerarCSVNewsletter()
+		{
+			var news = _newsletterRepository.ObterTodosNewsletter();
+
+			StringBuilder sb = new StringBuilder();
+
+			foreach (var email in news)
+			{
+				sb.AppendLine(email.Email);
+			}
+
+			byte[] buffer = Encoding.ASCII.GetBytes(sb.ToString());
+
+			return File(buffer, "text/csv", $"newsletter.csv");
 		}
 	}
 }

@@ -15,6 +15,10 @@ namespace LojaVirtual.Repositories.Contracts
 		IPagedList<Pedido> ObterTodosPedidosCliente(int? pagina, int clienteId);
 		IPagedList<Pedido> ObterTodosPedidos(int? pagina, string codigoPedido, string cpf);
 		List<Pedido> ObterTodosPedidosPorSituacao(string status);
+		int QuantidadeTotalPedidos();
+		decimal ValorTotalPedidos();
+		int QuantidadeTotalCartaoCredito();
+		int QuantidadeTotalBoletoBancario();
 
 	}
 }

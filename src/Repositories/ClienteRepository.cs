@@ -63,5 +63,10 @@ namespace LojaVirtual.Repositories
 
 			return bancoCliente.ToPagedList<Cliente>(NumeroPagina, RegistroPorPagina);
 		}
+
+		public int QuantidadeTotalClientes()
+		{
+			return _banco.Clientes.Count();
+		}
 	}
 }

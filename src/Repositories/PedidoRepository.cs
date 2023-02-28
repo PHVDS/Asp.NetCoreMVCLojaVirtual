@@ -75,5 +75,25 @@ namespace LojaVirtual.Repositories
 				.Include(a => a.Cliente)
 				.Where(a => a.Situacao == status).ToList();
 		}
+
+		public int QuantidadeTotalBoletoBancario()
+		{
+			return _banco.Pedidos.Where(a => a.FormaPagamento == MetodoPagamentoConstant.Boleto).Count();
+		}
+
+		public int QuantidadeTotalCartaoCredito()
+		{
+			return _banco.Pedidos.Where(a => a.FormaPagamento == MetodoPagamentoConstant.CartaoCredito).Count();
+		}
+
+		public int QuantidadeTotalPedidos()
+		{
+			return _banco.Pedidos.Count();
+		}
+
+		public decimal ValorTotalPedidos()
+		{
+			return _banco.Pedidos.Sum(a => a.ValorTotal);
+		}
 	}
 }

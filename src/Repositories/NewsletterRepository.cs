@@ -27,5 +27,10 @@ namespace LojaVirtual.Repositories
 		{
 			return _banco.NewsletterEmails.ToList();
 		}
+
+		public int QuantidadeTotalNewsletters()
+		{
+			return _banco.NewsletterEmails.Count();
+		}
 	}
 }

@@ -16,7 +16,6 @@ namespace LojaVirtual.Repositories.Contracts
 		void Excluir(int Id);
 		Cliente ObterCliente(int Id);
 		IPagedList<Cliente> ObterTodosClientes(int? pagina, string pesquisa);
-
-
+		int QuantidadeTotalClientes();
 	}
 }
