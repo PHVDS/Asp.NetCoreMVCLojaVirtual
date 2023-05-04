@@ -76,8 +76,14 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Correios.NET-1.3.1\src\Correios.NET\Correios.NET.csproj" />
-    <ProjectReference Include="..\..\PagarMe\PagarMeCore\PagarMeCore.csproj" />
+    <ProjectReference Include="..\..\CorreiosNET1.3.1\Correios.NET-1.3.1\src\Correios.NET\Correios.NET.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Reference Include="PagarMeCore">
+      <HintPath>..\..\pagarme-net-master\PagarMeCore\bin\Release\netstandard2.0\PagarMeCore.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 

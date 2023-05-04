@@ -5,13 +5,7 @@ VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LojaVirtual", "src\LojaVirtual.csproj", "{62986CE2-B7A0-44D1-977C-1A8B0C6B6C99}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Correios.NET", "..\Correios.NET-1.3.1\src\Correios.NET\Correios.NET.csproj", "{F8E89969-82A0-42BF-BD48-EB42D0270814}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PagarMe", "PagarMe", "{A2C47052-E389-4197-B24D-F249FA0D44A8}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PagarMeCore", "..\PagarMe\PagarMeCore\PagarMeCore.csproj", "{D5D96413-5D94-4612-BBAB-13DAD0674CFA}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "PagarMe.Shared", "..\PagarMe\PagarMe.Shared\PagarMe.Shared.shproj", "{A1E35F76-C32B-4490-BB52-282A27E0A37D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Correios.NET", "..\CorreiosNET1.3.1\Correios.NET-1.3.1\src\Correios.NET\Correios.NET.csproj", "{92D57AB2-7FF3-43DD-85C7-A0B91462C18E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,27 +17,15 @@ Global
 		{62986CE2-B7A0-44D1-977C-1A8B0C6B6C99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62986CE2-B7A0-44D1-977C-1A8B0C6B6C99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62986CE2-B7A0-44D1-977C-1A8B0C6B6C99}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F8E89969-82A0-42BF-BD48-EB42D0270814}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F8E89969-82A0-42BF-BD48-EB42D0270814}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F8E89969-82A0-42BF-BD48-EB42D0270814}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F8E89969-82A0-42BF-BD48-EB42D0270814}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D5D96413-5D94-4612-BBAB-13DAD0674CFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D5D96413-5D94-4612-BBAB-13DAD0674CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D5D96413-5D94-4612-BBAB-13DAD0674CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D5D96413-5D94-4612-BBAB-13DAD0674CFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92D57AB2-7FF3-43DD-85C7-A0B91462C18E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92D57AB2-7FF3-43DD-85C7-A0B91462C18E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92D57AB2-7FF3-43DD-85C7-A0B91462C18E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92D57AB2-7FF3-43DD-85C7-A0B91462C18E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{D5D96413-5D94-4612-BBAB-13DAD0674CFA} = {A2C47052-E389-4197-B24D-F249FA0D44A8}
-		{A1E35F76-C32B-4490-BB52-282A27E0A37D} = {A2C47052-E389-4197-B24D-F249FA0D44A8}
-	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {230BD8BD-54C2-4E1E-9CDD-C5557038EF91}
-	EndGlobalSection
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		..\PagarMe\PagarMe.Shared\PagarMe.Shared.projitems*{a1e35f76-c32b-4490-bb52-282a27e0a37d}*SharedItemsImports = 13
-		..\PagarMe\PagarMe.Shared\PagarMe.Shared.projitems*{d5d96413-5d94-4612-bbab-13dad0674cfa}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal
