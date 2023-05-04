@@ -18066,3 +18066,2107 @@ System.NullReferenceException: Object reference not set to an instance of an obj
 2023-05-04 18:08:40.916 -03:00 [INF] > PedidoEntregueJob: Iniciando
 2023-05-04 18:08:41.830 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
 2023-05-04 18:08:41.835 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:08:50.484 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:08:50.498 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:08:50.499 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:08:51.041 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:08:51.042 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:08:51.987 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:08:51.994 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:09:00.480 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:09:00.486 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:09:00.487 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:09:01.023 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:09:01.024 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:09:01.875 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:09:01.883 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:09:10.466 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:09:10.472 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:09:10.473 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:09:10.951 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:09:10.952 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:09:11.856 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:09:11.865 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:09:20.475 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:09:20.484 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:09:20.485 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:09:21.033 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:09:21.034 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:09:21.835 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:09:21.840 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:09:30.479 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:09:30.485 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:09:30.485 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:09:30.886 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:09:30.887 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:09:31.780 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:09:31.785 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:09:40.481 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:09:40.494 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:09:40.495 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:09:40.902 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:09:40.903 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:09:42.010 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:09:42.018 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:09:50.480 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:09:50.486 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:09:50.486 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:09:50.956 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:09:50.957 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:09:53.097 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:09:53.103 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:10:00.489 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:10:00.495 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:10:00.496 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:10:00.972 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:10:00.973 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:10:01.805 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:10:01.814 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:10:10.475 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:10:10.483 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:10:10.484 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:10:11.179 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:10:11.180 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:10:12.058 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:10:12.066 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:10:20.476 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:10:20.484 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:10:20.484 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:10:20.964 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:10:20.965 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:10:21.754 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:10:21.762 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:10:30.480 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:10:30.494 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:10:30.496 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:10:31.000 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:10:31.001 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:10:31.859 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:10:31.865 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:10:40.480 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:10:40.491 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:10:40.492 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:10:41.034 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:10:41.035 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:10:41.897 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:10:41.908 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:10:50.475 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:10:50.481 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:10:50.482 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:10:50.878 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:10:50.879 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:10:51.676 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:10:51.677 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:11:00.476 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:11:00.478 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:11:00.478 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:11:00.950 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:11:00.951 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:11:01.599 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:11:01.600 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:11:10.479 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:11:10.487 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:11:10.488 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:11:10.996 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:11:10.997 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:11:11.921 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:11:11.922 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:11:20.476 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:11:20.481 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:11:20.481 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:11:21.068 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:11:21.068 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:11:21.789 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:11:21.801 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:11:30.486 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:11:30.496 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:11:30.496 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:11:31.018 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:11:31.018 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:11:31.987 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:11:31.988 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:11:40.475 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:11:40.476 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:11:40.477 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:11:40.981 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:11:40.982 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:11:41.866 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:11:41.872 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:11:50.477 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:11:50.479 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:11:50.479 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:11:50.914 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:11:50.915 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:11:51.797 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:11:51.802 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:12:00.467 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:12:00.469 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:12:00.469 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:12:00.999 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:12:01.000 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:12:01.842 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:12:01.843 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:12:10.467 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:12:10.469 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:12:10.469 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:12:10.913 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:12:10.913 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:12:11.857 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:12:11.866 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:12:20.490 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:12:20.495 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:12:20.496 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:12:20.909 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:12:20.910 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:12:21.786 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:12:21.787 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:12:30.484 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:12:30.491 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:12:30.491 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:12:31.226 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:12:31.226 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:12:32.209 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:12:32.210 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:12:40.469 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:12:40.470 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:12:40.470 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:12:41.603 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:12:41.604 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:12:42.428 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:12:42.431 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:12:50.468 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:12:50.470 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:12:50.470 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:12:50.938 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:12:50.938 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:12:51.838 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:12:51.840 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:13:00.466 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:13:00.467 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:13:00.467 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:13:01.502 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:13:01.502 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:13:02.439 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:13:02.440 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:13:10.472 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:13:10.473 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:13:10.473 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:13:10.903 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:13:10.904 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:13:11.833 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:13:11.834 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:13:20.479 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:13:20.485 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:13:20.486 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:13:20.998 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:13:20.998 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:13:21.954 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:13:21.962 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:13:30.472 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:13:30.489 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:13:30.490 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:13:31.015 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:13:31.015 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:13:31.912 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:13:31.918 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:13:40.464 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:13:40.471 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:13:40.471 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:13:41.101 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:13:41.102 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:13:41.997 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:13:42.002 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:13:50.476 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:13:50.597 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:13:50.598 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:13:51.421 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:13:51.421 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:13:52.230 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:13:52.235 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:14:00.470 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:14:00.476 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:14:00.476 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:14:01.298 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:14:01.299 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:14:02.099 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:14:02.104 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:14:10.466 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:14:10.472 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:14:10.473 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:14:10.962 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:14:10.963 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:14:11.831 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:14:11.836 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:14:20.486 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:14:20.494 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:14:20.494 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:14:20.986 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:14:20.986 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:14:21.869 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:14:21.874 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:14:30.468 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:14:30.474 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:14:30.475 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:14:30.957 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:14:30.958 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:14:31.723 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:14:31.725 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:14:40.469 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:14:40.478 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:14:40.479 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:14:40.897 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:14:40.897 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:14:41.742 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:14:41.748 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:14:50.490 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:14:50.497 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:14:50.497 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:14:51.053 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:14:51.054 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:14:51.865 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:14:51.866 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:15:00.470 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:15:00.472 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:15:00.473 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:15:01.342 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:15:01.343 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:15:02.273 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:15:02.275 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:15:10.472 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:15:10.480 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:15:10.480 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:15:10.970 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:15:10.971 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:15:12.021 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:15:12.026 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:15:20.668 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:15:20.673 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:15:20.674 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:15:21.147 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:15:21.147 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:15:21.945 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:15:21.951 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:15:30.661 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:15:30.674 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:15:30.675 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:15:31.149 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:15:31.149 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:15:31.891 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:15:31.897 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:15:40.678 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:15:40.688 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:15:40.688 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:15:41.189 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:15:41.190 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:15:41.994 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:15:41.999 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:15:50.676 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:15:51.542 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:15:51.543 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:15:52.581 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:15:52.582 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:15:53.517 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:15:53.526 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:16:00.674 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:16:00.686 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:16:00.687 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:16:01.169 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:16:01.170 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:16:02.092 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:16:02.097 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:16:10.666 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:16:10.677 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:16:10.678 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:16:11.243 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:16:11.243 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:16:12.127 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:16:12.129 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:16:20.667 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:16:20.669 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:16:20.670 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:16:21.157 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:16:21.158 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:16:22.059 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:16:22.061 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:16:30.668 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:16:30.670 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:16:30.670 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:16:31.098 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:16:31.098 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:16:31.877 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:16:31.880 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:16:40.671 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:16:40.678 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:16:40.679 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:16:41.079 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:16:41.080 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:16:42.957 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:16:42.958 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:16:50.675 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:16:50.678 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:16:50.679 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:16:51.167 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:16:51.168 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:16:51.974 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:16:51.979 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:17:00.667 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:17:00.673 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:17:00.674 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:17:01.219 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:17:01.234 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:17:05.681 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:17:05.686 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:17:10.677 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:17:10.683 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:17:10.683 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:17:11.063 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:17:11.063 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:17:11.848 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:17:11.856 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:17:20.678 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:17:20.689 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:17:20.690 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:17:21.125 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:17:21.125 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:17:22.000 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:17:22.005 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:17:30.677 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:17:30.683 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:17:30.683 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:17:31.186 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:17:31.186 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:17:31.855 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:17:31.860 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:17:40.670 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:17:40.676 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:17:40.677 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:17:41.267 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:17:41.268 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:17:42.021 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:17:42.027 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:17:50.670 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:17:50.675 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:17:50.676 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:17:51.203 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:17:51.203 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:17:51.900 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:17:51.911 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:18:00.666 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:18:00.911 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:18:00.913 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:18:01.389 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:18:01.390 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:18:02.571 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:18:02.771 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:18:10.674 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:18:11.009 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:18:11.010 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:18:11.686 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:18:11.687 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:18:12.774 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:18:13.603 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:18:20.673 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:18:20.684 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:18:20.685 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:18:21.528 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:18:21.528 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:18:22.963 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:18:22.969 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:18:30.666 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:18:30.672 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:18:30.672 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:18:31.679 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:18:31.679 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:18:33.021 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:18:33.852 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:18:40.136 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:18:40.165 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:18:42.996 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:18:42.997 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:18:45.985 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:18:45.986 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:18:47.797 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:18:47.797 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:18:49.613 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:18:49.613 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:18:50.153 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:18:52.694 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:18:54.074 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:18:54.074 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:18:54.075 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:18:54.852 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:18:54.853 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:18:55.149 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:18:59.433 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:19:00.150 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:19:00.162 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:19:00.163 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:19:01.354 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:19:01.355 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:19:02.298 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:19:02.307 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:19:04.198 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:19:07.831 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:19:10.142 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:19:10.789 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:19:10.790 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:19:11.464 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:19:11.465 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:19:13.252 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:19:13.944 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:19:20.142 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:19:20.686 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:19:20.687 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:19:21.419 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:19:21.419 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:19:23.130 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:19:23.589 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:19:30.140 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:19:30.146 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:19:30.147 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:19:30.778 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:19:30.778 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:19:31.727 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:19:31.734 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:19:40.137 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:19:41.056 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:19:41.056 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:19:41.551 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:19:41.552 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:19:42.425 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:19:42.430 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:19:50.153 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:19:50.745 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:19:50.746 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:19:51.172 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:19:51.173 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:19:52.760 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:19:54.942 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:20:00.157 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:20:00.753 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:20:00.754 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:20:01.176 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:20:01.177 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:20:02.656 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:20:03.089 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:20:10.152 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:20:10.965 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:20:10.966 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:20:11.810 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:20:11.810 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:20:14.771 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:20:15.420 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:20:20.160 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:20:20.925 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:20:20.926 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:20:22.391 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:20:22.391 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:20:24.337 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:20:25.404 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:20:30.147 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:20:31.081 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:20:31.081 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:20:32.034 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:20:32.035 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:20:34.463 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:20:35.409 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:20:40.164 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:20:41.697 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:20:41.698 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:20:42.333 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:20:42.334 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:20:43.558 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:20:43.936 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:20:50.147 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:20:50.153 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:20:50.153 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:20:51.281 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:20:51.282 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:20:52.226 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:20:52.238 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:21:00.137 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:21:00.145 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:21:00.145 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:21:00.737 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:21:00.738 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:21:01.650 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:21:01.655 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:21:10.145 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:21:10.150 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:21:10.151 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:21:10.605 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:21:10.605 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:21:11.399 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:21:11.400 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:21:20.141 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:21:20.148 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:21:20.149 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:21:20.654 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:21:20.655 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:21:21.316 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:21:21.317 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:21:30.138 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:21:30.144 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:21:30.145 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:21:30.545 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:21:30.546 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:21:31.528 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:21:31.533 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:21:40.144 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:21:40.151 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:21:40.151 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:21:40.659 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:21:40.660 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:21:41.730 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:21:41.735 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:21:50.153 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:21:50.164 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:21:50.165 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:21:50.585 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:21:50.585 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:21:51.818 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:21:51.831 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:22:00.143 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:22:03.087 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:22:03.088 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:22:04.127 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:22:04.128 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:22:05.142 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:22:05.149 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:22:10.161 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:22:10.278 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:22:10.278 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:22:10.691 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:22:10.691 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:22:11.521 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:22:11.530 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:22:20.160 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:22:20.737 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:22:20.738 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:22:21.428 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:22:21.429 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:22:22.312 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:22:22.978 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:22:30.142 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:22:30.158 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:22:30.177 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:22:30.840 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:22:30.840 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:22:31.677 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:22:31.684 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:22:40.141 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:22:40.152 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:22:40.153 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:22:42.054 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:22:42.056 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:22:42.948 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:22:42.950 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:22:50.157 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:22:50.162 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:22:50.214 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:22:50.708 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:22:50.709 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:22:51.470 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:22:51.476 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:23:00.139 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:23:00.144 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:23:00.145 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:23:01.195 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:23:01.196 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:23:02.345 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:23:02.397 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:23:10.142 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:23:10.148 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:23:10.148 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:23:10.726 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:23:10.727 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:23:11.947 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:23:11.958 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:23:20.155 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:23:20.160 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:23:20.161 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:23:21.269 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:23:21.269 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:23:22.240 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:23:22.246 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:23:30.149 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:23:33.105 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:23:33.106 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:23:34.357 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:23:34.357 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:23:35.235 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:23:35.243 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:23:40.161 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:23:40.167 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:23:40.167 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:23:40.659 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:23:40.660 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:23:41.493 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:23:41.499 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:23:50.154 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:23:50.160 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:23:50.161 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:23:50.586 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:23:50.587 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:23:51.354 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:23:51.361 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:24:00.015 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:24:00.020 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:24:00.020 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:24:00.146 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:24:00.153 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:24:00.154 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:24:00.450 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:24:00.451 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:24:00.650 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:24:00.651 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:24:01.318 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:24:01.325 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:24:01.406 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:24:01.412 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:24:10.138 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:24:10.749 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:24:10.750 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:24:11.265 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:24:11.266 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:24:12.140 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:24:12.146 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:24:20.157 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:24:20.168 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:24:20.169 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:24:20.701 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:24:20.702 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:24:21.537 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:24:21.546 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:24:30.149 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:24:30.154 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:24:30.154 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:24:30.576 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:24:30.577 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:24:31.402 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:24:31.409 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:24:40.143 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:24:40.150 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:24:40.151 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:24:40.630 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:24:40.631 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:24:41.482 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:24:41.491 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:24:50.149 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:24:50.206 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:24:50.207 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:24:50.604 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:24:50.605 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:24:51.580 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:24:51.588 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:25:00.154 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:25:00.777 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:25:00.777 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:25:01.302 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:25:01.303 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:25:02.079 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:25:02.485 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:25:10.145 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:25:10.150 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:25:10.151 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:25:10.701 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:25:10.702 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:25:11.709 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:25:11.715 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:25:20.143 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:25:20.752 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:25:20.752 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:25:22.629 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:25:22.630 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:25:24.533 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:25:25.412 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:25:30.144 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:25:32.124 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:25:32.124 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:25:32.973 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:25:32.974 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:25:34.850 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:25:35.289 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:25:40.142 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:25:40.533 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:25:40.534 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:25:41.051 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:25:41.052 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:25:42.827 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:25:43.972 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:25:50.150 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:25:50.162 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:25:50.163 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:25:51.534 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:25:51.535 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:25:52.380 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:25:52.382 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:26:00.160 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:26:01.303 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:26:01.304 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:26:02.305 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:26:02.306 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:26:03.277 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:26:03.278 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:26:10.139 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:26:10.141 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:26:10.141 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:26:10.545 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:26:10.546 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:26:11.218 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:26:11.221 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:26:20.161 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:26:20.163 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:26:20.163 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:26:20.650 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:26:20.650 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:26:21.336 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:26:21.338 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:26:30.139 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:26:30.353 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:26:30.354 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:26:30.807 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:26:30.808 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:26:31.829 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:26:31.833 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:26:40.146 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:26:40.147 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:26:40.148 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:26:40.665 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:26:40.667 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:26:41.644 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:26:41.645 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:26:50.150 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:26:50.162 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:26:50.163 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:26:50.688 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:26:50.689 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:26:51.486 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:26:51.488 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:27:00.141 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:27:00.143 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:27:00.144 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:27:00.763 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:27:00.763 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:27:01.595 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:27:01.597 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:27:10.148 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:27:10.150 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:27:10.151 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:27:10.582 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:27:10.583 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:27:11.460 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:27:11.462 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:27:20.141 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:27:20.147 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:27:20.147 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:27:20.564 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:27:20.564 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:27:21.368 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:27:21.374 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:27:30.161 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:27:30.168 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:27:30.169 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:27:30.558 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:27:30.559 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:27:31.364 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:27:31.370 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:27:40.152 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:27:40.159 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:27:40.159 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:27:40.615 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:27:40.616 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:27:41.385 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:27:41.391 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:27:50.163 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:27:50.169 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:27:50.169 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:27:50.649 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:27:50.650 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:27:51.519 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:27:51.522 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:28:00.140 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:28:00.148 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:28:00.149 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:28:00.602 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:28:00.603 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:28:01.430 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:28:01.433 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:28:10.152 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:28:10.154 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:28:10.155 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:28:10.880 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:28:10.881 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:28:11.652 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:28:11.653 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:28:20.138 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:28:20.141 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:28:20.142 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:28:20.641 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:28:20.642 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:28:21.910 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:28:21.912 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:28:30.152 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:28:30.154 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:28:30.155 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:28:30.661 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:28:30.662 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:28:31.538 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:28:31.540 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:28:40.150 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:28:40.161 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:28:40.162 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:28:40.669 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:28:40.670 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:28:41.866 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:28:41.872 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:28:50.162 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:28:50.163 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:28:50.175 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:28:50.573 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:28:50.573 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:28:51.404 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:28:51.405 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:29:00.141 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:29:00.175 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:29:00.175 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:29:00.749 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:29:00.749 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:29:01.602 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:29:01.609 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:29:10.151 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:29:10.163 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:29:10.163 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:29:10.702 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:29:10.703 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:29:11.585 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:29:11.586 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:29:20.151 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:29:20.155 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:29:20.186 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:29:20.885 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:29:20.886 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:29:21.700 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:29:21.703 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:29:30.152 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:29:30.160 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:29:30.161 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:29:30.603 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:29:30.603 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:29:31.473 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:29:31.478 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:29:40.151 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:29:40.161 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:29:40.161 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:29:40.735 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:29:40.736 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:29:41.601 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:29:41.602 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:29:50.139 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:29:50.145 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:29:50.146 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:29:50.637 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:29:50.638 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:29:51.626 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:29:51.629 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:30:00.140 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:30:00.172 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:30:00.172 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:30:00.583 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:30:00.584 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:30:01.475 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:30:01.478 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:30:10.139 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:30:10.278 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:30:10.279 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:30:10.858 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:30:10.858 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:30:14.122 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:30:16.069 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:30:20.140 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:30:21.017 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:30:21.018 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:30:22.335 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:30:22.336 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:30:24.953 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:30:26.098 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:30:30.155 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:30:30.822 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:30:30.838 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:30:33.069 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:30:33.070 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:30:38.094 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:30:40.432 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:30:40.467 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:30:41.530 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:30:41.531 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:30:42.381 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:30:42.383 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:30:46.920 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:30:47.909 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:30:50.478 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:30:50.481 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:30:50.482 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:30:51.769 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:30:51.770 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:30:52.495 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:30:52.498 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:31:00.467 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:31:00.594 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:31:00.594 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:31:01.033 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:31:01.034 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:31:01.823 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:31:01.825 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:34:12.668 -03:00 [INF] --- SERVIDOR INICIANDO ---
+2023-05-04 18:34:50.981 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:34:53.070 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:34:53.105 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:34:53.108 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:34:53.109 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:35:00.859 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:35:00.866 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:35:00.866 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:35:00.868 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:35:00.868 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:35:03.703 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:35:03.703 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:35:04.614 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:35:04.614 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:35:10.869 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:35:10.880 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:35:10.881 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:35:10.883 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:35:10.884 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:35:11.714 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:35:12.225 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:35:20.870 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:35:20.879 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:35:20.880 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:35:20.885 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:35:20.885 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:35:21.707 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:35:22.233 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:35:30.866 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:35:30.872 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:35:30.873 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:35:30.874 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:35:30.875 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:35:31.847 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:35:32.528 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:35:40.871 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:35:41.110 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:35:41.112 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:35:41.115 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:35:41.116 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:35:42.173 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:35:42.632 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:35:50.861 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:35:50.904 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:35:50.904 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:35:50.906 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:35:50.906 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:35:51.776 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:35:52.229 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:36:00.861 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:36:00.862 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:36:00.863 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:36:00.864 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:36:00.864 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:36:01.669 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:36:02.238 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:36:10.868 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:36:10.870 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:36:10.871 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:36:10.874 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:36:10.875 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:36:12.877 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:36:13.374 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:36:20.867 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:36:20.877 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:36:20.878 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:36:20.880 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:36:20.881 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:36:21.660 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:36:22.190 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:36:30.864 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:36:30.880 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:36:30.882 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:36:30.885 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:36:30.886 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:36:31.721 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:36:32.139 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:36:37.380 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at LojaVirtual.Libraries.Email.GerenciarEmail.EnviarDadosDoPedido(Cliente cliente, Pedido pedido) in C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\Libraries\Email\GerenciarEmail.cs:line 86
+   at LojaVirtual.Controllers.PagamentoController.ProcessarPedido(List`1 produtos, Transaction transaction) in C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\Controllers\PagamentoController.cs:line 152
+   at LojaVirtual.Controllers.PagamentoController.BoletoBancario() in C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\Controllers\PagamentoController.cs:line 130
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at LojaVirtual.Libraries.Middleware.ValidateAntiForgeryTokenMiddleware.Invoke(HttpContext context) in C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\Libraries\Middleware\ValidateAntiForgeryTokenMiddleware.cs:line 31
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-05-04 18:36:40.867 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:36:40.870 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:36:40.871 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:36:40.873 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:36:40.874 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:36:41.670 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:36:42.509 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:36:50.862 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:36:50.873 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:36:50.874 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:36:50.876 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:36:50.876 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:36:51.864 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:36:53.236 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:37:00.862 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:37:00.863 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:37:00.864 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:37:00.865 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:37:00.865 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:37:01.663 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:37:02.589 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:37:10.873 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:37:10.875 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:37:10.875 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:37:10.876 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:37:10.877 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:37:11.743 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:37:12.602 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:37:20.873 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:37:20.875 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:37:20.875 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:37:20.876 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:37:20.877 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:37:21.725 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:37:22.532 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:37:30.860 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:37:30.874 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:37:30.875 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:37:30.877 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:37:30.878 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:37:31.857 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:37:32.898 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:37:40.882 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:37:40.884 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:37:40.885 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:37:40.887 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:37:40.888 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:37:41.691 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:37:42.743 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:37:50.868 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:37:50.873 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:37:50.873 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:37:50.874 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:37:50.875 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:37:51.667 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:37:52.500 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:38:00.860 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:38:00.871 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:38:00.872 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:38:00.874 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:38:00.875 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:38:01.661 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:38:02.537 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:38:10.863 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:38:10.865 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:38:10.866 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:38:10.868 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:38:10.869 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:38:11.774 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:38:12.588 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:38:20.859 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:38:20.861 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:38:20.862 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:38:20.864 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:38:20.865 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:38:21.586 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:38:22.579 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:38:30.859 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:38:30.862 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:38:30.862 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:38:30.864 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:38:30.865 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:38:31.555 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:38:32.438 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:38:40.882 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:38:40.889 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:38:40.889 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:38:40.890 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:38:40.891 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:38:41.663 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:38:42.623 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:38:50.868 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:38:50.870 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:38:50.871 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:38:50.874 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:38:50.875 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:38:51.995 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:38:52.834 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:38:54.306 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at LojaVirtual.Libraries.Email.GerenciarEmail.EnviarDadosDoPedido(Cliente cliente, Pedido pedido) in C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\Libraries\Email\GerenciarEmail.cs:line 86
+   at LojaVirtual.Controllers.PagamentoController.ProcessarPedido(List`1 produtos, Transaction transaction) in C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\Controllers\PagamentoController.cs:line 152
+   at LojaVirtual.Controllers.PagamentoController.BoletoBancario() in C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\Controllers\PagamentoController.cs:line 130
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at LojaVirtual.Libraries.Middleware.ValidateAntiForgeryTokenMiddleware.Invoke(HttpContext context) in C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\Libraries\Middleware\ValidateAntiForgeryTokenMiddleware.cs:line 31
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-05-04 18:39:00.867 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:39:00.873 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:39:00.873 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:39:00.874 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:39:00.875 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:39:01.674 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:39:03.411 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:39:10.864 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:39:10.867 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:39:10.868 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:39:10.870 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:39:10.870 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:39:11.689 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:39:13.145 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:39:20.865 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:39:20.875 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:39:20.876 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:39:20.878 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:39:20.879 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:39:21.734 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:39:23.030 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:39:30.863 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:39:30.865 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:39:30.866 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:39:30.867 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:39:30.867 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:39:31.866 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:39:33.160 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:39:40.866 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:39:40.875 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:39:40.876 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:39:40.877 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:39:40.877 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:39:41.681 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:39:42.963 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:39:50.870 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:39:50.881 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:39:50.882 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:39:50.884 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:39:50.885 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:39:51.693 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:39:53.051 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:40:00.876 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:40:01.738 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:40:01.738 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:40:01.740 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:40:01.740 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:40:03.770 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:40:06.196 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:40:10.870 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:40:11.290 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:40:11.291 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:40:11.293 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:40:11.293 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:40:12.439 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:40:14.971 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:40:20.865 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:40:21.409 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:40:21.409 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:40:21.410 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:40:21.411 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:40:22.354 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:40:24.203 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:40:30.874 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:40:31.275 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:40:31.275 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:40:31.285 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:40:31.285 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:40:32.662 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:40:34.503 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:40:40.870 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:40:41.435 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:40:41.436 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:40:41.438 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:40:41.439 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:40:42.699 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:40:45.760 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:40:50.874 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:40:51.695 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:40:51.696 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:40:51.699 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:40:51.700 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:40:52.488 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:40:54.122 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:41:00.867 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:41:00.875 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:41:00.875 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:41:00.882 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:41:00.883 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:41:01.726 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:41:03.110 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:41:10.874 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:41:11.787 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:41:11.787 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:41:11.789 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:41:11.789 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:41:12.880 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:41:15.506 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:41:20.863 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:41:21.971 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:41:21.971 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:41:21.973 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:41:21.973 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:41:23.378 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:41:26.004 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:41:30.860 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:41:32.189 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:41:32.189 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:41:32.191 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:41:32.191 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:41:33.083 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:41:36.964 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:41:40.872 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:41:41.297 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:41:41.298 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:41:41.299 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:41:41.299 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:41:42.113 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:41:44.429 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:41:50.861 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:41:51.250 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:41:51.251 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:41:51.252 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:41:51.253 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:41:52.083 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:41:54.058 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:42:00.874 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:42:01.471 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:42:01.472 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:42:01.473 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:42:01.473 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:42:02.608 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:42:04.450 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:42:10.866 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:42:11.372 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:42:11.373 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:42:11.460 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:42:11.461 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:42:12.488 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:42:15.213 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:42:20.872 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:42:22.346 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:42:22.346 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:42:22.544 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:42:22.545 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:42:25.138 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:42:27.630 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:42:30.866 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:42:31.328 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:42:31.329 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:42:31.330 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:42:31.330 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:42:32.235 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:42:33.927 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:42:40.867 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:42:41.286 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:42:41.287 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:42:41.288 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:42:41.289 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:42:42.324 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:42:43.989 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:42:50.870 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:42:54.286 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:42:54.287 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:42:54.290 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:42:54.290 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:42:55.203 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:42:56.636 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:43:00.882 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:43:01.009 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:43:01.010 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:43:01.012 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:43:01.013 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:43:01.784 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:43:03.078 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:43:22.337 -03:00 [INF] --- SERVIDOR INICIANDO ---
+2023-05-04 18:43:31.334 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:43:34.262 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:43:34.267 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:43:34.269 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:43:34.288 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:43:34.290 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:43:34.292 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:43:40.506 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:43:41.941 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:43:41.942 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:43:41.945 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:43:41.946 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:43:41.948 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:43:41.950 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:43:50.494 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:43:51.782 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:43:51.783 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:43:51.797 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:43:51.798 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:43:51.813 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:43:51.813 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:44:00.501 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:44:02.018 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:44:02.019 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:44:02.025 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:44:02.025 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:44:02.027 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:44:02.027 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:44:10.502 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:44:12.033 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:44:12.033 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:44:12.039 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:44:12.039 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:44:12.040 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:44:12.041 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:44:20.506 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:44:21.820 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:44:21.821 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:44:21.840 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:44:21.841 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:44:21.844 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:44:21.845 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:44:30.497 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:44:34.033 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:44:34.034 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:44:34.411 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:44:34.412 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:44:34.429 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:44:34.429 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:44:38.333 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at LojaVirtual.Libraries.Email.GerenciarEmail.EnviarDadosDoPedido(Cliente cliente, Pedido pedido) in C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\Libraries\Email\GerenciarEmail.cs:line 86
+   at LojaVirtual.Controllers.PagamentoController.ProcessarPedido(List`1 produtos, Transaction transaction) in C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\Controllers\PagamentoController.cs:line 152
+   at LojaVirtual.Controllers.PagamentoController.BoletoBancario() in C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\Controllers\PagamentoController.cs:line 130
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at LojaVirtual.Libraries.Middleware.ValidateAntiForgeryTokenMiddleware.Invoke(HttpContext context) in C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\Libraries\Middleware\ValidateAntiForgeryTokenMiddleware.cs:line 31
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-05-04 18:44:40.500 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:44:43.156 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:44:43.157 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:44:44.307 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:44:44.308 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:44:44.309 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:44:44.310 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:44:50.508 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:44:53.985 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:44:53.986 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:44:53.989 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:44:53.989 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:44:53.991 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:44:53.992 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:45:00.506 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:45:02.770 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:45:02.771 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:45:02.772 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:45:02.772 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:45:02.773 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:45:02.774 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:45:10.500 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:45:12.257 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:45:12.258 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:45:12.263 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:45:12.264 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:45:12.265 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:45:12.265 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:45:20.493 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:45:22.646 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:45:22.647 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:45:22.649 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:45:22.650 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:45:22.652 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:45:22.653 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:45:30.506 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:45:32.388 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:45:32.389 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:45:32.399 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:45:32.399 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:45:32.401 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:45:32.402 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:45:40.504 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:45:42.133 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:45:42.134 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:45:42.136 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:45:42.137 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:45:42.140 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:45:42.142 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:45:50.500 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:45:52.294 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:45:52.295 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:45:52.298 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:45:52.298 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:45:52.301 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:45:52.301 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:46:00.503 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:46:02.272 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:46:02.273 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:46:02.275 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:46:02.276 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:46:02.278 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:46:02.278 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:46:10.495 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:46:12.424 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:46:12.425 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:46:12.427 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:46:12.428 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:46:12.431 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:46:12.432 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:46:20.496 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:46:22.448 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:46:22.449 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:46:22.451 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:46:22.452 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:46:22.454 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:46:22.455 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:46:30.496 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:46:32.179 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:46:32.180 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:46:32.183 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:46:32.184 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:46:32.186 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:46:32.187 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:46:40.501 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:46:42.639 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:46:42.642 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:46:42.726 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:46:42.726 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:46:42.728 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:46:42.729 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:46:50.495 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:46:52.160 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:46:52.160 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:46:52.161 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:46:52.162 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:46:52.163 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:46:52.163 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:47:00.501 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:47:02.560 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:47:02.561 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:47:02.562 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:47:02.563 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:47:02.564 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:47:02.565 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:47:10.502 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:47:12.280 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:47:12.281 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:47:12.283 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:47:12.283 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:47:12.286 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:47:12.286 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:47:20.506 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:47:22.279 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 18:47:22.280 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 18:47:22.285 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 18:47:22.286 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:47:22.287 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 18:47:22.287 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 18:47:30.496 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 18:51:50.217 -03:00 [INF] --- SERVIDOR INICIANDO ---
+2023-05-04 18:54:12.168 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:54:12.168 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:54:20.302 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:54:30.645 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:54:30.678 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:54:40.649 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:54:48.227 -03:00 [ERR] An error occurred using the connection to database 'LojaVirtual' on server '(localdb)\MSSQLLocalDB'.
+System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+2023-05-04 18:54:50.322 -03:00 [ERR] An error occurred using the connection to database 'LojaVirtual' on server '(localdb)\MSSQLLocalDB'.
+System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+2023-05-04 18:54:48.227 -03:00 [ERR] An error occurred using the connection to database 'LojaVirtual' on server '(localdb)\MSSQLLocalDB'.
+System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+2023-05-04 18:54:50.654 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 18:54:59.797 -03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'LojaVirtual.Database.LojaVirtualContext'.
+System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.QueryMethodProvider.GetResult[TResult](IEnumerable`1 valueBuffers, Boolean throwOnNullResult)
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ResultEnumerable`1.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.QueryMethodProvider.GetResult[TResult](IEnumerable`1 valueBuffers, Boolean throwOnNullResult)
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ResultEnumerable`1.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+2023-05-04 18:54:59.967 -03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'LojaVirtual.Database.LojaVirtualContext'.
+System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+2023-05-04 18:54:59.967 -03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'LojaVirtual.Database.LojaVirtualContext'.
+System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+2023-05-04 18:55:00.193 -03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'LojaVirtual.Database.LojaVirtualContext'.
+System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.QueryMethodProvider.GetResult[TResult](IEnumerable`1 valueBuffers, Boolean throwOnNullResult)
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ResultEnumerable`1.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass15_1`1.<CompileQueryCore>b__0(QueryContext qc)
+System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.QueryMethodProvider.GetResult[TResult](IEnumerable`1 valueBuffers, Boolean throwOnNullResult)
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ResultEnumerable`1.GetEnumerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass15_1`1.<CompileQueryCore>b__0(QueryContext qc)
+2023-05-04 18:55:09.381 -03:00 [ERR] An error occurred using the connection to database 'LojaVirtual' on server '(localdb)\MSSQLLocalDB'.
+System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+2023-05-04 18:55:09.381 -03:00 [ERR] An error occurred using the connection to database 'LojaVirtual' on server '(localdb)\MSSQLLocalDB'.
+System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+2023-05-04 18:55:09.382 -03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'LojaVirtual.Database.LojaVirtualContext'.
+System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+2023-05-04 18:55:09.382 -03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'LojaVirtual.Database.LojaVirtualContext'.
+System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+2023-05-04 19:01:51.005 -03:00 [ERR] An error occurred using the connection to database 'LojaVirtual' on server '(localdb)\MSSQLLocalDB'.
+System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+2023-05-04 19:01:51.005 -03:00 [ERR] An error occurred using the connection to database 'LojaVirtual' on server '(localdb)\MSSQLLocalDB'.
+System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+2023-05-04 19:01:51.015 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:01:52.406 -03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'LojaVirtual.Database.LojaVirtualContext'.
+System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+2023-05-04 19:01:52.417 -03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'LojaVirtual.Database.LojaVirtualContext'.
+System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+System.InvalidOperationException: Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+2023-05-04 19:13:30.999 -03:00 [INF] --- SERVIDOR INICIANDO ---
+2023-05-04 19:14:00.932 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:14:10.915 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:14:20.897 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:14:30.112 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:14:30.112 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:14:30.112 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:14:30.775 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:14:30.775 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:14:30.775 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:14:30.891 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:14:30.898 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:14:30.898 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:14:39.969 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:14:39.969 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:14:39.969 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:14:39.969 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:14:39.995 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:14:39.997 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:14:40.000 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:14:40.004 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:14:40.891 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:14:40.897 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:14:40.898 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:14:41.628 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:14:41.628 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:14:41.628 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:14:41.628 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:14:41.750 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:14:41.751 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:14:41.752 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:14:46.992 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:14:47.115 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:14:47.518 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:14:48.036 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:14:48.257 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:14:50.147 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:14:50.161 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:14:50.162 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:14:52.056 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:14:52.059 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:14:52.060 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:14:53.855 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:15:00.140 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:15:00.150 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:15:00.150 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:15:00.925 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:15:00.932 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:15:00.933 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:15:03.187 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:15:10.142 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:15:10.148 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:15:10.149 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:15:11.038 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:15:11.050 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:15:11.051 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:15:13.156 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:15:20.138 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:15:20.144 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:15:20.144 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:15:20.825 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:15:20.832 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:15:20.832 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:15:23.137 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:15:30.142 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:15:30.150 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:15:30.151 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:15:30.918 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:15:30.924 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:15:30.925 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:15:33.247 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:15:40.147 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:15:40.155 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:15:40.155 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:15:40.899 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:15:40.901 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:15:40.902 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:15:42.868 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:15:50.146 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:15:50.154 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:15:50.155 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:15:51.072 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:15:51.084 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:15:51.085 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:15:53.140 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:16:00.137 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:16:00.143 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:16:00.143 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:16:02.044 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:16:02.049 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:16:02.050 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:16:03.875 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:16:10.135 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:16:10.141 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:16:10.142 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:16:10.904 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:16:10.911 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:16:10.912 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:16:13.055 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:16:20.138 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:16:20.144 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:16:20.145 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:16:21.092 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:16:21.098 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:16:21.099 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:16:22.863 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:16:30.147 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:16:30.155 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:16:30.156 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:16:31.051 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:16:31.057 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:16:31.058 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:16:32.976 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:16:40.147 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:16:40.153 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:16:40.154 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:16:41.013 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:16:41.023 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:16:41.024 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:16:42.937 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:16:50.139 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:16:50.150 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:16:50.151 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:16:51.055 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:16:51.057 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:16:51.057 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:16:53.149 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:17:00.137 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:17:00.139 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:17:00.139 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:17:00.920 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:17:00.922 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:17:00.922 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:17:03.073 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:17:04.351 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at LojaVirtual.Libraries.Email.GerenciarEmail.EnviarDadosDoPedido(Cliente cliente, Pedido pedido) in C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\Libraries\Email\GerenciarEmail.cs:line 86
+   at LojaVirtual.Controllers.PagamentoController.ProcessarPedido(List`1 produtos, Transaction transaction) in C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\Controllers\PagamentoController.cs:line 152
+   at LojaVirtual.Controllers.PagamentoController.BoletoBancario() in C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\Controllers\PagamentoController.cs:line 130
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at LojaVirtual.Libraries.Middleware.ValidateAntiForgeryTokenMiddleware.Invoke(HttpContext context) in C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\Libraries\Middleware\ValidateAntiForgeryTokenMiddleware.cs:line 31
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-05-04 19:17:10.143 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:17:10.144 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:17:10.145 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:17:10.990 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:17:10.991 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:17:10.992 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:17:12.984 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:17:20.135 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:17:20.137 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:17:20.138 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:17:21.014 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:17:21.015 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:17:21.016 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:17:23.323 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:17:30.136 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:17:30.139 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:17:30.139 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:17:30.984 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:17:30.986 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:17:30.987 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:17:33.066 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:17:40.136 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:17:40.137 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:17:40.138 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:17:40.909 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:17:40.912 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:17:40.912 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:17:43.268 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:17:50.140 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:17:50.141 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:17:50.142 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:17:51.046 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:17:51.047 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:17:51.048 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:17:53.446 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:18:00.137 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:18:00.140 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:18:00.141 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:18:00.988 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:18:00.989 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:18:00.990 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:18:03.259 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:18:10.133 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:18:10.136 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:18:10.137 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:18:10.977 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:18:10.980 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:18:10.981 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:18:13.129 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:18:20.149 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:18:20.151 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:18:20.152 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:18:20.953 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:18:20.955 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:18:20.955 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:18:23.116 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:18:30.135 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:18:30.138 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:18:30.138 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:18:31.128 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:18:31.130 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:18:31.131 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:18:33.735 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:18:40.147 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:18:40.150 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:18:40.150 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:18:40.987 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:18:40.989 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:18:40.989 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:18:43.489 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:18:50.143 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:18:50.145 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:18:50.146 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:18:50.955 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:18:50.956 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:18:50.957 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:18:53.014 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:19:00.140 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:19:00.143 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:19:00.143 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:19:00.941 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:19:00.948 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:19:00.948 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando
+2023-05-04 19:19:03.014 -03:00 [INF] > PedidoPagamentoSituacao: Finalizado
+2023-05-04 19:19:10.137 -03:00 [INF] > PedidoFinalizadoJob: Iniciando
+2023-05-04 19:19:10.141 -03:00 [INF] > PedidoFinalizadoJob: Finalizado
+2023-05-04 19:19:10.141 -03:00 [INF] > PedidoEntregueJob: Iniciando
+2023-05-04 19:19:11.025 -03:00 [INF] > PedidoDevolverEntregueJob: Iniciando
+2023-05-04 19:19:11.027 -03:00 [INF] > PedidoDevolverEntregueJob: Finalizado
+2023-05-04 19:19:11.027 -03:00 [INF] > PedidoPagamentoSituacao: Iniciando

@@ -197,7 +197,8 @@ namespace LojaVirtual.Controllers
 			}
 			else
 			{
-				_enderecoEntregaRepository.ObterEnderecoEntrega(enderecoEntregaId);
+				var endereco = _enderecoEntregaRepository.ObterEnderecoEntrega(enderecoEntregaId);
+				enderecoEntrega = endereco;
 			}
 
 			return enderecoEntrega;
