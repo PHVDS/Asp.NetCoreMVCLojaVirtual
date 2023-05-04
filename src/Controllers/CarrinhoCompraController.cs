@@ -34,7 +34,27 @@ namespace LojaVirtual.Controllers
 			return View(produtoItemCompleto);
 		}
 
-		public IActionResult AdicionarItem(int id)
+		public IActionResult VerificarEstoque()
+		{
+			List<ProdutoItem> produtoItemCompleto = CarregarProdutoDB();
+			foreach (var produto in produtoItemCompleto)
+			{
+				if (produto.Estoque <= 0)
+				{
+					ViewBag.MSG_E = Mensagem.MSG_E008;
+					return View("Index", produtoItemCompleto);
+				}
+				if (produto.Estoque < produto.UnidadesPedidas)
+				{
+                    ViewBag.MSG_E = Mensagem.MSG_E008;
+                    return View("Index", produtoItemCompleto);
+                }
+			}
+
+			return RedirectToAction(nameof(EnderecoEntrega));
+		}
+
+        public IActionResult AdicionarItem(int id)
 		{
 			Produto produto = _produtoRepository.ObterProduto(id);
 			if (produto == null)

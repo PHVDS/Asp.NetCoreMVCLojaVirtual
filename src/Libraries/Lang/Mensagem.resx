@@ -139,7 +139,7 @@
     <value>Quantidade não pode ser 0, se quiser remova do carrinho!</value>
   </data>
   <data name="MSG_E008" xml:space="preserve">
-    <value>Você atingiu a quantidade de produto que tem no estoque!</value>
+    <value>Quantidade de produto solicitada é maior do que o nosso estoque!</value>
   </data>
   <data name="MSG_E009" xml:space="preserve">
     <value>Tipo de Frete não foi selecionado!</value>

@@ -36,8 +36,16 @@
                                 <h4 class="title">@produto.Nome</h4>
 
                             </figcaption>
+
+                            @if (produto.Estoque > 0)
+                            {
+                                <a asp-controller="CarrinhoCompra" asp-action="AdicionarItem" asp-route-id="@produto.Id" class="btn btn-primary">Adicionar ao Carrinho</a>
+                            }
+                            else
+                            {
+                                <a href="#" class="btn btn-danger disabled" onclick="javascript: return false;" style="cursor: default">Esgotado</a>
+                            }
                             <div class="bottom-wrap">
-                                <a asp-controller="CarrinhoCompra" asp-action="AdicionarItem" asp-route-id="@produto.Id" class="btn btn-sm btn-primary float-right">Adicionar ao Carrinho</a>
                                 <div class="price-wrap h5">
                                     <span class="price-new">@produto.Valor.ToString("C")</span>
                                 </div>

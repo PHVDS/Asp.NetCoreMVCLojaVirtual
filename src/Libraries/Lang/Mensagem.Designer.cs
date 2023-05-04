@@ -124,7 +124,7 @@ namespace LojaVirtual.Libraries.Lang {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Você atingiu a quantidade de produto que tem no estoque!.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Quantidade de produto solicitada é maior do que o nosso estoque!.
         /// </summary>
         public static string MSG_E008 {
             get {
