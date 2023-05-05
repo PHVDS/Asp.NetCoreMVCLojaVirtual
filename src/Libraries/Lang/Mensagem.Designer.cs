@@ -160,6 +160,24 @@ namespace LojaVirtual.Libraries.Lang {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Não é possível excluir Categorias que possuem categoria vinculadas: {0}.
+        /// </summary>
+        public static string MSG_E012 {
+            get {
+                return ResourceManager.GetString("MSG_E012", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Não é possível excluir Categorias que possuem produtos vinculados: {0}.
+        /// </summary>
+        public static string MSG_E013 {
+            get {
+                return ResourceManager.GetString("MSG_E013", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Registro salvo com sucesso!.
         /// </summary>
         public static string MSG_S001 {

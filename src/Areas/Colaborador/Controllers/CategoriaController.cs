@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using X.PagedList;
 
@@ -17,10 +18,12 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 	public class CategoriaController : Controller
 	{
 		private readonly ICategoriaRepository _categoriaRepository;
+		private readonly IProdutoRepository _produtoRepository;
 
-		public CategoriaController(ICategoriaRepository categoriaRepository)
+		public CategoriaController(IProdutoRepository produtoRepository, ICategoriaRepository categoriaRepository)
 		{
 			_categoriaRepository = categoriaRepository;
+			_produtoRepository = produtoRepository;
 		}
 
 		public IActionResult Index(int? pagina)
@@ -82,11 +85,35 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 		[ValidateHttpReferer]
 		public IActionResult Excluir(int id)
 		{
-			_categoriaRepository.Excluir(id);
+			var categoriaFilho = _categoriaRepository.ObterCategoriasPorCategoriaPai(id);
+			if (categoriaFilho.Count > 0)
+			{
+				StringBuilder stringBuilder = new StringBuilder();
 
-			TempData["MSG_S"] = Mensagem.MSG_S002;
+				foreach (var item in categoriaFilho)
+				{
+					stringBuilder.Append($"'{item.Nome}' ");
+				}
+                TempData["MSG_E"] = string.Format(Mensagem.MSG_E012, stringBuilder.ToString());
+                return RedirectToAction(nameof(Index));
+            }
 
-			return RedirectToAction(nameof(Index));
+            var produtoFilho = _produtoRepository.ObterProdutoPorCategoria(id);
+            if (produtoFilho.Count > 0)
+            {
+                StringBuilder stringBuilder = new StringBuilder();
+
+                foreach (var item in produtoFilho)
+                {
+                    stringBuilder.Append($"'{item.Nome}' ");
+                }
+                TempData["MSG_E"] = string.Format(Mensagem.MSG_E013, stringBuilder.ToString());
+                return RedirectToAction(nameof(Index));
+            }
+
+				_categoriaRepository.Excluir(id);
+				TempData["MSG_S"] = Mensagem.MSG_S002;
+				return RedirectToAction(nameof(Index));
 		}
 	}
 }

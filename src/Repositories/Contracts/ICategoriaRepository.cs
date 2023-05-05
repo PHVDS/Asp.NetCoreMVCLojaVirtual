@@ -15,6 +15,7 @@ namespace LojaVirtual.Repositories.Contracts
 		Categoria ObterCategoria(int id);
 		Categoria ObterCategoria(string slug);
 		Categoria ObterCategoriaNome(string nome);
+		List<Categoria> ObterCategoriasPorCategoriaPai(int id);
 		IEnumerable<Categoria> ObterCategoriasRecursivas(Categoria categoriaPai);
 		IEnumerable<Categoria> ObterTodasCategorias();
 		IPagedList<Categoria> ObterTodasCategorias(int? pagina);
