@@ -1,27 +1,24 @@
-﻿using LojaVirtual.Libraries.Filtro;
+﻿using LojaVirtual.Libraries.Email;
+using LojaVirtual.Libraries.Lang;
 using LojaVirtual.Libraries.Login;
-using LojaVirtual.Models;
+using LojaVirtual.Libraries.Seguranca;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace LojaVirtual.Areas.Cliente.Controllers
 {
 	[Area("Cliente")]
 	public class HomeController : Controller
 	{
+		private readonly GerenciarEmail _gerenciarEmail; 
 		private readonly LoginCliente _loginCliente;
 		private readonly IClienteRepository _repositoryCliente;
-		private readonly IEnderecoEntregaRepository _enderecoEntregaRepository;
 
-		public HomeController(IEnderecoEntregaRepository enderecoEntregaRepository, LoginCliente loginCliente, IClienteRepository repositoryCliente)
+        public HomeController(GerenciarEmail gerenciarEmail, LoginCliente loginCliente, IClienteRepository repositoryCliente)
 		{
-			_enderecoEntregaRepository = enderecoEntregaRepository;
 			_loginCliente = loginCliente;
 			_repositoryCliente = repositoryCliente;
+			_gerenciarEmail = gerenciarEmail;
 		}
 
 		[HttpGet]
@@ -55,6 +52,117 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 		}
 
 		[HttpGet]
+		public IActionResult Recuperar()
+		{
+			return View();
+		}
+
+        [HttpPost]
+        public IActionResult Recuperar([FromForm]Models.Cliente cliente)
+		{
+			ModelState.Remove("Nome");
+			ModelState.Remove("Nascimento");
+			ModelState.Remove("Sexo");
+			ModelState.Remove("CPF");
+			ModelState.Remove("Telefone");
+			ModelState.Remove("CEP");
+			ModelState.Remove("Estado");
+			ModelState.Remove("Cidade");
+			ModelState.Remove("Bairro");
+			ModelState.Remove("Endereco");
+			ModelState.Remove("Complemento");
+			ModelState.Remove("Numero");
+			ModelState.Remove("Senha");
+			ModelState.Remove("ConfirmacaoSenha");
+
+			if (ModelState.IsValid)
+			{
+				var clienteDoBancoDados = _repositoryCliente.ObterClientePorEmail(cliente.Email);
+
+				if (clienteDoBancoDados != null)
+				{
+					string idCrip = Base64Cipher.Base64Encode(clienteDoBancoDados.Id.ToString());
+                    _gerenciarEmail.EnviarLinkResetarSenha(clienteDoBancoDados, idCrip);
+					
+					TempData["MSG_S"] = Mensagem.MSG_S005;
+
+					ModelState.Clear();
+				}
+				else
+				{
+					TempData["MSG_E"] = Mensagem.MSG_E014;
+				}
+			}
+			return View();
+		}
+
+		[HttpGet]
+		public IActionResult CriarSenha(string id)
+		{
+			try
+			{
+                var idClienteDeCrip = Base64Cipher.Base64Decode(id);
+
+                if (!int.TryParse(idClienteDeCrip, out int idCliente))
+                {
+                    TempData["MSG_E"] = Mensagem.MSG_E015;
+                }
+            }
+			catch (System.FormatException e)
+			{
+                TempData["MSG_E"] = Mensagem.MSG_E015;
+            }
+            
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CriarSenha([FromForm] Models.Cliente cliente, string id)
+        {
+            ModelState.Remove("Nome");
+            ModelState.Remove("Nascimento");
+            ModelState.Remove("Sexo");
+            ModelState.Remove("CPF");
+            ModelState.Remove("Email");
+            ModelState.Remove("Telefone");
+            ModelState.Remove("CEP");
+            ModelState.Remove("Estado");
+            ModelState.Remove("Cidade");
+            ModelState.Remove("Bairro");
+            ModelState.Remove("Endereco");
+            ModelState.Remove("Complemento");
+            ModelState.Remove("Numero");
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var idClienteDeCrip = Base64Cipher.Base64Decode(id);
+
+                    if (!int.TryParse(idClienteDeCrip, out int idCliente))
+                    {
+                        TempData["MSG_E"] = Mensagem.MSG_E015;
+                        return View();
+                    }
+                    var clienteDB = _repositoryCliente.ObterCliente(idCliente);
+                    if (clienteDB != null)
+                    {
+                        clienteDB.Senha = cliente.Senha;
+
+                        _repositoryCliente.Atualizar(clienteDB);
+                        TempData["MSG_S"] = Mensagem.MSG_S004;
+                    }
+                }
+                catch (System.FormatException)
+                {
+                    TempData["MSG_E"] = Mensagem.MSG_E015;
+                    return View();
+                }
+            }
+            return View();
+        }
+
+        [HttpGet]
 		public IActionResult Sair()
 		{
 			_loginCliente.Logout();

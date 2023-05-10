@@ -1,11 +1,8 @@
-﻿using LojaVirtual.Models;
+﻿using LojaVirtual.Libraries.Seguranca;
+using LojaVirtual.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Mail;
-using System.Threading.Tasks;
 
 namespace LojaVirtual.Libraries.Email
 {
@@ -13,10 +10,13 @@ namespace LojaVirtual.Libraries.Email
 	{
 		private readonly SmtpClient _smtp;
 		private readonly IConfiguration _configuration;
-		public GerenciarEmail(SmtpClient smtp, IConfiguration configuration)
+		private readonly IHttpContextAccessor _httpContextAccessor;
+
+		public GerenciarEmail(IHttpContextAccessor httpContextAccessor, SmtpClient smtp, IConfiguration configuration)
 		{ 
 			_smtp = smtp;
 			_configuration = configuration;
+			_httpContextAccessor = httpContextAccessor;
 		}
 
 		public void EnviarContatoPorEmail(Contato contato)
@@ -85,5 +85,30 @@ namespace LojaVirtual.Libraries.Email
 			//Enviar mensagem via SMTP
 			_smtp.Send(mensagem);
 		}
-	}
+
+        public void EnviarLinkResetarSenha(Cliente cliente, string idCrip)
+        {
+			var request = _httpContextAccessor.HttpContext.Request;
+			string url = $"{request.Scheme}://{request.Host}/Cliente/CriarSenha/{idCrip}";
+            var corpoMsg = string.Format(
+                "<h1>Criar nova senha para {1}({2})!</h1><br />" +
+                "Clique no link abaixo para criar uma nova senha!<br />" +
+                "<a href='{0}' target='_blank'>{0}</a><br />",
+				url,
+				cliente.Nome,
+				cliente.Email
+            );
+
+            //MailMessage -> Construir a mensagem.
+            MailMessage mensagem = new MailMessage();
+            mensagem.From = new MailAddress(_configuration.GetValue<string>("Email:Username"));
+            mensagem.To.Add(cliente.Email);
+            mensagem.Subject = "LojaVirtual - Criar nova senha - " + cliente.Nome;
+            mensagem.Body = corpoMsg;
+            mensagem.IsBodyHtml = true;
+
+            //Enviar mensagem via SMTP
+            _smtp.Send(mensagem);
+        }
+    }
 }
