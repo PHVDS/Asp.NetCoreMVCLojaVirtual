@@ -12,6 +12,9 @@ namespace LojaVirtual.Libraries.Validacao
 	{
 		protected override ValidationResult IsValid(object value, ValidationContext validationContext)
 		{
+			if (value == null) {
+                return new ValidationResult("Digite o E-mail!");
+            }
 			string Email = (value as string).Trim();
 			IColaboradorRepository _colaboradorRepository = (IColaboradorRepository)validationContext.GetService(typeof(IColaboradorRepository));
 

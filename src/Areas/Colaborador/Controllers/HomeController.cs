@@ -1,5 +1,8 @@
-﻿using LojaVirtual.Libraries.Filtro;
+﻿using LojaVirtual.Libraries.Email;
+using LojaVirtual.Libraries.Filtro;
+using LojaVirtual.Libraries.Lang;
 using LojaVirtual.Libraries.Login;
+using LojaVirtual.Libraries.Seguranca;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -14,7 +17,8 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 	[Area("Colaborador")]
 	public class HomeController : Controller
 	{
-		private readonly IColaboradorRepository _repositoryColaborador;
+        private readonly GerenciarEmail _gerenciarEmail;
+        private readonly IColaboradorRepository _repositoryColaborador;
 		private readonly LoginColaborador _loginColaborador;
 		private readonly IClienteRepository _clienteRepository;
 		private readonly IProdutoRepository _produtoRepository;
@@ -26,8 +30,9 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			IProdutoRepository produtoRepository, 
 			INewsletterRepository newsletterRepository, 
 			IColaboradorRepository colaboradorRepository, 
-			LoginColaborador loginColaborador
-		)
+			LoginColaborador loginColaborador,
+            GerenciarEmail gerenciarEmail
+        )
 		{
 			_repositoryColaborador = colaboradorRepository;
 			_loginColaborador = loginColaborador;
@@ -35,7 +40,9 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			_newsletterRepository = newsletterRepository;
 			_pedidoRepository = pedidoRepository;
 			_clienteRepository = clienteRepository;
-		}
+            _gerenciarEmail = gerenciarEmail;
+
+        }
 
 		[HttpGet]
 		public IActionResult Login()
@@ -68,19 +75,90 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			return RedirectToAction("Login","Home");
 		}
 
-		[HttpGet]
-		public IActionResult RecuperarSenha()
-		{
-			return View();
-		}
+        [HttpGet]
+        public IActionResult Recuperar()
+        {
+            return View();
+        }
 
-		[HttpPost]
-		public IActionResult CadastrarNovaSenha()
-		{
-			return View();
-		}
+        [HttpPost]
+        public IActionResult Recuperar([FromForm] Models.Colaborador colaborador)
+        {
+            var colaboradorDoBancoDados = _repositoryColaborador.ObterColaboradorPorEmail(colaborador.Email);
 
-		[ColaboradorAutorizacao]
+            if (colaboradorDoBancoDados != null && colaboradorDoBancoDados.Count > 0)
+            {
+                string idCrip = Base64Cipher.Base64Encode(colaboradorDoBancoDados.First().Id.ToString());
+                _gerenciarEmail.EnviarLinkResetarSenha(colaboradorDoBancoDados.First(), idCrip);
+
+                TempData["MSG_S"] = Mensagem.MSG_S005;
+
+                ModelState.Clear();
+            }
+            else
+            {
+                TempData["MSG_E"] = Mensagem.MSG_E014;
+            }
+
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult CriarSenha(string id)
+        {
+            try
+            {
+                var idColaboradorDeCrip = Base64Cipher.Base64Decode(id);
+
+                if (!int.TryParse(idColaboradorDeCrip, out int idColaborador))
+                {
+                    TempData["MSG_E"] = Mensagem.MSG_E015;
+                }
+            }
+            catch (System.FormatException e)
+            {
+                TempData["MSG_E"] = Mensagem.MSG_E015;
+            }
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CriarSenha([FromForm] Models.Colaborador colaborador, string id)
+        {
+            ModelState.Remove("Nome");
+            ModelState.Remove("Email");
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var idColaboradorDeCrip = Base64Cipher.Base64Decode(id);
+
+                    if (!int.TryParse(idColaboradorDeCrip, out int idColaborador))
+                    {
+                        TempData["MSG_E"] = Mensagem.MSG_E015;
+                        return View();
+                    }
+                    var colaboradorDB = _repositoryColaborador.ObterColaborador(idColaborador);
+                    if (colaboradorDB != null)
+                    {
+                        colaboradorDB.Senha = colaborador.Senha;
+
+                        _repositoryColaborador.AtualizarSenha(colaboradorDB);
+                        TempData["MSG_S"] = Mensagem.MSG_S004;
+                    }
+                }
+                catch (System.FormatException)
+                {
+                    TempData["MSG_E"] = Mensagem.MSG_E015;
+                    return View();
+                }
+            }
+            return View();
+        }
+
+        [ColaboradorAutorizacao]
 		public IActionResult Painel()
 		{
 			ViewBag.Clientes = _clienteRepository.QuantidadeTotalClientes();

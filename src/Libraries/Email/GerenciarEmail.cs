@@ -86,24 +86,34 @@ namespace LojaVirtual.Libraries.Email
 			_smtp.Send(mensagem);
 		}
 
-        public void EnviarLinkResetarSenha(Cliente cliente, string idCrip)
+        public void EnviarLinkResetarSenha(dynamic usuario, string idCrip)
         {
 			var request = _httpContextAccessor.HttpContext.Request;
-			string url = $"{request.Scheme}://{request.Host}/Cliente/CriarSenha/{idCrip}";
+			string url = "";
+
+			if (usuario.GetType() == typeof(Cliente))
+			{
+				url = $"{request.Scheme}://{request.Host}/Cliente/Home/CriarSenha/{idCrip}";
+			}
+			else
+			{
+                url = $"{request.Scheme}://{request.Host}/Colaborador/Home/CriarSenha/{idCrip}";
+            }
+
             var corpoMsg = string.Format(
                 "<h1>Criar nova senha para {1}({2})!</h1><br />" +
                 "Clique no link abaixo para criar uma nova senha!<br />" +
                 "<a href='{0}' target='_blank'>{0}</a><br />",
 				url,
-				cliente.Nome,
-				cliente.Email
+				usuario.Nome,
+				usuario.Email
             );
 
             //MailMessage -> Construir a mensagem.
             MailMessage mensagem = new MailMessage();
             mensagem.From = new MailAddress(_configuration.GetValue<string>("Email:Username"));
-            mensagem.To.Add(cliente.Email);
-            mensagem.Subject = "LojaVirtual - Criar nova senha - " + cliente.Nome;
+            mensagem.To.Add(usuario.Email);
+            mensagem.Subject = "LojaVirtual - Criar nova senha - " + usuario.Nome;
             mensagem.Body = corpoMsg;
             mensagem.IsBodyHtml = true;
 
