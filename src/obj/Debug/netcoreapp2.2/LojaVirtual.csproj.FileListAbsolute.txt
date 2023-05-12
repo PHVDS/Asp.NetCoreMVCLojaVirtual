@@ -330,10 +330,8 @@ C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\obj\Debug\n
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Areas\Colaborador\Views\Colaborador\Atualizar.g.cshtml.cs
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Areas\Colaborador\Views\Colaborador\Cadastrar.g.cshtml.cs
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Areas\Colaborador\Views\Colaborador\Index.g.cshtml.cs
-C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Areas\Colaborador\Views\Home\CadastrarNovaSenha.g.cshtml.cs
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Areas\Colaborador\Views\Home\Login.g.cshtml.cs
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Areas\Colaborador\Views\Home\Painel.g.cshtml.cs
-C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Areas\Colaborador\Views\Home\RecuperarSenha.g.cshtml.cs
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Areas\Colaborador\Views\Pedido\Index.g.cshtml.cs
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Areas\Colaborador\Views\Pedido\Visualizar.g.cshtml.cs
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Areas\Colaborador\Views\Produto\Atualizar.g.cshtml.cs
@@ -372,3 +370,5 @@ C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\obj\Debug\n
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\obj\Debug\netcoreapp2.2\LojaVirtual.genruntimeconfig.cache
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Home\Recuperar.g.cshtml.cs
 C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Areas\Cliente\Views\Home\CriarSenha.g.cshtml.cs
+C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Areas\Colaborador\Views\Home\CriarSenha.g.cshtml.cs
+C:\Users\PAULO HENRIQUE\Documents\Visual Studio 2022\LojaVirtual\src\obj\Debug\netcoreapp2.2\Razor\Areas\Colaborador\Views\Home\Recuperar.g.cshtml.cs

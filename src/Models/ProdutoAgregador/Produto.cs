@@ -8,7 +8,9 @@ namespace LojaVirtual.Models.ProdutoAgregador
 {
 	public class Produto
 	{
-		public int Id { get; set; }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
 
 		[JsonIgnore]
 		[Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E001")]
