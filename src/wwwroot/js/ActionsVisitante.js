@@ -165,7 +165,7 @@ function MascaraCPF() {
 }
 
 function MascaraTEL() {
-    $(".tel").mask("(00)00000-0000");
+    $(".tel").mask("(00) 0000-00009");
 }
 
 function MascaraCEP() {
