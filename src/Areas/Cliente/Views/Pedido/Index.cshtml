@@ -45,5 +45,24 @@
             </table>
         </div>
     }
+    else
+    {
+        <div class="container">
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-md-12">
+                    Você ainda não tem nenhum pedido! <a asp-controller="Home" asp-action="Index">Clique aqui</a> para começar a comprar!
+                </div>
+                <br />
+                <br />
+                <div class="offset-md-4 col-md-4">
+                    <a class="btn btn-primary btn-continuar-comprando" asp-controller="Home" asp-action="Index">
+                        Vamos as compras
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
     @Html.PagedListPager((IPagedList)Model, pagina => Url.Action("Index", new { pagina = pagina }))
 </div>
