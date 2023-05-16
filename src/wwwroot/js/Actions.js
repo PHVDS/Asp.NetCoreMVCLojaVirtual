@@ -48,6 +48,23 @@ function AJAXUploadImagemProduto() {
     });
 
     $(".input-file").change(function () {
+
+        var ArquivoEnviado = $(this)[0].files[0].name;
+        var EhPermitidoUpload = true;
+
+        $("input[name=imagem]").each(function () {
+            if ( $(this).val().length > 0 ) {
+                var NomeDaImagem = $(this).val().split("/")[3];
+
+                if (NomeDaImagem == ArquivoEnviado) {
+                    alert(`Não é permitido enviar imagens com o mesmo nome, renomeia a imagem e envie novamente! (${NomeDaImagem})`);
+                    EhPermitidoUpload = false;
+                }
+            }
+        });
+
+        if (!EhPermitidoUpload) return;
+
         //Formulário de dados via JavaScript
         var Binario = $(this)[0].files[0];
         var Formulario = new FormData();
