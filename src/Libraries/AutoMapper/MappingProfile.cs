@@ -31,7 +31,7 @@ namespace LojaVirtual.Libraries.AutoMapper
 				.ForMember(dest => dest.FreteEmpresa, opt => opt.MapFrom(origem => "ECT - Correios"))
 				.ForMember(dest => dest.FormaPagamento, opt => opt.MapFrom(origem => (origem.PaymentMethod == 0) ? MetodoPagamentoConstant.CartaoCredito : MetodoPagamentoConstant.Boleto))
 				.ForMember(dest => dest.DadosTransaction, opt => opt.MapFrom(origem => JsonConvert.SerializeObject(origem , new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore })))      
-				.ForMember(dest => dest.DataRegistro, opt => opt.MapFrom(origem => DateTime.Now))
+				.ForMember(dest => dest.DataRegistro, opt => opt.MapFrom(origem => origem.DateCreated.Value.ToLocalTime()))
 				.ForMember(dest => dest.ValorTotal, opt => opt.MapFrom(origem => Mascara.ConverterPagarMeIntToDecimal(origem.Amount)));
 
 			CreateMap<List<ProdutoItem>, Pedido>()
@@ -44,7 +44,7 @@ namespace LojaVirtual.Libraries.AutoMapper
 			CreateMap<Pedido, PedidoSituacao>()
 				.ForMember(dest => dest.Id, opt => opt.MapFrom(origem => 0))
 				.ForMember(dest => dest.PedidoId, opt => opt.MapFrom(origem => origem.Id))
-				.ForMember(dest => dest.Data, opt => opt.MapFrom(origem => DateTime.Now));
+				.ForMember(dest => dest.Data, opt => opt.MapFrom(origem => origem.DataRegistro));
 
 			CreateMap<TransactionProduto, PedidoSituacao>()
 				.ForMember(dest => dest.Dados, opt => opt.MapFrom(origem => JsonConvert.SerializeObject(origem, new JsonSerializerSettings()

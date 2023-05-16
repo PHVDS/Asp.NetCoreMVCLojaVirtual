@@ -83,7 +83,7 @@ namespace LojaVirtual.Libraries.Gerenciador.Scheduler.Invocable
 					{
 						PedidoId = pedido.Id,
 						Situacao = situacao,
-						Data = transaction.DateUpdated.Value,
+						Data = transaction.DateUpdated.Value.ToLocalTime(),
 						Dados = JsonConvert.SerializeObject(transacaoPagarMe)
 					};
 

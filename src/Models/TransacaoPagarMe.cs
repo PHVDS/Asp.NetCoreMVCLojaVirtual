@@ -59,5 +59,6 @@ namespace LojaVirtual.Models
 		public string CardNumber { get; set; }
 		public string AcquirerResponseCode { get; set; }
 		protected string Endpoint { get; }
+		public DateTime? DateCreated { get; set; }
 	}
 }
