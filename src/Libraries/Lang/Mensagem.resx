@@ -162,6 +162,12 @@
   <data name="MSG_E015" xml:space="preserve">
     <value>Link de alteração de senha inválido!</value>
   </data>
+  <data name="MSG_E016" xml:space="preserve">
+    <value>Usuario não encontrado, verifique o e-mail e senha se estão corretos!</value>
+  </data>
+  <data name="MSG_E017" xml:space="preserve">
+    <value>Usuário desativado, entre em contato para resolver essa situação!</value>
+  </data>
   <data name="MSG_S001" xml:space="preserve">
     <value>Registro salvo com sucesso!</value>
   </data>

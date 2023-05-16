@@ -2,6 +2,7 @@
 using LojaVirtual.Libraries.Lang;
 using LojaVirtual.Libraries.Login;
 using LojaVirtual.Libraries.Seguranca;
+using LojaVirtual.Models.Constants;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Mvc;
 
@@ -31,22 +32,32 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 		public IActionResult Login([FromForm]Models.Cliente cliente, string returnUrl = null)
 		{
 			Models.Cliente clienteDB = _repositoryCliente.Login(cliente.Email, cliente.Senha);
+
 			if (clienteDB != null)
 			{
-				_loginCliente.Login(clienteDB);
+                if (clienteDB.Situacao == SituacaoConstant.Desativado)
+                {
+                    ViewData["MSG_E"] = Mensagem.MSG_E017;
+                    return View();
+                }
+                else
+                {
+                    _loginCliente.Login(clienteDB);
 
-				if (returnUrl == null)
-				{
-					return RedirectToAction("Index", "Home", new { area = "" });
-				}
-				else
-				{
-					return LocalRedirectPermanent(returnUrl);
-				}
+                    if (returnUrl == null)
+                    {
+                        return RedirectToAction("Index", "Home", new { area = "" });
+                    }
+                    else
+                    {
+                        return LocalRedirectPermanent(returnUrl);
+                    }
+                }
+                
 			}
 			else
 			{
-				ViewData["MSG_E"] = "Usuario não encontrado, verifique o e-mail e senha se estão corretos!";
+				ViewData["MSG_E"] = Mensagem.MSG_E016;
 				return View();
 			}
 		}

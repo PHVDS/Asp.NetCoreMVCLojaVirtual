@@ -1,6 +1,7 @@
 ﻿using LojaVirtual.Libraries.Filtro;
 using LojaVirtual.Libraries.Lang;
 using LojaVirtual.Libraries.Login;
+using LojaVirtual.Models.Constants;
 using LojaVirtual.Repositories.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -39,7 +40,9 @@ namespace LojaVirtual.Areas.Cliente.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				_clienteRepository.Cadastrar(cliente);
+				cliente.Situacao = SituacaoConstant.Ativo; 
+
+                _clienteRepository.Cadastrar(cliente);
 				_loginCliente.Login(cliente);
 
 				TempData["MSG_S"] = Mensagem.MSG_S001;

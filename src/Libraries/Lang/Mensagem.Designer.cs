@@ -196,6 +196,24 @@ namespace LojaVirtual.Libraries.Lang {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Usuario não encontrado, verifique o e-mail e senha se estão corretos!.
+        /// </summary>
+        public static string MSG_E016 {
+            get {
+                return ResourceManager.GetString("MSG_E016", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Usuário desativado, entre em contato para resolver essa situação!.
+        /// </summary>
+        public static string MSG_E017 {
+            get {
+                return ResourceManager.GetString("MSG_E017", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Registro salvo com sucesso!.
         /// </summary>
         public static string MSG_S001 {

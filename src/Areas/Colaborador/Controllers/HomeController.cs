@@ -62,8 +62,8 @@ namespace LojaVirtual.Areas.Colaborador.Controllers
 			}
 			else
 			{
-				ViewData["MSG_E"] = "Usuario não encontrado, verifique os campos digitados!";
-				return View();
+				ViewData["MSG_E"] = Mensagem.MSG_E016;
+                return View();
 			}
 		}
 
